@@ -2,6 +2,8 @@
 
 A scraper and RAG pipeline for [allaboutberlin.com](https://allaboutberlin.com) guides. Scrapes 149 guides into structured JSON, then lets you ask questions about living in Berlin and get grounded answers from an LLM.
 
+Built as a capstone project for [LLM Zoomcamp](https://github.com/DataTalksClub/llm-zoomcamp) by DataTalksClub.
+
 **Coverage:** ![Coverage Badge Placeholder](https://img.shields.io/badge/coverage-98%25-brightgreen)
 
 ## Overview
@@ -12,6 +14,8 @@ This scraper crawls https://allaboutberlin.com/guides and produces two types of 
 2. **`output/json/<slug>.json`** — Full article text split by sections for each guide (analogous to `llm-zoomcamp.json`)
 
 The resulting data contains **149 guides** organized into **1,905 sections**, ready for search indexing, RAG systems, or downstream processing.
+
+> **Note:** The `output/` directory is not tracked in git. Run `uv run python scraper.py` first to generate the data locally before using the RAG or agent pipelines.
 
 ## JSON Output Format
 
@@ -102,6 +106,8 @@ All commands use `uv run` — no need to activate the virtual environment manual
 
 ### RAG Pipeline (ask questions)
 
+> **Prerequisite:** Run `uv run python scraper.py` first to populate `output/json/` with scraped data.
+
 ```bash
 # Ask a question (keyword/BM25 search — default)
 uv run python rag_helper.py --question "How do I register my address in Berlin?"
@@ -140,6 +146,8 @@ print(vpipeline.rag("How do I find a flat?"))
 ```
 
 ### Agentic RAG (iterative tool-calling loop)
+
+> **Prerequisite:** Run `uv run python scraper.py` first to populate `output/json/` with scraped data.
 
 `agent.py` implements an agentic loop: the model calls the `search` tool repeatedly, refining its queries, until it has enough context to answer. It also has guardrails — off-topic questions are rejected.
 
@@ -184,6 +192,8 @@ uv run jupyter notebook notebooks/
 | `02_vector_search.ipynb` | Vector/semantic search demo — embeddings, VectorSearch index, RAGVector pipeline |
 | `03_agents.ipynb` | Agentic RAG prototype — function calling, iterative tool-use loop, guardrails |
 
+> **Note:** Notebook files (`*.ipynb`) are not tracked in git — they exist locally as development artifacts.
+
 ### Run the Scraper
 
 ```bash
@@ -196,7 +206,7 @@ This will:
 3. Parse sections by H2, H3, and content blocks
 4. Save JSON files to `output/json/`
 
-**Output directory structure:**
+**Output directory structure** (generated locally, not tracked in git):
 ```
 output/json/
 ├── guides.json
