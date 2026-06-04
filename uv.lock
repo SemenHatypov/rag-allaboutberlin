@@ -2412,10 +2412,12 @@ dependencies = [
     { name = "lxml" },
     { name = "minsearch" },
     { name = "openai" },
+    { name = "pandas" },
     { name = "python-dotenv" },
     { name = "requests" },
     { name = "sentence-transformers" },
     { name = "toyaikit" },
+    { name = "tqdm" },
 ]
 
 [package.dev-dependencies]
@@ -2432,10 +2434,12 @@ requires-dist = [
     { name = "lxml", specifier = ">=6.1.0" },
     { name = "minsearch" },
     { name = "openai" },
+    { name = "pandas", specifier = ">=3.0.3" },
     { name = "python-dotenv" },
     { name = "requests", specifier = ">=2.33.0" },
     { name = "sentence-transformers", specifier = ">=5.5.1" },
     { name = "toyaikit", specifier = ">=0.0.11" },
+    { name = "tqdm", specifier = ">=4.67.3" },
 ]
 
 [package.metadata.requires-dev]

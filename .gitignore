@@ -17,8 +17,7 @@ build/
 .ruff_cache/
 
 # Jupyter
-.ipynb_checkpoints/
-*.ipynb
+notebooks/
 
 # Output data
 output/

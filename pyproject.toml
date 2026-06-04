@@ -12,6 +12,8 @@ dependencies = [
     "python-dotenv",
     "sentence-transformers>=5.5.1",
     "toyaikit>=0.0.11",
+    "tqdm>=4.67.3",
+    "pandas>=3.0.3",
 ]
 
 [dependency-groups]
