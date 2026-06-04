@@ -191,8 +191,50 @@ uv run jupyter notebook notebooks/
 | `01_rag_intro.ipynb` | Step-by-step RAG pipeline — search, prompt building, LLM call, cost tracking |
 | `02_vector_search.ipynb` | Vector/semantic search demo — embeddings, VectorSearch index, RAGVector pipeline |
 | `03_agents.ipynb` | Agentic RAG prototype — function calling, iterative tool-use loop, guardrails |
+| `04_ground_truth.ipynb` | Ground truth dataset exploration — sampling strategy, cost estimation |
+| `05_search_evaluation.ipynb` | Search quality evaluation — Hit Rate & MRR, BM25 vs vector, boost tuning |
 
 > **Note:** Notebook files (`*.ipynb`) are not tracked in git — they exist locally as development artifacts.
+
+### Search Evaluation
+
+Evaluates retrieval quality of BM25 and vector search using Hit Rate and MRR metrics against the ground truth dataset.
+
+> **Prerequisite:** Run `uv run python scraper.py` and `uv run python generate_ground_truth.py` first.
+
+```bash
+# Evaluate both text and vector search (default)
+uv run python evaluate_search.py
+
+# Evaluate only BM25 text search
+uv run python evaluate_search.py --method text
+
+# Evaluate only vector search
+uv run python evaluate_search.py --method vector
+
+# Run grid search to find optimal BM25 boost parameters
+uv run python evaluate_search.py --method text --tune
+
+# Save results to JSON
+uv run python evaluate_search.py --output output/search-eval-results.json
+```
+
+**Example output:**
+
+```
+=== Results ===
+                                        hit_rate    mrr
+method
+text_search (title=2.0, section=0.5)       0.649  0.520
+text_search (title=0.5, section=0.5)       0.770  0.641
+vector_search (all-MiniLM-L6-v2)           0.868  0.690
+```
+
+**Metrics:**
+- **Hit Rate** — fraction of queries where the correct document appears in top-5 results
+- **MRR (Mean Reciprocal Rank)** — rewards finding the correct document at higher ranks (rank 1 = 1.0, rank 2 = 0.5, …)
+
+The full interactive walkthrough with per-query examples lives in `notebooks/05_search_evaluation.ipynb`.
 
 ### Run the Scraper
 
