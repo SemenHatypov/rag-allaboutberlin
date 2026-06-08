@@ -24,6 +24,7 @@ GUIDES_PATH = "/guides"
 OUTPUT_DIR = Path("output/json")
 REQUEST_DELAY = 1.0
 REQUEST_TIMEOUT = 15
+MIN_SECTION_TEXT_LEN = 50  # shorter blocks are nav fragments, not substantive content
 
 _SAFE_SLUG = re.compile(r"^[a-z0-9][a-z0-9\-]{0,99}$")
 
@@ -150,7 +151,11 @@ def parse_guide_page(html: str, slug: str) -> list[GuideSection]:
             pass  # handled via <li>
 
     flush(current_h2, current_h3, buffer)
-    return sections
+    return [s for s in sections if is_valid_section(s)]
+
+
+def is_valid_section(section: GuideSection) -> bool:
+    return len(section.text.strip()) >= MIN_SECTION_TEXT_LEN
 
 
 def save_json(data: list[GuideEntry | GuideSection], path: Path) -> None:
