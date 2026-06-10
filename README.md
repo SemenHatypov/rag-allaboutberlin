@@ -125,7 +125,7 @@ uv run python rag_helper.py --question "What documents do I need?" --guide anmel
 uv run python rag_helper.py --question "How does health insurance work?" --num-results 10
 ```
 
-`rag_helper.py` can also be imported as a module in notebooks or scripts:
+`rag_helper.py` can also be imported as a module in your own scripts:
 
 ```python
 from openai import OpenAI
@@ -178,24 +178,6 @@ agent = AgentRAG(index=index, llm_client=OpenAI())
 print(agent.loop("How do I find a flat in Berlin?"))
 ```
 
-### Notebooks
-
-Experiments live in `notebooks/`. To open them:
-
-```bash
-uv run jupyter notebook notebooks/
-```
-
-| Notebook | Description |
-|----------|-------------|
-| `01_rag_intro.ipynb` | Step-by-step RAG pipeline — search, prompt building, LLM call, cost tracking |
-| `02_vector_search.ipynb` | Vector/semantic search demo — embeddings, VectorSearch index, RAGVector pipeline |
-| `03_agents.ipynb` | Agentic RAG prototype — function calling, iterative tool-use loop, guardrails |
-| `04_ground_truth.ipynb` | Ground truth dataset exploration — sampling strategy, cost estimation |
-| `05_search_evaluation.ipynb` | Search quality evaluation — Hit Rate & MRR, BM25 vs vector, boost tuning |
-
-> **Note:** Notebook files (`*.ipynb`) are not tracked in git — they exist locally as development artifacts.
-
 ### Search Evaluation
 
 Evaluates retrieval quality of BM25 and vector search using Hit Rate and MRR metrics against the ground truth dataset.
@@ -234,7 +216,65 @@ vector_search (all-MiniLM-L6-v2)           0.868  0.690
 - **Hit Rate** — fraction of queries where the correct document appears in top-5 results
 - **MRR (Mean Reciprocal Rank)** — rewards finding the correct document at higher ranks (rank 1 = 1.0, rank 2 = 0.5, …)
 
-The full interactive walkthrough with per-query examples lives in `notebooks/05_search_evaluation.ipynb`.
+### Answer Quality Evaluation (LLM-as-a-Judge)
+
+Search evaluation tells us whether the *right document* was retrieved — it says nothing about whether the *generated answer* is correct. `evaluate_rag.py` measures answer quality with an **LLM-as-a-judge**: a second LLM call that reads each answer and rates it.
+
+It uses the same **A → Q → A′** structure the ground truth was built from:
+
+```
+A   original guide section text          (the "correct" answer)
+ └─ Q   a question generated from it      (output/ground-truth-data.csv)
+     └─ A′  the answer the RAG returns    (generated and judged here)
+```
+
+> **Prerequisite:** Run `uv run python scraper.py` and `uv run python generate_ground_truth.py` first.
+
+```bash
+# Estimate cost on a 10-question pilot, then exit (recommended first step)
+uv run python evaluate_rag.py --dry-run
+
+# Quick run on a random 25-question sample
+uv run python evaluate_rag.py --sample 25
+
+# Full run with both judge modes
+uv run python evaluate_rag.py --judge both
+```
+
+**Two judge modes:**
+
+| Mode | Judge sees | Verdict | Use case |
+|------|-----------|---------|----------|
+| `reference` (default) | question + original answer **A** + RAG answer **A′** | `good` / `bad` | Offline / development (needs ground truth) |
+| `reference-free` | question + RAG answer **A′** only | `RELEVANT` / `PARTLY_RELEVANT` / `NON_RELEVANT` | Online / production (no reference available) |
+| `both` | — | both sets of columns | Side-by-side comparison |
+
+Results are written to `output/rag-eval.{csv,json}` (one row per question, with the judge's `reasoning` and verdict), and a summary is printed.
+
+**Results on the full ground truth** (289 questions, `gpt-4o-mini` for both RAG and judge):
+
+```
+=== Results ===
+Reference judge   : good 219/289 (75.8%)  |  bad 70/289 (24.2%)
+Reference-free    :
+    RELEVANT         228/289 (78.9%)
+    PARTLY_RELEVANT  24/289 (8.3%)
+    NON_RELEVANT     37/289 (12.8%)
+```
+
+| Metric | Result |
+|--------|--------|
+| Reference judge — `good` | **219 / 289 (75.8%)** |
+| Reference judge — `bad` | 70 / 289 (24.2%) |
+| Reference-free — `RELEVANT` | **228 / 289 (78.9%)** |
+| Reference-free — `PARTLY_RELEVANT` | 24 / 289 (8.3%) |
+| Reference-free — `NON_RELEVANT` | 37 / 289 (12.8%) |
+
+Cost for the full run: ~$0.32 to generate the 289 answers, ~$0.23 for the reference judge, ~$0.17 for the reference-free judge (≈ $0.72 total).
+
+The judge always returns a `reasoning` field alongside its verdict. A `bad` / `NON_RELEVANT` verdict is a **pointer for investigation**, not a final truth — read the flagged rows in the output to decide whether the RAG answer, the question, or the ground truth is at fault.
+
+**Options:** `--judge {reference,reference-free,both}`, `--sample N`, `--workers`, `--rag-model`, `--judge-model`, `--ground-truth`, `--output-dir`, `--seed`, `--dry-run`. Both models default to `gpt-4o-mini`.
 
 ### Run the Scraper
 
@@ -346,6 +386,19 @@ agent.py
     ├── _search(query)                — Search index (no boost, direct lookup)
     ├── _execute_tool_call(call)      — Run tool call, return function_call_output
     └── loop(question)               — Agentic loop: call LLM → dispatch tools → repeat
+
+generate_ground_truth.py              — Build Q&A ground truth (samples docs → generates one question each)
+
+evaluate_search.py                    — Retrieval evaluation: Hit Rate & MRR, BM25 vs vector, boost grid search
+
+evaluate_rag.py                       — Answer evaluation (LLM-as-a-judge)
+├── RAGTracked(RAGBase)               — RAG pipeline that records token usage / cost
+├── generate_rag_answers(...)         — Produce A′ for each ground-truth question
+├── judge_with_reference(...)         — Score good/bad vs the original answer A
+├── judge_reference_free(...)         — Score relevance from the question alone
+└── main()                            — CLI: generate → judge → summarize → output/rag-eval.{csv,json}
+
+evaluation_utils.py                   — Shared helpers: structured LLM calls, cost accounting, parallel map
 ```
 
 ## Error Handling
