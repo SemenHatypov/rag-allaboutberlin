@@ -1,6 +1,6 @@
 # All About Berlin RAG
 
-A scraper and RAG pipeline for [allaboutberlin.com](https://allaboutberlin.com) guides. Scrapes 149 guides into structured JSON, then lets you ask questions about living in Berlin and get grounded answers from an LLM.
+A scraper, RAG pipeline, and chat interface for [allaboutberlin.com](https://allaboutberlin.com) guides. Scrapes 149 guides into structured JSON, then lets you ask questions about living in Berlin and get grounded answers from an LLM — via CLI or a Streamlit chat app.
 
 Built as a capstone project for [LLM Zoomcamp](https://github.com/DataTalksClub/llm-zoomcamp) by DataTalksClub.
 
@@ -103,6 +103,35 @@ OPENAI_API_KEY=sk-...
 ## Usage
 
 All commands use `uv run` — no need to activate the virtual environment manually.
+
+### Streamlit Chat App
+
+The easiest way to interact with the RAG system. Run a local web app and ask questions in a chat interface.
+
+> **Prerequisite:** Run `uv run python scraper.py` first to populate `output/json/` with scraped data.
+
+```bash
+uv run streamlit run app.py
+```
+
+Opens at **http://localhost:8501**.
+
+**Features:**
+- Chat interface with full conversation history
+- Semantic vector search (all-MiniLM-L6-v2) — the highest-accuracy backend (92% good answers vs 75% for BM25)
+- "Sources" expander under each answer showing the retrieved guide sections
+- Sidebar to filter answers to a specific guide (149 options)
+- Slider to control how many source sections are retrieved (3–15)
+- "Clear chat" button to reset the conversation
+
+**Example questions to try:**
+- `How do I register my address in Berlin (Anmeldung)?`
+- `What is Schufa and how can I get my credit report for free?`
+- `I'm a freelancer — which health insurance should I choose?`
+- `What's the difference between a freelance visa and a Blue Card?`
+- `How do I find an apartment and what's a typical rental deposit?`
+
+---
 
 ### RAG Pipeline (ask questions)
 
@@ -403,6 +432,11 @@ evaluate_rag.py                       — Answer evaluation (LLM-as-a-judge)
 └── main()                            — CLI: generate → judge → summarize → output/rag-eval-<type>.{csv,json}
 
 evaluation_utils.py                   — Shared helpers: structured LLM calls, cost accounting, parallel map
+
+app.py                                — Streamlit chat app (vector search only)
+├── _load_index()                     — @st.cache_resource: loads docs + builds vector index once
+├── _render_sources(sources)          — Renders retrieved sections in an expander
+└── main()                            — Page layout, sidebar settings, chat loop
 ```
 
 ## Error Handling
@@ -432,6 +466,7 @@ Managed via `pyproject.toml` and `uv.lock`.
 | `requests` | HTTP client for the scraper |
 | `beautifulsoup4` + `lxml` | HTML parsing |
 | `jupyter` | Notebook environment |
+| `streamlit` | Chat web app |
 | `pytest` + `pytest-cov` | Tests and coverage |
 | `responses` | HTTP mocking in tests |
 
