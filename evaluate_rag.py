@@ -18,10 +18,22 @@ Two judge modes are supported:
     reference-free   Judge sees only Q and A'. Scores relevance
                      RELEVANT / PARTLY_RELEVANT / NON_RELEVANT. (online / production)
 
+Three search backends are supported:
+
+    keyword   BM25 full-text search with title/section boosting (fast, no GPU needed)
+    vector    Semantic search via all-MiniLM-L6-v2 embeddings (slower to index)
+    both      Run both backends on the same questions and produce a comparison
+
 Output
 ------
-output/rag-eval.csv
-output/rag-eval.json
+Single mode  (keyword or vector):
+    output/rag-eval-<type>.csv / .json
+    output/rag-eval.csv / .json   (backwards-compat alias for keyword)
+
+Comparison mode (both):
+    output/rag-eval-keyword.csv / .json
+    output/rag-eval-vector.csv  / .json
+    output/rag-eval-comparison.csv / .json   (combined, with search_type column)
 
     Each record contains the question, RAG answer, original answer, plus the
     judge verdict columns for the mode(s) that were run:
@@ -30,13 +42,16 @@ output/rag-eval.json
 
 Usage
 -----
-    uv run evaluate_rag.py                          # reference judge, full dataset
-    uv run evaluate_rag.py --sample 25              # quick sample run
-    uv run evaluate_rag.py --judge both             # both judge modes
-    uv run evaluate_rag.py --dry-run --sample 50    # estimate cost and exit
+    uv run evaluate_rag.py                               # keyword, reference judge, full dataset
+    uv run evaluate_rag.py --search-type vector          # vector search backend
+    uv run evaluate_rag.py --search-type both            # compare both backends
+    uv run evaluate_rag.py --sample 25                   # quick sample run
+    uv run evaluate_rag.py --judge both                  # both judge modes
+    uv run evaluate_rag.py --dry-run --sample 50         # estimate cost and exit
 
 Options
 -------
+    --search-type  {keyword,vector,both}  Search backend(s) (default: keyword)
     --judge        {reference,reference-free,both}  Judge mode(s) (default: reference)
     --sample       INT   Evaluate a random N-row sample instead of the full set
     --workers      INT   Parallel OpenAI requests (default: 6)
@@ -62,8 +77,8 @@ from openai import OpenAI
 from pydantic import BaseModel, Field
 
 from evaluation_utils import calc_total_price, llm_structured_retry, map_progress
-from ingest import build_index, load_documents
-from rag_helper import DEFAULT_MODEL, RAGBase
+from ingest import build_index, build_vector_index, load_documents
+from rag_helper import DEFAULT_MODEL, RAGBase, RAGVector
 
 load_dotenv()
 
@@ -155,6 +170,39 @@ class RAGTracked(RAGBase):
         response = self.llm_client.responses.create(model=self.model, input=messages)
         self.usages.append(response.usage)  # list.append is thread-safe under the GIL
         return response.output_text
+
+
+class RAGVectorTracked(RAGVector):
+    """RAGVector that records token usage for cost accounting."""
+
+    def __init__(self, *args, **kwargs) -> None:
+        super().__init__(*args, **kwargs)
+        self.usages: list = []
+
+    def llm(self, prompt: str) -> str:
+        messages = [
+            {"role": "developer", "content": self.instructions},
+            {"role": "user", "content": prompt},
+        ]
+        response = self.llm_client.responses.create(model=self.model, input=messages)
+        self.usages.append(response.usage)
+        return response.output_text
+
+
+def build_assistant(
+    search_type: str,
+    documents: list[dict],
+    client: OpenAI,
+    model: str,
+) -> RAGTracked | RAGVectorTracked:
+    if search_type == "vector":
+        print("Building vector index (encoding documents — this may take a minute)...")
+        index, embedder = build_vector_index(documents)
+        return RAGVectorTracked(embedder=embedder, index=index, llm_client=client, model=model)
+    else:
+        print("Building keyword (BM25) index...")
+        index = build_index(documents)
+        return RAGTracked(index=index, llm_client=client, model=model)
 
 
 # ── Data loading ─────────────────────────────────────────────────────────────
@@ -252,7 +300,16 @@ def judge_reference_free(client: OpenAI, answers: list[dict], model: str, worker
 
 
 def summarize(df: pd.DataFrame) -> None:
-    print("\n=== Results ===")
+    search_types = df["search_type"].unique().tolist() if "search_type" in df else []
+    if len(search_types) > 1:
+        _summarize_comparison(df, search_types)
+    else:
+        label = search_types[0] if search_types else "results"
+        print(f"\n=== Results ({label}) ===")
+        _summarize_single(df)
+
+
+def _summarize_single(df: pd.DataFrame) -> None:
     if "score" in df:
         counts = df["score"].value_counts()
         good, total = int(counts.get("good", 0)), len(df)
@@ -264,11 +321,58 @@ def summarize(df: pd.DataFrame) -> None:
             print(f"    {label:<16} {n}/{len(df)} ({n / len(df):.1%})")
 
 
+def _summarize_comparison(df: pd.DataFrame, search_types: list[str]) -> None:
+    print(f"\n{'=== Comparison: ' + ' vs '.join(search_types) + ' ==='}")
+    col_w = 12
+
+    def pct(sub: pd.DataFrame, col: str, val: str) -> str:
+        if col not in sub:
+            return "  n/a   "
+        n = int((sub[col] == val).sum())
+        return f"{n}/{len(sub)} ({n / len(sub):.1%})"
+
+    header = f"{'Metric':<28}" + "".join(f"{st:>{col_w}}" for st in search_types)
+    print(header)
+    print("-" * len(header))
+
+    groups = {st: df[df["search_type"] == st] for st in search_types}
+
+    if "score" in df:
+        row = f"{'Reference: good':<28}"
+        row += "".join(f"{pct(groups[st], 'score', 'good'):>{col_w}}" for st in search_types)
+        print(row)
+
+    if "relevance" in df:
+        for label in ("RELEVANT", "PARTLY_RELEVANT", "NON_RELEVANT"):
+            row = f"{label:<28}"
+            row += "".join(f"{pct(groups[st], 'relevance', label):>{col_w}}" for st in search_types)
+            print(row)
+
+
 def save(df: pd.DataFrame, output_dir: Path) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
-    df.to_csv(output_dir / "rag-eval.csv", index=False)
-    df.to_json(output_dir / "rag-eval.json", orient="records", indent=2)
-    print(f"\nSaved {len(df)} records to {output_dir}/rag-eval.{{csv,json}}")
+    search_types = df["search_type"].unique().tolist() if "search_type" in df else []
+
+    if len(search_types) > 1:
+        # Comparison mode: save per-type files + combined
+        for st in search_types:
+            sub = df[df["search_type"] == st].drop(columns=["search_type"])
+            sub.to_csv(output_dir / f"rag-eval-{st}.csv", index=False)
+            sub.to_json(output_dir / f"rag-eval-{st}.json", orient="records", indent=2)
+            print(f"Saved {len(sub)} records to {output_dir}/rag-eval-{st}.{{csv,json}}")
+        df.to_csv(output_dir / "rag-eval-comparison.csv", index=False)
+        df.to_json(output_dir / "rag-eval-comparison.json", orient="records", indent=2)
+        print(f"Saved {len(df)} records to {output_dir}/rag-eval-comparison.{{csv,json}}")
+    else:
+        st = search_types[0] if search_types else "keyword"
+        out = df.drop(columns=["search_type"]) if "search_type" in df else df
+        out.to_csv(output_dir / f"rag-eval-{st}.csv", index=False)
+        out.to_json(output_dir / f"rag-eval-{st}.json", orient="records", indent=2)
+        print(f"\nSaved {len(out)} records to {output_dir}/rag-eval-{st}.{{csv,json}}")
+        if st == "keyword":
+            # Backwards-compat alias
+            out.to_csv(output_dir / "rag-eval.csv", index=False)
+            out.to_json(output_dir / "rag-eval.json", orient="records", indent=2)
 
 
 def build_dataframe(answers: list[dict], verdict_rows: list[list[dict]]) -> pd.DataFrame:
@@ -284,10 +388,44 @@ def build_dataframe(answers: list[dict], verdict_rows: list[list[dict]]) -> pd.D
 # ── Main ─────────────────────────────────────────────────────────────────────
 
 
+def _run_one_search_type(
+    search_type: str,
+    documents: list[dict],
+    doc_idx: dict,
+    records: list[dict],
+    client: OpenAI,
+    run_reference: bool,
+    run_reference_free: bool,
+    args: argparse.Namespace,
+) -> pd.DataFrame:
+    """Run RAG generation + judging for a single search backend. Returns a DataFrame."""
+    assistant = build_assistant(search_type, documents, client, args.rag_model)
+
+    print(f"\n[{search_type}] Generating RAG answers for {len(records)} questions...")
+    answers = generate_rag_answers(assistant, doc_idx, records, args.workers)
+
+    verdict_rows: list[list[dict]] = []
+    if run_reference:
+        print(f"\n[{search_type}] Judging with reference (good/bad)...")
+        rows, usages = judge_with_reference(client, answers, args.judge_model, args.workers)
+        verdict_rows.append(rows)
+        print(f"  judge cost: ${calc_total_price(usages):.4f}")
+    if run_reference_free:
+        print(f"\n[{search_type}] Judging reference-free (relevance)...")
+        rows, usages = judge_reference_free(client, answers, args.judge_model, args.workers)
+        verdict_rows.append(rows)
+        print(f"  judge cost: ${calc_total_price(usages):.4f}")
+
+    df = build_dataframe(answers, verdict_rows)
+    df.insert(0, "search_type", search_type)
+    return df
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
+    parser.add_argument("--search-type", choices=["keyword", "vector", "both"], default="keyword")
     parser.add_argument("--judge", choices=["reference", "reference-free", "both"], default="reference")
     parser.add_argument("--sample", type=int, default=None, metavar="INT")
     parser.add_argument("--workers", type=int, default=DEFAULT_WORKERS, metavar="INT")
@@ -306,37 +444,29 @@ def main() -> None:
     ground_truth, doc_idx, documents = load_eval_inputs(args.ground_truth)
     records = select_records(ground_truth, args.sample, args.seed)
 
-    print("\nBuilding BM25 index...")
-    index = build_index(documents)
-    assistant = RAGTracked(index=index, llm_client=client, model=args.rag_model)
-
     if args.dry_run:
+        # Pilot on keyword backend for cost estimate
+        assistant = build_assistant("keyword", documents, client, args.rag_model)
         estimate_cost(client, assistant, doc_idx, records, run_reference, run_reference_free, args)
         return
 
-    print(f"\nGenerating RAG answers for {len(records)} questions...")
-    answers = generate_rag_answers(assistant, doc_idx, records, args.workers)
+    search_types = ["keyword", "vector"] if args.search_type == "both" else [args.search_type]
+    dfs: list[pd.DataFrame] = []
+    for st in search_types:
+        df = _run_one_search_type(
+            st, documents, doc_idx, records, client,
+            run_reference, run_reference_free, args,
+        )
+        dfs.append(df)
 
-    verdict_rows: list[list[dict]] = []
-    if run_reference:
-        print("\nJudging with reference (good/bad)...")
-        rows, usages = judge_with_reference(client, answers, args.judge_model, args.workers)
-        verdict_rows.append(rows)
-        print(f"  judge cost: ${calc_total_price(usages):.4f}")
-    if run_reference_free:
-        print("\nJudging reference-free (relevance)...")
-        rows, usages = judge_reference_free(client, answers, args.judge_model, args.workers)
-        verdict_rows.append(rows)
-        print(f"  judge cost: ${calc_total_price(usages):.4f}")
-
-    df = build_dataframe(answers, verdict_rows)
-    summarize(df)
-    save(df, args.output_dir)
+    combined = pd.concat(dfs, ignore_index=True)
+    summarize(combined)
+    save(combined, args.output_dir)
 
 
 def estimate_cost(
     client: OpenAI,
-    assistant: RAGTracked,
+    assistant: RAGTracked | RAGVectorTracked,
     doc_idx: dict,
     records: list[dict],
     run_reference: bool,

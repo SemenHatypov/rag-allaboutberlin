@@ -239,6 +239,9 @@ uv run python evaluate_rag.py --sample 25
 
 # Full run with both judge modes
 uv run python evaluate_rag.py --judge both
+
+# Compare keyword vs vector backends (both judge modes)
+uv run python evaluate_rag.py --search-type both --judge both
 ```
 
 **Two judge modes:**
@@ -249,32 +252,31 @@ uv run python evaluate_rag.py --judge both
 | `reference-free` | question + RAG answer **A′** only | `RELEVANT` / `PARTLY_RELEVANT` / `NON_RELEVANT` | Online / production (no reference available) |
 | `both` | — | both sets of columns | Side-by-side comparison |
 
-Results are written to `output/rag-eval.{csv,json}` (one row per question, with the judge's `reasoning` and verdict), and a summary is printed.
+**Three search backends** (`--search-type`):
 
-**Results on the full ground truth** (289 questions, `gpt-4o-mini` for both RAG and judge):
+| Value | Backend | Description |
+|-------|---------|-------------|
+| `keyword` (default) | BM25 | Fast, no GPU needed |
+| `vector` | all-MiniLM-L6-v2 | Semantic embeddings |
+| `both` | — | Run both and compare; writes per-type files + combined `rag-eval-comparison.{csv,json}` |
 
-```
-=== Results ===
-Reference judge   : good 219/289 (75.8%)  |  bad 70/289 (24.2%)
-Reference-free    :
-    RELEVANT         228/289 (78.9%)
-    PARTLY_RELEVANT  24/289 (8.3%)
-    NON_RELEVANT     37/289 (12.8%)
-```
+Results are written to `output/rag-eval-<type>.{csv,json}` (one row per question, with the judge's `reasoning` and verdict), and a summary is printed. Keyword results are also aliased to `output/rag-eval.{csv,json}` for backwards compatibility.
 
-| Metric | Result |
-|--------|--------|
-| Reference judge — `good` | **219 / 289 (75.8%)** |
-| Reference judge — `bad` | 70 / 289 (24.2%) |
-| Reference-free — `RELEVANT` | **228 / 289 (78.9%)** |
-| Reference-free — `PARTLY_RELEVANT` | 24 / 289 (8.3%) |
-| Reference-free — `NON_RELEVANT` | 37 / 289 (12.8%) |
+**Keyword vs vector comparison** (289 questions, both judge modes, `gpt-4o-mini`):
 
-Cost for the full run: ~$0.32 to generate the 289 answers, ~$0.23 for the reference judge, ~$0.17 for the reference-free judge (≈ $0.72 total).
+| Metric | keyword (BM25) | vector (MiniLM) |
+|--------|---------------|-----------------|
+| Reference judge — `good` | 216 / 289 (74.7%) | **266 / 289 (92.0%)** |
+| Reference judge — `bad` | 73 / 289 (25.3%) | **23 / 289 (8.0%)** |
+| Reference-free — `RELEVANT` | 228 / 289 (78.9%) | **274 / 289 (94.8%)** |
+| Reference-free — `PARTLY_RELEVANT` | 23 / 289 (8.0%) | 11 / 289 (3.8%) |
+| Reference-free — `NON_RELEVANT` | 38 / 289 (13.1%) | **4 / 289 (1.4%)** |
+
+Vector search produces **+17 pp more good answers** and **9× fewer non-relevant responses** — consistent with its higher retrieval Hit Rate (0.868 vs 0.770).
 
 The judge always returns a `reasoning` field alongside its verdict. A `bad` / `NON_RELEVANT` verdict is a **pointer for investigation**, not a final truth — read the flagged rows in the output to decide whether the RAG answer, the question, or the ground truth is at fault.
 
-**Options:** `--judge {reference,reference-free,both}`, `--sample N`, `--workers`, `--rag-model`, `--judge-model`, `--ground-truth`, `--output-dir`, `--seed`, `--dry-run`. Both models default to `gpt-4o-mini`.
+**Options:** `--search-type {keyword,vector,both}`, `--judge {reference,reference-free,both}`, `--sample N`, `--workers`, `--rag-model`, `--judge-model`, `--ground-truth`, `--output-dir`, `--seed`, `--dry-run`. Both models default to `gpt-4o-mini`.
 
 ### Run the Scraper
 
@@ -392,11 +394,13 @@ generate_ground_truth.py              — Build Q&A ground truth (samples docs �
 evaluate_search.py                    — Retrieval evaluation: Hit Rate & MRR, BM25 vs vector, boost grid search
 
 evaluate_rag.py                       — Answer evaluation (LLM-as-a-judge)
-├── RAGTracked(RAGBase)               — RAG pipeline that records token usage / cost
+├── RAGTracked(RAGBase)               — Keyword RAG pipeline with token usage tracking
+├── RAGVectorTracked(RAGVector)        — Vector RAG pipeline with token usage tracking
+├── build_assistant(search_type, ...) — Factory: builds the right pipeline for keyword/vector
 ├── generate_rag_answers(...)         — Produce A′ for each ground-truth question
 ├── judge_with_reference(...)         — Score good/bad vs the original answer A
 ├── judge_reference_free(...)         — Score relevance from the question alone
-└── main()                            — CLI: generate → judge → summarize → output/rag-eval.{csv,json}
+└── main()                            — CLI: generate → judge → summarize → output/rag-eval-<type>.{csv,json}
 
 evaluation_utils.py                   — Shared helpers: structured LLM calls, cost accounting, parallel map
 ```
