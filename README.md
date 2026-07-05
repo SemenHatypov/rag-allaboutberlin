@@ -2,6 +2,8 @@
 
 A scraper, RAG pipeline, and chat interface for [allaboutberlin.com](https://allaboutberlin.com) guides. Scrapes 149 guides into structured JSON, then lets you ask questions about living in Berlin and get grounded answers from an LLM — via CLI or a Streamlit chat app.
 
+**🐻 Try it live: [rag-all-about-berlin.streamlit.app](https://rag-all-about-berlin.streamlit.app/)** — no installation needed, just open the link and ask a question in the chat.
+
 Built as a capstone project for [LLM Zoomcamp](https://github.com/DataTalksClub/llm-zoomcamp) by DataTalksClub.
 
 **Coverage:** ![Coverage Badge Placeholder](https://img.shields.io/badge/coverage-98%25-brightgreen)
@@ -15,7 +17,7 @@ This scraper crawls https://allaboutberlin.com/guides and produces two types of 
 
 The resulting data contains **149 guides** organized into **1,905 sections**, ready for search indexing, RAG systems, or downstream processing.
 
-> **Note:** The `output/` directory is not tracked in git. Run `uv run python scraper.py` first to generate the data locally before using the RAG or agent pipelines.
+> **Note:** The scraped data in `output/json/` is tracked in git (it is required by the deployed Streamlit app), so the RAG and agent pipelines work out of the box. Run `uv run python scraper.py` only if you want to re-scrape fresh data. Other `output/` artifacts (evaluation results, ground truth) are not tracked.
 
 ## JSON Output Format
 
@@ -106,9 +108,11 @@ All commands use `uv run` — no need to activate the virtual environment manual
 
 ### Streamlit Chat App
 
-The easiest way to interact with the RAG system. Run a local web app and ask questions in a chat interface.
+The easiest way to interact with the RAG system — ask questions in a chat interface.
 
-> **Prerequisite:** Run `uv run python scraper.py` first to populate `output/json/` with scraped data.
+**Hosted version:** the app is deployed on Streamlit Community Cloud at **[rag-all-about-berlin.streamlit.app](https://rag-all-about-berlin.streamlit.app/)**. Every push to `main` redeploys it automatically. (On the free tier the app goes to sleep after ~12 hours without visitors — the first visitor wakes it up with one click, then the vector index builds in about a minute.)
+
+To run it locally instead:
 
 ```bash
 uv run streamlit run app.py
@@ -134,8 +138,6 @@ Opens at **http://localhost:8501**.
 ---
 
 ### RAG Pipeline (ask questions)
-
-> **Prerequisite:** Run `uv run python scraper.py` first to populate `output/json/` with scraped data.
 
 ```bash
 # Ask a question (keyword/BM25 search — default)
@@ -176,8 +178,6 @@ print(vpipeline.rag("How do I find a flat?"))
 
 ### Agentic RAG (iterative tool-calling loop)
 
-> **Prerequisite:** Run `uv run python scraper.py` first to populate `output/json/` with scraped data.
-
 `agent.py` implements an agentic loop: the model calls the `search` tool repeatedly, refining its queries, until it has enough context to answer. It also has guardrails — off-topic questions are rejected.
 
 ```bash
@@ -211,7 +211,7 @@ print(agent.loop("How do I find a flat in Berlin?"))
 
 Evaluates retrieval quality of BM25 and vector search using Hit Rate and MRR metrics against the ground truth dataset.
 
-> **Prerequisite:** Run `uv run python scraper.py` and `uv run python generate_ground_truth.py` first.
+> **Prerequisite:** Run `uv run python generate_ground_truth.py` first to build the ground truth dataset.
 
 ```bash
 # Evaluate both text and vector search (default)
@@ -257,7 +257,7 @@ A   original guide section text          (the "correct" answer)
      └─ A′  the answer the RAG returns    (generated and judged here)
 ```
 
-> **Prerequisite:** Run `uv run python scraper.py` and `uv run python generate_ground_truth.py` first.
+> **Prerequisite:** Run `uv run python generate_ground_truth.py` first to build the ground truth dataset.
 
 ```bash
 # Estimate cost on a 10-question pilot, then exit (recommended first step)
@@ -319,7 +319,7 @@ This will:
 3. Parse sections by H2, H3, and content blocks
 4. Save JSON files to `output/json/`
 
-**Output directory structure** (generated locally, not tracked in git):
+**Output directory structure** (tracked in git — re-running the scraper refreshes it):
 ```
 output/json/
 ├── guides.json
@@ -339,6 +339,15 @@ OUTPUT_DIR = Path("output/json")          # Output directory
 REQUEST_DELAY = 1.0                       # Seconds between requests
 REQUEST_TIMEOUT = 15                      # HTTP timeout
 ```
+
+## Deployment
+
+The chat app is hosted on [Streamlit Community Cloud](https://streamlit.io/cloud): **[rag-all-about-berlin.streamlit.app](https://rag-all-about-berlin.streamlit.app/)**
+
+- **Entry point:** `app.py`, deployed from the `main` branch — every push redeploys automatically
+- **Dependencies:** installed from `uv.lock` (Community Cloud supports uv natively)
+- **Data:** the scraped guides in `output/json/` are tracked in git, so the app indexes them directly from the repo
+- **Secrets:** `OPENAI_API_KEY` is set in the app's Secrets settings on Community Cloud (exposed to the app as an environment variable)
 
 ## Testing
 
