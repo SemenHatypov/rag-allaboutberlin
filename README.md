@@ -17,7 +17,7 @@ This scraper crawls https://allaboutberlin.com/guides and produces two types of 
 
 The resulting data contains **149 guides** organized into **1,905 sections** (142 guides have content — 1,861 sections; the rest are index-only entries), ready for search indexing, RAG systems, or downstream processing. At load time each document is enriched with the guide's human-readable title (`guide_name`) and its canonical article URL (`https://allaboutberlin.com/guides/<slug>`).
 
-> **Note:** The scraped data in `output/json/` is tracked in git (it is required by the deployed Streamlit app), so the RAG and agent pipelines work out of the box. Run `uv run python scraper.py` only if you want to re-scrape fresh data. Other `output/` artifacts (evaluation results, ground truth) are not tracked.
+> **Note:** The scraped data in `output/json/` and the ground truth dataset in `eval/ground_truth/` are tracked in git — the former is required by the deployed Streamlit app, the latter so evaluation metrics can always be recomputed without regenerating it first. Run `uv run python scraper.py` only if you want to re-scrape fresh data. Other `output/` artifacts (evaluation run results, cost estimates) are ephemeral and not tracked.
 
 ## JSON Output Format
 
@@ -215,7 +215,9 @@ print(agent.loop("How do I find a flat in Berlin?"))
 
 ### Ground Truth Generation
 
-Builds the article-level ground truth dataset: for every guide with content (142 of them), an LLM generates 2 distinct questions that this guide answers best. Result: ~284 "question → correct article" pairs in `output/ground-truth-guides.{csv,json}` with columns `question, guide, guide_name, url`.
+Builds the article-level ground truth dataset: for every guide with content (142 of them), an LLM generates 2 distinct questions that this guide answers best. Result: ~284 "question → correct article" pairs in `eval/ground_truth/ground-truth-guides.{csv,json}` with columns `question, guide, guide_name, url`, plus a `metadata.json` recording the model, prompt version, and a content fingerprint of the corpus used to generate it.
+
+This dataset is **committed to the repo** (unlike `output/`, which holds ephemeral run results) so that evaluation metrics can always be recomputed against a fixed, versioned set of questions without calling an LLM to regenerate it first.
 
 ```bash
 # Estimate cost and exit (recommended first step; full run costs ~$0.20)
@@ -228,7 +230,9 @@ uv run python generate_ground_truth.py
 uv run python generate_ground_truth.py --questions-per-guide 3
 ```
 
-**Options:** `--questions-per-guide` (default 2), `--workers`, `--output-dir`, `--dry-run`.
+**Options:** `--questions-per-guide` (default 2), `--workers`, `--model`, `--output-dir`, `--dry-run`.
+
+Regenerate only when the underlying guide content changes meaningfully, and review the diff before committing — LLM-generated questions vary between runs even with the same prompt. `tests/test_ground_truth_contract.py` warns when `output/json/`'s content fingerprint no longer matches `metadata.json`.
 
 > An earlier section-level ground truth and evaluation (hit = exact section match) is available in the git history.
 
@@ -236,7 +240,7 @@ uv run python generate_ground_truth.py --questions-per-guide 3
 
 Evaluates **article-level** retrieval quality of BM25 and vector search: a query is a hit when the correct guide appears among the unique guides of the top-k results — exactly the articles the chatbot cites as source links.
 
-> **Prerequisite:** Run `uv run python generate_ground_truth.py` first to build the ground truth dataset.
+> **Prerequisite:** `eval/ground_truth/ground-truth-guides.csv` is committed to the repo, so this works out of the box. Only run `uv run python generate_ground_truth.py` again if you need to regenerate it (e.g. after a significant content update).
 
 ```bash
 # Evaluate both text and vector search (default)
@@ -279,7 +283,7 @@ For every ground-truth question it runs search, extracts the cited sources exact
 
 Citation metrics need **zero LLM calls** — with `--judge none` the whole run is free.
 
-> **Prerequisite:** Run `uv run python generate_ground_truth.py` first to build the ground truth dataset.
+> **Prerequisite:** `eval/ground_truth/ground-truth-guides.csv` is committed to the repo, so this works out of the box. Only run `uv run python generate_ground_truth.py` again if you need to regenerate it (e.g. after a significant content update).
 
 ```bash
 # Citation metrics only — free, no LLM calls
@@ -443,7 +447,8 @@ agent.py
 generate_ground_truth.py              — Build article-level ground truth
 ├── group_by_guide(documents)         — Group sections by guide slug
 ├── build_guide_text(docs)            — One text digest per guide (truncated)
-└── main()                            — 2 questions per guide → output/ground-truth-guides.{csv,json}
+├── corpus_fingerprint(documents)      — Content hash of output/json/, stored for staleness checks
+└── main()                            — 2 questions per guide → eval/ground_truth/ground-truth-guides.{csv,json}
 
 evaluate_search.py                    — Article-level retrieval evaluation
 ├── unique_guides(results)            — Deduped guide slugs in rank order

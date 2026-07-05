@@ -6,16 +6,27 @@ then uses OpenAI to generate QUESTIONS_PER_GUIDE distinct questions that this
 guide answers best. The result is a dataset of "question -> correct guide"
 pairs used to evaluate whether the RAG cites the right article as its source.
 
+This dataset is committed to the repo (eval/ground_truth/) so that evaluation
+metrics can always be recomputed against a fixed, versioned set of questions.
+Regenerating it produces a new sample of LLM-written questions each time —
+review the diff before committing a regeneration.
+
 Output
 ------
-output/ground-truth-guides.csv
-output/ground-truth-guides.json
+eval/ground_truth/ground-truth-guides.csv
+eval/ground_truth/ground-truth-guides.json
 
     Each record:
         question    — question a Berlin expat might ask
         guide       — guide slug (e.g. "abmeldung") that best answers it
         guide_name  — human-readable guide title
         url         — canonical article URL on allaboutberlin.com
+
+eval/ground_truth/metadata.json
+
+    Provenance for the generation run: model, prompt version, and a
+    fingerprint of the output/json/ corpus used, so staleness relative to
+    the current corpus can be detected later (see corpus_fingerprint()).
 
 Usage
 -----
@@ -26,13 +37,17 @@ Options
 -------
     --questions-per-guide  INT   Questions generated per guide (default: 2)
     --workers              INT   Parallel OpenAI requests (default: 6)
-    --output-dir           PATH  Directory to write output files (default: output)
+    --model                STR   OpenAI model used to generate questions (default: gpt-4o-mini)
+    --output-dir           PATH  Directory to write output files (default: eval/ground_truth)
     --dry-run                    Print cost estimate and exit
 """
 
 import argparse
+import hashlib
+import json
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -42,11 +57,14 @@ from pydantic import BaseModel
 
 from evaluation_utils import calc_total_price, llm_structured_retry, map_progress
 from ingest import load_documents
+from rag_helper import DEFAULT_MODEL
 
 load_dotenv()
 
 MAX_GUIDE_CHARS = 25_000
 PER_SECTION_CHARS = 800
+PROMPT_VERSION = "v1"
+GROUND_TRUTH_DIR = Path("eval/ground_truth")
 
 PROMPT = """
 You emulate an expat or foreign resident living in Germany who needs help navigating
@@ -100,12 +118,14 @@ def make_guide_record(doc: dict, question: str) -> dict:
     }
 
 
-def make_generate_records(client: OpenAI, questions_per_guide: int):
+def make_generate_records(client: OpenAI, questions_per_guide: int, model: str):
     def generate_records(docs: list[dict]) -> tuple[list[dict], object | None]:
         first = docs[0]
         try:
             prompt = PROMPT.format(guide_name=first["guide_name"], n=questions_per_guide)
-            result, usage = llm_structured_retry(client, prompt, build_guide_text(docs), GuideQuestions)
+            result, usage = llm_structured_retry(
+                client, prompt, build_guide_text(docs), GuideQuestions, model=model
+            )
             questions = result.questions[:questions_per_guide]
             return [make_guide_record(first, q) for q in questions], usage
         except Exception as e:
@@ -113,6 +133,12 @@ def make_generate_records(client: OpenAI, questions_per_guide: int):
             return [], None
 
     return generate_records
+
+
+def corpus_fingerprint(documents: list[dict]) -> str:
+    """Stable hash of guide content, used to detect staleness vs. a generated ground truth."""
+    parts = sorted(f"{doc['guide']}\x1f{doc.get('section', '')}\x1f{doc.get('title', '')}\x1f{doc['text']}" for doc in documents)
+    return hashlib.sha256("\n".join(parts).encode("utf-8")).hexdigest()
 
 
 def estimate_cost(
@@ -145,14 +171,31 @@ def generate(guide_groups: list[list[dict]], generate_records, workers: int) -> 
     return records
 
 
-def save(records: list[dict], output_dir: Path) -> None:
+def save(
+    records: list[dict],
+    documents: list[dict],
+    output_dir: Path,
+    model: str,
+    questions_per_guide: int,
+) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
 
     df = pd.DataFrame(records)
     df.to_csv(output_dir / "ground-truth-guides.csv", index=False)
     df.to_json(output_dir / "ground-truth-guides.json", orient="records", indent=2)
 
+    metadata = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "model": model,
+        "prompt_version": PROMPT_VERSION,
+        "questions_per_guide": questions_per_guide,
+        "source_guides_count": df["guide"].nunique(),
+        "source_corpus_hash": corpus_fingerprint(documents),
+    }
+    (output_dir / "metadata.json").write_text(json.dumps(metadata, indent=2) + "\n")
+
     print(f"Saved {len(df)} records to {output_dir}/ground-truth-guides.{{csv,json}}")
+    print(f"Saved provenance to {output_dir}/metadata.json")
 
     print(f"\nTotal questions : {len(df)}")
     print(f"Guides covered  : {df['guide'].nunique()}")
@@ -163,12 +206,13 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--questions-per-guide", type=int, default=2, metavar="INT")
     parser.add_argument("--workers", type=int, default=6, metavar="INT")
-    parser.add_argument("--output-dir", type=Path, default=Path("output"), metavar="PATH")
+    parser.add_argument("--model", default=DEFAULT_MODEL, metavar="STR")
+    parser.add_argument("--output-dir", type=Path, default=GROUND_TRUTH_DIR, metavar="PATH")
     parser.add_argument("--dry-run", action="store_true", help="estimate cost and exit")
     args = parser.parse_args()
 
     client = OpenAI(timeout=60.0)
-    generate_records = make_generate_records(client, args.questions_per_guide)
+    generate_records = make_generate_records(client, args.questions_per_guide, args.model)
 
     documents = load_documents()
     by_guide = group_by_guide(documents)
@@ -181,7 +225,7 @@ def main() -> None:
         return
 
     records = generate(guide_groups, generate_records, args.workers)
-    save(records, args.output_dir)
+    save(records, documents, args.output_dir, args.model, args.questions_per_guide)
 
 
 if __name__ == "__main__":

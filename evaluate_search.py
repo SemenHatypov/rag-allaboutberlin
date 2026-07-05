@@ -17,7 +17,7 @@ import pandas as pd
 from evaluation_utils import map_progress
 from ingest import build_index, build_vector_index, load_documents
 
-DEFAULT_GROUND_TRUTH = Path("output/ground-truth-guides.csv")
+DEFAULT_GROUND_TRUTH = Path("eval/ground_truth/ground-truth-guides.csv")
 DEFAULT_NUM_RESULTS = 5
 DEFAULT_WORKERS = 4
 TITLE_BOOSTS = [0.5, 1.0, 2.0, 3.0, 5.0]

@@ -45,7 +45,7 @@ Options
     --workers      INT   Parallel OpenAI requests (default: 6)
     --rag-model    STR   Model used to generate RAG answers (default: gpt-4o-mini)
     --judge-model  STR   Model used by the judge (default: gpt-4o-mini)
-    --ground-truth PATH  Ground-truth CSV (default: output/ground-truth-guides.csv)
+    --ground-truth PATH  Ground-truth CSV (default: eval/ground_truth/ground-truth-guides.csv)
     --output-dir   PATH  Directory to write results (default: output)
     --seed         INT   Random seed for sampling (default: 42)
     --dry-run            Estimate cost on a pilot and exit without a full run
@@ -71,7 +71,7 @@ load_dotenv()
 
 # ── Constants ────────────────────────────────────────────────────────────────
 
-DEFAULT_GROUND_TRUTH = Path("output/ground-truth-guides.csv")
+DEFAULT_GROUND_TRUTH = Path("eval/ground_truth/ground-truth-guides.csv")
 DEFAULT_OUTPUT_DIR = Path("output")
 DEFAULT_NUM_RESULTS = 5
 DEFAULT_WORKERS = 6
