@@ -1,0 +1,58 @@
+[
+  {
+    "id": "55dd3fce92",
+    "guide": "gewerbesteuer",
+    "section": "",
+    "title": "",
+    "text": "Most German businesses must pay a trade tax (Gewerbesteuer) on theirprofits. If youstart a business in Germany, you must understand how the trade tax works. This guide explains it."
+  },
+  {
+    "id": "264d347b3a",
+    "guide": "gewerbesteuer",
+    "section": "On this page",
+    "title": "",
+    "text": "Who must pay trade tax How much is the trade tax?Tax-free amount Tax-free amount IHK membership How to pay the trade tax Need help?"
+  },
+  {
+    "id": "f487e90693",
+    "guide": "gewerbesteuer",
+    "section": "Who must pay trade tax",
+    "title": "",
+    "text": "Sole proprietorships, partnerships and corporationsmust pay the trade tax. This includesKleinunternehmer. Freelancers (Freiberufler) do not pay the trade tax.Not all self-employed peopleare freelancers. If you work alone, you might still need to pay the trade tax."
+  },
+  {
+    "id": "f5cbb00122",
+    "guide": "gewerbesteuer",
+    "section": "How much is the trade tax?",
+    "title": "",
+    "text": "In Berlin, trade tax is 14.35% of all profit above €24,500per year.1As a sole proprietor, you get most of it back as an income tax credit.8In the endyou pay 1.05% more taxesin total. To calculate your trade tax: Take yourprofitfor the year, and round it down to the nearest €100.7 If you are a sole proprietor (Einzelunternehmer), remove €24,500(the tax-free amount). Multiply that by 3.5%. Multiply that bytheHebesatzin your city. In Berlin, it’s 4.1%. Example trade tax calculationFor a sole proprietor in Berlin €45,678per year profit, rounded down to €45,600 €45,600– €24,500tax-free amount = €21,100taxable profit €21,100× 3.5% = €738.50 €738.50× 410% =€3,027.85trade tax If you are a sole proprietor (Einzelunternehmer), you get an income tax credit for the trade tax you pay.2You pay 14.35% trade tax, but you get 13.30% income tax back.In other words, you only pay 1.05% more taxes in total. €3,027.85trade tax – €2,806.30income taxcredit =€221.55extra taxes Trade tax calculator– Smart-Rechner.de (in German)"
+  },
+  {
+    "id": "a9751c5e9e",
+    "guide": "gewerbesteuer",
+    "section": "How much is the trade tax?",
+    "title": "Tax-free amount",
+    "text": "If you are a sole proprietor (Einzelunternehmer), the first €24,500per year in profit are not taxed. If you have a society (Verein), the first €5,000per year in profit are not taxed.3If you have a corporation (Kapitalgesellschaft,AG,GmbH), the entire profit is taxed.4"
+  },
+  {
+    "id": "08d620d03c",
+    "guide": "gewerbesteuer",
+    "section": "IHK membership",
+    "title": "",
+    "text": "In Berlin, all businesses that pay trade tax must join theIHKand pay the membership fee. The IHK membership fee is not the same as the trade tax. IHK membership fee calculator You get an IHK letter (Beitragsbescheid) every year. You have 30 days to pay. You can’t automate payments with adirect debit authorisation.6"
+  },
+  {
+    "id": "1a046185ef",
+    "guide": "gewerbesteuer",
+    "section": "How to pay the trade tax",
+    "title": "",
+    "text": "You start paying trade tax after youdo yourGewerbeanmeldung. Trade tax is collected by theFinanzamtat the same time as theincome tax. Every year, you must make atax declarationfor your business. A bit later, theFinanzamtwill send you a tax assessment for income tax (Einkommensteuerbescheid) and trade tax (Gewerbesteuerbescheid). It tells you how much you need to pay. If you have a high income, theFinanzamtcan request advance tax payments (Vorauszahlungen) every quarter:5on February 15, May 15, August 15 and November 15. You pay income tax and trade tax in advance, and it’s adjusted later."
+  },
+  {
+    "id": "6107d67714",
+    "guide": "gewerbesteuer",
+    "section": "Need help?",
+    "title": "",
+    "text": "When youstart a business in Germany, you shouldhire a tax advisor(Steuerberater). They can help youregister your business, file your taxes, and solve other tax problems. Where to ask business questions Berlin.de⤴ Berlin.de⤴ blog.consultinghouse.eu⤴ blog.consultinghouse.eu⤴ § 11 GewStG⤴ § 11 GewStG⤴ fuer-gruender.de,IHK Berlin⤴ fuer-gruender.de,IHK Berlin⤴ wwkn.de,IHK Berlin⤴ wwkn.de,IHK Berlin⤴ ttc.tax⤴ ttc.tax⤴ § 11 Abs. 3 GewStG⤴ § 11 Abs. 3 GewStG⤴ Haufe.de⤴ Haufe.de⤴"
+  }
+]

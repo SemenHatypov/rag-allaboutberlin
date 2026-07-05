@@ -19,8 +19,9 @@ build/
 # Jupyter
 notebooks/
 
-# Output data
-output/
+# Output data (keep output/json — required by the Streamlit app on Community Cloud)
+output/*
+!output/json/
 
 # macOS
 .DS_Store
