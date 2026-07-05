@@ -1,4 +1,9 @@
-"""Evaluate retrieval quality of text (BM25) and vector search."""
+"""Evaluate article-level retrieval quality of text (BM25) and vector search.
+
+A query is a "hit" when the correct guide (article) appears among the unique
+guides of the top-k search results — the same guides the chatbot cites as
+source links. MRR uses the rank of the correct guide among those unique guides.
+"""
 
 from __future__ import annotations
 
@@ -12,10 +17,22 @@ import pandas as pd
 from evaluation_utils import map_progress
 from ingest import build_index, build_vector_index, load_documents
 
-DEFAULT_GROUND_TRUTH = Path("output/ground-truth-data.csv")
+DEFAULT_GROUND_TRUTH = Path("output/ground-truth-guides.csv")
+DEFAULT_NUM_RESULTS = 5
 DEFAULT_WORKERS = 4
 TITLE_BOOSTS = [0.5, 1.0, 2.0, 3.0, 5.0]
 SECTION_BOOSTS = [0.1, 0.5, 1.0]
+
+
+def unique_guides(results: list[dict]) -> list[str]:
+    """Unique guide slugs from ranked results, preserving rank order."""
+    seen: set[str] = set()
+    guides: list[str] = []
+    for doc in results:
+        if doc["guide"] not in seen:
+            seen.add(doc["guide"])
+            guides.append(doc["guide"])
+    return guides
 
 
 def hit_rate(relevance_total: list[list[int]]) -> float:
@@ -40,8 +57,8 @@ def evaluate(
 ) -> dict[str, float]:
     def process_row(row):
         results = search_function(row["question"])
-        result_ids = [r["id"] for r in results]
-        return [1 if doc_id == row["document"] else 0 for doc_id in result_ids]
+        guides = unique_guides(results)
+        return [1 if guide == row["guide"] else 0 for guide in guides]
 
     rows = [row for _, row in ground_truth.iterrows()]
 
@@ -54,12 +71,12 @@ def evaluate(
     }
 
 
-def make_text_search(index, title_boost: float, section_boost: float):
+def make_text_search(index, title_boost: float, section_boost: float, num_results: int = DEFAULT_NUM_RESULTS):
     def search(query: str):
         return index.search(
             query,
             boost_dict={"title": title_boost, "section": section_boost},
-            num_results=5,
+            num_results=num_results,
         )
     return search
 
@@ -68,6 +85,7 @@ def run_grid_search(
     ground_truth: pd.DataFrame,
     index,
     workers: int,
+    num_results: int = DEFAULT_NUM_RESULTS,
 ) -> pd.DataFrame:
     total = len(TITLE_BOOSTS) * len(SECTION_BOOSTS)
     print(f"\nGrid search: {total} combinations")
@@ -77,7 +95,7 @@ def run_grid_search(
         for section_b in SECTION_BOOSTS:
             result = evaluate(
                 ground_truth,
-                make_text_search(index, title_b, section_b),
+                make_text_search(index, title_b, section_b, num_results),
                 workers=workers,
             )
             results.append({"title_boost": title_b, "section_boost": section_b, **result})
@@ -131,6 +149,12 @@ def main() -> None:
         default=DEFAULT_WORKERS,
         help="Parallel workers for evaluation",
     )
+    parser.add_argument(
+        "--num-results",
+        type=int,
+        default=DEFAULT_NUM_RESULTS,
+        help="Top-k search results (bounds the number of citable sources)",
+    )
     args = parser.parse_args()
 
     print(f"Ground truth : {args.ground_truth}")
@@ -150,14 +174,16 @@ def main() -> None:
         best_title, best_section = 2.0, 0.5
 
         if args.tune:
-            grid_df = run_grid_search(ground_truth, index, args.workers)
+            grid_df = run_grid_search(ground_truth, index, args.workers, args.num_results)
             best_title = grid_df.iloc[0]["title_boost"]
             best_section = grid_df.iloc[0]["section_boost"]
             print(f"\nBest params: title={best_title}, section={best_section}")
 
         print(f"\nEvaluating text_search (title=2.0, section=0.5)...")
         default_result = evaluate(
-            ground_truth, make_text_search(index, 2.0, 0.5), workers=args.workers
+            ground_truth,
+            make_text_search(index, 2.0, 0.5, args.num_results),
+            workers=args.workers,
         )
         comparison_rows.append({"method": "text_search (title=2.0, section=0.5)", **default_result})
 
@@ -165,7 +191,7 @@ def main() -> None:
             print(f"Evaluating text_search (title={best_title}, section={best_section})...")
             tuned_result = evaluate(
                 ground_truth,
-                make_text_search(index, best_title, best_section),
+                make_text_search(index, best_title, best_section, args.num_results),
                 workers=args.workers,
             )
             comparison_rows.append({
@@ -179,7 +205,7 @@ def main() -> None:
 
         def vector_search(query: str):
             vec = embedder.encode(query)
-            return vindex.search(vec, num_results=5)
+            return vindex.search(vec, num_results=args.num_results)
 
         print("Evaluating vector_search...")
         vector_result = evaluate(ground_truth, vector_search, workers=args.workers)

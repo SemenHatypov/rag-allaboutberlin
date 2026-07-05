@@ -1,24 +1,18 @@
 """
-Evaluate answer quality of the RAG system with an LLM-as-a-judge.
+Evaluate whether the RAG cites the correct source article, and answer quality.
 
-Retrieval metrics (Hit Rate, MRR — see evaluate_search.py) only tell us whether
-the right document was found. This script measures whether the *generated answer*
-is actually correct, using a second LLM call as the judge.
+The chatbot cites its sources deterministically: the unique guides from the
+top-k search results, in rank order (see rag_helper.extract_sources). This
+script checks those citations against the article-level ground truth
+(question -> correct guide, see generate_ground_truth.py):
 
-It follows the A -> Q -> A' setup of the ground-truth dataset:
+    correct_source_cited   True if the correct guide is among the cited sources
+    source_rank            1-based rank of the correct guide among citations
 
-    A   original guide section text          (the "correct" answer)
-     └─ Q   a question generated from it      (output/ground-truth-data.csv)
-         └─ A'  the answer the RAG returns    (generated here)
+Citation metrics need NO LLM calls. Optionally, a reference-free LLM judge
+rates the generated answers: RELEVANT / PARTLY_RELEVANT / NON_RELEVANT.
 
-Two judge modes are supported:
-
-    reference        Judge sees Q, the original answer A, and the RAG answer A'.
-                     Scores each answer 'good' / 'bad'. (offline / development)
-    reference-free   Judge sees only Q and A'. Scores relevance
-                     RELEVANT / PARTLY_RELEVANT / NON_RELEVANT. (online / production)
-
-Three search backends are supported:
+Search backends:
 
     keyword   BM25 full-text search with title/section boosting (fast, no GPU needed)
     vector    Semantic search via all-MiniLM-L6-v2 embeddings (slower to index)
@@ -28,36 +22,30 @@ Output
 ------
 Single mode  (keyword or vector):
     output/rag-eval-<type>.csv / .json
-    output/rag-eval.csv / .json   (backwards-compat alias for keyword)
 
 Comparison mode (both):
     output/rag-eval-keyword.csv / .json
     output/rag-eval-vector.csv  / .json
     output/rag-eval-comparison.csv / .json   (combined, with search_type column)
 
-    Each record contains the question, RAG answer, original answer, plus the
-    judge verdict columns for the mode(s) that were run:
-        score, reasoning                  (reference mode)
-        relevance, rel_reasoning          (reference-free mode)
-
 Usage
 -----
-    uv run evaluate_rag.py                               # keyword, reference judge, full dataset
-    uv run evaluate_rag.py --search-type vector          # vector search backend
-    uv run evaluate_rag.py --search-type both            # compare both backends
+    uv run evaluate_rag.py                               # both backends, judge on
+    uv run evaluate_rag.py --judge none                  # citation metrics only (free)
+    uv run evaluate_rag.py --search-type vector          # vector backend only
     uv run evaluate_rag.py --sample 25                   # quick sample run
-    uv run evaluate_rag.py --judge both                  # both judge modes
-    uv run evaluate_rag.py --dry-run --sample 50         # estimate cost and exit
+    uv run evaluate_rag.py --dry-run                     # estimate cost and exit
 
 Options
 -------
-    --search-type  {keyword,vector,both}  Search backend(s) (default: keyword)
-    --judge        {reference,reference-free,both}  Judge mode(s) (default: reference)
+    --search-type  {keyword,vector,both}   Search backend(s) (default: both)
+    --judge        {none,reference-free}   Judge mode (default: reference-free)
+    --num-results  INT   Top-k search results / citation depth (default: 5)
     --sample       INT   Evaluate a random N-row sample instead of the full set
     --workers      INT   Parallel OpenAI requests (default: 6)
     --rag-model    STR   Model used to generate RAG answers (default: gpt-4o-mini)
     --judge-model  STR   Model used by the judge (default: gpt-4o-mini)
-    --ground-truth PATH  Path to ground-truth CSV (default: output/ground-truth-data.csv)
+    --ground-truth PATH  Ground-truth CSV (default: output/ground-truth-guides.csv)
     --output-dir   PATH  Directory to write results (default: output)
     --seed         INT   Random seed for sampling (default: 42)
     --dry-run            Estimate cost on a pilot and exit without a full run
@@ -66,7 +54,6 @@ Options
 from __future__ import annotations
 
 import argparse
-import json
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Literal
@@ -78,27 +65,21 @@ from pydantic import BaseModel, Field
 
 from evaluation_utils import calc_total_price, llm_structured_retry, map_progress
 from ingest import build_index, build_vector_index, load_documents
-from rag_helper import DEFAULT_MODEL, RAGBase, RAGVector
+from rag_helper import DEFAULT_MODEL, RAGBase, RAGVector, extract_sources
 
 load_dotenv()
 
 # ── Constants ────────────────────────────────────────────────────────────────
 
-DEFAULT_GROUND_TRUTH = Path("output/ground-truth-data.csv")
+DEFAULT_GROUND_TRUTH = Path("output/ground-truth-guides.csv")
 DEFAULT_OUTPUT_DIR = Path("output")
+DEFAULT_NUM_RESULTS = 5
 DEFAULT_WORKERS = 6
 DEFAULT_JUDGE_MODEL = DEFAULT_MODEL  # gpt-4o-mini
 PILOT_SIZE = 10
 
 
-# ── Judge schemas & prompts ──────────────────────────────────────────────────
-
-
-class AnswerEvaluation(BaseModel):
-    reasoning: str = Field(description="Reasoning about the quality of the answer.")
-    score: Literal["good", "bad"] = Field(
-        description="'good' if the answer is correct and complete, 'bad' otherwise."
-    )
+# ── Judge schema & prompts ───────────────────────────────────────────────────
 
 
 class RelevanceEvaluation(BaseModel):
@@ -107,28 +88,6 @@ class RelevanceEvaluation(BaseModel):
         description="How well the answer addresses the question."
     )
 
-
-JUDGE_INSTRUCTIONS = """
-You compare an AI-generated answer against the original ground-truth answer
-for a question. The AI answer does NOT need to match word for word.
-
-Mark it 'good' if it conveys the same key information and is factually correct.
-Mark it 'bad' only if the AI answer is wrong, contradicts the original, or
-misses the key point.
-
-Always explain your reasoning before giving the score.
-""".strip()
-
-JUDGE_PROMPT = """
-Question:
-{question}
-
-Original Answer (ground truth):
-{answer_orig}
-
-AI Answer:
-{answer_llm}
-""".strip()
 
 RELEVANCE_INSTRUCTIONS = """
 You are an expert evaluator for a question-answering system.
@@ -152,11 +111,22 @@ Answer:
 """.strip()
 
 
-# ── RAG pipeline with usage tracking ─────────────────────────────────────────
+# ── Citation scoring ─────────────────────────────────────────────────────────
 
 
-class RAGTracked(RAGBase):
-    """RAGBase that records token usage for cost accounting."""
+def score_citation(cited_guides: list[str], gt_guide: str) -> tuple[bool, int | None]:
+    """Whether the correct guide is cited, and its 1-based rank among citations."""
+    for rank, guide in enumerate(cited_guides, start=1):
+        if guide == gt_guide:
+            return True, rank
+    return False, None
+
+
+# ── RAG pipelines with usage tracking ────────────────────────────────────────
+
+
+class _UsageTracking:
+    """Mixin that records token usage of llm() calls for cost accounting."""
 
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
@@ -172,21 +142,12 @@ class RAGTracked(RAGBase):
         return response.output_text
 
 
-class RAGVectorTracked(RAGVector):
-    """RAGVector that records token usage for cost accounting."""
+class RAGTracked(_UsageTracking, RAGBase):
+    pass
 
-    def __init__(self, *args, **kwargs) -> None:
-        super().__init__(*args, **kwargs)
-        self.usages: list = []
 
-    def llm(self, prompt: str) -> str:
-        messages = [
-            {"role": "developer", "content": self.instructions},
-            {"role": "user", "content": prompt},
-        ]
-        response = self.llm_client.responses.create(model=self.model, input=messages)
-        self.usages.append(response.usage)
-        return response.output_text
+class RAGVectorTracked(_UsageTracking, RAGVector):
+    pass
 
 
 def build_assistant(
@@ -208,18 +169,18 @@ def build_assistant(
 # ── Data loading ─────────────────────────────────────────────────────────────
 
 
-def load_eval_inputs(ground_truth_path: Path) -> tuple[pd.DataFrame, dict, list[dict]]:
+def load_eval_inputs(ground_truth_path: Path) -> tuple[pd.DataFrame, list[dict]]:
     documents = load_documents()
-    doc_idx = {doc["id"]: doc for doc in documents if doc.get("id")}
-
     ground_truth = pd.read_csv(ground_truth_path)
+
+    known_guides = {doc["guide"] for doc in documents}
     n_before = len(ground_truth)
-    ground_truth = ground_truth[ground_truth["document"].isin(doc_idx)].reset_index(drop=True)
+    ground_truth = ground_truth[ground_truth["guide"].isin(known_guides)].reset_index(drop=True)
 
     print(f"Ground-truth questions : {len(ground_truth)}  (dropped {n_before - len(ground_truth)} unresolvable)")
     print(f"Source documents       : {len(documents)}")
     print(f"Guides covered         : {ground_truth['guide'].nunique()}")
-    return ground_truth, doc_idx, documents
+    return ground_truth, documents
 
 
 def select_records(ground_truth: pd.DataFrame, sample: int | None, seed: int) -> list[dict]:
@@ -228,161 +189,124 @@ def select_records(ground_truth: pd.DataFrame, sample: int | None, seed: int) ->
     return ground_truth.to_dict(orient="records")
 
 
-# ── RAG answer generation (A') ───────────────────────────────────────────────
+# ── Per-question evaluation ──────────────────────────────────────────────────
 
 
-def generate_rag_answers(
-    assistant: RAGTracked,
-    doc_idx: dict,
+def evaluate_questions(
+    assistant: RAGTracked | RAGVectorTracked,
     records: list[dict],
+    num_results: int,
+    with_answers: bool,
     workers: int,
 ) -> list[dict]:
-    def generate_one(rec: dict) -> dict:
+    """Run search (+ optional answer generation) and score citations per question."""
+
+    def evaluate_one(rec: dict) -> dict:
+        if with_answers:
+            answer, sources = assistant.rag_with_sources(rec["question"], num_results=num_results)
+        else:
+            answer = ""
+            sources = extract_sources(assistant.search(rec["question"], num_results=num_results))
+
+        cited = [s["guide"] for s in sources]
+        correct, rank = score_citation(cited, rec["guide"])
         return {
             "question": rec["question"],
-            "answer_llm": assistant.rag(rec["question"]),
-            "answer_orig": doc_idx[rec["document"]]["text"],
-            "document": rec["document"],
             "guide": rec["guide"],
+            "guide_name": rec["guide_name"],
+            "url": rec["url"],
+            "cited_guides": "|".join(cited),
+            "correct_source_cited": correct,
+            "source_rank": rank,
+            "answer_llm": answer,
         }
 
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        answers = map_progress(pool, records, generate_one)
+        rows = map_progress(pool, records, evaluate_one)
 
-    print(f"Generated {len(answers)} RAG answers  |  cost: ${calc_total_price(assistant.usages):.4f}")
-    return answers
+    if with_answers:
+        print(f"Generated {len(rows)} RAG answers  |  cost: ${calc_total_price(assistant.usages):.4f}")
+    return rows
 
 
 # ── Judging ──────────────────────────────────────────────────────────────────
 
 
-def run_judge(
+def judge_reference_free(
     client: OpenAI,
-    answers: list[dict],
-    instructions: str,
-    prompt_template: str,
-    schema: type[BaseModel],
-    fields: dict[str, str],
+    rows: list[dict],
     model: str,
     workers: int,
 ) -> tuple[list[dict], list]:
-    """Run a judge over every answer. `fields` maps schema attr -> output column."""
-
     def judge_one(rec: dict) -> tuple[dict, object]:
-        prompt = prompt_template.format(**rec)
-        verdict, usage = llm_structured_retry(client, instructions, prompt, schema, model=model)
-        row = {out_key: getattr(verdict, attr) for attr, out_key in fields.items()}
-        return row, usage
+        prompt = RELEVANCE_PROMPT.format(**rec)
+        verdict, usage = llm_structured_retry(
+            client, RELEVANCE_INSTRUCTIONS, prompt, RelevanceEvaluation, model=model
+        )
+        return {"relevance": verdict.relevance, "rel_reasoning": verdict.reasoning}, usage
 
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        results = map_progress(pool, answers, judge_one)
+        results = map_progress(pool, rows, judge_one)
 
-    rows = [r for r, _ in results]
+    verdicts = [r for r, _ in results]
     usages = [u for _, u in results if u is not None]
-    return rows, usages
-
-
-def judge_with_reference(client: OpenAI, answers: list[dict], model: str, workers: int):
-    return run_judge(
-        client, answers, JUDGE_INSTRUCTIONS, JUDGE_PROMPT, AnswerEvaluation,
-        {"score": "score", "reasoning": "reasoning"}, model, workers,
-    )
-
-
-def judge_reference_free(client: OpenAI, answers: list[dict], model: str, workers: int):
-    return run_judge(
-        client, answers, RELEVANCE_INSTRUCTIONS, RELEVANCE_PROMPT, RelevanceEvaluation,
-        {"relevance": "relevance", "reasoning": "rel_reasoning"}, model, workers,
-    )
+    return verdicts, usages
 
 
 # ── Reporting & output ───────────────────────────────────────────────────────
 
 
+def _citation_stats(df: pd.DataFrame) -> dict[str, str]:
+    total = len(df)
+    cited = int(df["correct_source_cited"].sum())
+    rank1 = int((df["source_rank"] == 1).sum())
+    mrr = (1 / df["source_rank"].dropna()).sum() / total
+    return {
+        "correct source cited": f"{cited}/{total} ({cited / total:.1%})",
+        "cited at rank 1": f"{rank1}/{total} ({rank1 / total:.1%})",
+        "guide MRR": f"{mrr:.3f}",
+    }
+
+
 def summarize(df: pd.DataFrame) -> None:
-    search_types = df["search_type"].unique().tolist() if "search_type" in df else []
-    if len(search_types) > 1:
-        _summarize_comparison(df, search_types)
-    else:
-        label = search_types[0] if search_types else "results"
-        print(f"\n=== Results ({label}) ===")
-        _summarize_single(df)
+    search_types = df["search_type"].unique().tolist()
+    print("\n=== Results ===")
+    col_w = max(len(st) for st in search_types) + 6
 
-
-def _summarize_single(df: pd.DataFrame) -> None:
-    if "score" in df:
-        counts = df["score"].value_counts()
-        good, total = int(counts.get("good", 0)), len(df)
-        print(f"Reference judge   : good {good}/{total} ({good / total:.1%})  |  bad {total - good}/{total}")
-    if "relevance" in df:
-        print("Reference-free    :")
-        for label in ("RELEVANT", "PARTLY_RELEVANT", "NON_RELEVANT"):
-            n = int((df["relevance"] == label).sum())
-            print(f"    {label:<16} {n}/{len(df)} ({n / len(df):.1%})")
-
-
-def _summarize_comparison(df: pd.DataFrame, search_types: list[str]) -> None:
-    print(f"\n{'=== Comparison: ' + ' vs '.join(search_types) + ' ==='}")
-    col_w = 12
-
-    def pct(sub: pd.DataFrame, col: str, val: str) -> str:
-        if col not in sub:
-            return "  n/a   "
-        n = int((sub[col] == val).sum())
-        return f"{n}/{len(sub)} ({n / len(sub):.1%})"
+    groups = {st: df[df["search_type"] == st] for st in search_types}
+    stats = {st: _citation_stats(groups[st]) for st in search_types}
 
     header = f"{'Metric':<28}" + "".join(f"{st:>{col_w}}" for st in search_types)
     print(header)
     print("-" * len(header))
-
-    groups = {st: df[df["search_type"] == st] for st in search_types}
-
-    if "score" in df:
-        row = f"{'Reference: good':<28}"
-        row += "".join(f"{pct(groups[st], 'score', 'good'):>{col_w}}" for st in search_types)
+    for metric in next(iter(stats.values())):
+        row = f"{metric:<28}" + "".join(f"{stats[st][metric]:>{col_w}}" for st in search_types)
         print(row)
 
     if "relevance" in df:
         for label in ("RELEVANT", "PARTLY_RELEVANT", "NON_RELEVANT"):
             row = f"{label:<28}"
-            row += "".join(f"{pct(groups[st], 'relevance', label):>{col_w}}" for st in search_types)
+            for st in search_types:
+                sub = groups[st]
+                n = int((sub["relevance"] == label).sum())
+                row += f"{f'{n}/{len(sub)} ({n / len(sub):.1%})':>{col_w}}"
             print(row)
 
 
 def save(df: pd.DataFrame, output_dir: Path) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
-    search_types = df["search_type"].unique().tolist() if "search_type" in df else []
+    search_types = df["search_type"].unique().tolist()
+
+    for st in search_types:
+        sub = df[df["search_type"] == st].drop(columns=["search_type"])
+        sub.to_csv(output_dir / f"rag-eval-{st}.csv", index=False)
+        sub.to_json(output_dir / f"rag-eval-{st}.json", orient="records", indent=2)
+        print(f"Saved {len(sub)} records to {output_dir}/rag-eval-{st}.{{csv,json}}")
 
     if len(search_types) > 1:
-        # Comparison mode: save per-type files + combined
-        for st in search_types:
-            sub = df[df["search_type"] == st].drop(columns=["search_type"])
-            sub.to_csv(output_dir / f"rag-eval-{st}.csv", index=False)
-            sub.to_json(output_dir / f"rag-eval-{st}.json", orient="records", indent=2)
-            print(f"Saved {len(sub)} records to {output_dir}/rag-eval-{st}.{{csv,json}}")
         df.to_csv(output_dir / "rag-eval-comparison.csv", index=False)
         df.to_json(output_dir / "rag-eval-comparison.json", orient="records", indent=2)
         print(f"Saved {len(df)} records to {output_dir}/rag-eval-comparison.{{csv,json}}")
-    else:
-        st = search_types[0] if search_types else "keyword"
-        out = df.drop(columns=["search_type"]) if "search_type" in df else df
-        out.to_csv(output_dir / f"rag-eval-{st}.csv", index=False)
-        out.to_json(output_dir / f"rag-eval-{st}.json", orient="records", indent=2)
-        print(f"\nSaved {len(out)} records to {output_dir}/rag-eval-{st}.{{csv,json}}")
-        if st == "keyword":
-            # Backwards-compat alias
-            out.to_csv(output_dir / "rag-eval.csv", index=False)
-            out.to_json(output_dir / "rag-eval.json", orient="records", indent=2)
-
-
-def build_dataframe(answers: list[dict], verdict_rows: list[list[dict]]) -> pd.DataFrame:
-    rows = []
-    for i, answer in enumerate(answers):
-        row = dict(answer)
-        for verdicts in verdict_rows:
-            row.update(verdicts[i])
-        rows.append(row)
-    return pd.DataFrame(rows)
 
 
 # ── Main ─────────────────────────────────────────────────────────────────────
@@ -391,42 +315,58 @@ def build_dataframe(answers: list[dict], verdict_rows: list[list[dict]]) -> pd.D
 def _run_one_search_type(
     search_type: str,
     documents: list[dict],
-    doc_idx: dict,
     records: list[dict],
     client: OpenAI,
-    run_reference: bool,
-    run_reference_free: bool,
+    run_judge: bool,
     args: argparse.Namespace,
 ) -> pd.DataFrame:
-    """Run RAG generation + judging for a single search backend. Returns a DataFrame."""
     assistant = build_assistant(search_type, documents, client, args.rag_model)
 
-    print(f"\n[{search_type}] Generating RAG answers for {len(records)} questions...")
-    answers = generate_rag_answers(assistant, doc_idx, records, args.workers)
+    print(f"\n[{search_type}] Evaluating {len(records)} questions...")
+    rows = evaluate_questions(assistant, records, args.num_results, run_judge, args.workers)
 
-    verdict_rows: list[list[dict]] = []
-    if run_reference:
-        print(f"\n[{search_type}] Judging with reference (good/bad)...")
-        rows, usages = judge_with_reference(client, answers, args.judge_model, args.workers)
-        verdict_rows.append(rows)
-        print(f"  judge cost: ${calc_total_price(usages):.4f}")
-    if run_reference_free:
+    if run_judge:
         print(f"\n[{search_type}] Judging reference-free (relevance)...")
-        rows, usages = judge_reference_free(client, answers, args.judge_model, args.workers)
-        verdict_rows.append(rows)
+        verdicts, usages = judge_reference_free(client, rows, args.judge_model, args.workers)
+        rows = [{**row, **verdict} for row, verdict in zip(rows, verdicts)]
         print(f"  judge cost: ${calc_total_price(usages):.4f}")
 
-    df = build_dataframe(answers, verdict_rows)
+    df = pd.DataFrame(rows)
     df.insert(0, "search_type", search_type)
     return df
+
+
+def estimate_cost(
+    documents: list[dict],
+    records: list[dict],
+    client: OpenAI,
+    args: argparse.Namespace,
+) -> None:
+    pilot_records = records[: min(PILOT_SIZE, len(records))]
+    print(f"\nPilot run on {len(pilot_records)} questions (keyword backend)...")
+
+    assistant = build_assistant("keyword", documents, client, args.rag_model)
+    rows = evaluate_questions(assistant, pilot_records, args.num_results, True, args.workers)
+    rag_cost = calc_total_price(assistant.usages)
+
+    _, usages = judge_reference_free(client, rows, args.judge_model, args.workers)
+    judge_cost = calc_total_price(usages)
+
+    n_backends = 2 if args.search_type == "both" else 1
+    pilot_cost = rag_cost + judge_cost
+    scale = len(records) / len(pilot_records) * n_backends
+    print(f"\nPilot cost ({len(pilot_records)} q)   : ${pilot_cost:.4f}")
+    print(f"Estimated total ({len(records)} q x {n_backends} backends) : ${pilot_cost * scale:.2f}")
+    print("Note: with --judge none the run is free (no LLM calls).")
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
-    parser.add_argument("--search-type", choices=["keyword", "vector", "both"], default="keyword")
-    parser.add_argument("--judge", choices=["reference", "reference-free", "both"], default="reference")
+    parser.add_argument("--search-type", choices=["keyword", "vector", "both"], default="both")
+    parser.add_argument("--judge", choices=["none", "reference-free"], default="reference-free")
+    parser.add_argument("--num-results", type=int, default=DEFAULT_NUM_RESULTS, metavar="INT")
     parser.add_argument("--sample", type=int, default=None, metavar="INT")
     parser.add_argument("--workers", type=int, default=DEFAULT_WORKERS, metavar="INT")
     parser.add_argument("--rag-model", default=DEFAULT_MODEL, metavar="STR")
@@ -438,59 +378,24 @@ def main() -> None:
     args = parser.parse_args()
 
     client = OpenAI(timeout=30.0)
-    run_reference = args.judge in ("reference", "both")
-    run_reference_free = args.judge in ("reference-free", "both")
+    run_judge = args.judge == "reference-free"
 
-    ground_truth, doc_idx, documents = load_eval_inputs(args.ground_truth)
+    ground_truth, documents = load_eval_inputs(args.ground_truth)
     records = select_records(ground_truth, args.sample, args.seed)
 
     if args.dry_run:
-        # Pilot on keyword backend for cost estimate
-        assistant = build_assistant("keyword", documents, client, args.rag_model)
-        estimate_cost(client, assistant, doc_idx, records, run_reference, run_reference_free, args)
+        estimate_cost(documents, records, client, args)
         return
 
     search_types = ["keyword", "vector"] if args.search_type == "both" else [args.search_type]
-    dfs: list[pd.DataFrame] = []
-    for st in search_types:
-        df = _run_one_search_type(
-            st, documents, doc_idx, records, client,
-            run_reference, run_reference_free, args,
-        )
-        dfs.append(df)
+    dfs = [
+        _run_one_search_type(st, documents, records, client, run_judge, args)
+        for st in search_types
+    ]
 
     combined = pd.concat(dfs, ignore_index=True)
     summarize(combined)
     save(combined, args.output_dir)
-
-
-def estimate_cost(
-    client: OpenAI,
-    assistant: RAGTracked | RAGVectorTracked,
-    doc_idx: dict,
-    records: list[dict],
-    run_reference: bool,
-    run_reference_free: bool,
-    args: argparse.Namespace,
-) -> None:
-    pilot_records = records[: min(PILOT_SIZE, len(records))]
-    print(f"\nPilot run on {len(pilot_records)} questions...")
-
-    answers = generate_rag_answers(assistant, doc_idx, pilot_records, args.workers)
-    rag_cost = calc_total_price(assistant.usages)
-
-    judge_cost = 0.0
-    if run_reference:
-        _, usages = judge_with_reference(client, answers, args.judge_model, args.workers)
-        judge_cost += calc_total_price(usages)
-    if run_reference_free:
-        _, usages = judge_reference_free(client, answers, args.judge_model, args.workers)
-        judge_cost += calc_total_price(usages)
-
-    pilot_cost = rag_cost + judge_cost
-    scale = len(records) / len(pilot_records)
-    print(f"\nPilot cost ({len(pilot_records)} q)   : ${pilot_cost:.4f}")
-    print(f"Estimated total ({len(records)} q) : ${pilot_cost * scale:.2f}")
 
 
 if __name__ == "__main__":

@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 from minsearch import Index
 from openai import OpenAI
 
-from ingest import build_index, build_vector_index, load_documents
+from ingest import build_index, build_vector_index, guide_url, load_documents
 
 load_dotenv()
 
@@ -18,14 +18,12 @@ DEFAULT_MODEL = "gpt-4o-mini"
 
 INSTRUCTIONS = """
 You are a helpful assistant for expats living in or moving to Berlin, Germany.
-Your task is to answer questions based on the provided context from guides.
+Answer the question using ONLY the provided context from allaboutberlin.com guides.
 
-Use the context to find relevant information and provide accurate,
-practical answers. If the answer is not found in the context,
+Give a short, summary-style answer: 2-4 sentences with the key facts and the
+practical next step. Do not list sources, guide names, or links in your answer —
+they are shown to the user separately. If the answer is not found in the context,
 respond with "I don't have information about this in my guides."
-
-Keep answers concise and actionable. When relevant, mention
-which guide the information comes from.
 """.strip()
 
 PROMPT_TEMPLATE = """
@@ -34,6 +32,33 @@ QUESTION: {question}
 CONTEXT:
 {context}
 """.strip()
+
+
+# ── Sources ────────────────────────────────────────────────────────────────────
+
+
+def extract_sources(search_results: list[dict]) -> list[dict]:
+    """Unique guides from ranked search results, preserving rank order.
+
+    Each source: {"guide", "guide_name", "url", "sections": [str, ...]}
+    where sections are the non-empty section headings retrieved for that guide.
+    """
+    by_guide: dict[str, dict] = {}
+    for doc in search_results:
+        slug = doc["guide"]
+        source = by_guide.get(slug)
+        if source is None:
+            source = {
+                "guide": slug,
+                "guide_name": doc.get("guide_name", slug),
+                "url": doc.get("url", guide_url(slug)),
+                "sections": [],
+            }
+            by_guide[slug] = source
+        section = doc.get("section", "")
+        if section and section not in source["sections"]:
+            source["sections"].append(section)
+    return list(by_guide.values())
 
 
 # ── RAG class ──────────────────────────────────────────────────────────────────
@@ -70,7 +95,7 @@ class RAGBase:
     def build_context(self, search_results: list[dict]) -> str:
         lines: list[str] = []
         for doc in search_results:
-            lines.append(f"Guide: {doc['guide']}")
+            lines.append(f"Guide: {doc.get('guide_name', doc['guide'])}")
             lines.append(f"Section: {doc['section']}")
             if doc.get("title"):
                 lines.append(f"Title: {doc['title']}")
@@ -93,10 +118,13 @@ class RAGBase:
         )
         return response.output_text
 
-    def rag(self, query: str) -> str:
-        search_results = self.search(query)
+    def rag_with_sources(self, query: str, num_results: int = 5) -> tuple[str, list[dict]]:
+        search_results = self.search(query, num_results=num_results)
         prompt = self.build_prompt(query, search_results)
-        return self.llm(prompt)
+        return self.llm(prompt), extract_sources(search_results)
+
+    def rag(self, query: str) -> str:
+        return self.rag_with_sources(query)[0]
 
 
 # ── Vector RAG class ───────────────────────────────────────────────────────────
@@ -155,4 +183,8 @@ if __name__ == "__main__":
             model=args.model,
         )
 
-    print(pipeline.rag(args.question))
+    answer, sources = pipeline.rag_with_sources(args.question, num_results=args.num_results)
+    print(answer)
+    print("\nSources:")
+    for source in sources:
+        print(f"- {source['guide_name']} — {source['url']}")

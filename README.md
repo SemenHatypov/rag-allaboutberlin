@@ -1,6 +1,6 @@
 # All About Berlin RAG
 
-A scraper, RAG pipeline, and chat interface for [allaboutberlin.com](https://allaboutberlin.com) guides. Scrapes 149 guides into structured JSON, then lets you ask questions about living in Berlin and get grounded answers from an LLM — via CLI or a Streamlit chat app.
+A scraper, RAG pipeline, and chat interface for [allaboutberlin.com](https://allaboutberlin.com) guides. Scrapes 149 guides into structured JSON, then lets you ask questions about living in Berlin and get short grounded answers from an LLM with clickable links to the source articles — via CLI or a Streamlit chat app.
 
 **🐻 Try it live: [rag-all-about-berlin.streamlit.app](https://rag-all-about-berlin.streamlit.app/)** — no installation needed, just open the link and ask a question in the chat.
 
@@ -15,7 +15,7 @@ This scraper crawls https://allaboutberlin.com/guides and produces two types of 
 1. **`output/json/guides.json`** — Index of all 149 guides with metadata (analogous to `courses.json`)
 2. **`output/json/<slug>.json`** — Full article text split by sections for each guide (analogous to `llm-zoomcamp.json`)
 
-The resulting data contains **149 guides** organized into **1,905 sections**, ready for search indexing, RAG systems, or downstream processing.
+The resulting data contains **149 guides** organized into **1,905 sections** (142 guides have content — 1,861 sections; the rest are index-only entries), ready for search indexing, RAG systems, or downstream processing. At load time each document is enriched with the guide's human-readable title (`guide_name`) and its canonical article URL (`https://allaboutberlin.com/guides/<slug>`).
 
 > **Note:** The scraped data in `output/json/` is tracked in git (it is required by the deployed Streamlit app), so the RAG and agent pipelines work out of the box. Run `uv run python scraper.py` only if you want to re-scrape fresh data. Other `output/` artifacts (evaluation results, ground truth) are not tracked.
 
@@ -122,9 +122,10 @@ Opens at **http://localhost:8501**.
 
 **Features:**
 - Chat interface with full conversation history
-- Semantic vector search (all-MiniLM-L6-v2) — the highest-accuracy backend (92% good answers vs 75% for BM25)
-- "Sources" expander under each answer showing the retrieved guide sections
-- Sidebar to filter answers to a specific guide (149 options)
+- Short summary-style answers (2–4 sentences) grounded in the retrieved guides
+- Clickable **source links** under each answer — the allaboutberlin.com articles the answer is based on, in relevance order (correct article cited in 94.7% of eval questions)
+- Semantic vector search (all-MiniLM-L6-v2) — the highest-accuracy backend
+- Sidebar to filter answers to a specific guide (142 options)
 - Slider to control how many source sections are retrieved (3–15)
 - "Clear chat" button to reset the conversation
 
@@ -156,6 +157,8 @@ uv run python rag_helper.py --question "What documents do I need?" --guide anmel
 uv run python rag_helper.py --question "How does health insurance work?" --num-results 10
 ```
 
+The CLI prints a short answer followed by a `Sources:` block with links to the articles the answer is based on.
+
 `rag_helper.py` can also be imported as a module in your own scripts:
 
 ```python
@@ -170,10 +173,13 @@ index = build_index(documents)
 pipeline = RAGBase(index=index, llm_client=OpenAI())
 print(pipeline.rag("How do I find a flat?"))
 
-# Vector/semantic search
+# Vector/semantic search, with source articles
 vindex, embedder = build_vector_index(documents)
 vpipeline = RAGVector(embedder=embedder, index=vindex, llm_client=OpenAI())
-print(vpipeline.rag("How do I find a flat?"))
+answer, sources = vpipeline.rag_with_sources("How do I find a flat?")
+print(answer)
+for src in sources:                     # unique guides from top-k results, rank order
+    print(f"{src['guide_name']} — {src['url']}")
 ```
 
 ### Agentic RAG (iterative tool-calling loop)
@@ -207,9 +213,28 @@ agent = AgentRAG(index=index, llm_client=OpenAI())
 print(agent.loop("How do I find a flat in Berlin?"))
 ```
 
+### Ground Truth Generation
+
+Builds the article-level ground truth dataset: for every guide with content (142 of them), an LLM generates 2 distinct questions that this guide answers best. Result: ~284 "question → correct article" pairs in `output/ground-truth-guides.{csv,json}` with columns `question, guide, guide_name, url`.
+
+```bash
+# Estimate cost and exit (recommended first step; full run costs ~$0.20)
+uv run python generate_ground_truth.py --dry-run
+
+# Generate the dataset
+uv run python generate_ground_truth.py
+
+# More questions per guide
+uv run python generate_ground_truth.py --questions-per-guide 3
+```
+
+**Options:** `--questions-per-guide` (default 2), `--workers`, `--output-dir`, `--dry-run`.
+
+> An earlier section-level ground truth and evaluation (hit = exact section match) is available in the git history.
+
 ### Search Evaluation
 
-Evaluates retrieval quality of BM25 and vector search using Hit Rate and MRR metrics against the ground truth dataset.
+Evaluates **article-level** retrieval quality of BM25 and vector search: a query is a hit when the correct guide appears among the unique guides of the top-k results — exactly the articles the chatbot cites as source links.
 
 > **Prerequisite:** Run `uv run python generate_ground_truth.py` first to build the ground truth dataset.
 
@@ -220,92 +245,74 @@ uv run python evaluate_search.py
 # Evaluate only BM25 text search
 uv run python evaluate_search.py --method text
 
-# Evaluate only vector search
-uv run python evaluate_search.py --method vector
-
 # Run grid search to find optimal BM25 boost parameters
 uv run python evaluate_search.py --method text --tune
 
-# Save results to JSON
-uv run python evaluate_search.py --output output/search-eval-results.json
+# Deeper retrieval (more citable sources per question)
+uv run python evaluate_search.py --num-results 10
 ```
 
-**Example output:**
+**Results** (284 questions, top-5, guide-level):
 
 ```
 === Results ===
-                                        hit_rate    mrr
+                                     hit_rate    mrr
 method
-text_search (title=2.0, section=0.5)       0.649  0.520
-text_search (title=0.5, section=0.5)       0.770  0.641
-vector_search (all-MiniLM-L6-v2)           0.868  0.690
+text_search (title=2.0, section=0.5)    0.539  0.412
+text_search (title=0.5, section=0.5)    0.813  0.669
+vector_search (all-MiniLM-L6-v2)        0.947  0.829
 ```
 
 **Metrics:**
-- **Hit Rate** — fraction of queries where the correct document appears in top-5 results
-- **MRR (Mean Reciprocal Rank)** — rewards finding the correct document at higher ranks (rank 1 = 1.0, rank 2 = 0.5, …)
+- **Hit Rate** — fraction of queries where the correct guide appears among the unique guides of the top-5 results
+- **MRR (Mean Reciprocal Rank)** — rewards citing the correct guide at higher ranks (rank 1 = 1.0, rank 2 = 0.5, …)
 
-### Answer Quality Evaluation (LLM-as-a-Judge)
+### RAG Evaluation (source citations + LLM-as-a-Judge)
 
-Search evaluation tells us whether the *right document* was retrieved — it says nothing about whether the *generated answer* is correct. `evaluate_rag.py` measures answer quality with an **LLM-as-a-judge**: a second LLM call that reads each answer and rates it.
+Search evaluation measures retrieval in isolation — `evaluate_rag.py` evaluates the chatbot end-to-end: **did it cite the correct source article**, and (optionally) is the generated answer relevant?
 
-It uses the same **A → Q → A′** structure the ground truth was built from:
+For every ground-truth question it runs search, extracts the cited sources exactly like the chatbot does (unique guides from top-k, rank order), and records:
 
-```
-A   original guide section text          (the "correct" answer)
- └─ Q   a question generated from it      (output/ground-truth-data.csv)
-     └─ A′  the answer the RAG returns    (generated and judged here)
-```
+- `correct_source_cited` — flag: the correct guide is among the cited sources
+- `source_rank` — 1-based rank of the correct guide among citations (or empty)
+- `relevance` / `rel_reasoning` — reference-free judge verdict on the answer (`RELEVANT` / `PARTLY_RELEVANT` / `NON_RELEVANT`), when the judge is enabled
+
+Citation metrics need **zero LLM calls** — with `--judge none` the whole run is free.
 
 > **Prerequisite:** Run `uv run python generate_ground_truth.py` first to build the ground truth dataset.
 
 ```bash
-# Estimate cost on a 10-question pilot, then exit (recommended first step)
+# Citation metrics only — free, no LLM calls
+uv run python evaluate_rag.py --judge none
+
+# Estimate cost of a judged run, then exit
 uv run python evaluate_rag.py --dry-run
 
-# Quick run on a random 25-question sample
+# Quick judged run on a 25-question sample
 uv run python evaluate_rag.py --sample 25
 
-# Full run with both judge modes
-uv run python evaluate_rag.py --judge both
-
-# Compare keyword vs vector backends (both judge modes)
-uv run python evaluate_rag.py --search-type both --judge both
+# Full run: both backends, answers judged (default; ~$0.50)
+uv run python evaluate_rag.py
 ```
 
-**Two judge modes:**
+Results are written to `output/rag-eval-<type>.{csv,json}` (one row per question); with `--search-type both` a combined `rag-eval-comparison.{csv,json}` is also produced.
 
-| Mode | Judge sees | Verdict | Use case |
-|------|-----------|---------|----------|
-| `reference` (default) | question + original answer **A** + RAG answer **A′** | `good` / `bad` | Offline / development (needs ground truth) |
-| `reference-free` | question + RAG answer **A′** only | `RELEVANT` / `PARTLY_RELEVANT` / `NON_RELEVANT` | Online / production (no reference available) |
-| `both` | — | both sets of columns | Side-by-side comparison |
-
-**Three search backends** (`--search-type`):
-
-| Value | Backend | Description |
-|-------|---------|-------------|
-| `keyword` (default) | BM25 | Fast, no GPU needed |
-| `vector` | all-MiniLM-L6-v2 | Semantic embeddings |
-| `both` | — | Run both and compare; writes per-type files + combined `rag-eval-comparison.{csv,json}` |
-
-Results are written to `output/rag-eval-<type>.{csv,json}` (one row per question, with the judge's `reasoning` and verdict), and a summary is printed. Keyword results are also aliased to `output/rag-eval.{csv,json}` for backwards compatibility.
-
-**Keyword vs vector comparison** (289 questions, both judge modes, `gpt-4o-mini`):
+**Keyword vs vector comparison** (284 questions, top-5, `gpt-4o-mini`):
 
 | Metric | keyword (BM25) | vector (MiniLM) |
 |--------|---------------|-----------------|
-| Reference judge — `good` | 216 / 289 (74.7%) | **266 / 289 (92.0%)** |
-| Reference judge — `bad` | 73 / 289 (25.3%) | **23 / 289 (8.0%)** |
-| Reference-free — `RELEVANT` | 228 / 289 (78.9%) | **274 / 289 (94.8%)** |
-| Reference-free — `PARTLY_RELEVANT` | 23 / 289 (8.0%) | 11 / 289 (3.8%) |
-| Reference-free — `NON_RELEVANT` | 38 / 289 (13.1%) | **4 / 289 (1.4%)** |
+| Correct source cited | 153 / 284 (53.9%) | **269 / 284 (94.7%)** |
+| Cited at rank 1 | 94 / 284 (33.1%) | **211 / 284 (74.3%)** |
+| Guide MRR | 0.412 | **0.829** |
+| Judge — `RELEVANT` | 161 / 284 (56.7%) | **230 / 284 (81.0%)** |
+| Judge — `PARTLY_RELEVANT` | 55 / 284 (19.4%) | 51 / 284 (18.0%) |
+| Judge — `NON_RELEVANT` | 68 / 284 (23.9%) | **3 / 284 (1.1%)** |
 
-Vector search produces **+17 pp more good answers** and **9× fewer non-relevant responses** — consistent with its higher retrieval Hit Rate (0.868 vs 0.770).
+Vector search cites the correct article **1.8× more often** and produces **23× fewer non-relevant answers** — it is the backend the Streamlit app uses.
 
-The judge always returns a `reasoning` field alongside its verdict. A `bad` / `NON_RELEVANT` verdict is a **pointer for investigation**, not a final truth — read the flagged rows in the output to decide whether the RAG answer, the question, or the ground truth is at fault.
+The judge always returns a `rel_reasoning` field alongside its verdict. A `NON_RELEVANT` verdict is a **pointer for investigation**, not a final truth — read the flagged rows in the output to decide whether the RAG answer, the question, or the ground truth is at fault.
 
-**Options:** `--search-type {keyword,vector,both}`, `--judge {reference,reference-free,both}`, `--sample N`, `--workers`, `--rag-model`, `--judge-model`, `--ground-truth`, `--output-dir`, `--seed`, `--dry-run`. Both models default to `gpt-4o-mini`.
+**Options:** `--search-type {keyword,vector,both}` (default `both`), `--judge {none,reference-free}` (default `reference-free`), `--num-results`, `--sample N`, `--workers`, `--rag-model`, `--judge-model`, `--ground-truth`, `--output-dir`, `--seed`, `--dry-run`. Both models default to `gpt-4o-mini`.
 
 ### Run the Scraper
 
@@ -351,7 +358,7 @@ The chat app is hosted on [Streamlit Community Cloud](https://streamlit.io/cloud
 
 ## Testing
 
-Run tests with pytest (44 tests, 98% coverage):
+Run tests with pytest (~80 tests covering the scraper, ingest, RAG helpers, and evaluation scoring):
 
 ```bash
 # Run all tests
@@ -406,18 +413,24 @@ scraper.py
 └── run(output_dir, delay)            — Main scraper orchestration
 
 ingest.py
-├── load_documents(json_dir)          — Load all per-guide JSON files
+├── load_guides(json_dir)             — Load guides.json index (slug → guide_name)
+├── guide_url(slug)                   — Canonical article URL on allaboutberlin.com
+├── load_documents(json_dir)          — Load per-guide JSON files, enrich each doc
+│                                        with guide_name + url (guides.json excluded)
 ├── build_index(documents)            — BM25 keyword index (minsearch.Index)
 └── build_vector_index(documents)     — Semantic vector index (minsearch.VectorSearch)
                                          + SentenceTransformer embedder
 
 rag_helper.py
+├── extract_sources(results)          — Unique guides from ranked results (rank order):
+│                                        {guide, guide_name, url, sections}
 ├── RAGBase                           — Keyword-search RAG pipeline
 │   ├── search(query)                 — BM25 search with boost/filter
 │   ├── build_context(results)        — Format results into LLM context
 │   ├── build_prompt(query, results)  — Combine context with question
 │   ├── llm(prompt)                   — Call OpenAI API
-│   └── rag(query)                    — End-to-end: search → prompt → LLM
+│   ├── rag_with_sources(query)       — End-to-end: (short answer, cited sources)
+│   └── rag(query)                    — Answer only
 └── RAGVector(RAGBase)                — Semantic-search RAG pipeline
     └── search(query)                 — Encode query → vector search
 
@@ -427,24 +440,28 @@ agent.py
     ├── _execute_tool_call(call)      — Run tool call, return function_call_output
     └── loop(question)               — Agentic loop: call LLM → dispatch tools → repeat
 
-generate_ground_truth.py              — Build Q&A ground truth (samples docs → generates one question each)
+generate_ground_truth.py              — Build article-level ground truth
+├── group_by_guide(documents)         — Group sections by guide slug
+├── build_guide_text(docs)            — One text digest per guide (truncated)
+└── main()                            — 2 questions per guide → output/ground-truth-guides.{csv,json}
 
-evaluate_search.py                    — Retrieval evaluation: Hit Rate & MRR, BM25 vs vector, boost grid search
+evaluate_search.py                    — Article-level retrieval evaluation
+├── unique_guides(results)            — Deduped guide slugs in rank order
+└── hit_rate / mrr                    — Guide-level Hit Rate & MRR, BM25 vs vector, boost grid search
 
-evaluate_rag.py                       — Answer evaluation (LLM-as-a-judge)
-├── RAGTracked(RAGBase)               — Keyword RAG pipeline with token usage tracking
-├── RAGVectorTracked(RAGVector)        — Vector RAG pipeline with token usage tracking
+evaluate_rag.py                       — End-to-end citation + answer evaluation
+├── score_citation(cited, gt_guide)   — (correct_source_cited, source_rank)
+├── _UsageTracking mixin              — Token usage tracking for cost accounting
 ├── build_assistant(search_type, ...) — Factory: builds the right pipeline for keyword/vector
-├── generate_rag_answers(...)         — Produce A′ for each ground-truth question
-├── judge_with_reference(...)         — Score good/bad vs the original answer A
-├── judge_reference_free(...)         — Score relevance from the question alone
-└── main()                            — CLI: generate → judge → summarize → output/rag-eval-<type>.{csv,json}
+├── evaluate_questions(...)           — search → extract_sources → citation flags (+ answers)
+├── judge_reference_free(...)         — Score answer relevance from the question alone
+└── main()                            — CLI: evaluate → judge → summarize → output/rag-eval-<type>.{csv,json}
 
 evaluation_utils.py                   — Shared helpers: structured LLM calls, cost accounting, parallel map
 
 app.py                                — Streamlit chat app (vector search only)
 ├── _load_index()                     — @st.cache_resource: loads docs + builds vector index once
-├── _render_sources(sources)          — Renders retrieved sections in an expander
+├── _render_sources(sources)          — Numbered clickable links to source articles
 └── main()                            — Page layout, sidebar settings, chat loop
 ```
 

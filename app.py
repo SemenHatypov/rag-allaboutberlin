@@ -18,17 +18,16 @@ load_dotenv()
 def _load_index() -> tuple:
     documents = load_documents()
     vindex, embedder = build_vector_index(documents)
-    guide_names = sorted({doc["guide"] for doc in documents})
-    return vindex, embedder, guide_names
+    name_to_slug = {doc["guide_name"]: doc["guide"] for doc in documents}
+    return vindex, embedder, name_to_slug
 
 
 def _render_sources(sources: list[dict]) -> None:
-    with st.expander("Sources"):
-        for doc in sources:
-            st.markdown(f"**{doc['guide']} › {doc['section']}**")
-            if doc.get("title"):
-                st.caption(doc["title"])
-            st.write(doc["text"][:300] + "…")
+    st.markdown("**Sources**")
+    for i, source in enumerate(sources, 1):
+        st.markdown(f"{i}. [{source['guide_name']}]({source['url']})")
+        if source.get("sections"):
+            st.caption(" · ".join(source["sections"][:3]))
 
 
 def main() -> None:
@@ -38,7 +37,7 @@ def main() -> None:
         layout="wide",
     )
     st.title("All About Berlin — Ask Me Anything")
-    st.caption("Answers based on 149 guides from allaboutberlin.com · Semantic vector search")
+    st.caption("Answers based on 142 guides from allaboutberlin.com · Semantic vector search")
 
     api_key = os.environ.get("OPENAI_API_KEY", "")
     if not api_key:
@@ -48,13 +47,13 @@ def main() -> None:
     client = OpenAI(api_key=api_key)
 
     with st.spinner("Building vector index (first load ~1 min)..."):
-        vindex, embedder, guide_names = _load_index()
+        vindex, embedder, name_to_slug = _load_index()
 
     with st.sidebar:
         st.header("Settings")
-        guide_options = ["All guides"] + guide_names
+        guide_options = ["All guides"] + sorted(name_to_slug)
         selected = st.selectbox("Filter by guide", guide_options)
-        guide_filter: str | None = None if selected == "All guides" else selected
+        guide_filter: str | None = None if selected == "All guides" else name_to_slug[selected]
         num_results = st.slider("Number of results", min_value=3, max_value=15, value=5)
         st.divider()
         if st.button("Clear chat", use_container_width=True):
@@ -85,9 +84,7 @@ def main() -> None:
         with st.chat_message("assistant"):
             with st.spinner("Thinking..."):
                 try:
-                    sources = pipeline.search(query, num_results=num_results)
-                    prompt = pipeline.build_prompt(query, sources)
-                    answer = pipeline.llm(prompt)
+                    answer, sources = pipeline.rag_with_sources(query, num_results=num_results)
                     error: str | None = None
                 except Exception as e:
                     answer = ""
