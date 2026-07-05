@@ -18,7 +18,7 @@ load_dotenv()
 def _load_index() -> tuple:
     documents = load_documents()
     vindex, embedder = build_vector_index(documents)
-    name_to_slug = {doc["guide_name"]: doc["guide"] for doc in documents}
+    name_to_slug = {doc.get("guide_name", doc["guide"]): doc["guide"] for doc in documents}
     return vindex, embedder, name_to_slug
 
 
