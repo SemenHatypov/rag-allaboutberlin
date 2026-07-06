@@ -31,7 +31,9 @@ def load_guides(json_dir: Path = DATA_DIR) -> list[dict]:
 
 
 def load_documents(json_dir: Path = DATA_DIR) -> list[dict]:
-    name_map = {g["guide"]: g["guide_name"] for g in load_guides(json_dir)}
+    guides = load_guides(json_dir)
+    name_map = {g["guide"]: g["guide_name"] for g in guides}
+    url_path_map = {g["guide"]: g.get("url_path") for g in guides}
     documents: list[dict] = []
     for json_file in sorted(Path(json_dir).glob("*.json")):
         if json_file.name == GUIDES_FILE:
@@ -40,7 +42,8 @@ def load_documents(json_dir: Path = DATA_DIR) -> list[dict]:
             file_docs = json.load(f)
         for doc in file_docs:
             doc["guide_name"] = name_map.get(doc["guide"], doc["guide"])
-            doc["url"] = guide_url(doc["guide"])
+            url_path = url_path_map.get(doc["guide"])
+            doc["url"] = f"https://allaboutberlin.com{url_path}" if url_path else guide_url(doc["guide"])
         documents.extend(file_docs)
     return documents
 

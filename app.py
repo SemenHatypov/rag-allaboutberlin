@@ -8,7 +8,7 @@ import streamlit as st
 from dotenv import load_dotenv
 from openai import OpenAI
 
-from ingest import build_vector_index, load_documents
+from ingest import build_vector_index, load_documents, load_guides
 from rag_helper import RAGVector
 
 load_dotenv()
@@ -37,7 +37,7 @@ def main() -> None:
         layout="wide",
     )
     st.title("All About Berlin — Ask Me Anything")
-    st.caption("Answers based on 142 guides from allaboutberlin.com · Semantic vector search")
+    st.caption(f"Answers based on {len(load_guides())} guides from allaboutberlin.com · Semantic vector search")
 
     api_key = os.environ.get("OPENAI_API_KEY", "")
     if not api_key:

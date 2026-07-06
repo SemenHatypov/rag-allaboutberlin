@@ -7,13 +7,6 @@
     "text": "German residents have different tax identification numbers. This guide explains what they are, and where to find them."
   },
   {
-    "id": "3fef77fa7d",
-    "guide": "german-tax-id-steuernummer",
-    "section": "On this page",
-    "title": "",
-    "text": "The tax ID (Steuer-ID)Why you need a tax IDHow to get your tax IDWhere to find your tax ID Why you need a tax ID How to get your tax ID Where to find your tax ID The tax number (Steuernummer)How to get a SteuernummerWhere to find your SteuernummerWhere to find a business' tax number How to get a Steuernummer Where to find your Steuernummer Where to find a business' tax number The VAT number (Umsatzsteuer-Id)How to get a German VAT numberWhere to find a business' VAT number How to get a German VAT number Where to find a business' VAT number Need help?"
-  },
-  {
     "id": "aad3a65e09",
     "guide": "german-tax-id-steuernummer",
     "section": "The tax ID (Steuer-ID)",
@@ -25,7 +18,7 @@
     "guide": "german-tax-id-steuernummer",
     "section": "The tax ID (Steuer-ID)",
     "title": "Why you need a tax ID",
-    "text": "You need a tax ID to… Get paid correctlyIf you don’t have a tax ID, you can still work and get paid, but you pay moresalary tax.1You can get that money back later by filing atax declaration.2Some employers think that you can’t work without a tax ID, but they are wrong. Open a bank accountSome banks ask for a tax ID when you open an account. Apply forKindergeldandElterngeld Get a KitagutscheinYour children need a tax ID to get aKitagutscheinand send them to daycare. Start a businessYou need a tax ID toregister your business with theFinanzamt."
+    "text": "You need a tax ID to… Get paid correctlyIf you don’t have a tax ID, you can still work and get paid, but you pay morewage tax.1You can get that money back later by filing atax declaration.2Some employers think that you can’t work without a tax ID, but they are wrong. Open a bank accountSome banks ask for a tax ID when you open an account. Apply forKindergeldandElterngeld Get a KitagutscheinYour children need a tax ID to get aKitagutscheinand send them to daycare. Start a businessYou need a tax ID toregister your business with theFinanzamt."
   },
   {
     "id": "e083619050",
@@ -39,7 +32,7 @@
     "guide": "german-tax-id-steuernummer",
     "section": "The tax ID (Steuer-ID)",
     "title": "Where to find your tax ID",
-    "text": "If you already have a tax ID, you can find it on… The letter from theBundeszentralamt für Steuern. You get it 4 to 6 weeks after your firstAnmeldung Yourpay slip(Gehaltsabrechnung) Yoursalary tax statement(Lohnsteuerbescheinigung) as “Identifikationsnummer” Yourincome tax assessment(Steuerbescheid) as “IdNr” InELSTERunderMeine Profile If you can’t find your tax ID… Go to yourlocalFinanzamtwith your passport, and ask for your tax ID.3You don’t need an appointment. If they won’t help you, go to anotherFinanzamt. Fillthis form, and get a letter from theFinanzamtin around 4 weeks. They will send it to the address youregistered, not anywhere else. Make sure thatyour name is on your mailbox. Your employer and yourtax advisoralso know your tax ID. Ask them."
+    "text": "If you already have a tax ID, you can find it on… The letter from theBundeszentralamt für Steuern. You get it 4 to 6 weeks after your firstAnmeldung Yourpay slip(Gehaltsabrechnung) Yourwage tax statement(Lohnsteuerbescheinigung) as “Identifikationsnummer” Yourincome tax assessment(Steuerbescheid) as “IdNr” InELSTERunderMeine Profile If you can’t find your tax ID… Go to yourlocalFinanzamtwith your passport, and ask for your tax ID.3You don’t need an appointment. If they won’t help you, go to anotherFinanzamt. Fillthis form, and get a letter from theFinanzamtin around 4 weeks. They will send it to the address youregistered, not anywhere else. Make sure thatyour name is on your mailbox. Your employer and yourtax advisoralso know your tax ID. Ask them."
   },
   {
     "id": "ecbd6d098c",

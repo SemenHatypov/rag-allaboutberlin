@@ -36,6 +36,7 @@ class GuideEntry:
     category: str       # top-level section on /guides page
     path: str           # relative JSON path, e.g. "/json/find-a-flat-in-berlin.json"
     sections_count: int = 0
+    url_path: str = ""  # real site path, e.g. "/guides/german-health-insurance/for-employees"
 
 
 @dataclass
@@ -77,6 +78,7 @@ def slug_from_url(url: str) -> str:
 def parse_guides_index(html: str) -> list[GuideEntry]:
     soup = BeautifulSoup(html, "lxml")
     entries: list[GuideEntry] = []
+    seen_slugs: dict[str, str] = {}
 
     for h3 in soup.find_all("h3"):
         category = h3.get_text(strip=True)
@@ -88,12 +90,21 @@ def parse_guides_index(html: str) -> list[GuideEntry]:
             if "/guides/" not in href:
                 continue
             slug = slug_from_url(href)
+            url_path = href.replace(BASE_URL, "").rstrip("/")
+            if slug in seen_slugs and seen_slugs[slug] != url_path:
+                logger.warning(
+                    "Duplicate slug %r from %r collides with earlier %r; skipping",
+                    slug, url_path, seen_slugs[slug],
+                )
+                continue
+            seen_slugs[slug] = url_path
             name = str(a.get("title") or a.get_text(strip=True))
             entries.append(GuideEntry(
                 guide=slug,
                 guide_name=name,
                 category=category,
                 path=f"/json/{slug}.json",
+                url_path=url_path,
             ))
 
     return entries
@@ -129,6 +140,8 @@ def parse_guide_page(html: str, slug: str) -> list[GuideSection]:
             ))
 
     for tag in content.find_all(["h2", "h3", "p", "li", "ul", "ol"], recursive=True):
+        if tag.find_parent("nav") is not None:
+            continue  # skip breadcrumbs and the table-of-contents nav
         if tag.name == "h2":
             flush(current_h2, current_h3, buffer)
             buffer = []
@@ -176,7 +189,7 @@ def _scrape(session: requests.Session, output_dir: Path, delay: float) -> None:
     logger.info("Found %d guides across categories", len(entries))
 
     for i, entry in enumerate(entries, 1):
-        url = f"{BASE_URL}/guides/{entry.guide}"
+        url = f"{BASE_URL}{entry.url_path}"
         logger.info("[%d/%d] %s", i, len(entries), entry.guide)
         try:
             html = fetch_html(url, session)
@@ -188,10 +201,22 @@ def _scrape(session: requests.Session, output_dir: Path, delay: float) -> None:
         if i < len(entries):
             time.sleep(delay)
 
+    _remove_stale_guide_files(output_dir, {e.guide for e in entries})
     save_json(entries, output_dir / "guides.json")
     total_sections = sum(e.sections_count for e in entries)
     logger.info("Done. %d guides, %d sections total.", len(entries), total_sections)
     logger.info("Output: %s", output_dir.resolve())
+
+
+def _remove_stale_guide_files(output_dir: Path, current_slugs: set[str]) -> None:
+    if not output_dir.exists():
+        return
+    for json_file in output_dir.glob("*.json"):
+        if json_file.stem == "guides":
+            continue
+        if json_file.stem not in current_slugs:
+            logger.info("Removing stale guide file: %s", json_file.name)
+            json_file.unlink()
 
 
 if __name__ == "__main__":

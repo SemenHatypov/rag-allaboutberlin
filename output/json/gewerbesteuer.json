@@ -7,13 +7,6 @@
     "text": "Most German businesses must pay a trade tax (Gewerbesteuer) on theirprofits. If youstart a business in Germany, you must understand how the trade tax works. This guide explains it."
   },
   {
-    "id": "264d347b3a",
-    "guide": "gewerbesteuer",
-    "section": "On this page",
-    "title": "",
-    "text": "Who must pay trade tax How much is the trade tax?Tax-free amount Tax-free amount IHK membership How to pay the trade tax Need help?"
-  },
-  {
     "id": "f487e90693",
     "guide": "gewerbesteuer",
     "section": "Who must pay trade tax",
@@ -25,7 +18,7 @@
     "guide": "gewerbesteuer",
     "section": "How much is the trade tax?",
     "title": "",
-    "text": "In Berlin, trade tax is 14.35% of all profit above €24,500per year.1As a sole proprietor, you get most of it back as an income tax credit.8In the endyou pay 1.05% more taxesin total. To calculate your trade tax: Take yourprofitfor the year, and round it down to the nearest €100.7 If you are a sole proprietor (Einzelunternehmer), remove €24,500(the tax-free amount). Multiply that by 3.5%. Multiply that bytheHebesatzin your city. In Berlin, it’s 4.1%. Example trade tax calculationFor a sole proprietor in Berlin €45,678per year profit, rounded down to €45,600 €45,600– €24,500tax-free amount = €21,100taxable profit €21,100× 3.5% = €738.50 €738.50× 410% =€3,027.85trade tax If you are a sole proprietor (Einzelunternehmer), you get an income tax credit for the trade tax you pay.2You pay 14.35% trade tax, but you get 13.30% income tax back.In other words, you only pay 1.05% more taxes in total. €3,027.85trade tax – €2,806.30income taxcredit =€221.55extra taxes Trade tax calculator– Smart-Rechner.de (in German)"
+    "text": "In Berlin, trade tax is 14.35% of all profit above €24,500per year.1As a sole proprietor, you get most of it back as an income tax credit.8In the endyou pay 0.35% more taxesin total. To calculate your trade tax: Take yourprofitfor the year, and round it down to the nearest €100.7 If you are a sole proprietor (Einzelunternehmer), remove €24,500(the tax-free amount). Multiply that by 3.5%. Multiply that bytheHebesatzin your city. In Berlin, it’s 410%. Example trade tax calculationFor a sole proprietor in Berlin €45,678per year profit, rounded down to €45,600 €45,600– €24,500tax-free amount = €21,100taxable profit €21,100× 3.5% = €738.50 €738.50× 410% =€302,785trade tax If you are a sole proprietor (Einzelunternehmer), you get an income tax credit for the trade tax you pay.2You pay 14.35% trade tax, but you get 14.0% income tax back.In other words, you only pay 0.35% more taxes in total. €3,027.85trade tax – €2,954income taxcredit =€73.85extra taxes Trade tax calculator– Smart-Rechner.de (in German)"
   },
   {
     "id": "a9751c5e9e",
@@ -53,6 +46,6 @@
     "guide": "gewerbesteuer",
     "section": "Need help?",
     "title": "",
-    "text": "When youstart a business in Germany, you shouldhire a tax advisor(Steuerberater). They can help youregister your business, file your taxes, and solve other tax problems. Where to ask business questions Berlin.de⤴ Berlin.de⤴ blog.consultinghouse.eu⤴ blog.consultinghouse.eu⤴ § 11 GewStG⤴ § 11 GewStG⤴ fuer-gruender.de,IHK Berlin⤴ fuer-gruender.de,IHK Berlin⤴ wwkn.de,IHK Berlin⤴ wwkn.de,IHK Berlin⤴ ttc.tax⤴ ttc.tax⤴ § 11 Abs. 3 GewStG⤴ § 11 Abs. 3 GewStG⤴ Haufe.de⤴ Haufe.de⤴"
+    "text": "When youstart a business in Germany, you shouldhire a tax advisor(Steuerberater). They can help youregister your business, file your taxes, and solve other tax problems. Where to ask business questions Berlin.de⤴ Berlin.de⤴ blog.consultinghouse.eu⤴ blog.consultinghouse.eu⤴ § 11 GewStG⤴ § 11 GewStG⤴ fuer-gruender.de,IHK Berlin⤴ fuer-gruender.de,IHK Berlin⤴ wwkn.de,IHK Berlin⤴ wwkn.de,IHK Berlin⤴ ttc.tax⤴ ttc.tax⤴ § 11 Abs. 3 GewStG⤴ § 11 Abs. 3 GewStG⤴ Haufe.de,§ 35 Abs. 1 EStG⤴ Haufe.de,§ 35 Abs. 1 EStG⤴"
   }
 ]

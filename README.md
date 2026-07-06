@@ -1,6 +1,6 @@
 # All About Berlin RAG
 
-A scraper, RAG pipeline, and chat interface for [allaboutberlin.com](https://allaboutberlin.com) guides. Scrapes 149 guides into structured JSON, then lets you ask questions about living in Berlin and get short grounded answers from an LLM with clickable links to the source articles — via CLI or a Streamlit chat app.
+A scraper, RAG pipeline, and chat interface for [allaboutberlin.com](https://allaboutberlin.com) guides. Scrapes 151 guides into structured JSON, then lets you ask questions about living in Berlin and get short grounded answers from an LLM with clickable links to the source articles — via CLI or a Streamlit chat app.
 
 **🐻 Try it live: [rag-all-about-berlin.streamlit.app](https://rag-all-about-berlin.streamlit.app/)** — no installation needed, just open the link and ask a question in the chat.
 
@@ -12,10 +12,10 @@ Built as a capstone project for [LLM Zoomcamp](https://github.com/DataTalksClub/
 
 This scraper crawls https://allaboutberlin.com/guides and produces two types of JSON output:
 
-1. **`output/json/guides.json`** — Index of all 149 guides with metadata (analogous to `courses.json`)
+1. **`output/json/guides.json`** — Index of all 151 guides with metadata (analogous to `courses.json`)
 2. **`output/json/<slug>.json`** — Full article text split by sections for each guide (analogous to `llm-zoomcamp.json`)
 
-The resulting data contains **149 guides** organized into **1,905 sections** (142 guides have content — 1,861 sections; the rest are index-only entries), ready for search indexing, RAG systems, or downstream processing. At load time each document is enriched with the guide's human-readable title (`guide_name`) and its canonical article URL (`https://allaboutberlin.com/guides/<slug>`).
+The resulting data contains **151 guides** organized into **1,808 sections**, ready for search indexing, RAG systems, or downstream processing. At load time each document is enriched with the guide's human-readable title (`guide_name`) and its canonical article URL (`https://allaboutberlin.com<url_path>`, using the guide's real site path — some guides are nested under a parent guide, e.g. `/guides/german-health-insurance/for-employees`).
 
 > **Note:** The scraped data in `output/json/` is tracked in git (it is required by the deployed Streamlit app), so the RAG and agent pipelines work out of the box. Run `uv run python scraper.py` only if you want to re-scrape fresh data. Other `output/` artifacts (evaluation results, ground truth) are not tracked.
 
@@ -30,24 +30,27 @@ The resulting data contains **149 guides** organized into **1,905 sections** (14
     "guide_name": "How to find an apartment in Berlin",
     "category": "Housing",
     "path": "/json/find-a-flat-in-berlin.json",
-    "sections_count": 40
+    "sections_count": 40,
+    "url_path": "/guides/find-a-flat-in-berlin"
   },
   {
-    "guide": "schufa",
-    "guide_name": "How to get a free Schufa",
-    "category": "Housing",
-    "path": "/json/schufa.json",
-    "sections_count": 7
+    "guide": "for-employees",
+    "guide_name": "German health insurance for employees",
+    "category": "Personal finance",
+    "path": "/json/for-employees.json",
+    "sections_count": 12,
+    "url_path": "/guides/german-health-insurance/for-employees"
   }
 ]
 ```
 
 **Fields:**
-- `guide` (str) — URL-safe slug, used as file identifier
+- `guide` (str) — URL-safe slug, used as file identifier (last path segment; for nested guides this drops the parent segment, so it isn't unique enough to reconstruct the URL — use `url_path` for that)
 - `guide_name` (str) — Display title of the guide
 - `category` (str) — Top-level section from the /guides page
 - `path` (str) — Relative path to the per-guide JSON file
 - `sections_count` (int) — Number of sections scraped for this guide (0 if fetch failed)
+- `url_path` (str) — Real site path after the domain, used to build the guide's canonical URL and to fetch it (some guides live under a parent guide, e.g. `/guides/german-health-insurance/for-employees`)
 
 ### Per-Guide JSON — Sections
 
@@ -386,6 +389,7 @@ class GuideEntry:
     category: str       # top-level section
     path: str           # relative JSON path
     sections_count: int # number of sections (default: 0)
+    url_path: str       # real site path, e.g. "/guides/german-health-insurance/for-employees"
 ```
 
 ### GuideSection (from per-guide JSON)
@@ -414,9 +418,9 @@ scraper.py
 
 ingest.py
 ├── load_guides(json_dir)             — Load guides.json index (slug → guide_name)
-├── guide_url(slug)                   — Canonical article URL on allaboutberlin.com
+├── guide_url(slug)                   — Fallback flat article URL (used if url_path missing)
 ├── load_documents(json_dir)          — Load per-guide JSON files, enrich each doc
-│                                        with guide_name + url (guides.json excluded)
+│                                        with guide_name + url (from guides.json's url_path)
 ├── build_index(documents)            — BM25 keyword index (minsearch.Index)
 └── build_vector_index(documents)     — Semantic vector index (minsearch.VectorSearch)
                                          + SentenceTransformer embedder

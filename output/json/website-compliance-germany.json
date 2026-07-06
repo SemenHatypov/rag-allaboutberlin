@@ -7,13 +7,6 @@
     "text": "This guide explains the rules to follow when you run a website in Germany."
   },
   {
-    "id": "ed0a519ab9",
-    "guide": "website-compliance-germany",
-    "section": "On this page",
-    "title": "",
-    "text": "GDPR/DSGVO complianceWho needs to do this?Legal basisGDPR checklist Who needs to do this? Legal basis GDPR checklist CookiesLegal basisExamplesCookies checklist Legal basis Examples Cookies checklist Tracking and analyticsWho needs to do this?Legal basisTracking checklist Who needs to do this? Legal basis Tracking checklist ImpressumWho needs to do this?Legal basisExamplesImpressum checklist Who needs to do this? Legal basis Examples Impressum checklist Privacy policyWho needs to do this?Legal basisExamplesPrivacy policy checklist Who needs to do this? Legal basis Examples Privacy policy checklist Terms and conditionsWho needs to do this?Legal basisTerms and conditions checklist Who needs to do this? Legal basis Terms and conditions checklist Creative Commons imagesWho needs to do this?Legal basisExamplesImages checklist Who needs to do this? Legal basis Examples Images checklist Sponsored content and affiliate linksWho needs to do this?Legal basisExamplesSponsored content checklist Who needs to do this? Legal basis Examples Sponsored content checklist Income-generating websitesWho needs to do this?ExamplesIncome-generating website checklist Who needs to do this? Examples Income-generating website checklist Need help?"
-  },
-  {
     "id": "98e190ffe7",
     "guide": "website-compliance-germany",
     "section": "GDPR/DSGVOcompliance",
@@ -28,10 +21,10 @@
     "text": "All websites that serve people in theEuropean Union, no matter who runs the website or where it is hosted. It applies to personal, non-commercial websites too. SeeWho does the data protection law apply to?for more details."
   },
   {
-    "id": "22035f1a8d",
+    "id": "cdc45e46d8",
     "guide": "website-compliance-germany",
     "section": "GDPR/DSGVOcompliance",
-    "title": "Legal basis",
+    "title": "GDPR legal basis",
     "text": "General Data Protection Regulation(DSGVOin German)"
   },
   {
@@ -49,17 +42,17 @@
     "text": "If you use cookies on your website, you must follow a few rules: Don’t set tracking cookies without consentBefore you set any tracking cookies, get consent from the user. Normally, you do this with a cookie banner. Make it easy to refuse trackingDon’t hide the “refuse tracking” button. Refusing must be as easy as accepting. Don’t force your users to accept trackingYou can’t make tracking cookies a condition for using your service. You can’t say “by using this website, you agree to accept our cookies”. You can’t force users to accept tracking cookies in your terms and conditions.23 Allow users to opt out of tracking.Users must have a way to opt out of tracking cookies, except for cookies that are needed to make the website work. Google Analytics is not needed to make the website work. Necessary cookies do not need consentYou don’t need consent to set cookies that are necessary to make the website work. You don’t need to allow the users to opt out of these cookies.1 Explain how you use cookies in your privacy policyYour privacy policy must clearly explain what cookies you set, and what they are used for. Be careful with embedded contentYouTube videos, Disqus comments, Facebook buttons and other third-party widgets often set tracking cookies.2Disable these widgets until you get consent from your users, or don’t use them at all. These articles helped me understand how cookies work with the GDPR: Tracking cookies and GDPR Cookie consent: how do I comply with the GDPR? Tools likeCookieBotcan help you implement a cookie notice that is GDPR compliant."
   },
   {
-    "id": "94a4442e06",
+    "id": "143ce287a2",
     "guide": "website-compliance-germany",
     "section": "Cookies",
-    "title": "Legal basis",
+    "title": "Cookie banners legal basis",
     "text": "In theEuropean Union, cookies were regulated by theCookie Directiveand now by theGeneral Data Protection Regulation (GDPR), particularly articles 6 and 7."
   },
   {
-    "id": "5784f35c53",
+    "id": "fd424b56fc",
     "guide": "website-compliance-germany",
     "section": "Cookies",
-    "title": "Examples",
+    "title": "Cookie banner examples",
     "text": "CookieBot’s cookie notice lets you choose which cookies you want to allow. Analytics cookies are enabled by default, and marketing cookies are disabled by default. Essential cookies cannot be disabled. Gruender.de’s cookie notice lets you choose which cookies you want to allow, with no pre-selected answer. Piwik Pro’s cookie notice also lets you choose which cookies you want to allow, with no pre-selected answer. Many websites ask for permission before they load content from YouTube, Twitter and other websites."
   },
   {
@@ -77,17 +70,17 @@
     "text": "If you use Google Analytics, youmustget consent from your visitors before you track them. Do not track your users at all until you get consent. Other tracking options likePlausibleare privacy-friendly, and don’t require a cookie notice. This is what I use on All About Berlin."
   },
   {
-    "id": "41d4772311",
+    "id": "d4b3ab1817",
     "guide": "website-compliance-germany",
     "section": "Tracking and analytics",
-    "title": "Who needs to do this?",
+    "title": "Who needs consent for tracking?",
     "text": "Any EU resident or company who uses Google Analytics on their website."
   },
   {
-    "id": "4d9a414b1a",
+    "id": "ec7df1397e",
     "guide": "website-compliance-germany",
     "section": "Tracking and analytics",
-    "title": "Legal basis",
+    "title": "Tracking legal basis",
     "text": "The rules for tracking users are defined by the GDPR (DSGVOin German)."
   },
   {
@@ -105,24 +98,24 @@
     "text": "TheImpressumis a page with your business’ contact information. It helps users contact you. Your Impressum page must be “easily identifiable, directly accessible and constantly available”.5In other words, it must be easy to find from any page on your website. It must be available in the same languages as your website.12 Your Impressum must always contain… The full name of the website owner6If it’s a company website, it must include the full name of the company, including its legal form (for example,GmbHorUG). Contact informationYou must be quickly reachable electronically, and non-electronically.8An email address that can be used to reach the company or website owner.7Full addressThe full address of the company or website owner. You cannot use a PO box.9Telephone number(optional)A phone number is not mandatory if the user has alternative options for rapid contact and direct and efficient communication.10 Full addressThe full address of the company or website owner. You cannot use a PO box.9 Telephone number(optional)A phone number is not mandatory if the user has alternative options for rapid contact and direct and efficient communication.10 VAT number Handelsregisternummer, if applicable Names of the managing directorsand authorized representatives, if applicable It’s important to have a complete Impressum. You can get sued for damages if it’s missing or incomplete.11Some lawyers make money by finding invalid Impressum pages. If you can,hide your Impressum page from Google."
   },
   {
-    "id": "de3f34f45f",
+    "id": "a110a7f822",
     "guide": "website-compliance-germany",
     "section": "Impressum",
-    "title": "Who needs to do this?",
+    "title": "Who needs an Impressum?",
     "text": "Any German resident or company who runs a commercial website, even if the website is hosted in another country, or has a .com domain.3Personal, non-commercial websites do not need an Impressum.4 Commercial Facebook, Instagram and social media pagesmust also have an Impressum.6"
   },
   {
-    "id": "09ea329379",
+    "id": "f780ee50fc",
     "guide": "website-compliance-germany",
     "section": "Impressum",
-    "title": "Legal basis",
+    "title": "Impressum legal basis",
     "text": "§ 5 Digitale-Dienst-Gesetz (DDG) § 55 Rundfunkstaatsvertrag (RStV) § 2 DL-InfoV"
   },
   {
-    "id": "3ce4d9a9d7",
+    "id": "223be06c00",
     "guide": "website-compliance-germany",
     "section": "Impressum",
-    "title": "Examples",
+    "title": "Impressum examples",
     "text": "SAP’s Impressum BMW’s Impressum Facebook’s Impressum Google’s Impressum, featuring details of the authorized representative A medical clinic’s Impressum, featuring details about supervisory authorities"
   },
   {
@@ -140,24 +133,24 @@
     "text": "Your website must have a privacy policy (Datenschutzerklärung) where you outline how you collect, process and use data about your users. If you fail to include a privacy policy on your website, you can receive anAbmahnung.13 If you need help with your privacy policy, you can eitherhire a lawyer, or use aprivacy policy generator."
   },
   {
-    "id": "7db8d58e7f",
+    "id": "d90f3ace62",
     "guide": "website-compliance-germany",
     "section": "Privacy policy",
-    "title": "Who needs to do this?",
+    "title": "Who needs a privacy policy?",
     "text": "Any German resident or company who runs a website, even for non-commercial purposes.13"
   },
   {
-    "id": "31b0128ec6",
+    "id": "b80c007815",
     "guide": "website-compliance-germany",
     "section": "Privacy policy",
-    "title": "Legal basis",
+    "title": "Privacy policy legal basis",
     "text": "A privacy policy is required by Articles 13 and 14 of theDSGVO.14"
   },
   {
-    "id": "d4059ccca1",
+    "id": "07b92dc3c3",
     "guide": "website-compliance-germany",
     "section": "Privacy policy",
-    "title": "Examples",
+    "title": "Privacy policy examples",
     "text": "Stripe’s privacy policycontains detailed information about how they collect and process data about their users N26’s privacy policyis a PDF file linked at the bottom of every page on their website All About Berlin’s privacy policyis on the same page as our Impressum, and is linked at the bottom of every page"
   },
   {
@@ -175,24 +168,24 @@
     "text": "Your website should have a terms and conditions (AGBorAllgemeine Geschäftsbedingungen) page. Usually, it’s the page where you say “we are not responsible for the accuracy of our content”. The terms in conditions must be available in the same languages as your website.15"
   },
   {
-    "id": "23b12ee0e6",
+    "id": "04950a0432",
     "guide": "website-compliance-germany",
     "section": "Terms and conditions",
-    "title": "Who needs to do this?",
+    "title": "Who needs an AGB page?",
     "text": "It is not required unless you have customers, but it’s always a good idea.16"
   },
   {
-    "id": "969ff15472",
+    "id": "66968dc969",
     "guide": "website-compliance-germany",
     "section": "Terms and conditions",
-    "title": "Legal basis",
+    "title": "AGB legal basis",
     "text": "The AGB is required by§ 312d BGBif you have customers."
   },
   {
-    "id": "3af29d068e",
+    "id": "3417ba5648",
     "guide": "website-compliance-germany",
     "section": "Terms and conditions",
-    "title": "Terms and conditions checklist",
+    "title": "AGB checklist",
     "text": "Add a terms and conditions page to your website. There are many AGB generators and templates online. Most of them are in German. Add a link to your terms an conditions to your website’s footer."
   },
   {
@@ -203,24 +196,24 @@
     "text": "If you use images with a Creative Commons licence, make sure you properly attribute the author. In Germany, using the wrong attribution format can be a costly mistake.I had to pay hundreds of euros in lawyer feesfor making that mistake. Here are the basic guidelines about using Creative Commons images on your website: Pay attention to the licence for the images you use on your website. Wikipedia images are not always free to use. Ideally, use public domain images that can be used without restrictions. You can find public domain images onpxhere.com. Understand that “free images” sometimes come with conditions.Some variants of the Creative Commons licence require attribution to the author, prohibit commercial use, and even prohibit derivative works. Seethis overviewfor more details. Use the correct format when giving credit to the author.Proper credit includes the Title, the Author, the Source and the Licence. Seethis guidefor more details."
   },
   {
-    "id": "3e9ca8793f",
+    "id": "1b084ac376",
     "guide": "website-compliance-germany",
     "section": "Creative Commons images",
-    "title": "Who needs to do this?",
+    "title": "Which images need attribution?",
     "text": "Anyone who uses Creative Commons media on their website. Most images that come from Wikipedia are under a Creative Commons licence, so you need to give credit to their author."
   },
   {
-    "id": "dd05cff2bd",
+    "id": "780f645e96",
     "guide": "website-compliance-germany",
     "section": "Creative Commons images",
-    "title": "Legal basis",
+    "title": "Attribution legal basis",
     "text": "The requirement for appropriate attribution is found in theCreative Commons licence. Later versions of the licence have more relaxed requirements."
   },
   {
-    "id": "0e3e29fa4b",
+    "id": "5bb40e82a6",
     "guide": "website-compliance-germany",
     "section": "Creative Commons images",
-    "title": "Examples",
+    "title": "Attribution examples",
     "text": "The correct attribution format for Creative Commons images is describedin this handy guide."
   },
   {
@@ -238,10 +231,10 @@
     "text": "TheTelemediengestzsays that ads on a website must be clearly labelled. You can’t disguise an ad as genuine content. Otherwise, it’s surreptitious advertising (Schleichwerbung), and you can get anAbmahnungfor “unfair competition”.17 Here are the basic guidelines for ads and sponsored content on your website: Affiliate links need to be labelledAffiliate links are “commercial communications” according to§ 6 DDG. Multiple lawyers suggest to mark affiliate links as ads,18even if you are notdirectlygetting financial compensation for affiliate content. A footnote regarding affiliate links might be insufficient.22 Sponsored content needs to be labelledIf you get paid to put a sponsored post on your blog, you need to clearly tell your users that this post is an ad, and tell them who is sponsoring the ad. In other words, you can’t disguise an advertisement as an editorial text. According to Kanzlei Plutte, “sponsored content” is not a sufficient label, and you should use a clear word like “advertisement” to label advertising on your website. He backs his opinion with court cases, but admits that Twitter, Facebook and Instagram use the term “sponsored”."
   },
   {
-    "id": "53b98498ef",
+    "id": "bc38986267",
     "guide": "website-compliance-germany",
     "section": "Sponsored content and affiliate links",
-    "title": "Who needs to do this?",
+    "title": "Who needs to mark affiliate links?",
     "text": "Any German resident or company who uses affiliate links, sponsored content or ads on their website."
   },
   {
@@ -252,10 +245,10 @@
     "text": "According to§ 6 DDG, “commercial communications must be clearly recognizable as such.”"
   },
   {
-    "id": "9d046a2c02",
+    "id": "9ec7f14f40",
     "guide": "website-compliance-germany",
     "section": "Sponsored content and affiliate links",
-    "title": "Examples",
+    "title": "Sponsored link examples",
     "text": "Googlemarks sponsored search results as ads. I disclose affiliate links on this website."
   },
   {
@@ -273,10 +266,10 @@
     "text": "If your website generates income, it’s a business. If it’s not part of a registered business, you will need to register it with theGewerbeamtand theFinanzamt. If your website qualifies as aGewerbe, you need a trade licence (Gewerbeschein).You must apply for a trade licence at your localGewerbeamt. In Berlin, you cando it online. If your business generates more than €24,500in profit per year, you also need to pay thetrade tax (Gewerbesteuer).19For more information, read myGewerbesteuerguide. If your website generates income, you need to register it with theFinanzamt.You register byfilling theFragebogen zur steuerlichen Erfassung. You will then receive a tax number (Steuernummer), which you need to put in your website’sImpressum. Making money from your website is considered self-employment.If you are not allowed to be self-employed in Germany, you will also need toapply for a freelance visa. You can get a freelance visa in addition to an existing visa.20 Related guides: How to start a business in GermanyHow to apply for a trade licence (Gewerbeschein)How to register a business with theFinanzamt How to apply for a trade licence (Gewerbeschein) How to register a business with theFinanzamt"
   },
   {
-    "id": "9b4551afd3",
+    "id": "c0dda7c9db",
     "guide": "website-compliance-germany",
     "section": "Income-generating websites",
-    "title": "Who needs to do this?",
+    "title": "Who needs to register a business?",
     "text": "Any German resident or who runs a website as a stand-alone business."
   },
   {

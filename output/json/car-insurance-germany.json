@@ -4,139 +4,90 @@
     "guide": "car-insurance-germany",
     "section": "",
     "title": "",
-    "text": "In Germany, car insurance (Kfz-Versicherung) is mandatory. It’s part of thecost of owning a car in Germany. If your vehicle is not insured, you can’t register it, and you can’t drive it. This guide shows you how to choose insurance for your car or motorcycle."
+    "text": "In Germany, all vehicles need insurance (Kfz-Versicherung). When youbuy a car, you must choose car insurance. It’s part of thecost of owning a car. This guide helps you find the best, cheapest car insurance."
   },
   {
-    "id": "74f9bd6ef3",
+    "id": "6f76a83ab5",
     "guide": "car-insurance-germany",
-    "section": "On this page",
+    "section": "How to choose car insurance",
+    "title": "1. Compare options",
+    "text": "When youbuy a car, you must choose a car insurance. UseVerivoxorTarifcheckto compare car insurance prices. If you don’t speak German,Featheris the only English-speaking car insurance. They also recognise your driving experience in other countries, so you can get a much lower price."
+  },
+  {
+    "id": "f88cb383be",
+    "guide": "car-insurance-germany",
+    "section": "How to choose car insurance",
+    "title": "2. Get an eVB number",
+    "text": "After you choose car insurance, you get aneVB numberfrom the insurer. It usually takes a few hours.17This number proves that your car is insured. You need it toregister your vehicleat theKfz-Zulassungsstelle."
+  },
+  {
+    "id": "b4cb47f281",
+    "guide": "car-insurance-germany",
+    "section": "Levels of coverage",
     "title": "",
-    "text": "Types of vehicle insuranceHaftpflichtTeilkaskoVollkasko Haftpflicht Teilkasko Vollkasko How to choose German car insurance How to pay less for German car insuranceCombine your insurance policiesUse your parents' car insuranceLook for cheaper insurance every yearChoose a higher deductiblePay yearly, not monthlyGet Sai­son­kenn­zei­chenGet a Werk­statt­bin­dungBe a good driverDeduct it from your taxes Combine your insurance policies Use your parents' car insurance Look for cheaper insurance every year Choose a higher deductible Pay yearly, not monthly Get Sai­son­kenn­zei­chen Get a Werk­statt­bin­dung Be a good driver Deduct it from your taxes What do I do if I get in a car accident in Germany? How to cancel car insurance What else should I know?Insurance Green Card Insurance Green Card What to do next"
+    "text": "There are 3 levels of car insurance coverage:Haftpflicht,TeilkaskoandVollkasko."
   },
   {
-    "id": "54e2ade997",
+    "id": "22185dad44",
     "guide": "car-insurance-germany",
-    "section": "Types of vehicle insurance",
-    "title": "",
-    "text": "There are three levels of vehicle insurance in Germany:Haftpflicht,TeilkaskoandVollkasko. Each level covers different things."
-  },
-  {
-    "id": "cc7b5702c8",
-    "guide": "car-insurance-germany",
-    "section": "Types of vehicle insurance",
+    "section": "Levels of coverage",
     "title": "Haftpflicht",
-    "text": "Liability (Haftpflicht) insurance only coversthe minimum. It covers thedamage to other people, vehicles and property. It does not cover damage to your own vehicle. It’s much cheaper thanTeilkaskoorVollkasko, For example, if you crash into another car, your insurance will pay to repair the other car. It will not pay to repair your car. Ifsomeone elsecrashes into your parked car,theirinsurance will pay for your repairs. If someone crashes into your car, then drives away, your insurance won’t pay for the repairs. Haftpflichtinsurance does not cover theft, vandalism, or damage from fires, storms or floods.14It only covers the bare minimum, and that’s why it’s much cheaper. Vehicle liability insurance (Kfz-Haftpflichtversicherung) is not the same asprivate liability insurance (Haftpflichtversicherung). Private liability insurance does not cover you while you drive. Teilkaskoinsurance makes sense if you want to pay as little insurance as possible."
+    "text": "Liability (Haftpflicht) car insurance is theminimum level of coverage. It’s cheaper thanTeilkaskoorVollkaskoinsurance. Haftpflichtinsurance covers…23 Damage to other peopleIf you hit someone with your car, your insurance pays for their medical bills and rehabilitation costs. Damage to other carsIf you crash into another person’s car, your insurance pays to repair or replace their car. Damage to other people’s thingsIf you drive over someone’s bicycle, your insurance pays to repair or replace the bicycle. It does not cover… Damage to your own carIf you cause an accident, your insurance will not pay to repair your car. Damage caused by other driversIf another driver hits your car,theirinsurance pays for your repairs. Your insurance does not pay anything. If the other driver disappears (hit-and-run), you must pay for the repairs yourself. Theft, break-ins and vandalism Animal collisions Fire, storms, floods and natural disasters14 Broken or cracked windows"
   },
   {
-    "id": "8a3f3d177d",
+    "id": "5e6c82e56c",
     "guide": "car-insurance-germany",
-    "section": "Types of vehicle insurance",
+    "section": "Levels of coverage",
     "title": "Teilkasko",
-    "text": "Partially comprehensive (Teilkasko) also coverstheft, fires and damage from natural catastrophes(earthquakes, floods, hail, etc).14Usually, it does not cover vandalism.1Each insurance policy is different. Some insurers let you choose what is covered. Teilkaskois more expensive thanHaftpflichtinsurance, but cheaper thanVollkasko. Teilkaskoinsurance makes more sense for older vehicles.15For new vehicles,Vollkaskomakes more sense."
+    "text": "Partially comprehensive (Teilkasko) car insurance covers… Everything thatHaftpflichtinsurance coversIt covers damage to other people and their things. Theft and break-insIf someone steals your car, or damages your car while trying to steal it. Fire, storms, floods and natural disasters14For example, a hail storm breaks your windscreen and destroys your roof. Broken or cracked windowsIf you drive on theAutobahn, and a rock cracks your windscreen, the insurance pays to replace the windscreen. Animal collisionsFor example, if you hit a deer. SomeTeilkaskoinsurances also cover vandalism.1"
   },
   {
-    "id": "d287db0293",
+    "id": "70eb1fa5d2",
     "guide": "car-insurance-germany",
-    "section": "Types of vehicle insurance",
+    "section": "Levels of coverage",
     "title": "Vollkasko",
-    "text": "Comprehensive (Vollkasko) insurance also coversdamage to your own vehicle, even if the accident is your fault. It also covers vandalism, and hit-and-runs. It costs almost twice as much asTeilkaskoinsurance.16 Vollkaskoinsurance makes more sense for new vehicles.15"
+    "text": "Comprehensive (Vollkasko) car insurance covers… Everything thatHaftpflichtandTeilkaskoinsurance coverIt covers damage to other people and their things, theft, natural disasters, cracked windows and animal collisions. Damage to your own carIt pays to repair your car, even when the accident is your fault. VandalismIf an angry person scratches your car or break your windows, your insurance pays for the repairs. SomeTeilkaskoinsurances also cover vandalism.1 Hit-and-runsIf another driver hits your vehicle, then disappears, your insurance pays for the repairs. Vollkaskoinsurance costs twice as much asTeilkasko.16Vollkaskomakes more sense for new vehicles, andTeilkaskomakes more sense for older vehicles.15"
   },
   {
-    "id": "902c057cbc",
+    "id": "db205852e5",
     "guide": "car-insurance-germany",
-    "section": "How to choose German car insurance",
+    "section": "Driver classes",
     "title": "",
-    "text": "UseVerivoxorTarifcheckto compare car insurance prices. You can also talk to aninsurance broker. They can help you transfer your driving experience from another country. You will get a much better price for your car insurance. Few brokers sell car insurance, because it’s not profitable. After you pick the right insurance, ask for aneVB number. You will get it in less than a day.17When youbuy a vehicleandregister itat theKfz-Zulassungsstelle, you must have that eVB number."
+    "text": "Every driver gets aSchadenfreiheitsklasse. It goes up every year. It goes down when you make an insurance claim. A highSchadenfreiheitsklassemakes your car insurance cheaper. If you have driving experience in other countries, tell your insurer. You might start with a higherSchadenfreiheitsklasse, and your insurance will be cheaper. Each insurer has different rules for recognizing driving experience. They all ask for different documents. If you use car sharing, tell your insurer. Some insurance companies count car sharing as driving experience.10You might start with a higherSchadenfreiheitsklasse, and your insurance will be cheaper. When you have an accident, and you make an insurance claim, yourSchadenfreiheitsklassecan go down. It’s sometimes cheaper to keep your highSchadenfreiheitsklasse, and pay for repairs yourself.13If the accident was not your fault, it does not affect yourSchadenfreiheitsklasse.9 When you change insurers, you keep yourSchadenfreiheitsklasse.18"
   },
   {
-    "id": "9bd1855224",
+    "id": "1162039124",
     "guide": "car-insurance-germany",
-    "section": "How to pay less for German car insurance",
-    "title": "Combine your insurance policies",
-    "text": "If you have multiple vehicles, it’s often cheaper to insure them with the same company. You can also combine it with yourliability insuranceandhome contents insurance."
-  },
-  {
-    "id": "8fc76a29ae",
-    "guide": "car-insurance-germany",
-    "section": "How to pay less for German car insurance",
-    "title": "Use your parents’ car insurance",
-    "text": "If your parents live in Germany, they can insure your car as their second vehicle (Zweitwagen), and register you as an additional driver (Zusatzfahrer).2Your parents will pay less for car insurance, because they have more driving experience. If you are under 25 years old, you can save a lot of money this way.3 Some insurance companies also offer discounts for the children of existing customers.4Ask for aFamilientarife."
-  },
-  {
-    "id": "3e963b6a8d",
-    "guide": "car-insurance-germany",
-    "section": "How to pay less for German car insurance",
-    "title": "Look for cheaper insurance every year",
-    "text": "Your car insurance is renewed automatically each year on January 1. You have until November 30 to cancel it.14Every year in November, you should look for cheaper car insurance. UseVerivoxorTarifcheckto compare car insurance prices. If you sell the vehicle, you can end the insurance immediately.18"
-  },
-  {
-    "id": "cf12d3b13d",
-    "guide": "car-insurance-germany",
-    "section": "How to pay less for German car insurance",
-    "title": "Choose a higher deductible",
-    "text": "The deductible (Selbstbeteiligung) is the amount you pay yourself, before your insurance helps you. For example, if you have a €300deductible, and you cause €2,500in damages, you will pay €300, and your insurance will pay the remaining €2,200. If you choose a higher deductible, your car insurance will be cheaper.5Finanztiprecommends a €150to €300deductible. This would make your car insurance 18% to 25% cheaper.5"
-  },
-  {
-    "id": "947b05ca0e",
-    "guide": "car-insurance-germany",
-    "section": "How to pay less for German car insurance",
-    "title": "Pay yearly, not monthly",
-    "text": "Make yearly payments instead of monthly payments. If you make yearly payments, you will pay 4% to 9% less.5"
-  },
-  {
-    "id": "b23439bdae",
-    "guide": "car-insurance-germany",
-    "section": "How to pay less for German car insurance",
-    "title": "Get Sai­son­kenn­zei­chen",
-    "text": "Seasonal plates (Saisonkennzeichen) are vehicle registration plates that only let you drive during certain months. For example, a motorcycle can haveSaisonkennzeichenfrom April to October, or March to November. You don’t pay insurance for the months you can’t drive, so it’s cheaper. Out of season, you can’t drive the vehicle, and you can’t park it in public spaces.6You must put it in storage, or find a private parking space."
-  },
-  {
-    "id": "f1e486cc81",
-    "guide": "car-insurance-germany",
-    "section": "How to pay less for German car insurance",
-    "title": "Get a Werk­statt­bin­dung",
-    "text": "If you agree to aWerkstattbindung, you can save 10% to 20% on your car insurance.7If you have an accident, you must repair your car at a garage approved by your insurer. In many cases, you get better service with aWerkstattbindung. For example, you can get a free rental car while they repair your vehicle. Your claims might also be approved faster. This option is only available forTeilkaskoandVollkaskoinsurance.19Haftpflichtinsurance does not cover repairs to your own vehicle."
-  },
-  {
-    "id": "ddccc3109e",
-    "guide": "car-insurance-germany",
-    "section": "How to pay less for German car insurance",
-    "title": "Be a good driver",
-    "text": "If you are a new driver, you will pay more for insurance. If you have more driving experience, and never have accidents, your insurance gets cheaper.8German insurance companies give every driver a class (Schadenfreiheitsklasse). If you don’t make any claims, yourSchadenfreiheitsklassegets higher every year. A highSchadenfreiheitsklassemeans that you are a safe driver. If you have a highSchadenfreiheitsklasse, you pay less for insurance. Damages that are not your fault don’t affect yourSchadenfreiheitsklasse.9For example, if your insurance pays to fix a crack in your windshield, it does not affect yourSchadenfreiheitsklasse. Your car insurance will not get more expensive. If you have driving experience in other another EU country, tell your insurance company. They will count it as driving experience, and your insurance will be cheaper. Otherwise, you will be treated as a new driver, and your insurance will be more expensive. Each insurer has different rules for recognizing driving experience. They all ask for different documents. If you have driving experience with car sharing, tell your insurance company. Some insurance companies count car sharing as driving experience, so your insurance will be cheaper.10 If you have a motorcycle, tell your insurance company. It will make your car insurance cheaper.11Insurance for a second vehicle (Zweitwagen) is also much cheaper. If you switch to a different insurance company, you will not lose yourSchadenfreiheitsklasse.20"
-  },
-  {
-    "id": "2818b1347e",
-    "guide": "car-insurance-germany",
-    "section": "How to pay less for German car insurance",
-    "title": "Deduct it from your taxes",
-    "text": "In some cases, you can deduct vehicle insurance in yourSteuererklärung.12If you are a permanent employee, you can deduct part of your car insurance. If you are self-employed and only use the vehicle for work, you can deduct the full amount.21You can only do this if you own the vehicle and the insurance policy.This page(in German) has more information. Atax advisorcan also help you with this. If you forgot to declare it, don’t worry. You can do it later, retroactively.21"
-  },
-  {
-    "id": "67e6129d78",
-    "guide": "car-insurance-germany",
-    "section": "What do I do if I get in a car accident in Germany?",
+    "section": "How to get cheaper car insurance",
     "title": "",
-    "text": "If someone is injured in the accident, you should call 112 (the police). You should then fill aEuropean accident report(Europäischer Unfallbericht). Write down the other person’s name, address and plate number.22 If you have questions about insurance, call theZentralruf der Autoversicherer(+4940300330300or08002502600). They can help you find the insurance details of the other person, even in other EU countries.23"
+    "text": "Car insurance can bereallyexpensive if you are a new driver.8There are a few ways to pay much less for the same coverage. Choose yearly paymentsMake yearly payments instead of monthly payments, and save 4% to 9% on car insurance.5 Choose a higherdeductibleChoose a €150to €300deductible, and save 18% to 25% on car insurance.5 Get aWerkstattbindungMake insurance repairs in approved garages, and save 10% to 20% on your car insurance.7You often get better service with aWerkstattbindung. You might get a free rental car while they repair your vehicle. Your claims are usually approved faster. Getseasonal platesIf you only drive during the summer months, don’t insure your vehicle during the winter months. Out of season, you can’t drive the vehicle, and you can’t park it on public streets.6 Combine your insurance policiesIt’s cheaper to insure multiple vehicles with the same company. Insurance for a second vehicle (Zweitwagen) is usually cheaper.11You sometimes get a discount if you combine car insurance,liability insuranceandhome contents insurance. Use your family’s car insuranceIf your parents or spouse live in Germany, they can insure your car and register you as a second driver (Zusatzfahrer).2Your parents get cheaper car insurance because they have more driving experience. If you are under 25 years old, it will be much cheaper.3Get a family discountSome insurance companies have discounts (Familientarife) for the family of existing customers.4 Get a family discountSome insurance companies have discounts (Familientarife) for the family of existing customers.4 Include it in yourtax declarationVehicle insurance is sometimestax deductible.12If you are a permanent employee, you can deduct part of the cost. If you are self-employed and only use the vehicle for work, you can deduct the full cost.19 Be a good driverIf you make no claims, yourSchadenfreiheitsklassegoes up every year, and your car insurance becomes cheaper. After a few years of safe driving, you get a big discount."
   },
   {
-    "id": "559d5e2853",
-    "guide": "car-insurance-germany",
-    "section": "How to cancel car insurance",
-    "title": "",
-    "text": "Your car insurance is renewed automatically every year on January 1. You have until November 30 to cancel it. Every year in November, you should look for cheaper insurance. UseVerivoxorTarifcheckto compare car insurance prices. If you sell your vehicle, you can cancel your vehicle insurance immediately. You do not need to wait until December 31."
-  },
-  {
-    "id": "46b8bd4296",
-    "guide": "car-insurance-germany",
-    "section": "What else should I know?",
-    "title": "Insurance Green Card",
-    "text": "To drive outside theEuropean Union, you need a Green Card (Grüne Karte). This document lists the countries in which your car insurance is valid.It looks like this. When you leave the European Union, you must show your green card at the border control.This mapshows which countries accept Green Cards. In other countries, you might need to buy car insurance at the border. You can request a Green Card from your car insurance company. This is usually free.24"
-  },
-  {
-    "id": "ed60d55b2c",
+    "id": "59346fd723",
     "guide": "car-insurance-germany",
     "section": "What to do next",
-    "title": "",
-    "text": "Before youbuy a vehicle, you must also think aboutother costslike maintenance, tires, fuel and taxes. sparkasse.de,Settle in Berlin⤴ sparkasse.de,Settle in Berlin⤴ test.de,Finanztip⤴ test.de,Finanztip⤴ versicherung-beratung.net⤴ versicherung-beratung.net⤴ reddit.com/r/germany,Finanztip⤴ reddit.com/r/germany,Finanztip⤴ Finanztip⤴ Finanztip⤴ mycarly.com⤴ mycarly.com⤴ verivox.de,check24.de,Finanztip⤴ verivox.de,check24.de,Finanztip⤴ sparkasse.de,check24.de,feuersozietaet.de⤴ sparkasse.de,check24.de,feuersozietaet.de⤴ da-direkt.de⤴ da-direkt.de⤴ verti.de,carsharing.de,routetogermany.com⤴ verti.de,carsharing.de,routetogermany.com⤴ routetogermany.com⤴ routetogermany.com⤴ iww.de,Finanztip⤴ iww.de,Finanztip⤴ check24.de⤴ check24.de⤴ sparkasse.de⤴ sparkasse.de⤴ check24.de⤴ check24.de⤴ check24.de⤴ check24.de⤴ Settle in Berlin⤴ Settle in Berlin⤴ sparkasse.de⤴ sparkasse.de⤴ verivox.de⤴ verivox.de⤴ check24.de⤴ check24.de⤴ allianz.de⤴ allianz.de⤴ zeit.de⤴ zeit.de⤴ zentralruf.de⤴ zentralruf.de⤴ Wikipedia⤴ Wikipedia⤴"
+    "title": "Buy a car",
+    "text": "After you get aneVB numberfrom your car insurer, you canregister your vehicleand drive it on German roads. Don’t forget to plan for thecost of owning a car. How to buy a car"
+  },
+  {
+    "id": "7c2a4f4183",
+    "guide": "car-insurance-germany",
+    "section": "What to do next",
+    "title": "Get a Green Card",
+    "text": "To drive your car outside theEuropean Union, you need aGreen Card. It lists the countries where your car insurance is valid. They often ask for it at border crossings. If your green card is not accepted, you can usually buy car insurance at the border. You can get a Green Card from your car insurer. It’s usually free.22"
+  },
+  {
+    "id": "7a3580604e",
+    "guide": "car-insurance-germany",
+    "section": "What to do next",
+    "title": "Find cheaper insurance",
+    "text": "Your car insurance renews automatically every year. A few months before it renews, useVerivoxorTarifcheckto look for cheaper car insurance. Add it to your calendar. When you change insurers, you keep yourSchadenfreiheitsklasse.18"
+  },
+  {
+    "id": "933641b6c0",
+    "guide": "car-insurance-germany",
+    "section": "What to do next",
+    "title": "If you have a car accident",
+    "text": "Call the policeIf someone is injured, youmustcall the police. They can also secure the accident scene and reroute traffic. Fill an accident reportUse theEuropean accident report(Europäischer Unfallbericht) template. Write down the other person’s name, address and plate number.20If the other driver runs away, ask theZentralruf der Autoversicherer. They can help you find the insurance details of the other person, even in other EU countries.21 Tell your insuranceIn some cases, it might be cheaper to pay for the repairs yourself, and keep yourSchadenfreiheitsklasse. If the accident is not your fault, yourSchadenfreiheitsklasseis not affected. sparkasse.de,Settle in Berlin⤴ sparkasse.de,Settle in Berlin⤴ test.de,Finanztip⤴ test.de,Finanztip⤴ versicherung-beratung.net⤴ versicherung-beratung.net⤴ reddit.com/r/germany,Finanztip⤴ reddit.com/r/germany,Finanztip⤴ Finanztip⤴ Finanztip⤴ mycarly.com⤴ mycarly.com⤴ verivox.de,check24.de,Finanztip⤴ verivox.de,check24.de,Finanztip⤴ sparkasse.de,check24.de,feuersozietaet.de⤴ sparkasse.de,check24.de,feuersozietaet.de⤴ da-direkt.de⤴ da-direkt.de⤴ verti.de,carsharing.de,routetogermany.com⤴ verti.de,carsharing.de,routetogermany.com⤴ routetogermany.com⤴ routetogermany.com⤴ iww.de,Finanztip⤴ iww.de,Finanztip⤴ Wikipedia(June 2026)⤴ Wikipedia(June 2026)⤴ sparkasse.de⤴ sparkasse.de⤴ check24.de⤴ check24.de⤴ check24.de⤴ check24.de⤴ Settle in Berlin, personal experience⤴ Settle in Berlin, personal experience⤴ check24.de,Wikipedia(June 2026)⤴ check24.de,Wikipedia(June 2026)⤴ allianz.de⤴ allianz.de⤴ zeit.de⤴ zeit.de⤴ zentralruf.de⤴ zentralruf.de⤴ Wikipedia⤴ Wikipedia⤴ dieversicherer.de(June 2026)⤴ dieversicherer.de(June 2026)⤴"
   }
 ]

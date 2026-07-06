@@ -7,13 +7,6 @@
     "text": "After youmove to Berlinandfind an apartment, you must move in. This guide shows you how it works."
   },
   {
-    "id": "0c1ced0c86",
-    "guide": "moving-in",
-    "section": "On this page",
-    "title": "",
-    "text": "Before the moveVisit the apartmentSign the leaseGet the keysPay the depositPay the rentGet an electricity contractGet an internet contract Visit the apartment Sign the lease Get the keys Pay the deposit Pay the rent Get an electricity contract Get an internet contract After the movePut your name on your mailboxRegister your addressBuy furniture and appliancesInstall light fixturesChange your addressGet liability insuranceDefend your rightsLower your rentStop junk mailDeduct your moving costs Put your name on your mailbox Register your address Buy furniture and appliances Install light fixtures Change your address Get liability insurance Defend your rights Lower your rent Stop junk mail Deduct your moving costs First apartment in Berlin?Quiet hoursHard waterRecyclingVentilationHeating and radiators Quiet hours Hard water Recycling Ventilation Heating and radiators Need help?"
-  },
-  {
     "id": "5a82fc1ae0",
     "guide": "moving-in",
     "section": "Before the move",
@@ -74,7 +67,7 @@
     "guide": "moving-in",
     "section": "After the move",
     "title": "Register your address",
-    "text": "You must mustregister your new addressat theBürgeramt(theAnmeldung).It’s important. How to register your address Book yourAnmeldungappointmentas soon as you can. Appointments are hard to find. They can be months in the future.12Your appointment date must be after you move in. If you move from another place in Germany, you don’t need toderegister your old address."
+    "text": "You must mustregister your new addressat theBürgeramt(theAnmeldung).It’s important. How to register your address Book yourAnmeldungappointmentas soon as you can. Appointments are hard to find. They can be months in the future.12Your appointment date must be after you move in. Tool to find available Anmeldung appointments at the Bürgeramt in Berlin. This tool requires JavaScript to work. If you move from another place in Germany, you don’t need toderegister your old address."
   },
   {
     "id": "2b55ab23e2",
@@ -109,7 +102,7 @@
     "guide": "moving-in",
     "section": "After the move",
     "title": "Defend your rights",
-    "text": "Landlords oftentry to scamimmigrants. You must be ready to defend yourself. There are many ways to do this: Join a tenants’ association(Mieterverein)If you are a member, you get free help from their lawyers. They can check your lease, help you with a bad landlord, lower your rent, and help you sublet your apartment. It costs around €5per month. TheBerliner MietervereinandMieterschutzbund Berlinare the biggest ones in Berlin. The Berliner Mieterverein speaks English.11 orget legal insurance(Rechtsschutzversicherung)It pays for your legal costs. You get free access to a lawyer. It’s more expensive than aMieterverein, but you get better service, and you can choose anyEnglish-speaking lawyer.FeatherandGetsafesell legal insurance, and they speak in English. orget help from theMieterberatungThis is a free service from the city of Berlin. They might not speak English. Other ways to get help"
+    "text": "Landlords oftentry to scamimmigrants. You must be ready to defend yourself. There are many ways to do this: Join a tenants’ association(Mieterverein)If you are a member, you get free help from their lawyers. They can check your lease, help you with a bad landlord, lower your rent, and help you sublet your apartment. It costs around €5per month. TheBerliner MietervereinandMieterschutzbund Berlinare the biggest ones in Berlin. The Berliner Mieterverein speaks English.11 orget legal insurance(Rechtsschutzversicherung)It pays for your legal costs. You get free access to a lawyer. It’s more expensive than aMieterverein, but you get better service, and you can choose anyEnglish-speaking lawyer.Feathersells legal insurance, and they speak in English. orget help from theMieterberatungThis is a free service from the city of Berlin. They might not speak English. Other ways to get help"
   },
   {
     "id": "ff44adcc75",
@@ -165,7 +158,7 @@
     "guide": "moving-in",
     "section": "First apartment in Berlin?",
     "title": "Ventilation",
-    "text": "Germans ventilate their apartments every day, even in winter. They open all the windows for a few minutes to let fresh air in. It’s calledStoßlüften. Ventilation is sometimes required in your lease, because it helps prevents mold. More information"
+    "text": "Germans ventilate their apartments every day, even in winter. They open all the windows for a few minutes to let fresh air in. It’s calledStoßlüften. It helps prevents mould. Your lease might require you to ventilate every day. More information"
   },
   {
     "id": "475352a399",
@@ -173,6 +166,13 @@
     "section": "First apartment in Berlin?",
     "title": "Heating and radiators",
     "text": "Most German apartment buildings have central heating. It’s turned off during the warm months. You control the heating in your apartment with the dial on your radiators. The ❄ setting prevents the pipes from freezing. The settings from 0 to 5 set the desired temperature, with 3 being around 20ºC.9 Some newer apartments have heated floors instead of radiators. You control them with a thermostat on the wall. More information Sometimes, your landlord will remove air in your radiators with anEntlüftungsschlüssel. You can do it yourself; it’s very easy. It takes a few seconds, and it makes your radiators work better. You should do it every year."
+  },
+  {
+    "id": "cdce06928d",
+    "guide": "moving-in",
+    "section": "First apartment in Berlin?",
+    "title": "Prepare for heat waves",
+    "text": "German apartments rarely have air conditioning. They can get really hot in the summer, during heat waves. Buy a fan before you need it. They are often sold out in the summer."
   },
   {
     "id": "df067608d4",

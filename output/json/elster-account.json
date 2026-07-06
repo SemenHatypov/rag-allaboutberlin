@@ -7,13 +7,6 @@
     "text": "This is how you create anELSTERaccount. This account gives you access to online tax services. It lets you file tax returns,register a business, and many other things. ELSTER is like an onlineFinanzamt. Creating an account is easy, but you must do it in German.It takes around 1 week, because they send your account activation code by post."
   },
   {
-    "id": "ac37ce853f",
-    "guide": "elster-account",
-    "section": "On this page",
-    "title": "",
-    "text": "Before you startFind your tax IDDo you need an ELSTER account? Find your tax ID Do you need an ELSTER account? Create your ELSTER account Activate your ELSTER account What to do next Need help?"
-  },
-  {
     "id": "21d5706bf7",
     "guide": "elster-account",
     "section": "Before you start",
@@ -32,7 +25,7 @@
     "guide": "elster-account",
     "section": "Create your ELSTER account",
     "title": "",
-    "text": "To create an account, visitelster.de, and follow these instructions. ▲ ClickBenutzerkonto erstellen ▲ ClickWeiter ▲ ClickWeiter ▲ Choose how you want to log in. The first option is the easiest. ClickAuswählento continue. ▲ Select why you are opening an account: for you (Für mich), or for an organisation (Für eine Organisation). You can selectFür mich, even if you are registering a business.1 ClickWeiterto continue. ▲ Choose how you want to verify your identity. With your tax ID (Mit steuerlicher Identifikationsnummer): This lets you access all ELSTER services. With email (Mit E-Mail): This only lets youregister a business. ClickWeiterto continue. ▲ Enter your personal information: Email address (E-Mail) Birth date (Geburtsdatum) – for example “23.09.1970” Tax ID(Identifikationsnummer) –more information Username (Benutzername) – maximum 8 characters Security question (Sicherheitsabfrage) Answer to the security question (Antwort) – maximum 40 characters ▲ Tick the box, and clickWeiterto continue ▲ ClickPrüfento continue ▲ Verify that all the information is correct, and clickAbsendento create your account. ▲ This is the confirmation page. You will receive an email with an activation link for your account. ▲ You will receive an email with an activation link. Click the activation link. ▲ This is what you see when you click the confirmation link. It says that you will receive an activation ID by email, and an activation code by post. You can close the window."
+    "text": "To create an account, visitelster.de, and follow these instructions. ▲ ClickBenutzerkonto erstellen ▲ ClickWeiter ▲ ClickWeiter ▲ Choose how you want to log in. The first option is the easiest. ClickAuswählento continue. ▲ Select why you are opening an account: for you (Für mich), or for an organisation (Für eine Organisation). You can selectFür mich, even if you are registering a business.1 ClickWeiterto continue. ▲ Choose how you want to verify your identity. With your tax ID (Mit steuerlicher Identifikationsnummer): This lets you access all ELSTER services. With email (Mit E-Mail): This only lets youregister a business. ClickWeiterto continue. ▲ Enter your personal information: Email address (E-Mail) Birth date (Geburtsdatum) – for example “23.09.1970” Tax ID(Identifikationsnummer) Username (Benutzername) – maximum 8 characters Security question (Sicherheitsabfrage) Answer to the security question (Antwort) – maximum 40 characters ▲ Tick the box, and clickWeiterto continue ▲ ClickPrüfento continue ▲ Verify that all the information is correct, and clickAbsendento create your account. ▲ This is the confirmation page. You will receive an email with an activation link for your account. ▲ You will receive an email with an activation link. Click the activation link. ▲ This is what you see when you click the confirmation link. It says that you will receive an activation ID by email, and an activation code by post. You can close the window."
   },
   {
     "id": "caf9e75b28",

@@ -27,7 +27,7 @@ class TestRealCorpusContract:
 
     def test_urls_point_to_allaboutberlin_guides(self):
         documents = load_documents()
-        assert all(doc["url"] == f"https://allaboutberlin.com/guides/{doc['guide']}" for doc in documents)
+        assert all(doc["url"].startswith("https://allaboutberlin.com/guides/") for doc in documents)
 
     def test_guides_index_covers_all_document_slugs(self):
         known = {g["guide"] for g in load_guides()}

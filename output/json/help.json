@@ -7,13 +7,6 @@
     "text": "If I can’t answer your questions, these resources can help."
   },
   {
-    "id": "a4f8b49464",
-    "guide": "help",
-    "section": "On this page",
-    "title": "",
-    "text": "General questionsIn English In English Immigration questionsFree helpPaid help Free help Paid help Apartment questions Medical questions Work questions Legal questions Financial questionsHealth insurance questions Health insurance questions Business questionsPeople who can help youHelpful websites People who can help you Helpful websites Parenting questionsParenting communitiesPaid services Parenting communities Paid services Ask me"
-  },
-  {
     "id": "39cafc6ddc",
     "guide": "help",
     "section": "General questions",
@@ -60,7 +53,7 @@
     "guide": "help",
     "section": "Legal questions",
     "title": "",
-    "text": "LawyersUse mylist of English-speaking lawyers in Berlin. If you havelegal insurancecan help you find a lawyer, and it might pay for it. Some legal insurances have a legal hotline.Business and immigration lawyer hotlineCall09008 529 366 11to ask quick legal questions. You will talk to Alexander von Engelhardt, a business and immigration lawyer in Berlin. It costs €2.99per minute. Business and immigration lawyer hotlineCall09008 529 366 11to ask quick legal questions. You will talk to Alexander von Engelhardt, a business and immigration lawyer in Berlin. It costs €2.99per minute. Legaltech(Rechtsdienstleister)Legal services can help you with specific legal problems. For example,Connyspecialises in tenant law. They canlower your rentand many other things. I reviewed themhere. Usually, their services cost nothing if you lose. If you win, they keep a part of the money you get back. If you have a low income, you can apply for legal help (Beratungshilfe) at thelocalAmtsgericht.6You will get a certificate (Beratungshilfeschein) that pays for your legal costs. If you getBürgergeldorSozialhilfe, or if you are an asylum seeker, you are eligible.7You will probably need to speak German. If you havelegal insurance, it covers talking to a lawyer. They usually have a legal hotline that you can call for free."
+    "text": "LawyersUse mylist of English-speaking lawyers in Berlin. If you havelegal insurancecan help you find a lawyer, and it might pay for it. Some legal insurances have a legal hotline.Business and immigration lawyer hotlineCall09008 529 366 11to ask quick legal questions. You will talk to Alexander von Engelhardt, a business and immigration lawyer in Berlin. It costs €2.99per minute. Business and immigration lawyer hotlineCall09008 529 366 11to ask quick legal questions. You will talk to Alexander von Engelhardt, a business and immigration lawyer in Berlin. It costs €2.99per minute. Legaltech(Rechtsdienstleister)Legal services can help you with specific legal problems. For example,Connyspecialises in tenant law. They canlower your rentand many other things. I reviewed themhere. Usually, their services cost nothing if you lose. If you win, they keep a part of the money you get back. If you have a low income, you can apply for legal help (Beratungshilfe) at thelocalAmtsgericht.6You will get a certificate (Beratungshilfeschein) that pays for your legal costs. If you getGrundsicherungorSozialhilfe, or if you are an asylum seeker, you are eligible.7You will probably need to speak German. If you havelegal insurance, it covers talking to a lawyer. They usually have a legal hotline that you can call for free."
   },
   {
     "id": "40f05751d0",
@@ -68,6 +61,13 @@
     "section": "Financial questions",
     "title": "",
     "text": "Tax advisorsandalternativesTax advisorsare certified tax professionals. They are legally liable for the advice they give. If they make a mistake, they pay for it. If you have complex tax questions, they are the only option. Tax softwareTax software can help you file atax declaration. It’s much cheaper than hiring atax advisor. Tax help union(Lohnsteuerhilfeverein)ALohnsteuerhilfevereincan help you file atax declaration. It’s usually cheaper than a tax advisor. The cost is often based on your income."
+  },
+  {
+    "id": "3ca7a7b48a",
+    "guide": "help",
+    "section": "Financial questions",
+    "title": "Health insurance questions",
+    "text": "Calculate the cost of German health insurance and see health insurance options for employees, students and freelancers. This tool requires JavaScript to work."
   },
   {
     "id": "58197c7d7a",

@@ -4,28 +4,21 @@
     "guide": "cost-of-living",
     "section": "",
     "title": "",
-    "text": "This is how much it costs to live in Berlin, and elsewhere in Germany. This guide helps you make a budget before youmove to Germany, and save money every month."
-  },
-  {
-    "id": "985799cf68",
-    "guide": "cost-of-living",
-    "section": "On this page",
-    "title": "",
-    "text": "Taxes, insurance and pension HousingRentElectricityInternetTV tax Rent Electricity Internet TV tax Food TransportationPublic transitVehicles Public transit Vehicles Mobile phone FinancesBankingLiability insurance Banking Liability insurance Dogs One time expensesApartment deposit (Kaution)Furniture, appliances, etc Apartment deposit (Kaution) Furniture, appliances, etc Example budgetIncomeExpenses Income Expenses How to save money"
+    "text": "This guide helps you budget yourmove to Germanyand lower your cost of living."
   },
   {
     "id": "a57fd9de10",
     "guide": "cost-of-living",
     "section": "Taxes, insurance and pension",
     "title": "",
-    "text": "Cost:Around 35% of your income. Use mytax calculator. In Germany, a part of yourgross income(Brutto) is for taxes and social contribution. Your employer automatically takes them from your paycheck. The money you keep is yournet income(Netto). How taxes work How to pay less taxes"
+    "text": "Cost:Around 35% of your income. Use mytax calculator. Your employer deductstaxes and social contributionsfrom your paycheck every month. This includesincome tax,health insurance,public pension insuranceandunemployment insurance. Calculate your German net income after income tax and social contributions. This tool requires JavaScript to work. How to pay less taxes"
   },
   {
     "id": "a9822f9512",
     "guide": "cost-of-living",
     "section": "Housing",
     "title": "Rent",
-    "text": "Cost:€600to €900per month (room), €900to €1,600per month (apartment). Use myrent map. In Germany, there is the cold rent (Kaltmiete), and the warm rent (Warmmiete). The warm rent includes utilities (Nebenkosten). Rent is usually your biggest expense. An unfurnished apartment costs €15to €22/m². Temporary furnished apartments are more expensive. If you just moved to Germany, you usually pay more for rent.Landlords prefer stable tenants, so cheap apartments usually go to long-term residents. If you just moved to Germany, you might need to pay more. Immigrants often get expensive furnished apartments, because they can’t find anything else. After a few months in Germany,get your rent loweredor look for a cheaper apartment. How to pay less rent"
+    "text": "Cost:€600to €900per month (room), €900to €1,600per month (apartment). In Germany, there is the cold rent (Kaltmiete), and the warm rent (Warmmiete). The warm rent includes utilities (Nebenkosten). Rent is usually your biggest expense. An unfurnished apartment costs€16to €25per m². Temporary furnished apartments are more expensive. If you just moved to Germany, you might need to pay more. Recent immigrants usually pay higher rents. They get overpriced furnished apartments because they have no other options. Cheap apartments usually go to long-term residents. After a few months in Germany,lower your rentorfind a cheaper apartment. Rent prices map How to pay less rent"
   },
   {
     "id": "980379f0bf",
@@ -39,14 +32,14 @@
     "guide": "cost-of-living",
     "section": "Housing",
     "title": "Internet",
-    "text": "Cost:around €35per month For €35per month, you can get a 100 Mbit/s internet connection. Compare internet plans"
+    "text": "Cost:around €40per month For €40per month, you can get a 100 Mbit/s internet connection. Compare internet plans"
   },
   {
     "id": "90152219c3",
     "guide": "cost-of-living",
     "section": "Housing",
     "title": "TV tax",
-    "text": "Cost:€18.36per household per month Every household pays the TV tax (Rundfunkbeitrag). If you live with other people, you can split the cost.In some cases, you don’t have to pay it. You get a TV tax invoice by post every 3 months. You can pay it manually with abank transfer, or automatically with adebit authorisation. How the TV tax works"
+    "text": "Cost:€18.36per household per month Every household must pay theTV tax. If you live with other people, you can share the cost. How the TV tax works"
   },
   {
     "id": "07da6e7f1d",
@@ -60,14 +53,14 @@
     "guide": "cost-of-living",
     "section": "Transportation",
     "title": "Public transit",
-    "text": "Cost (Berlin):€42to €99per month (monthly pass), or €4.00per ride"
+    "text": "Cost:€63per month or €4per ride Public transit ticket prices in Berlin How to use public transit"
   },
   {
     "id": "035bb5b2fe",
     "guide": "cost-of-living",
     "section": "Transportation",
     "title": "Vehicles",
-    "text": "Cost:at least €100per month You don’t need a car in Berlin. Cars are expensive to own and maintain. If you have a car, you must pay for parking, car insurance,vehicle tax, fuel, tires and maintenance. You need adriving licenceto drive in Germany. It costs around €2,500to €4,000. You can sometimesconvert your foreign driving licence. It’s cheaper and faster. There is no yearly cost for a driving licence. Cost of owning a car"
+    "text": "Cost:at least €100per month In Berlin, you rarely need a car. If you have a car, you must pay for parking,car insurance,vehicle tax, fuel, tires and maintenance. Cost of owning a car You need adriving licenceto drive in Germany. It costs around €2,500to €4,000. You can sometimesconvert your foreign driving licence. It’s cheaper and faster. There is no yearly cost for a driving licence."
   },
   {
     "id": "e00546124b",
@@ -81,14 +74,14 @@
     "guide": "cost-of-living",
     "section": "Finances",
     "title": "Banking",
-    "text": "Cost:€0to €10per month Some banks charge a monthly fee. It’s usually around €10per month. Some banks also charge €5to €10when you use an ATM from another network. Compare German banks"
+    "text": "Cost:€0to €10per month Some banks charge a monthly fee. It’s usually around €10per month. Some banks also charge €5to €10when you use an ATM from another network. Find the best German bank"
   },
   {
     "id": "ae44d176c5",
     "guide": "cost-of-living",
     "section": "Finances",
     "title": "Liability insurance",
-    "text": "Cost:around €5per month Liability insuranceis optional, but it’sreallyimportant to have. If you cause an accident, and someone sues you, the liability insurance pays for the damages. It costs around €5per month. Most Germans have it. How to choose liability insurance"
+    "text": "Cost:around €5per month Liability insuranceis optional, butreallyimportant. It costs around €5per month. Most Germans have it. How to choose liability insurance"
   },
   {
     "id": "25c92df06e",
@@ -116,27 +109,6 @@
     "guide": "cost-of-living",
     "section": "Example budget",
     "title": "",
-    "text": "This is an example budget for a single person who lives in Berlin. It uses realistic values."
-  },
-  {
-    "id": "fecb5781bc",
-    "guide": "cost-of-living",
-    "section": "Example budget",
-    "title": "Income",
-    "text": "€4,634was the average German salary in 2024.1This is an example budget for an unmarried employee with no children. Calculate your income after taxes"
-  },
-  {
-    "id": "892b773a92",
-    "guide": "cost-of-living",
-    "section": "Example budget",
-    "title": "Expenses",
-    "text": "These are my real monthly expenses. This table does not include buying clothes, replacing broken things, or having fun. It only lists the bills Imustpay. My budget includes a motorcycle, and a garage (€120/month). You don’t need those. My rent is also very low, because I live far from the centre."
-  },
-  {
-    "id": "480474fd76",
-    "guide": "cost-of-living",
-    "section": "How to save money",
-    "title": "",
-    "text": "How to save money in Germany destatis.de⤴ destatis.de⤴"
+    "text": "These are my real monthly expenses in 2026. It only includes the bills Imustpay. It does not include buying clothes, replacing broken things, and going out. My rent is also very low, because I have an old rent contract, and I live far from the centre."
   }
 ]

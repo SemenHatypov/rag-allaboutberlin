@@ -4,1042 +4,1207 @@
     "guide_name": "How to find an apartment in Berlin",
     "category": "Housing",
     "path": "/json/find-a-flat-in-berlin.json",
-    "sections_count": 40
+    "sections_count": 39,
+    "url_path": "/guides/find-a-flat-in-berlin"
   },
   {
     "guide": "housing-scams",
     "guide_name": "Common housing scams in Germany",
     "category": "Housing",
     "path": "/json/housing-scams.json",
-    "sections_count": 26
+    "sections_count": 25,
+    "url_path": "/guides/housing-scams"
   },
   {
     "guide": "schufa",
     "guide_name": "How to get a free Schufa",
     "category": "Housing",
     "path": "/json/schufa.json",
-    "sections_count": 7
+    "sections_count": 6,
+    "url_path": "/guides/schufa"
   },
   {
     "guide": "moving-in",
     "guide_name": "How to move into an apartment in Germany",
     "category": "Housing",
     "path": "/json/moving-in.json",
-    "sections_count": 26
+    "sections_count": 26,
+    "url_path": "/guides/moving-in"
   },
   {
     "guide": "mietkaution",
     "guide_name": "How the apartment deposit (Kaution) works in Germany",
     "category": "Housing",
     "path": "/json/mietkaution.json",
-    "sections_count": 10
+    "sections_count": 9,
+    "url_path": "/guides/mietkaution"
   },
   {
     "guide": "key-copies",
     "guide_name": "How to get key doubles in Germany",
     "category": "Housing",
     "path": "/json/key-copies.json",
-    "sections_count": 7
+    "sections_count": 6,
+    "url_path": "/guides/key-copies"
   },
   {
     "guide": "electric-bill-berlin",
     "guide_name": "How electric bills work in Germany",
     "category": "Housing",
     "path": "/json/electric-bill-berlin.json",
-    "sections_count": 8
+    "sections_count": 7,
+    "url_path": "/guides/electric-bill-berlin"
   },
   {
     "guide": "gez-rundfunkbeitrag",
     "guide_name": "What is the German TV tax (Rund­funk­bei­trag)?",
     "category": "Housing",
     "path": "/json/gez-rundfunkbeitrag.json",
-    "sections_count": 11
+    "sections_count": 10,
+    "url_path": "/guides/gez-rundfunkbeitrag"
   },
   {
     "guide": "quiet-hours",
     "guide_name": "Quiet hours and noise laws in Berlin",
     "category": "Housing",
     "path": "/json/quiet-hours.json",
-    "sections_count": 5
+    "sections_count": 4,
+    "url_path": "/guides/quiet-hours"
   },
   {
     "guide": "noise-complaint",
     "guide_name": "How to make a noise complaint in Berlin",
     "category": "Housing",
     "path": "/json/noise-complaint.json",
-    "sections_count": 9
+    "sections_count": 8,
+    "url_path": "/guides/noise-complaint"
   },
   {
     "guide": "conny-review",
     "guide_name": "Review of Conny, the rent reduction service",
     "category": "Housing",
     "path": "/json/conny-review.json",
-    "sections_count": 9
+    "sections_count": 8,
+    "url_path": "/guides/conny-review"
   },
   {
     "guide": "address-change",
     "guide_name": "How to change your address in Germany",
     "category": "Housing",
     "path": "/json/address-change.json",
-    "sections_count": 8
+    "sections_count": 7,
+    "url_path": "/guides/address-change"
   },
   {
     "guide": "anmeldung-in-english-berlin",
     "guide_name": "The Anmeldung — How to register your address in Berlin",
     "category": "Housing",
     "path": "/json/anmeldung-in-english-berlin.json",
-    "sections_count": 21
+    "sections_count": 20,
+    "url_path": "/guides/anmeldung-in-english-berlin"
   },
   {
     "guide": "berlin-burgeramt-appointment",
     "guide_name": "How to get a Bürgeramt appointment in Berlin",
     "category": "Housing",
     "path": "/json/berlin-burgeramt-appointment.json",
-    "sections_count": 12
+    "sections_count": 11,
+    "url_path": "/guides/berlin-burgeramt-appointment"
   },
   {
     "guide": "replacement-meldebescheinigung",
     "guide_name": "How to get a Mel­de­be­schei­ni­gung or An­mel­de­be­stä­ti­gung",
     "category": "Housing",
     "path": "/json/replacement-meldebescheinigung.json",
-    "sections_count": 8
+    "sections_count": 7,
+    "url_path": "/guides/replacement-meldebescheinigung"
   },
   {
     "guide": "moving-out",
     "guide_name": "How to move out of an apartment in Germany",
     "category": "Housing",
     "path": "/json/moving-out.json",
-    "sections_count": 26
+    "sections_count": 25,
+    "url_path": "/guides/moving-out"
   },
   {
     "guide": "abmeldung",
     "guide_name": "Abmeldung — How to deregister your address in Berlin",
     "category": "Housing",
     "path": "/json/abmeldung.json",
-    "sections_count": 19
+    "sections_count": 18,
+    "url_path": "/guides/abmeldung"
   },
   {
     "guide": "lost-keys",
     "guide_name": "Lost your keys in Berlin? Locked yourself out? Here's what to do",
     "category": "Housing",
     "path": "/json/lost-keys.json",
-    "sections_count": 7
+    "sections_count": 6,
+    "url_path": "/guides/lost-keys"
   },
   {
     "guide": "leaving-germany",
     "guide_name": "How to leave Germany",
     "category": "Housing",
     "path": "/json/leaving-germany.json",
-    "sections_count": 15
+    "sections_count": 14,
+    "url_path": "/guides/leaving-germany"
   },
   {
     "guide": "pension-payments-refund",
     "guide_name": "How to get a German pension refund",
     "category": "Housing",
     "path": "/json/pension-payments-refund.json",
-    "sections_count": 23
+    "sections_count": 22,
+    "url_path": "/guides/pension-payments-refund"
   },
   {
     "guide": "find-a-job-in-berlin",
     "guide_name": "How to find a job in Berlin",
     "category": "Work",
     "path": "/json/find-a-job-in-berlin.json",
-    "sections_count": 27
+    "sections_count": 26,
+    "url_path": "/guides/find-a-job-in-berlin"
   },
   {
     "guide": "salaries-in-germany",
     "guide_name": "Salaries in Germany",
     "category": "Work",
     "path": "/json/salaries-in-germany.json",
-    "sections_count": 11
+    "sections_count": 10,
+    "url_path": "/guides/salaries-in-germany"
   },
   {
     "guide": "probezeit",
     "guide_name": "The probation period (Probezeit) in Germany",
     "category": "Work",
     "path": "/json/probezeit.json",
-    "sections_count": 11
+    "sections_count": 10,
+    "url_path": "/guides/probezeit"
   },
   {
     "guide": "mwd-meaning",
     "guide_name": "What does \"m/w/d\" mean in German job offers?",
     "category": "Work",
     "path": "/json/mwd-meaning.json",
-    "sections_count": 5
+    "sections_count": 4,
+    "url_path": "/guides/mwd-meaning"
   },
   {
     "guide": "losing-your-job",
     "guide_name": "Changing or losing your job in Germany",
     "category": "Work",
     "path": "/json/losing-your-job.json",
-    "sections_count": 34
+    "sections_count": 33,
+    "url_path": "/guides/losing-your-job"
   },
   {
     "guide": "job-notice-period",
     "guide_name": "How job notice periods work in Germany",
     "category": "Work",
     "path": "/json/job-notice-period.json",
-    "sections_count": 9
+    "sections_count": 8,
+    "url_path": "/guides/job-notice-period"
   },
   {
     "guide": "unemployment-benefits",
     "guide_name": "Unemployment benefits in Germany",
     "category": "Work",
     "path": "/json/unemployment-benefits.json",
-    "sections_count": 20
+    "sections_count": 19,
+    "url_path": "/guides/unemployment-benefits"
   },
   {
     "guide": "when-unemployed",
     "guide_name": "German health insurance when unemployed",
     "category": "Work",
     "path": "/json/when-unemployed.json",
-    "sections_count": 0
+    "sections_count": 5,
+    "url_path": "/guides/german-health-insurance/when-unemployed"
   },
   {
     "guide": "vacation-days",
     "guide_name": "How to take vacations in Germany",
     "category": "Work",
     "path": "/json/vacation-days.json",
-    "sections_count": 14
+    "sections_count": 13,
+    "url_path": "/guides/vacation-days"
   },
   {
     "guide": "sick-leave",
     "guide_name": "How to take sick days in Germany",
     "category": "Work",
     "path": "/json/sick-leave.json",
-    "sections_count": 18
+    "sections_count": 17,
+    "url_path": "/guides/sick-leave"
   },
   {
     "guide": "sabbatical-leave",
     "guide_name": "How to take a sabbatical in Germany",
     "category": "Work",
     "path": "/json/sabbatical-leave.json",
-    "sections_count": 9
+    "sections_count": 8,
+    "url_path": "/guides/sabbatical-leave"
   },
   {
     "guide": "bildungsurlaub",
     "guide_name": "How educational leave works (Bildungsurlaub)",
     "category": "Work",
     "path": "/json/bildungsurlaub.json",
-    "sections_count": 7
+    "sections_count": 6,
+    "url_path": "/guides/bildungsurlaub"
+  },
+  {
+    "guide": "moving-to-berlin",
+    "guide_name": "How to move to Berlin",
+    "category": "Visas and immigration",
+    "path": "/json/moving-to-berlin.json",
+    "sections_count": 21,
+    "url_path": "/guides/moving-to-berlin"
   },
   {
     "guide": "residence-permit",
     "guide_name": "How to apply for a German residence permit",
     "category": "Visas and immigration",
     "path": "/json/residence-permit.json",
-    "sections_count": 37
+    "sections_count": 36,
+    "url_path": "/guides/residence-permit"
   },
   {
     "guide": "work-visa",
     "guide_name": "How to apply for a German work visa",
     "category": "Visas and immigration",
     "path": "/json/work-visa.json",
-    "sections_count": 20
+    "sections_count": 19,
+    "url_path": "/guides/work-visa"
   },
   {
     "guide": "blue-card",
     "guide_name": "How to apply for a German Blue Card",
     "category": "Visas and immigration",
     "path": "/json/blue-card.json",
-    "sections_count": 21
+    "sections_count": 20,
+    "url_path": "/guides/blue-card"
   },
   {
     "guide": "permanent-residence",
     "guide_name": "How to apply for German permanent residence",
     "category": "Visas and immigration",
     "path": "/json/permanent-residence.json",
-    "sections_count": 35
+    "sections_count": 34,
+    "url_path": "/guides/permanent-residence"
   },
   {
     "guide": "freelance-visa",
     "guide_name": "How to apply for a German freelance visa",
     "category": "Visas and immigration",
     "path": "/json/freelance-visa.json",
-    "sections_count": 25
+    "sections_count": 24,
+    "url_path": "/guides/freelance-visa"
   },
   {
     "guide": "freelance-visa-letter-of-intent",
     "guide_name": "Letters of intent for the German freelance visa",
     "category": "Visas and immigration",
     "path": "/json/freelance-visa-letter-of-intent.json",
-    "sections_count": 7
+    "sections_count": 6,
+    "url_path": "/guides/freelance-visa-letter-of-intent"
   },
   {
     "guide": "renew-german-freelance-visa",
     "guide_name": "How to renew a German freelance visa",
     "category": "Visas and immigration",
     "path": "/json/renew-german-freelance-visa.json",
-    "sections_count": 17
+    "sections_count": 16,
+    "url_path": "/guides/renew-german-freelance-visa"
   },
   {
     "guide": "fiktionsbescheinigung",
     "guide_name": "How the German Fik­ti­ons­be­schei­ni­gung works",
     "category": "Visas and immigration",
     "path": "/json/fiktionsbescheinigung.json",
-    "sections_count": 9
+    "sections_count": 8,
+    "url_path": "/guides/fiktionsbescheinigung"
   },
   {
     "guide": "zusatzblatt",
     "guide_name": "How to read your Zusatzblatt",
     "category": "Visas and immigration",
     "path": "/json/zusatzblatt.json",
-    "sections_count": 2
+    "sections_count": 2,
+    "url_path": "/guides/zusatzblatt"
   },
   {
     "guide": "eid-online-ausweisfunktion",
     "guide_name": "How to activate the eID on your residence permit",
     "category": "Visas and immigration",
     "path": "/json/eid-online-ausweisfunktion.json",
-    "sections_count": 7
+    "sections_count": 6,
+    "url_path": "/guides/eid-online-ausweisfunktion"
   },
   {
     "guide": "immigration-office",
     "guide_name": "How the Berlin immigration office works",
     "category": "Visas and immigration",
     "path": "/json/immigration-office.json",
-    "sections_count": 14
+    "sections_count": 13,
+    "url_path": "/guides/immigration-office"
   },
   {
     "guide": "wait-times",
     "guide_name": "Berlin immigration office wait times",
     "category": "Visas and immigration",
     "path": "/json/wait-times.json",
-    "sections_count": 0
+    "sections_count": 2,
+    "url_path": "/guides/immigration-office/wait-times"
   },
   {
     "guide": "visit-berlin",
     "guide_name": "Berlin travel guide: what to see, do and eat in Berlin",
     "category": "Living in Germany",
     "path": "/json/visit-berlin.json",
-    "sections_count": 36
+    "sections_count": 35,
+    "url_path": "/guides/visit-berlin"
   },
   {
     "guide": "power-sockets",
     "guide_name": "Power sockets in Germany",
     "category": "Living in Germany",
     "path": "/json/power-sockets.json",
-    "sections_count": 4
+    "sections_count": 3,
+    "url_path": "/guides/power-sockets"
   },
   {
     "guide": "learn-german",
     "guide_name": "How to learn German in Berlin",
     "category": "Living in Germany",
     "path": "/json/learn-german.json",
-    "sections_count": 24
+    "sections_count": 23,
+    "url_path": "/guides/learn-german"
   },
   {
     "guide": "tipping",
     "guide_name": "How to tip in Germany",
     "category": "Living in Germany",
     "path": "/json/tipping.json",
-    "sections_count": 15
+    "sections_count": 14,
+    "url_path": "/guides/tipping"
   },
   {
     "guide": "sorting-trash-in-germany",
     "guide_name": "How to sort trash and recycle in Germany",
     "category": "Living in Germany",
     "path": "/json/sorting-trash-in-germany.json",
-    "sections_count": 23
+    "sections_count": 22,
+    "url_path": "/guides/sorting-trash-in-germany"
   },
   {
     "guide": "pfand-bottles",
     "guide_name": "The Pfand system: how to return bottles in Germany",
     "category": "Living in Germany",
     "path": "/json/pfand-bottles.json",
-    "sections_count": 11
+    "sections_count": 10,
+    "url_path": "/guides/pfand-bottles"
   },
   {
     "guide": "christmas-tree-disposal",
     "guide_name": "How to dispose of a Christmas tree in Berlin",
     "category": "Living in Germany",
     "path": "/json/christmas-tree-disposal.json",
-    "sections_count": 3
+    "sections_count": 3,
+    "url_path": "/guides/christmas-tree-disposal"
   },
   {
     "guide": "public-holidays",
     "guide_name": "List of public holidays in Berlin",
     "category": "Living in Germany",
     "path": "/json/public-holidays.json",
-    "sections_count": 10
+    "sections_count": 9,
+    "url_path": "/guides/public-holidays"
   },
   {
     "guide": "mail-a-letter",
     "guide_name": "How to mail a letter in Germany",
     "category": "Living in Germany",
     "path": "/json/mail-a-letter.json",
-    "sections_count": 7
+    "sections_count": 6,
+    "url_path": "/guides/mail-a-letter"
   },
   {
     "guide": "addressing-a-letter-in-germany",
     "guide_name": "How to write a German address",
     "category": "Living in Germany",
     "path": "/json/addressing-a-letter-in-germany.json",
-    "sections_count": 8
+    "sections_count": 7,
+    "url_path": "/guides/addressing-a-letter-in-germany"
   },
   {
     "guide": "package-delivery",
     "guide_name": "How to get your DHL, GLS, DPD and Hermes packages",
     "category": "Living in Germany",
     "path": "/json/package-delivery.json",
-    "sections_count": 5
+    "sections_count": 4,
+    "url_path": "/guides/package-delivery"
   },
   {
     "guide": "dial-phone-numbers-germany",
     "guide_name": "How to dial phone numbers in Germany",
     "category": "Living in Germany",
     "path": "/json/dial-phone-numbers-germany.json",
-    "sections_count": 7
+    "sections_count": 6,
+    "url_path": "/guides/dial-phone-numbers-germany"
   },
   {
     "guide": "emergency-numbers",
     "guide_name": "Police and emergency numbers in Berlin",
     "category": "Living in Germany",
     "path": "/json/emergency-numbers.json",
-    "sections_count": 9
+    "sections_count": 8,
+    "url_path": "/guides/emergency-numbers"
   },
   {
     "guide": "photography-laws-germany",
     "guide_name": "Photography laws in Germany",
     "category": "Living in Germany",
     "path": "/json/photography-laws-germany.json",
-    "sections_count": 11
+    "sections_count": 10,
+    "url_path": "/guides/photography-laws-germany"
   },
   {
     "guide": "pirating-streaming-movies-in-germany",
     "guide_name": "How to stream or torrent movies in Germany",
     "category": "Living in Germany",
     "path": "/json/pirating-streaming-movies-in-germany.json",
-    "sections_count": 13
+    "sections_count": 12,
+    "url_path": "/guides/pirating-streaming-movies-in-germany"
   },
   {
     "guide": "netto-vs-netto",
     "guide_name": "Why are there two kinds of Netto in Germany?",
     "category": "Living in Germany",
     "path": "/json/netto-vs-netto.json",
-    "sections_count": 5
+    "sections_count": 4,
+    "url_path": "/guides/netto-vs-netto"
   },
   {
     "guide": "worms-in-trees",
     "guide_name": "What are the small worms in German trees?",
     "category": "Living in Germany",
     "path": "/json/worms-in-trees.json",
-    "sections_count": 3
+    "sections_count": 3,
+    "url_path": "/guides/worms-in-trees"
   },
   {
     "guide": "germany-sign-fonts",
     "guide_name": "What fonts do German signs use?",
     "category": "Living in Germany",
     "path": "/json/germany-sign-fonts.json",
-    "sections_count": 9
+    "sections_count": 8,
+    "url_path": "/guides/germany-sign-fonts"
   },
   {
     "guide": "movies-set-in-berlin",
     "guide_name": "Which movies are set in Berlin?",
     "category": "Living in Germany",
     "path": "/json/movies-set-in-berlin.json",
-    "sections_count": 11
+    "sections_count": 10,
+    "url_path": "/guides/movies-set-in-berlin"
   },
   {
     "guide": "cost-of-living",
-    "guide_name": "Cost of living in Berlin, and Germany",
+    "guide_name": "Cost of living in Berlin and Germany",
     "category": "Personal finance",
     "path": "/json/cost-of-living.json",
-    "sections_count": 20
+    "sections_count": 16,
+    "url_path": "/guides/cost-of-living"
   },
   {
     "guide": "saving-money-germany",
     "guide_name": "How to save money in Germany",
     "category": "Personal finance",
     "path": "/json/saving-money-germany.json",
-    "sections_count": 12
+    "sections_count": 11,
+    "url_path": "/guides/saving-money-germany"
   },
   {
     "guide": "banking",
     "guide_name": "How banking works in Germany",
     "category": "Personal finance",
     "path": "/json/banking.json",
-    "sections_count": 13
+    "sections_count": 12,
+    "url_path": "/guides/banking"
   },
   {
     "guide": "best-bank-germany",
     "guide_name": "What is the best German bank for expats?",
     "category": "Personal finance",
     "path": "/json/best-bank-germany.json",
-    "sections_count": 15
+    "sections_count": 14,
+    "url_path": "/guides/best-bank-germany"
   },
   {
     "guide": "an-honest-review-of-n26",
     "guide_name": "My honest N26 review — 7 years with N26",
     "category": "Personal finance",
     "path": "/json/an-honest-review-of-n26.json",
-    "sections_count": 26
+    "sections_count": 25,
+    "url_path": "/guides/an-honest-review-of-n26"
   },
   {
     "guide": "kontist-review",
     "guide_name": "My review of Kontist: it's not worth it",
     "category": "Personal finance",
     "path": "/json/kontist-review.json",
-    "sections_count": 25
+    "sections_count": 24,
+    "url_path": "/guides/kontist-review"
   },
   {
     "guide": "an-honest-review-of-degiro",
     "guide_name": "Degiro review: there are better options",
     "category": "Personal finance",
     "path": "/json/an-honest-review-of-degiro.json",
-    "sections_count": 11
+    "sections_count": 10,
+    "url_path": "/guides/an-honest-review-of-degiro"
   },
   {
     "guide": "exchange-coins-berlin",
     "guide_name": "How to exchange or deposit coins in Berlin",
     "category": "Personal finance",
     "path": "/json/exchange-coins-berlin.json",
-    "sections_count": 5
+    "sections_count": 4,
+    "url_path": "/guides/exchange-coins-berlin"
   },
   {
     "guide": "taxes",
     "guide_name": "How taxes work in Germany",
     "category": "Personal finance",
     "path": "/json/taxes.json",
-    "sections_count": 16
+    "sections_count": 15,
+    "url_path": "/guides/taxes"
   },
   {
     "guide": "english-speaking-steuerberater-berlin",
     "guide_name": "English-speaking accountants and tax advisors in Berlin",
     "category": "Personal finance",
     "path": "/json/english-speaking-steuerberater-berlin.json",
-    "sections_count": 13
+    "sections_count": 13,
+    "url_path": "/guides/english-speaking-steuerberater-berlin"
   },
   {
     "guide": "steuerberater-vs-buchhalter",
     "guide_name": "Steuerberater or Buchhalter: what's the difference?",
     "category": "Personal finance",
     "path": "/json/steuerberater-vs-buchhalter.json",
-    "sections_count": 7
+    "sections_count": 6,
+    "url_path": "/guides/steuerberater-vs-buchhalter"
   },
   {
     "guide": "german-tax-software",
     "guide_name": "English-speaking tax software for Germany",
     "category": "Personal finance",
     "path": "/json/german-tax-software.json",
-    "sections_count": 5
+    "sections_count": 4,
+    "url_path": "/guides/german-tax-software"
   },
   {
     "guide": "german-tax-id-steuernummer",
     "guide_name": "How to find your German tax ID, tax number or VAT number",
     "category": "Personal finance",
     "path": "/json/german-tax-id-steuernummer.json",
-    "sections_count": 14
+    "sections_count": 13,
+    "url_path": "/guides/german-tax-id-steuernummer"
   },
   {
     "guide": "german-versicherungsnummer",
     "guide_name": "How to find your So­zi­a­l­ver­si­che­rungs­num­mer",
     "category": "Personal finance",
     "path": "/json/german-versicherungsnummer.json",
-    "sections_count": 10
+    "sections_count": 9,
+    "url_path": "/guides/german-versicherungsnummer"
   },
   {
     "guide": "elster-account",
     "guide_name": "How to create an ELSTER account",
     "category": "Personal finance",
     "path": "/json/elster-account.json",
-    "sections_count": 8
+    "sections_count": 7,
+    "url_path": "/guides/elster-account"
   },
   {
     "guide": "bescheinigung-in-steuersachen",
     "guide_name": "How to get a Bescheinigung in Steuersachen",
     "category": "Personal finance",
     "path": "/json/bescheinigung-in-steuersachen.json",
-    "sections_count": 7
+    "sections_count": 6,
+    "url_path": "/guides/bescheinigung-in-steuersachen"
   },
   {
     "guide": "german-health-insurance",
     "guide_name": "How to choose German health insurance",
     "category": "Personal finance",
     "path": "/json/german-health-insurance.json",
-    "sections_count": 30
+    "sections_count": 29,
+    "url_path": "/guides/german-health-insurance"
   },
   {
     "guide": "for-a-visa-application",
     "guide_name": "Health insurance for a German visa or residence permit",
     "category": "Personal finance",
     "path": "/json/for-a-visa-application.json",
-    "sections_count": 0
+    "sections_count": 9,
+    "url_path": "/guides/german-health-insurance/for-a-visa-application"
   },
   {
     "guide": "for-employees",
     "guide_name": "German health insurance for employees",
     "category": "Personal finance",
     "path": "/json/for-employees.json",
-    "sections_count": 0
+    "sections_count": 11,
+    "url_path": "/guides/german-health-insurance/for-employees"
   },
   {
     "guide": "for-students",
     "guide_name": "German health insurance for students",
     "category": "Personal finance",
     "path": "/json/for-students.json",
-    "sections_count": 0
+    "sections_count": 11,
+    "url_path": "/guides/german-health-insurance/for-students"
   },
   {
     "guide": "for-freelancers",
     "guide_name": "German health insurance for freelancers",
     "category": "Personal finance",
     "path": "/json/for-freelancers.json",
-    "sections_count": 0
+    "sections_count": 9,
+    "url_path": "/guides/german-health-insurance/for-freelancers"
   },
   {
     "guide": "ksk-kuenstlersozialkasse",
     "guide_name": "How to join the Künst­ler­so­zi­al­kas­se (KSK)",
     "category": "Personal finance",
     "path": "/json/ksk-kuenstlersozialkasse.json",
-    "sections_count": 48
+    "sections_count": 47,
+    "url_path": "/guides/ksk-kuenstlersozialkasse"
   },
   {
     "guide": "for-apprentices",
     "guide_name": "German health insurance for Azubis",
     "category": "Personal finance",
     "path": "/json/for-apprentices.json",
-    "sections_count": 0
+    "sections_count": 5,
+    "url_path": "/guides/german-health-insurance/for-apprentices"
   },
   {
     "guide": "ottonova-review",
     "guide_name": "Should you trust Ottonova? An objective review",
     "category": "Personal finance",
     "path": "/json/ottonova-review.json",
-    "sections_count": 12
+    "sections_count": 11,
+    "url_path": "/guides/ottonova-review"
   },
   {
     "guide": "techniker-krankenkasse-review",
     "guide_name": "My honest Techniker Krankenkasse review",
     "category": "Personal finance",
     "path": "/json/techniker-krankenkasse-review.json",
-    "sections_count": 15
+    "sections_count": 14,
+    "url_path": "/guides/techniker-krankenkasse-review"
   },
   {
     "guide": "insurance",
     "guide_name": "Types of insurance in Germany",
     "category": "Personal finance",
     "path": "/json/insurance.json",
-    "sections_count": 12
+    "sections_count": 11,
+    "url_path": "/guides/insurance"
   },
   {
     "guide": "haftpflichtversicherung",
     "guide_name": "How to choose Germany liability insurance",
     "category": "Personal finance",
     "path": "/json/haftpflichtversicherung.json",
-    "sections_count": 15
+    "sections_count": 14,
+    "url_path": "/guides/haftpflichtversicherung"
   },
   {
     "guide": "legal-insurance",
     "guide_name": "What is legal insurance? Is it worth it?",
     "category": "Personal finance",
     "path": "/json/legal-insurance.json",
-    "sections_count": 14
+    "sections_count": 13,
+    "url_path": "/guides/legal-insurance"
   },
   {
     "guide": "making-friends",
     "guide_name": "How to make friends in Berlin",
     "category": "Family, friends and pets",
     "path": "/json/making-friends.json",
-    "sections_count": 7
+    "sections_count": 6,
+    "url_path": "/guides/making-friends"
+  },
+  {
+    "guide": "board-games-in-berlin",
+    "guide_name": "Where to play board games in Berlin?",
+    "category": "Family, friends and pets",
+    "path": "/json/board-games-in-berlin.json",
+    "sections_count": 3,
+    "url_path": "/guides/board-games-in-berlin"
   },
   {
     "guide": "getting-married-in-germany",
     "guide_name": "How to get married in Germany",
     "category": "Family, friends and pets",
     "path": "/json/getting-married-in-germany.json",
-    "sections_count": 11
+    "sections_count": 10,
+    "url_path": "/guides/getting-married-in-germany"
   },
   {
     "guide": "kita",
     "guide_name": "How to find a Kita in Berlin",
     "category": "Family, friends and pets",
     "path": "/json/kita.json",
-    "sections_count": 11
+    "sections_count": 10,
+    "url_path": "/guides/kita"
   },
   {
     "guide": "kitagutschein",
     "guide_name": "How to get a Kitagutschein",
     "category": "Family, friends and pets",
     "path": "/json/kitagutschein.json",
-    "sections_count": 9
+    "sections_count": 8,
+    "url_path": "/guides/kitagutschein"
   },
   {
     "guide": "dog-ownership",
     "guide_name": "Having a dog in Berlin",
     "category": "Family, friends and pets",
     "path": "/json/dog-ownership.json",
-    "sections_count": 19
+    "sections_count": 18,
+    "url_path": "/guides/dog-ownership"
   },
   {
     "guide": "english-speaking-vets",
     "guide_name": "English-speaking veterinarians in Berlin",
     "category": "Family, friends and pets",
     "path": "/json/english-speaking-vets.json",
-    "sections_count": 2
+    "sections_count": 3,
+    "url_path": "/guides/english-speaking-vets"
   },
   {
     "guide": "dead-animal-disposal-berlin",
     "guide_name": "How to dispose of a dead animal in Berlin",
     "category": "Family, friends and pets",
     "path": "/json/dead-animal-disposal-berlin.json",
-    "sections_count": 7
+    "sections_count": 6,
+    "url_path": "/guides/dead-animal-disposal-berlin"
   },
   {
     "guide": "how-to-find-english-speaking-medical-professionals-in-berlin",
     "guide_name": "How to find English-speaking medical professionals in Berlin",
     "category": "Health",
     "path": "/json/how-to-find-english-speaking-medical-professionals-in-berlin.json",
-    "sections_count": 5
+    "sections_count": 4,
+    "url_path": "/guides/how-to-find-english-speaking-medical-professionals-in-berlin"
   },
   {
     "guide": "english-speaking-doctors-berlin",
     "guide_name": "List of English-speaking doctors and GPs in Berlin",
     "category": "Health",
     "path": "/json/english-speaking-doctors-berlin.json",
-    "sections_count": 5
+    "sections_count": 4,
+    "url_path": "/guides/english-speaking-doctors-berlin"
   },
   {
     "guide": "english-speaking-psychiatrists-berlin",
     "guide_name": "List of English-speaking psychiatrists in Berlin",
     "category": "Health",
     "path": "/json/english-speaking-psychiatrists-berlin.json",
-    "sections_count": 8
+    "sections_count": 7,
+    "url_path": "/guides/english-speaking-psychiatrists-berlin"
   },
   {
     "guide": "english-speaking-psychotherapists-berlin",
     "guide_name": "List of English-speaking psy­cho­the­ra­pists in Berlin",
     "category": "Health",
     "path": "/json/english-speaking-psychotherapists-berlin.json",
-    "sections_count": 13
+    "sections_count": 12,
+    "url_path": "/guides/english-speaking-psychotherapists-berlin"
   },
   {
     "guide": "list-of-english-speaking-dentists-in-berlin",
     "guide_name": "List of English-speaking dentists in Berlin",
     "category": "Health",
     "path": "/json/list-of-english-speaking-dentists-in-berlin.json",
-    "sections_count": 1
+    "sections_count": 2,
+    "url_path": "/guides/list-of-english-speaking-dentists-in-berlin"
   },
   {
     "guide": "english-speaking-gynecologists-berlin",
     "guide_name": "List of English-speaking gynaecologists and obstetricians in Berlin",
     "category": "Health",
     "path": "/json/english-speaking-gynecologists-berlin.json",
-    "sections_count": 1
+    "sections_count": 2,
+    "url_path": "/guides/english-speaking-gynecologists-berlin"
   },
   {
     "guide": "std-testing",
     "guide_name": "How to get tested for sexually transmitted diseases in Berlin",
     "category": "Health",
     "path": "/json/std-testing.json",
-    "sections_count": 7
+    "sections_count": 6,
+    "url_path": "/guides/std-testing"
   },
   {
     "guide": "adhd-berlin-germany",
     "guide_name": "How to get diagnosed with ADHD in Germany",
     "category": "Health",
     "path": "/json/adhd-berlin-germany.json",
-    "sections_count": 16
+    "sections_count": 15,
+    "url_path": "/guides/adhd-berlin-germany"
   },
   {
     "guide": "hay-fever",
     "guide_name": "How to deal with hay fever in Germany",
     "category": "Health",
     "path": "/json/hay-fever.json",
-    "sections_count": 8
+    "sections_count": 7,
+    "url_path": "/guides/hay-fever"
   },
   {
     "guide": "eyeglasses",
     "guide_name": "How to buy eyeglasses in Germany",
     "category": "Health",
     "path": "/json/eyeglasses.json",
-    "sections_count": 12
+    "sections_count": 11,
+    "url_path": "/guides/eyeglasses"
   },
   {
     "guide": "organ-donor",
     "guide_name": "How to register as an organ donor in Germany",
     "category": "Health",
     "path": "/json/organ-donor.json",
-    "sections_count": 9
+    "sections_count": 8,
+    "url_path": "/guides/organ-donor"
   },
   {
     "guide": "public-transit",
     "guide_name": "How to use public transit in Berlin",
     "category": "Getting around",
     "path": "/json/public-transit.json",
-    "sections_count": 23
+    "sections_count": 22,
+    "url_path": "/guides/public-transit"
   },
   {
     "guide": "deutschland-ticket",
     "guide_name": "How to buy a Deutschland Ticket",
     "category": "Getting around",
     "path": "/json/deutschland-ticket.json",
-    "sections_count": 7
+    "sections_count": 6,
+    "url_path": "/guides/deutschland-ticket"
   },
   {
     "guide": "paying-a-bvg-fine",
     "guide_name": "How to pay (or avoid paying) a BVG fine",
     "category": "Getting around",
     "path": "/json/paying-a-bvg-fine.json",
-    "sections_count": 12
+    "sections_count": 11,
+    "url_path": "/guides/paying-a-bvg-fine"
   },
   {
     "guide": "cancel-bvg-yearly-ticket",
     "guide_name": "How to cancel a BVG ticket subscription",
     "category": "Getting around",
     "path": "/json/cancel-bvg-yearly-ticket.json",
-    "sections_count": 9
+    "sections_count": 8,
+    "url_path": "/guides/cancel-bvg-yearly-ticket"
   },
   {
     "guide": "bicycle-in-berlin",
     "guide_name": "How to buy and ride a bicycle in Berlin",
     "category": "Getting around",
     "path": "/json/bicycle-in-berlin.json",
-    "sections_count": 17
+    "sections_count": 16,
+    "url_path": "/guides/bicycle-in-berlin"
   },
   {
-    "guide": "buying-used-car-in-germany",
+    "guide": "buy-a-car-in-germany",
     "guide_name": "How to buy a car in Germany",
     "category": "Getting around",
-    "path": "/json/buying-used-car-in-germany.json",
-    "sections_count": 21
+    "path": "/json/buy-a-car-in-germany.json",
+    "sections_count": 21,
+    "url_path": "/guides/buy-a-car-in-germany"
   },
   {
     "guide": "car-insurance-germany",
-    "guide_name": "How to choose car insurance in Germany",
+    "guide_name": "How to choose German car insurance",
     "category": "Getting around",
     "path": "/json/car-insurance-germany.json",
-    "sections_count": 20
+    "sections_count": 13,
+    "url_path": "/guides/car-insurance-germany"
   },
   {
     "guide": "car-cost-of-ownership-germany",
     "guide_name": "The cost of owning a car in Germany",
     "category": "Getting around",
     "path": "/json/car-cost-of-ownership-germany.json",
-    "sections_count": 9
+    "sections_count": 8,
+    "url_path": "/guides/car-cost-of-ownership-germany"
   },
   {
     "guide": "international-driving-permit-germany",
     "guide_name": "How to get an International Driving Permit in Berlin",
     "category": "Getting around",
     "path": "/json/international-driving-permit-germany.json",
-    "sections_count": 4
+    "sections_count": 3,
+    "url_path": "/guides/international-driving-permit-germany"
   },
   {
     "guide": "motorcycle-parking",
     "guide_name": "Can you park a motorcycle on the sidewalk in Berlin?",
     "category": "Getting around",
     "path": "/json/motorcycle-parking.json",
-    "sections_count": 1
+    "sections_count": 1,
+    "url_path": "/guides/motorcycle-parking"
   },
   {
     "guide": "driving-licence",
     "guide_name": "How to get a driving licence in Germany",
     "category": "Getting around",
     "path": "/json/driving-licence.json",
-    "sections_count": 17
+    "sections_count": 16,
+    "url_path": "/guides/driving-licence"
   },
   {
     "guide": "convert-to-german-driving-licence",
     "guide_name": "How to trade your foreign driver licence for a German one",
     "category": "Getting around",
     "path": "/json/convert-to-german-driving-licence.json",
-    "sections_count": 15
+    "sections_count": 14,
+    "url_path": "/guides/convert-to-german-driving-licence"
   },
   {
     "guide": "english-speaking-driving-schools",
     "guide_name": "List of English-speaking driving schools in Berlin",
     "category": "Getting around",
     "path": "/json/english-speaking-driving-schools.json",
-    "sections_count": 3
+    "sections_count": 3,
+    "url_path": "/guides/english-speaking-driving-schools"
   },
   {
     "guide": "open-on-sundays-in-berlin",
     "guide_name": "What is open on Sundays and public holidays in Berlin?",
     "category": "Where to find...",
     "path": "/json/open-on-sundays-in-berlin.json",
-    "sections_count": 10
+    "sections_count": 9,
+    "url_path": "/guides/open-on-sundays-in-berlin"
   },
   {
     "guide": "how-do-i-buy-and-sell-used-things-in-berlin",
     "guide_name": "Where to buy, sell and donate things in Berlin?",
     "category": "Where to find...",
     "path": "/json/how-do-i-buy-and-sell-used-things-in-berlin.json",
-    "sections_count": 8
+    "sections_count": 7,
+    "url_path": "/guides/how-do-i-buy-and-sell-used-things-in-berlin"
   },
   {
     "guide": "donate-clothes",
     "guide_name": "Where to donate clothes in Berlin",
     "category": "Where to find...",
     "path": "/json/donate-clothes.json",
-    "sections_count": 8
+    "sections_count": 7,
+    "url_path": "/guides/donate-clothes"
   },
   {
     "guide": "where-to-buy-what",
     "guide_name": "Where to buy what in Berlin",
     "category": "Where to find...",
     "path": "/json/where-to-buy-what.json",
-    "sections_count": 9
+    "sections_count": 8,
+    "url_path": "/guides/where-to-buy-what"
   },
   {
     "guide": "biometric-pictures-in-berlin",
     "guide_name": "Where to get passport photos in Berlin",
     "category": "Where to find...",
     "path": "/json/biometric-pictures-in-berlin.json",
-    "sections_count": 10
+    "sections_count": 9,
+    "url_path": "/guides/biometric-pictures-in-berlin"
   },
   {
     "guide": "foreign-cooking-ingredients-in-berlin",
     "guide_name": "Where to find foreign cooking ingredients in Berlin",
     "category": "Where to find...",
     "path": "/json/foreign-cooking-ingredients-in-berlin.json",
-    "sections_count": 32
+    "sections_count": 31,
+    "url_path": "/guides/foreign-cooking-ingredients-in-berlin"
   },
   {
     "guide": "where-to-eat-american-pizza-in-berlin",
     "guide_name": "Where to eat American pizza in Berlin",
     "category": "Where to find...",
     "path": "/json/where-to-eat-american-pizza-in-berlin.json",
-    "sections_count": 1
+    "sections_count": 2,
+    "url_path": "/guides/where-to-eat-american-pizza-in-berlin"
   },
   {
     "guide": "motorcycle-stores-in-berlin",
     "guide_name": "Where to buy motorcycle gear in Berlin",
     "category": "Where to find...",
     "path": "/json/motorcycle-stores-in-berlin.json",
-    "sections_count": 2
+    "sections_count": 2,
+    "url_path": "/guides/motorcycle-stores-in-berlin"
   },
   {
     "guide": "buying-marijuana-in-berlin",
     "guide_name": "How to buy weed in Berlin",
     "category": "Where to find...",
     "path": "/json/buying-marijuana-in-berlin.json",
-    "sections_count": 8
+    "sections_count": 7,
+    "url_path": "/guides/buying-marijuana-in-berlin"
   },
   {
     "guide": "is-marijuana-legal",
     "guide_name": "Is marijuana legal in Gemany?",
     "category": "Where to find...",
     "path": "/json/is-marijuana-legal.json",
-    "sections_count": 10
+    "sections_count": 9,
+    "url_path": "/guides/is-marijuana-legal"
   },
   {
     "guide": "lost-and-found-berlin",
     "guide_name": "Lost and found in Berlin — how to get your things back",
     "category": "Where to find...",
     "path": "/json/lost-and-found-berlin.json",
-    "sections_count": 11
+    "sections_count": 10,
+    "url_path": "/guides/lost-and-found-berlin"
   },
   {
     "guide": "english-cinemas-berlin",
     "guide_name": "Cinemas with English movies in Berlin",
     "category": "Where to find...",
     "path": "/json/english-cinemas-berlin.json",
-    "sections_count": 4
+    "sections_count": 3,
+    "url_path": "/guides/english-cinemas-berlin"
   },
   {
     "guide": "hairdressers-hairstylists-barbers-berlin",
     "guide_name": "List of English-speaking hair salons and barbers in Berlin",
     "category": "Where to find...",
     "path": "/json/hairdressers-hairstylists-barbers-berlin.json",
-    "sections_count": 1
+    "sections_count": 2,
+    "url_path": "/guides/hairdressers-hairstylists-barbers-berlin"
   },
   {
     "guide": "24-hour-gym-berlin",
     "guide_name": "List of 24 hour gyms in Berlin",
     "category": "Where to find...",
     "path": "/json/24-hour-gym-berlin.json",
-    "sections_count": 2
+    "sections_count": 2,
+    "url_path": "/guides/24-hour-gym-berlin"
   },
   {
     "guide": "start-a-business-in-germany",
     "guide_name": "How to start a business in Germany",
     "category": "Self-employment",
     "path": "/json/start-a-business-in-germany.json",
-    "sections_count": 28
+    "sections_count": 27,
+    "url_path": "/guides/start-a-business-in-germany"
   },
   {
     "guide": "fragebogen-zur-steuerlichen-erfassung",
     "guide_name": "How to fill the Fragebogen zur steuerlichen Erfassung",
     "category": "Self-employment",
     "path": "/json/fragebogen-zur-steuerlichen-erfassung.json",
-    "sections_count": 38
+    "sections_count": 37,
+    "url_path": "/guides/fragebogen-zur-steuerlichen-erfassung"
   },
   {
     "guide": "kleinunternehmer",
     "guide_name": "How being a Klein­un­ter­neh­mer works",
     "category": "Self-employment",
     "path": "/json/kleinunternehmer.json",
-    "sections_count": 9
+    "sections_count": 8,
+    "url_path": "/guides/kleinunternehmer"
   },
   {
     "guide": "freiberufler-or-gewerbe",
     "guide_name": "Freiberufler or Gewerbe: what's the difference?",
     "category": "Self-employment",
     "path": "/json/freiberufler-or-gewerbe.json",
-    "sections_count": 13
+    "sections_count": 12,
+    "url_path": "/guides/freiberufler-or-gewerbe"
   },
   {
     "guide": "gewerbeschein",
     "guide_name": "How to do your Ge­wer­be­an­mel­dung in Berlin",
     "category": "Self-employment",
     "path": "/json/gewerbeschein.json",
-    "sections_count": 16
+    "sections_count": 15,
+    "url_path": "/guides/gewerbeschein"
   },
   {
     "guide": "handelsregisternummer-germany",
     "guide_name": "What is a Han­dels­re­gis­ter­num­mer?",
     "category": "Self-employment",
     "path": "/json/handelsregisternummer-germany.json",
-    "sections_count": 7
+    "sections_count": 6,
+    "url_path": "/guides/handelsregisternummer-germany"
   },
   {
     "guide": "gewerbesteuer",
     "guide_name": "What is the trade tax (Gewerbesteuer)?",
     "category": "Self-employment",
     "path": "/json/gewerbesteuer.json",
-    "sections_count": 8
+    "sections_count": 7,
+    "url_path": "/guides/gewerbesteuer"
   },
   {
     "guide": "value-added-tax",
     "guide_name": "How VAT works in Germany",
     "category": "Self-employment",
     "path": "/json/value-added-tax.json",
-    "sections_count": 17
+    "sections_count": 16,
+    "url_path": "/guides/value-added-tax"
   },
   {
     "guide": "website-compliance-germany",
     "guide_name": "How to run a website in Germany",
     "category": "Self-employment",
     "path": "/json/website-compliance-germany.json",
-    "sections_count": 43
+    "sections_count": 42,
+    "url_path": "/guides/website-compliance-germany"
   },
   {
     "guide": "freelance-developer-rate",
     "guide_name": "Freelance developer rates in Berlin",
     "category": "Self-employment",
     "path": "/json/freelance-developer-rate.json",
-    "sections_count": 9
+    "sections_count": 8,
+    "url_path": "/guides/freelance-developer-rate"
   },
   {
     "guide": "help",
     "guide_name": "Where to get help in Berlin",
     "category": "Getting help",
     "path": "/json/help.json",
-    "sections_count": 15
+    "sections_count": 15,
+    "url_path": "/guides/help"
   },
   {
     "guide": "relocation-agency-in-berlin",
     "guide_name": "List of relocation consultants and agencies in Berlin",
     "category": "Getting help",
     "path": "/json/relocation-agency-in-berlin.json",
-    "sections_count": 3
+    "sections_count": 3,
+    "url_path": "/guides/relocation-agency-in-berlin"
   },
   {
     "guide": "english-speaking-lawyers-berlin",
     "guide_name": "List of English-speaking lawyers in Berlin",
     "category": "Getting help",
     "path": "/json/english-speaking-lawyers-berlin.json",
-    "sections_count": 7
+    "sections_count": 6,
+    "url_path": "/guides/english-speaking-lawyers-berlin"
   }
 ]

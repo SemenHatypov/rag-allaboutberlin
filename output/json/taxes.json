@@ -7,39 +7,32 @@
     "text": "This guide explains how taxes work in Germany, and how to pay less taxes."
   },
   {
-    "id": "c340f78524",
-    "guide": "taxes",
-    "section": "On this page",
-    "title": "",
-    "text": "Tax calculator The taxes you pay in GermanyIncome and salary taxHealth insuranceLong-term care insurancePublic pension insuranceUnemployment insuranceChurch taxSolidarity surchargeCapital gains tax Income and salary tax Health insurance Long-term care insurance Public pension insurance Unemployment insurance Church tax Solidarity surcharge Capital gains tax Other taxes Taxes for businesses German tax classes How to pay less taxes Need help?"
-  },
-  {
     "id": "e36aa31dee",
     "guide": "taxes",
     "section": "Tax calculator",
     "title": "",
-    "text": "This tax calculator shows your salary after taxes. It works for employees, students and freelancers."
+    "text": "This tax calculator shows your salary after taxes. It works for employees, students and freelancers. Calculate your German net income after income tax and social contributions. This tool requires JavaScript to work."
   },
   {
     "id": "baf337fe70",
     "guide": "taxes",
     "section": "The taxes you pay in Germany",
     "title": "",
-    "text": "All German residents must pay taxes. These are the taxes to pay: Income and salary tax(Einkommensteuer,Lohnsteuer) Health insurance(Krankenversicherung) Long-term care insurance(Pflegeversicherung) Public pension insurance(gesetzliche Rentenversicherung) Unemployment insurance(Arbeitslosenversicherung) Church tax(Kirchensteuer) Solidarity surcharge(Solidaritätszuschlag) If you are an employee, your employer collects taxes directly from your paycheck. If you are self-employed, you pay taxes bybank transferordirect debit. Income from investments is taxed differently.4You pay: Capital gains tax (Kapitalertragsteuer) Church tax(Kirchensteuer) Solidarity surcharge(Solidaritätszuschlag)"
+    "text": "All German residents must pay taxes. These are the taxes to pay: Income and wage tax(Einkommensteuer,Lohnsteuer) Health insurance(Krankenversicherung) Long-term care insurance(Pflegeversicherung) Public pension insurance(gesetzliche Rentenversicherung) Unemployment insurance(Arbeitslosenversicherung) Church tax(Kirchensteuer) Solidarity surcharge(Solidaritätszuschlag) If you are an employee, your employer collects taxes directly from your paycheck. If you are self-employed, you pay taxes bybank transferordirect debit. Income from investments is taxed differently.4You pay: Capital gains tax (Kapitalertragsteuer) Church tax(Kirchensteuer) Solidarity surcharge(Solidaritätszuschlag)"
   },
   {
-    "id": "363b231f10",
+    "id": "e374c33724",
     "guide": "taxes",
     "section": "The taxes you pay in Germany",
-    "title": "Income and salary tax",
-    "text": "All German residents pay income tax (Einkommensteuer). This tax is a percentage of your income. It’s a progressive tax, so if you earn more, you pay a bigger percentage of your income.3 If you earn less than €12,348per year, you pay no income tax. If you earn themedian income, your income tax is around 18% of your income. The maximum income tax is 45% of your income.1 If you are an employee, you pay a salary tax (Lohnsteuer) on every paycheck. This is a prepayment of yourestimatedincome tax. If you pay too much salary tax, you can make atax declarationand get money back. Usually, tips are not taxed.6"
+    "title": "Income and wage tax",
+    "text": "All German residents pay income tax (Einkommensteuer). This tax is a percentage of your income. It’s a progressive tax, so if you earn more, you pay a bigger percentage of your income.3 If you earn less than €12,348per year, you pay no income tax. If you earn themedian income, your income tax is around 18% of your income. The maximum income tax is 45% of your income.1 If you are an employee, you pay a wage tax (Lohnsteuer) on every paycheck. This is a prepayment of yourestimatedincome tax. If you pay too much wage tax, you can make atax declarationand get money back. Usually, tips are not taxed.6"
   },
   {
     "id": "4d57d21670",
     "guide": "taxes",
     "section": "The taxes you pay in Germany",
     "title": "Health insurance",
-    "text": "All German residents must have health insurance (Krankenversicherung). Health insurance pays for your healthcare when you are sick. There are three types of health insurance: Public health insurance. It costs a percentage of your income. Private health insurance. The cost is set by the health insurer. Expat health insurance. The cost is set by the health insurer. If you are an employee, your employer pays half of it. If you earn less than €565per month, you can use your parents’ or spouse’s health insurance for free. Students get a cheaper tariff. How to choose health insurance"
+    "text": "All German residents must have health insurance (Krankenversicherung). Health insurance pays for your healthcare when you are sick. There are three types of health insurance: Public health insurance. It costs a percentage of your income. Private health insurance. The cost is set by the health insurer. Expat health insurance. The cost is set by the health insurer. If you are an employee, your employer pays half of it. If you earn less than €565per month, you can use your parents’ or spouse’s health insurance for free. Students get a cheaper tariff. Calculate the cost of German health insurance and see health insurance options for employees, students and freelancers. This tool requires JavaScript to work. How to choose health insurance"
   },
   {
     "id": "6cfd0be7cc",
@@ -102,7 +95,7 @@
     "guide": "taxes",
     "section": "German tax classes",
     "title": "",
-    "text": "Your tax class affects how yoursalary taxis calculated. It does not affect how muchincome taxyou pay. It only changes how much income tax you payin advance, as salary tax. You can change your tax class online withELSTER. If you are self-employed, you might not have a tax class, because you don’t need to calculate your salary tax.2 There are 6 tax classes: Tax class 1If you are not married, and you are not in any other tax class. Tax class 2If you are not married, and you raise children alone. You get more tax benefits. Tax class 3If you are married, and you earn more than your spouse. If you are in tax class 3, your spouse is in tax class 5. Tax class 4If you are married, and you and your spouse have similar incomes. If you are in tax class 4, your spouse is also in tax class 4. Tax class 5If you are married, and you earn less than your spouse. If you are in tax class 5, your spouse is in tax class 3. Tax class 6This is the tax class for a second job. If you don’t have a tax ID, your employer might put you in tax class 6. You have no tax benefits, and you pay more salary tax."
+    "text": "Your tax class affects how yourwage taxis calculated. It does not affect how muchincome taxyou pay. It only changes how much income tax you payin advance, as wage tax. You can change your tax class online withELSTER. If you are self-employed, you might not have a tax class, because you don’t need to calculate your wage tax.2 There are 6 tax classes: Tax class 1If you are not married, and you are not in any other tax class. Tax class 2If you are not married, and you raise children alone. You get more tax benefits. Tax class 3If you are married, and you earn more than your spouse. If you are in tax class 3, your spouse is in tax class 5. Tax class 4If you are married, and you and your spouse have similar incomes. If you are in tax class 4, your spouse is also in tax class 4. Tax class 5If you are married, and you earn less than your spouse. If you are in tax class 5, your spouse is in tax class 3. Tax class 6This is the tax class for a second job. If you don’t have a tax ID, your employer might put you in tax class 6. You have no tax benefits, and you pay more wage tax."
   },
   {
     "id": "bbeffc19d2",

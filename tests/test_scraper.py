@@ -44,6 +44,16 @@ GUIDES_INDEX_HTML = """
 </body></html>
 """
 
+NESTED_GUIDES_INDEX_HTML = """
+<html><body>
+  <h3>Personal Finance</h3>
+  <ul>
+    <li><h4><a href="https://allaboutberlin.com/guides/german-health-insurance/for-employees"
+               title="German health insurance for employees">For employees</a></h4></li>
+  </ul>
+</body></html>
+"""
+
 GUIDE_PAGE_HTML = """
 <html><body>
 <article>
@@ -56,6 +66,23 @@ GUIDE_PAGE_HTML = """
   <p>Write a short cover letter.</p>
   <h3>What to include</h3>
   <p>Proof of income, SCHUFA report.</p>
+</article>
+</body></html>
+"""
+
+GUIDE_PAGE_WITH_NAV_HTML = """
+<html><body>
+<article>
+  <nav aria-label="Breadcrumbs" class="breadcrumbs">
+    <ol><li><a href="/guides">Guides</a></li><li>Housing</li><li>Schufa</li></ol>
+  </nav>
+  <p>Real intro paragraph that is long enough to pass the section filter easily.</p>
+  <nav aria-label="Table of contents" class="table-of-contents">
+    <h2>On this page</h2>
+    <ol><li><a href="#a">What is a Schufa</a></li><li><a href="#b">How to get one</a></li></ol>
+  </nav>
+  <h2>What is a Schufa</h2>
+  <p>Real section content that is long enough to pass the fifty character filter.</p>
 </article>
 </body></html>
 """
@@ -175,6 +202,34 @@ class TestParseGuidesIndex:
         for e in self.entries:
             assert e.sections_count == 0
 
+    def test_url_path_matches_href(self):
+        anmeldung = next(e for e in self.entries if e.guide == "anmeldung")
+        assert anmeldung.url_path == "/guides/anmeldung"
+
+
+class TestParseGuidesIndexNested:
+    def setup_method(self):
+        self.entries = parse_guides_index(NESTED_GUIDES_INDEX_HTML)
+
+    def test_slug_is_last_segment(self):
+        assert self.entries[0].guide == "for-employees"
+
+    def test_url_path_preserves_full_nested_path(self):
+        assert self.entries[0].url_path == "/guides/german-health-insurance/for-employees"
+
+    def test_duplicate_slug_from_different_path_is_skipped(self):
+        html = """
+        <html><body>
+          <h3>A</h3>
+          <ul><li><a href="https://allaboutberlin.com/guides/parent-a/child">A</a></li></ul>
+          <h3>B</h3>
+          <ul><li><a href="https://allaboutberlin.com/guides/parent-b/child">B</a></li></ul>
+        </body></html>
+        """
+        entries = parse_guides_index(html)
+        assert len(entries) == 1
+        assert entries[0].url_path == "/guides/parent-a/child"
+
 
 # ---------------------------------------------------------------------------
 # parse_guide_page
@@ -227,6 +282,15 @@ class TestParseGuidePage:
 
     def test_empty_html_returns_empty_list(self):
         assert parse_guide_page("<html><body></body></html>", "empty") == []
+
+    def test_breadcrumbs_and_toc_nav_excluded_from_content(self):
+        sections = parse_guide_page(GUIDE_PAGE_WITH_NAV_HTML, "schufa")
+        all_text = " ".join(s.text for s in sections)
+        assert "Guides" not in all_text
+        assert "On this page" not in all_text
+        assert not any(s.section == "On this page" for s in sections)
+        assert "Real intro paragraph" in all_text
+        assert "Real section content" in all_text
 
 
 # ---------------------------------------------------------------------------
@@ -431,3 +495,51 @@ class TestRun:
         index = json.loads((tmp_path / "guides.json").read_text())
         failed = next(e for e in index if e["guide"] == "find-a-flat-in-berlin")
         assert failed["sections_count"] == 0
+
+    @responses_lib.activate
+    def test_fetches_nested_guide_at_its_real_path_not_flat_reconstruction(self, tmp_path):
+        responses_lib.add(
+            responses_lib.GET,
+            f"{BASE_URL}{GUIDES_PATH}",
+            body=NESTED_GUIDES_INDEX_HTML,
+            status=200,
+        )
+        responses_lib.add(
+            responses_lib.GET,
+            f"{BASE_URL}/guides/german-health-insurance/for-employees",
+            body=GUIDE_PAGE_HTML,
+            status=200,
+        )
+
+        run(output_dir=tmp_path, delay=0)
+
+        requested_urls = [call.request.url for call in responses_lib.calls]
+        assert f"{BASE_URL}/guides/german-health-insurance/for-employees" in requested_urls
+        assert f"{BASE_URL}/guides/for-employees" not in requested_urls
+
+        data = json.loads((tmp_path / "guides.json").read_text())
+        assert data[0]["sections_count"] > 0
+        assert (tmp_path / "for-employees.json").exists()
+
+    @responses_lib.activate
+    def test_removes_stale_guide_file_no_longer_in_index(self, tmp_path):
+        (tmp_path / "renamed-old-slug.json").write_text("[]", encoding="utf-8")
+
+        responses_lib.add(
+            responses_lib.GET,
+            f"{BASE_URL}{GUIDES_PATH}",
+            body=GUIDES_INDEX_HTML,
+            status=200,
+        )
+        for slug in ("find-a-flat-in-berlin", "apartment-deposit", "anmeldung"):
+            responses_lib.add(
+                responses_lib.GET,
+                f"{BASE_URL}/guides/{slug}",
+                body=GUIDE_PAGE_HTML,
+                status=200,
+            )
+
+        run(output_dir=tmp_path, delay=0)
+
+        assert not (tmp_path / "renamed-old-slug.json").exists()
+        assert (tmp_path / "guides.json").exists()
