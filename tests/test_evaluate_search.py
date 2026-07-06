@@ -1,9 +1,11 @@
 """Tests for evaluate_search.py — guide-level relevance metrics."""
 
-from evaluate_search import hit_rate, mrr, unique_guides
+import pandas as pd
+
+from evaluate_search import cited_guides, filter_known_guides, hit_rate, mrr
 
 
-class TestUniqueGuides:
+class TestCitedGuides:
     def test_dedupes_preserving_rank_order(self):
         results = [
             {"guide": "anmeldung"},
@@ -11,10 +13,35 @@ class TestUniqueGuides:
             {"guide": "anmeldung"},
             {"guide": "taxes"},
         ]
-        assert unique_guides(results) == ["anmeldung", "schufa", "taxes"]
+        assert cited_guides(results) == ["anmeldung", "schufa", "taxes"]
 
     def test_empty_results(self):
-        assert unique_guides([]) == []
+        assert cited_guides([]) == []
+
+
+class TestFilterKnownGuides:
+    def test_drops_questions_for_missing_guides(self):
+        ground_truth = pd.DataFrame(
+            [
+                {"question": "q1", "guide": "anmeldung"},
+                {"question": "q2", "guide": "removed-guide"},
+                {"question": "q3", "guide": "schufa"},
+            ]
+        )
+        documents = [{"guide": "anmeldung"}, {"guide": "schufa"}]
+
+        filtered = filter_known_guides(ground_truth, documents)
+
+        assert filtered["guide"].tolist() == ["anmeldung", "schufa"]
+        assert len(ground_truth) == 3  # input is not mutated
+
+    def test_keeps_everything_when_all_guides_known(self):
+        ground_truth = pd.DataFrame([{"question": "q1", "guide": "anmeldung"}])
+        documents = [{"guide": "anmeldung"}]
+
+        filtered = filter_known_guides(ground_truth, documents)
+
+        assert len(filtered) == 1
 
 
 class TestHitRate:

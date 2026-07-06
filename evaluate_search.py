@@ -1,8 +1,9 @@
 """Evaluate article-level retrieval quality of text (BM25) and vector search.
 
-A query is a "hit" when the correct guide (article) appears among the unique
-guides of the top-k search results — the same guides the chatbot cites as
-source links. MRR uses the rank of the correct guide among those unique guides.
+A query is a "hit" when the correct guide (article) appears among the sources
+the chatbot would cite for the top-k search results (rag_helper.extract_sources:
+unique guides in rank order). MRR uses the rank of the correct guide among
+those cited guides.
 """
 
 from __future__ import annotations
@@ -16,6 +17,7 @@ import pandas as pd
 
 from evaluation_utils import map_progress
 from ingest import build_index, build_vector_index, load_documents
+from rag_helper import extract_sources
 
 DEFAULT_GROUND_TRUTH = Path("output/ground-truth-guides.csv")
 DEFAULT_NUM_RESULTS = 5
@@ -24,15 +26,15 @@ TITLE_BOOSTS = [0.5, 1.0, 2.0, 3.0, 5.0]
 SECTION_BOOSTS = [0.1, 0.5, 1.0]
 
 
-def unique_guides(results: list[dict]) -> list[str]:
-    """Unique guide slugs from ranked results, preserving rank order."""
-    seen: set[str] = set()
-    guides: list[str] = []
-    for doc in results:
-        if doc["guide"] not in seen:
-            seen.add(doc["guide"])
-            guides.append(doc["guide"])
-    return guides
+def cited_guides(results: list[dict]) -> list[str]:
+    """Guide slugs the chatbot would cite for these results, in rank order."""
+    return [source["guide"] for source in extract_sources(results)]
+
+
+def filter_known_guides(ground_truth: pd.DataFrame, documents: list[dict]) -> pd.DataFrame:
+    """Drop questions whose guide is no longer present in the corpus."""
+    known = {doc["guide"] for doc in documents}
+    return ground_truth[ground_truth["guide"].isin(known)].reset_index(drop=True)
 
 
 def hit_rate(relevance_total: list[list[int]]) -> float:
@@ -57,7 +59,7 @@ def evaluate(
 ) -> dict[str, float]:
     def process_row(row):
         results = search_function(row["question"])
-        guides = unique_guides(results)
+        guides = cited_guides(results)
         return [1 if guide == row["guide"] else 0 for guide in guides]
 
     rows = [row for _, row in ground_truth.iterrows()]
@@ -157,13 +159,16 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    print(f"Ground truth : {args.ground_truth}")
-    ground_truth = pd.read_csv(args.ground_truth)
-    print(f"  {len(ground_truth)} records  /  {ground_truth['guide'].nunique()} guides")
-
-    print("\nLoading documents...")
+    print("Loading documents...")
     documents = load_documents()
     print(f"  {len(documents)} documents")
+
+    print(f"\nGround truth : {args.ground_truth}")
+    raw_ground_truth = pd.read_csv(args.ground_truth)
+    ground_truth = filter_known_guides(raw_ground_truth, documents)
+    dropped = len(raw_ground_truth) - len(ground_truth)
+    print(f"  {len(ground_truth)} records  /  {ground_truth['guide'].nunique()} guides"
+          + (f"  (dropped {dropped} for guides not in the corpus)" if dropped else ""))
 
     comparison_rows: list[dict] = []
 

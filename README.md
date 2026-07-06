@@ -237,7 +237,7 @@ uv run python generate_ground_truth.py --questions-per-guide 3
 
 ### Search Evaluation
 
-Evaluates **article-level** retrieval quality of BM25 and vector search: a query is a hit when the correct guide appears among the unique guides of the top-k results — exactly the articles the chatbot cites as source links.
+The evaluation of this project is deliberately retrieval-only: given a natural-language question in English, **did the system find the correct guide article?** `evaluate_search.py` measures this for BM25 and vector search: a query is a hit when the correct guide appears among the sources the chatbot would cite for the top-k results (`rag_helper.extract_sources` — unique guides in rank order). Questions whose guide is no longer in the corpus (e.g. removed by a re-scrape) are dropped automatically. The run makes **no LLM calls** and is free.
 
 > **Prerequisite:** Run `uv run python generate_ground_truth.py` first to build the ground truth dataset.
 
@@ -270,52 +270,11 @@ vector_search (all-MiniLM-L6-v2)        0.947  0.829
 - **Hit Rate** — fraction of queries where the correct guide appears among the unique guides of the top-5 results
 - **MRR (Mean Reciprocal Rank)** — rewards citing the correct guide at higher ranks (rank 1 = 1.0, rank 2 = 0.5, …)
 
-### RAG Evaluation (source citations + LLM-as-a-Judge)
+Vector search finds the correct article **1.8× more often** than BM25 — it is the backend the Streamlit app uses.
 
-Search evaluation measures retrieval in isolation — `evaluate_rag.py` evaluates the chatbot end-to-end: **did it cite the correct source article**, and (optionally) is the generated answer relevant?
+**Options:** `--method {text,vector,all}` (default `all`), `--tune` (BM25 boost grid search), `--num-results`, `--workers`, `--ground-truth`, `--output` (save results JSON).
 
-For every ground-truth question it runs search, extracts the cited sources exactly like the chatbot does (unique guides from top-k, rank order), and records:
-
-- `correct_source_cited` — flag: the correct guide is among the cited sources
-- `source_rank` — 1-based rank of the correct guide among citations (or empty)
-- `relevance` / `rel_reasoning` — reference-free judge verdict on the answer (`RELEVANT` / `PARTLY_RELEVANT` / `NON_RELEVANT`), when the judge is enabled
-
-Citation metrics need **zero LLM calls** — with `--judge none` the whole run is free.
-
-> **Prerequisite:** Run `uv run python generate_ground_truth.py` first to build the ground truth dataset.
-
-```bash
-# Citation metrics only — free, no LLM calls
-uv run python evaluate_rag.py --judge none
-
-# Estimate cost of a judged run, then exit
-uv run python evaluate_rag.py --dry-run
-
-# Quick judged run on a 25-question sample
-uv run python evaluate_rag.py --sample 25
-
-# Full run: both backends, answers judged (default; ~$0.50)
-uv run python evaluate_rag.py
-```
-
-Results are written to `output/rag-eval-<type>.{csv,json}` (one row per question); with `--search-type both` a combined `rag-eval-comparison.{csv,json}` is also produced.
-
-**Keyword vs vector comparison** (284 questions, top-5, `gpt-4o-mini`):
-
-| Metric | keyword (BM25) | vector (MiniLM) |
-|--------|---------------|-----------------|
-| Correct source cited | 153 / 284 (53.9%) | **269 / 284 (94.7%)** |
-| Cited at rank 1 | 94 / 284 (33.1%) | **211 / 284 (74.3%)** |
-| Guide MRR | 0.412 | **0.829** |
-| Judge — `RELEVANT` | 161 / 284 (56.7%) | **230 / 284 (81.0%)** |
-| Judge — `PARTLY_RELEVANT` | 55 / 284 (19.4%) | 51 / 284 (18.0%) |
-| Judge — `NON_RELEVANT` | 68 / 284 (23.9%) | **3 / 284 (1.1%)** |
-
-Vector search cites the correct article **1.8× more often** and produces **23× fewer non-relevant answers** — it is the backend the Streamlit app uses.
-
-The judge always returns a `rel_reasoning` field alongside its verdict. A `NON_RELEVANT` verdict is a **pointer for investigation**, not a final truth — read the flagged rows in the output to decide whether the RAG answer, the question, or the ground truth is at fault.
-
-**Options:** `--search-type {keyword,vector,both}` (default `both`), `--judge {none,reference-free}` (default `reference-free`), `--num-results`, `--sample N`, `--workers`, `--rag-model`, `--judge-model`, `--ground-truth`, `--output-dir`, `--seed`, `--dry-run`. Both models default to `gpt-4o-mini`.
+> An earlier end-to-end RAG evaluation (answer generation + LLM-as-a-judge relevance verdicts) is available in the git history; it was removed to keep the evaluation focused on retrieval quality.
 
 ### Run the Scraper
 
@@ -450,16 +409,9 @@ generate_ground_truth.py              — Build article-level ground truth
 └── main()                            — 2 questions per guide → output/ground-truth-guides.{csv,json}
 
 evaluate_search.py                    — Article-level retrieval evaluation
-├── unique_guides(results)            — Deduped guide slugs in rank order
+├── cited_guides(results)             — Guide slugs the chatbot would cite (via extract_sources)
+├── filter_known_guides(gt, docs)     — Drop questions for guides no longer in the corpus
 └── hit_rate / mrr                    — Guide-level Hit Rate & MRR, BM25 vs vector, boost grid search
-
-evaluate_rag.py                       — End-to-end citation + answer evaluation
-├── score_citation(cited, gt_guide)   — (correct_source_cited, source_rank)
-├── _UsageTracking mixin              — Token usage tracking for cost accounting
-├── build_assistant(search_type, ...) — Factory: builds the right pipeline for keyword/vector
-├── evaluate_questions(...)           — search → extract_sources → citation flags (+ answers)
-├── judge_reference_free(...)         — Score answer relevance from the question alone
-└── main()                            — CLI: evaluate → judge → summarize → output/rag-eval-<type>.{csv,json}
 
 evaluation_utils.py                   — Shared helpers: structured LLM calls, cost accounting, parallel map
 
