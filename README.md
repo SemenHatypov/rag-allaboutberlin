@@ -126,10 +126,9 @@ Opens at **http://localhost:8501**.
 **Features:**
 - Chat interface with full conversation history
 - Short summary-style answers (2–4 sentences) grounded in the retrieved guides
-- Clickable **source links** under each answer — the allaboutberlin.com articles the answer is based on, in relevance order (correct article cited in 94.7% of eval questions)
+- Clickable **source links** under each answer — the allaboutberlin.com articles the answer is based on, in relevance order (correct article cited in 98.2% of eval questions)
 - Semantic vector search (all-MiniLM-L6-v2) — the highest-accuracy backend
-- Sidebar to filter answers to a specific guide (142 options)
-- Slider to control how many source sections are retrieved (3–15)
+- Search always spans **all guides**, with a fixed top-k of 12 retrieved sections — the value where retrieval metrics plateau in the k-sweep evaluation (see [Search Evaluation](#search-evaluation))
 - "Clear chat" button to reset the conversation
 
 **Example questions to try:**
@@ -156,8 +155,8 @@ uv run python rag_helper.py --question "What is a Schufa?" --model gpt-4o
 # Filter to a specific guide
 uv run python rag_helper.py --question "What documents do I need?" --guide anmeldung
 
-# Use more search results for context
-uv run python rag_helper.py --question "How does health insurance work?" --num-results 10
+# Override how many search results are used for context (default: 12)
+uv run python rag_helper.py --question "How does health insurance work?" --num-results 5
 ```
 
 The CLI prints a short answer followed by a `Sources:` block with links to the articles the answer is based on.
@@ -251,26 +250,27 @@ uv run python evaluate_search.py --method text
 # Run grid search to find optimal BM25 boost parameters
 uv run python evaluate_search.py --method text --tune
 
-# Deeper retrieval (more citable sources per question)
-uv run python evaluate_search.py --num-results 10
+# Override the default top-k (DEFAULT_NUM_RESULTS = 12)
+uv run python evaluate_search.py --num-results 5
 ```
 
-**Results** (284 questions, top-5, guide-level):
+**Results** (282 questions, top-12, guide-level):
 
 ```
 === Results ===
                                      hit_rate    mrr
 method
-text_search (title=2.0, section=0.5)    0.539  0.412
-text_search (title=0.5, section=0.5)    0.813  0.669
-vector_search (all-MiniLM-L6-v2)        0.947  0.829
+text_search (title=2.0, section=0.5)    0.674  0.424
+vector_search (all-MiniLM-L6-v2)        0.982  0.829
 ```
 
 **Metrics:**
-- **Hit Rate** — fraction of queries where the correct guide appears among the unique guides of the top-5 results
+- **Hit Rate** — fraction of queries where the correct guide appears among the unique guides of the top-k results
 - **MRR (Mean Reciprocal Rank)** — rewards citing the correct guide at higher ranks (rank 1 = 1.0, rank 2 = 0.5, …)
 
-Vector search finds the correct article **1.8× more often** than BM25 — it is the backend the Streamlit app uses.
+Vector search finds the correct article **1.5× more often** than BM25 — it is the backend the Streamlit app uses.
+
+**Choosing top-k:** a sweep of `num_results` from 1 to 15 (vector search) showed hit_rate climbing from 0.734 (k=1) through 0.947 (k=5) to 0.982 (k=12), after which every further step gains at most one question (< 0.005) and MRR is flat (0.829). `DEFAULT_NUM_RESULTS = 12` in `rag_helper.py` fixes this value for the app, the CLI, and the evaluation.
 
 **Options:** `--method {text,vector,all}` (default `all`), `--tune` (BM25 boost grid search), `--num-results`, `--workers`, `--ground-truth`, `--output` (save results JSON).
 
@@ -418,7 +418,7 @@ evaluation_utils.py                   — Shared helpers: structured LLM calls, 
 app.py                                — Streamlit chat app (vector search only)
 ├── _load_index()                     — @st.cache_resource: loads docs + builds vector index once
 ├── _render_sources(sources)          — Numbered clickable links to source articles
-└── main()                            — Page layout, sidebar settings, chat loop
+└── main()                            — Page layout, chat loop (fixed top-k, all guides)
 ```
 
 ## Error Handling

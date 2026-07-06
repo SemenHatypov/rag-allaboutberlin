@@ -16,6 +16,11 @@ load_dotenv()
 
 DEFAULT_MODEL = "gpt-4o-mini"
 
+# Top-k search results. Chosen from a k-sweep over the ground truth (see README,
+# "Search Evaluation"): the smallest k where vector-search hit_rate/MRR plateau
+# (k=12: hit_rate 0.982, MRR 0.829; further k gains < 0.005).
+DEFAULT_NUM_RESULTS = 12
+
 INSTRUCTIONS = """
 You are a helpful assistant for expats living in or moving to Berlin, Germany.
 Answer the question using ONLY the provided context from allaboutberlin.com guides.
@@ -82,7 +87,7 @@ class RAGBase:
         self.guide = guide  # None = search across all guides
         self.model = model
 
-    def search(self, query: str, num_results: int = 5) -> list[dict]:
+    def search(self, query: str, num_results: int = DEFAULT_NUM_RESULTS) -> list[dict]:
         boost_dict = {"title": 2.0, "section": 0.5}
         filter_dict = {"guide": self.guide} if self.guide else {}
         return self.index.search(
@@ -118,7 +123,7 @@ class RAGBase:
         )
         return response.output_text
 
-    def rag_with_sources(self, query: str, num_results: int = 5) -> tuple[str, list[dict]]:
+    def rag_with_sources(self, query: str, num_results: int = DEFAULT_NUM_RESULTS) -> tuple[str, list[dict]]:
         search_results = self.search(query, num_results=num_results)
         prompt = self.build_prompt(query, search_results)
         return self.llm(prompt), extract_sources(search_results)
@@ -136,7 +141,7 @@ class RAGVector(RAGBase):
         super().__init__(index, llm_client, **kwargs)
         self.embedder = embedder
 
-    def search(self, query: str, num_results: int = 5) -> list[dict]:
+    def search(self, query: str, num_results: int = DEFAULT_NUM_RESULTS) -> list[dict]:
         query_vector = self.embedder.encode(query)
         filter_dict = {"guide": self.guide} if self.guide else {}
         return self.index.search(query_vector, num_results=num_results, filter_dict=filter_dict)
@@ -149,7 +154,12 @@ if __name__ == "__main__":
     parser.add_argument("--question", "-q", required=True, help="Question to ask")
     parser.add_argument("--model", "-m", default=DEFAULT_MODEL, help="OpenAI model to use")
     parser.add_argument("--guide", "-g", default=None, help="Filter to a specific guide slug")
-    parser.add_argument("--num-results", "-n", type=int, default=5, help="Number of search results to use")
+    parser.add_argument(
+        "--num-results", "-n",
+        type=int,
+        default=DEFAULT_NUM_RESULTS,
+        help="Number of search results to use",
+    )
     parser.add_argument(
         "--search-type", "-s",
         choices=["keyword", "vector"],

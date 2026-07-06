@@ -1,6 +1,6 @@
 """Tests for rag_helper.py — source extraction and the RAG pipeline plumbing."""
 
-from rag_helper import RAGBase, RAGVector, extract_sources
+from rag_helper import DEFAULT_NUM_RESULTS, RAGBase, RAGVector, extract_sources
 
 DOCS = [
     {
@@ -126,6 +126,12 @@ class TestRagWithSources:
     def test_rag_returns_answer_only(self):
         pipeline = RAGBase(index=StubIndex(DOCS), llm_client=StubClient())
         assert pipeline.rag("How do I register?") == "A short answer."
+
+    def test_defaults_to_fixed_num_results(self):
+        index = StubIndex(DOCS)
+        pipeline = RAGBase(index=index, llm_client=StubClient())
+        pipeline.rag_with_sources("How do I register?")
+        assert index.calls[0]["num_results"] == DEFAULT_NUM_RESULTS
 
     def test_vector_pipeline_encodes_query(self):
         index = StubIndex(DOCS)

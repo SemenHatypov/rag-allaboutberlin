@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 from ingest import build_vector_index, load_documents, load_guides
-from rag_helper import RAGVector
+from rag_helper import DEFAULT_NUM_RESULTS, RAGVector
 
 load_dotenv()
 
@@ -18,8 +18,7 @@ load_dotenv()
 def _load_index() -> tuple:
     documents = load_documents()
     vindex, embedder = build_vector_index(documents)
-    name_to_slug = {doc.get("guide_name", doc["guide"]): doc["guide"] for doc in documents}
-    return vindex, embedder, name_to_slug
+    return vindex, embedder
 
 
 def _render_sources(sources: list[dict]) -> None:
@@ -47,15 +46,9 @@ def main() -> None:
     client = OpenAI(api_key=api_key)
 
     with st.spinner("Building vector index (first load ~1 min)..."):
-        vindex, embedder, name_to_slug = _load_index()
+        vindex, embedder = _load_index()
 
     with st.sidebar:
-        st.header("Settings")
-        guide_options = ["All guides"] + sorted(name_to_slug)
-        selected = st.selectbox("Filter by guide", guide_options)
-        guide_filter: str | None = None if selected == "All guides" else name_to_slug[selected]
-        num_results = st.slider("Number of results", min_value=3, max_value=15, value=5)
-        st.divider()
         if st.button("Clear chat", use_container_width=True):
             st.session_state.messages = []
             st.rerun()
@@ -78,13 +71,12 @@ def main() -> None:
             embedder=embedder,
             index=vindex,
             llm_client=client,
-            guide=guide_filter,
         )
 
         with st.chat_message("assistant"):
             with st.spinner("Thinking..."):
                 try:
-                    answer, sources = pipeline.rag_with_sources(query, num_results=num_results)
+                    answer, sources = pipeline.rag_with_sources(query, num_results=DEFAULT_NUM_RESULTS)
                     error: str | None = None
                 except Exception as e:
                     answer = ""
