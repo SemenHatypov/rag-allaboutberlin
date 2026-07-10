@@ -127,11 +127,10 @@ def parse_guide_page(html: str, slug: str) -> list[GuideSection]:
     if content is None:
         return []
 
-    # Footnote reference markers (<sup><a class="footnote-ref">31</a></sup>) glue
-    # digits onto sentences ("the law.31"); drop them. Unit superscripts like m²
-    # are literal characters, not <sup>, so this is safe.
-    for sup in content.find_all("sup"):
-        sup.decompose()
+    # Inline legal (§) footnotes next to the claim that cites them; drop the rest
+    # of the footnote markers and the footnote list. (Unit superscripts like m²
+    # are literal characters, not <sup>, so they are untouched.)
+    resolve_footnotes(content)
 
     sections: list[GuideSection] = []
     current_h2 = ""
@@ -204,6 +203,8 @@ def serialize_table(table) -> str:
 
 _WS = re.compile(r"\s+")
 _SPACE_BEFORE_PUNCT = re.compile(r"\s+([.,;:!?%)])")
+_FN_ID = re.compile(r"^fn:")  # footnote target id, e.g. <li id="fn:20">
+_BACKREF = "⤴↩"  # footnote back-reference arrows to strip
 
 
 def clean_text(tag) -> str:
@@ -211,12 +212,41 @@ def clean_text(tag) -> str:
 
     get_text(strip=True) drops the whitespace between inline elements, gluing
     words together ("theBürgeramt"). Joining with a separator and re-normalizing
-    fixes that; footnote <sup> markers are stripped by the caller beforehand.
+    fixes that; footnote markers are handled by resolve_footnotes beforehand.
     """
     text = tag.get_text(separator=" ")
     text = _WS.sub(" ", text)
     text = _SPACE_BEFORE_PUNCT.sub(r"\1", text)
     return text.strip()
+
+
+def _footnote_text(li) -> str:
+    text = clean_text(li)
+    for arrow in _BACKREF:
+        text = text.replace(arrow, "")
+    return text.strip()
+
+
+def resolve_footnotes(content) -> None:
+    """Attach legal references to the claims that cite them.
+
+    Footnote content lives in <li id="fn:N"> at the end of the article and is
+    otherwise dumped into the last section as a wall of source names. Here a
+    footnote that contains a legal reference (§) is inlined right where it is
+    cited (e.g. "…register within 14 days [§ 17 Abs. 1 BMG]"), so retrieval finds
+    the law next to the rule. Non-legal markers (source URLs) are dropped, and the
+    footnote list itself is removed so it no longer pollutes the last section.
+    """
+    fn_map = {li["id"]: _footnote_text(li) for li in content.find_all(id=_FN_ID)}
+    for sup in content.find_all("sup"):
+        anchor = sup.find("a", href=True)
+        note = fn_map.get(anchor["href"].lstrip("#"), "") if anchor else ""
+        if note and "§" in note:
+            sup.replace_with(f" [{note}]")
+        else:
+            sup.decompose()
+    for li in content.find_all(id=_FN_ID):
+        li.decompose()
 
 
 def is_valid_section(section: GuideSection) -> bool:

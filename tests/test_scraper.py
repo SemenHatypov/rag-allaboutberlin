@@ -121,6 +121,19 @@ GUIDE_PAGE_GLUED_HTML = """
 </body></html>
 """
 
+GUIDE_PAGE_FOOTNOTES_HTML = """
+<html><body>
+<article>
+  <h2>Register your address</h2>
+  <p>You have 14 days to register your address after moving in<sup id="fnref:20"><a class="footnote-ref" href="#fn:20">21</a></sup>, but in Berlin enforcement is lax<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">2</a></sup>.</p>
+  <ol>
+    <li id="fn:1"><p>reddit.com/r/berlin ⤴</p></li>
+    <li id="fn:20"><p><a href="https://example.com">§ 17 Abs. 1 BMG</a>, Berlin.de (January 2026) ⤴</p></li>
+  </ol>
+</article>
+</body></html>
+"""
+
 GUIDE_PAGE_WITH_IDS_HTML = """
 <html><body>
 <article>
@@ -366,6 +379,31 @@ class TestTextCleaning:
     def test_unit_superscript_preserved(self):
         text = " ".join(s.text for s in self.sections)
         assert "9 m²" in text  # literal ², not a <sup>, must survive
+
+
+class TestFootnotes:
+    def setup_method(self):
+        self.sections = parse_guide_page(GUIDE_PAGE_FOOTNOTES_HTML, "anmeldung")
+
+    def test_legal_footnote_inlined_at_the_claim(self):
+        sec = next(s for s in self.sections if s.section == "Register your address")
+        assert "§ 17 Abs. 1 BMG" in sec.text
+        # law sits in the same chunk as the rule it supports
+        assert "14 days to register" in sec.text
+
+    def test_non_legal_footnote_dropped(self):
+        text = " ".join(s.text for s in self.sections)
+        assert "reddit" not in text  # source-URL footnote is not inlined or dumped
+
+    def test_footnote_list_not_dumped_as_content(self):
+        # no chunk is just the footnote wall; back-ref arrows are gone
+        text = " ".join(s.text for s in self.sections)
+        assert "⤴" not in text
+        assert not any("Berlin.de (January 2026)" in s.text and "Register" not in s.section for s in self.sections)
+
+    def test_marker_digits_not_glued(self):
+        sec = self.sections[0]
+        assert "lax2" not in sec.text and "moving in21" not in sec.text
 
 
 class TestParseGuidePageAnchors:

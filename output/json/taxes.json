@@ -20,7 +20,7 @@
     "guide": "taxes",
     "section": "The taxes you pay in Germany",
     "title": "",
-    "text": "All German residents must pay taxes. These are the taxes to pay: Income and wage tax ( Einkommensteuer, Lohnsteuer) Health insurance ( Krankenversicherung) Long-term care insurance ( Pflegeversicherung) Public pension insurance ( gesetzliche Rentenversicherung) Unemployment insurance ( Arbeitslosenversicherung) Church tax ( Kirchensteuer) Solidarity surcharge ( Solidaritätszuschlag) If you are an employee, your employer collects taxes directly from your paycheck. If you are self-employed, you pay taxes by bank transfer or direct debit. Income from investments is taxed differently. You pay: Capital gains tax ( Kapitalertragsteuer) Church tax ( Kirchensteuer) Solidarity surcharge ( Solidaritätszuschlag)",
+    "text": "All German residents must pay taxes. These are the taxes to pay: Income and wage tax ( Einkommensteuer, Lohnsteuer) Health insurance ( Krankenversicherung) Long-term care insurance ( Pflegeversicherung) Public pension insurance ( gesetzliche Rentenversicherung) Unemployment insurance ( Arbeitslosenversicherung) Church tax ( Kirchensteuer) Solidarity surcharge ( Solidaritätszuschlag) If you are an employee, your employer collects taxes directly from your paycheck. If you are self-employed, you pay taxes by bank transfer or direct debit. Income from investments is taxed differently. [§ 32d EStG] You pay: Capital gains tax ( Kapitalertragsteuer) Church tax ( Kirchensteuer) Solidarity surcharge ( Solidaritätszuschlag)",
     "anchor": "the-taxes-you-pay-in-germany"
   },
   {
@@ -28,7 +28,7 @@
     "guide": "taxes",
     "section": "The taxes you pay in Germany",
     "title": "Income and wage tax",
-    "text": "All German residents pay income tax ( Einkommensteuer). This tax is a percentage of your income. It’s a progressive tax, so if you earn more, you pay a bigger percentage of your income. If you earn less than € 12,348 per year, you pay no income tax. If you earn the median income, your income tax is around 18% of your income. The maximum income tax is 45% of your income. If you are an employee, you pay a wage tax ( Lohnsteuer) on every paycheck. This is a prepayment of your estimated income tax. If you pay too much wage tax, you can make a tax declaration and get money back. Usually, tips are not taxed.",
+    "text": "All German residents pay income tax ( Einkommensteuer). This tax is a percentage of your income. It’s a progressive tax, so if you earn more, you pay a bigger percentage of your income. [§ 32a EStG] If you earn less than € 12,348 per year, you pay no income tax. If you earn the median income, your income tax is around 18% of your income. The maximum income tax is 45% of your income. [§ 32a EStG] If you are an employee, you pay a wage tax ( Lohnsteuer) on every paycheck. This is a prepayment of your estimated income tax. If you pay too much wage tax, you can make a tax declaration and get money back. Usually, tips are not taxed.",
     "anchor": "income-and-wage-tax"
   },
   {
@@ -116,7 +116,7 @@
     "guide": "taxes",
     "section": "Need help?",
     "title": "",
-    "text": "A tax advisor can answer your questions and help you file your German taxes correctly. You can also call or email your local Finanzamt. English-speaking tax advisors in Berlin Find your Finanzamt § 32a EStG ⤴ § 32a EStG ⤴ selbststaendig.de ⤴ selbststaendig.de ⤴ § 32a EStG ⤴ § 32a EStG ⤴ § 32d EStG ⤴ § 32d EStG ⤴ pandotax.de (March 2026), steuern.de (February 2025) ⤴ pandotax.de (March 2026), steuern.de (February 2025) ⤴ orderbird.com ⤴ orderbird.com ⤴ 1.3% of the Beitragsbemessungsgrenze ⤴ 1.3% of the Beitragsbemessungsgrenze ⤴ lexware.de (March 2026) ⤴ lexware.de (March 2026) ⤴ lexware.de (March 2026) ⤴ lexware.de (March 2026) ⤴",
+    "text": "A tax advisor can answer your questions and help you file your German taxes correctly. You can also call or email your local Finanzamt. English-speaking tax advisors in Berlin Find your Finanzamt",
     "anchor": "need-help"
   }
 ]

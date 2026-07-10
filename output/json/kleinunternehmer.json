@@ -36,7 +36,7 @@
     "guide": "kleinunternehmer",
     "section": "How the revenue limit works",
     "title": "",
-    "text": "Your revenue must be less than € 25,000 per year. In your first year in business, the € 25,000 limit is prorated: Example: If you start your business in July, the limit for that year is € 25,000 × 50% of the year: € 12,500. Only your VAT-eligible income is measured. VAT-free income does not count. Example: Your revenue is € 130,000 per year. € 30,000 is salary from employment (no VAT), € 80,000 is from US clients (no VAT), and € 20,000 from German clients (with VAT). Your VAT-eligible revenue is € 20,000, so you can be a Kleinunternehmer.",
+    "text": "Your revenue must be less than € 25,000 per year. In your first year in business, the € 25,000 limit is prorated: Example: If you start your business in July, the limit for that year is € 25,000 × 50% of the year: € 12,500. Only your VAT-eligible income is measured. VAT-free income does not count. [Sebastian Hoffmann (October 2022), § 19 Abs. 2 UStG] Example: Your revenue is € 130,000 per year. € 30,000 is salary from employment (no VAT), € 80,000 is from US clients (no VAT), and € 20,000 from German clients (with VAT). Your VAT-eligible revenue is € 20,000, so you can be a Kleinunternehmer.",
     "anchor": "how-the-revenue-limit-works"
   },
   {
@@ -52,7 +52,7 @@
     "guide": "kleinunternehmer",
     "section": "How to be a Klein­un­ter­neh­mer",
     "title": "Register with the Finanzamt",
-    "text": "You decide when you register your business with the Finanzamt. If you choose to charge VAT, you must always charge VAT. You can’t change your decision for 5 years. How to fill the Fragebogen zur steuerlichen Erfassung If you don’t charge VAT, you don’t need a VAT number ( Umsatzsteuernummer). You should still ask for one when you fill the Fragebogen. If you stop being a Kleinunternehmer, you will already have a VAT number. It makes things easier.",
+    "text": "You decide when you register your business with the Finanzamt. If you choose to charge VAT, you must always charge VAT. You can’t change your decision for 5 years. [§ 19 UStG] How to fill the Fragebogen zur steuerlichen Erfassung If you don’t charge VAT, you don’t need a VAT number ( Umsatzsteuernummer). You should still ask for one when you fill the Fragebogen. If you stop being a Kleinunternehmer, you will already have a VAT number. It makes things easier.",
     "anchor": "register-with-the-finanzamt"
   },
   {
@@ -60,7 +60,7 @@
     "guide": "kleinunternehmer",
     "section": "How to be a Klein­un­ter­neh­mer",
     "title": "Update your invoices",
-    "text": "If you don’t charge VAT, you must add this line to your invoices: English: “In accordance to § 19 UStG, no value added tax is charged.” German: “Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.” Debitoor, Existenzgründer ⤴ Debitoor, Existenzgründer ⤴ Existenzgründer ⤴ Existenzgründer ⤴ Existenzgründer, kleinunternehmer.de ⤴ Existenzgründer, kleinunternehmer.de ⤴ kleinunternehmer.de ⤴ kleinunternehmer.de ⤴ kleinunternehmer.de ⤴ kleinunternehmer.de ⤴ billomat.com, kleinunternehmer.de ⤴ billomat.com, kleinunternehmer.de ⤴ § 19 UStG ⤴ § 19 UStG ⤴ starting-up.de, Existenzgründer ⤴ starting-up.de, Existenzgründer ⤴ starting-up.de, Existenzgründer ⤴ starting-up.de, Existenzgründer ⤴ andrewcross.eu (archived), mutebuttonblog.wordpress.com ⤴ andrewcross.eu (archived), mutebuttonblog.wordpress.com ⤴ starting-up.de ⤴ starting-up.de ⤴ Seamus Wolf on LinkedIn ⤴ Seamus Wolf on LinkedIn ⤴ Seamus Wolf on LinkedIn ⤴ Seamus Wolf on LinkedIn ⤴ Sebastian Hoffmann (October 2022), § 19 Abs. 2 UStG ⤴ Sebastian Hoffmann (October 2022), § 19 Abs. 2 UStG ⤴",
+    "text": "If you don’t charge VAT, you must add this line to your invoices: English: “In accordance to § 19 UStG, no value added tax is charged.” German: “Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.”",
     "anchor": "update-your-invoices"
   }
 ]

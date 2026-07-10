@@ -12,7 +12,7 @@
     "guide_name": "Common housing scams in Germany",
     "category": "Housing",
     "path": "/json/housing-scams.json",
-    "sections_count": 25,
+    "sections_count": 24,
     "url_path": "/guides/housing-scams"
   },
   {
@@ -28,7 +28,7 @@
     "guide_name": "How to move into an apartment in Germany",
     "category": "Housing",
     "path": "/json/moving-in.json",
-    "sections_count": 26,
+    "sections_count": 25,
     "url_path": "/guides/moving-in"
   },
   {
@@ -68,7 +68,7 @@
     "guide_name": "Quiet hours and noise laws in Berlin",
     "category": "Housing",
     "path": "/json/quiet-hours.json",
-    "sections_count": 4,
+    "sections_count": 3,
     "url_path": "/guides/quiet-hours"
   },
   {
@@ -124,7 +124,7 @@
     "guide_name": "How to move out of an apartment in Germany",
     "category": "Housing",
     "path": "/json/moving-out.json",
-    "sections_count": 25,
+    "sections_count": 24,
     "url_path": "/guides/moving-out"
   },
   {
@@ -212,7 +212,7 @@
     "guide_name": "Unemployment benefits in Germany",
     "category": "Work",
     "path": "/json/unemployment-benefits.json",
-    "sections_count": 19,
+    "sections_count": 18,
     "url_path": "/guides/unemployment-benefits"
   },
   {
@@ -308,7 +308,7 @@
     "guide_name": "Letters of intent for the German freelance visa",
     "category": "Visas and immigration",
     "path": "/json/freelance-visa-letter-of-intent.json",
-    "sections_count": 6,
+    "sections_count": 5,
     "url_path": "/guides/freelance-visa-letter-of-intent"
   },
   {
@@ -316,7 +316,7 @@
     "guide_name": "How to renew a German freelance visa",
     "category": "Visas and immigration",
     "path": "/json/renew-german-freelance-visa.json",
-    "sections_count": 16,
+    "sections_count": 15,
     "url_path": "/guides/renew-german-freelance-visa"
   },
   {
@@ -324,7 +324,7 @@
     "guide_name": "How the German Fik­ti­ons­be­schei­ni­gung works",
     "category": "Visas and immigration",
     "path": "/json/fiktionsbescheinigung.json",
-    "sections_count": 8,
+    "sections_count": 7,
     "url_path": "/guides/fiktionsbescheinigung"
   },
   {
@@ -364,7 +364,7 @@
     "guide_name": "Berlin travel guide: what to see, do and eat in Berlin",
     "category": "Living in Germany",
     "path": "/json/visit-berlin.json",
-    "sections_count": 35,
+    "sections_count": 34,
     "url_path": "/guides/visit-berlin"
   },
   {
@@ -476,7 +476,7 @@
     "guide_name": "How to stream or torrent movies in Germany",
     "category": "Living in Germany",
     "path": "/json/pirating-streaming-movies-in-germany.json",
-    "sections_count": 12,
+    "sections_count": 11,
     "url_path": "/guides/pirating-streaming-movies-in-germany"
   },
   {
@@ -596,7 +596,7 @@
     "guide_name": "Steuerberater or Buchhalter: what's the difference?",
     "category": "Personal finance",
     "path": "/json/steuerberater-vs-buchhalter.json",
-    "sections_count": 6,
+    "sections_count": 5,
     "url_path": "/guides/steuerberater-vs-buchhalter"
   },
   {
@@ -612,7 +612,7 @@
     "guide_name": "How to find your German tax ID, tax number or VAT number",
     "category": "Personal finance",
     "path": "/json/german-tax-id-steuernummer.json",
-    "sections_count": 13,
+    "sections_count": 12,
     "url_path": "/guides/german-tax-id-steuernummer"
   },
   {
@@ -628,7 +628,7 @@
     "guide_name": "How to create an ELSTER account",
     "category": "Personal finance",
     "path": "/json/elster-account.json",
-    "sections_count": 7,
+    "sections_count": 6,
     "url_path": "/guides/elster-account"
   },
   {
@@ -764,7 +764,7 @@
     "guide_name": "How to find a Kita in Berlin",
     "category": "Family, friends and pets",
     "path": "/json/kita.json",
-    "sections_count": 10,
+    "sections_count": 9,
     "url_path": "/guides/kita"
   },
   {
@@ -772,7 +772,7 @@
     "guide_name": "How to get a Kitagutschein",
     "category": "Family, friends and pets",
     "path": "/json/kitagutschein.json",
-    "sections_count": 8,
+    "sections_count": 7,
     "url_path": "/guides/kitagutschein"
   },
   {
@@ -924,7 +924,7 @@
     "guide_name": "How to buy and ride a bicycle in Berlin",
     "category": "Getting around",
     "path": "/json/bicycle-in-berlin.json",
-    "sections_count": 16,
+    "sections_count": 15,
     "url_path": "/guides/bicycle-in-berlin"
   },
   {
@@ -1036,7 +1036,7 @@
     "guide_name": "Where to find foreign cooking ingredients in Berlin",
     "category": "Where to find...",
     "path": "/json/foreign-cooking-ingredients-in-berlin.json",
-    "sections_count": 31,
+    "sections_count": 30,
     "url_path": "/guides/foreign-cooking-ingredients-in-berlin"
   },
   {
@@ -1068,7 +1068,7 @@
     "guide_name": "Is marijuana legal in Gemany?",
     "category": "Where to find...",
     "path": "/json/is-marijuana-legal.json",
-    "sections_count": 9,
+    "sections_count": 8,
     "url_path": "/guides/is-marijuana-legal"
   },
   {
@@ -1132,7 +1132,7 @@
     "guide_name": "Freiberufler or Gewerbe: what's the difference?",
     "category": "Self-employment",
     "path": "/json/freiberufler-or-gewerbe.json",
-    "sections_count": 12,
+    "sections_count": 11,
     "url_path": "/guides/freiberufler-or-gewerbe"
   },
   {
@@ -1148,7 +1148,7 @@
     "guide_name": "What is a Han­dels­re­gis­ter­num­mer?",
     "category": "Self-employment",
     "path": "/json/handelsregisternummer-germany.json",
-    "sections_count": 6,
+    "sections_count": 5,
     "url_path": "/guides/handelsregisternummer-germany"
   },
   {
@@ -1164,7 +1164,7 @@
     "guide_name": "How VAT works in Germany",
     "category": "Self-employment",
     "path": "/json/value-added-tax.json",
-    "sections_count": 16,
+    "sections_count": 15,
     "url_path": "/guides/value-added-tax"
   },
   {
@@ -1172,7 +1172,7 @@
     "guide_name": "How to run a website in Germany",
     "category": "Self-employment",
     "path": "/json/website-compliance-germany.json",
-    "sections_count": 42,
+    "sections_count": 41,
     "url_path": "/guides/website-compliance-germany"
   },
   {
@@ -1180,7 +1180,7 @@
     "guide_name": "Freelance developer rates in Berlin",
     "category": "Self-employment",
     "path": "/json/freelance-developer-rate.json",
-    "sections_count": 8,
+    "sections_count": 7,
     "url_path": "/guides/freelance-developer-rate"
   },
   {

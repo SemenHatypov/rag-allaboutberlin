@@ -36,7 +36,7 @@
     "guide": "losing-your-job",
     "section": "If you get fired or laid off",
     "title": "",
-    "text": "If your employer does not need you, you can get laid off. If your employer has financial problems, they can also put you on Kurzarbeit. If your employer is not happy with your work, you can get fired. You can’t get fired without a good reason, except during probation period. You get written warnings before you get fired, except for very serious reasons.",
+    "text": "If your employer does not need you, you can get laid off. If your employer has financial problems, they can also put you on Kurzarbeit. If your employer is not happy with your work, you can get fired. You can’t get fired without a good reason, except during probation period. You get written warnings before you get fired, except for very serious reasons. [§ 626 BGB]",
     "anchor": "if-you-get-fired-or-laid-off"
   },
   {
@@ -44,7 +44,7 @@
     "guide": "losing-your-job",
     "section": "If you get fired or laid off",
     "title": "Resist",
-    "text": "During your probation period, you can be fired without a reason. After your probation period ends, your employer needs a valid reason to fire you. If you don’t agree with the reason, you have 3 weeks to resist with a Kündigungsschutzklage. These are often successful. Get legal help for this.",
+    "text": "During your probation period, you can be fired without a reason. After your probation period ends, your employer needs a valid reason to fire you. If you don’t agree with the reason, you have 3 weeks to resist with a Kündigungsschutzklage. [§ 4 KSchG] These are often successful. Get legal help for this.",
     "anchor": "resist"
   },
   {
@@ -60,7 +60,7 @@
     "guide": "losing-your-job",
     "section": "If you get fired or laid off",
     "title": "Negotiate severance pay",
-    "text": "If you get laid off, ask for severance pay ( Abfindung). Usually, you must sign a termination agreement ( Abwicklungsvertrag) to get severance pay. In other words, your employer pays you to leave without suing them. There is no guaranteed severance pay. You must negotiate how much severance pay you get. You usually get 0.5× your gross monthly income for each year of employment. For example, if you work 5 years for an employer, your severance pay could be 2.5 months of income. A labour lawyer can help you negotiate better severance pay, because they know how much money you can get. Find a labour lawyer Severance pay can affect your unemployment benefits. If your severance pay is really high, you can lose 3 months of unemployment benefits. Sometimes, it’s better to refuse severance pay and get unemployment benefits. If you are not sure, ask a labour lawyer. How unemployment benefits work If you are over 50 years old and plan to retire soon, you can ask for pension payments instead of severance pay. It might be a better deal for you.",
+    "text": "If you get laid off, ask for severance pay ( Abfindung). Usually, you must sign a termination agreement ( Abwicklungsvertrag) to get severance pay. In other words, your employer pays you to leave without suing them. There is no guaranteed severance pay. You must negotiate how much severance pay you get. You usually get 0.5× your gross monthly income for each year of employment. [§ 1a KSchG, “It’s a guideline, not a legal entitlement” ( Andreas Martin, July 2025)] For example, if you work 5 years for an employer, your severance pay could be 2.5 months of income. A labour lawyer can help you negotiate better severance pay, because they know how much money you can get. Find a labour lawyer Severance pay can affect your unemployment benefits. If your severance pay is really high, you can lose 3 months of unemployment benefits. Sometimes, it’s better to refuse severance pay and get unemployment benefits. If you are not sure, ask a labour lawyer. How unemployment benefits work If you are over 50 years old and plan to retire soon, you can ask for pension payments instead of severance pay. It might be a better deal for you.",
     "anchor": "negotiate-severance-pay"
   },
   {
@@ -84,7 +84,7 @@
     "guide": "losing-your-job",
     "section": "Before you stop working",
     "title": "Tell the Aus­län­der­be­hör­de",
-    "text": "If you have a residence permit, always tell the Ausländerbehörde when you change or lose your job. Do not wait more than 2 weeks. Permanent residents don’t need to do this. If you change employers, use the online form to tell the Ausländerbehörde. You get a PDF confirmation. If you lose your job, use my letter generator to write the message. Use the Ausländerbehörde ’s contact form to send it to the correct department. Attach your resignation letter or termination notice. Generate a letter to notify the Berlin immigration office of a job change. This tool requires JavaScript to work. The Ausländerbehörde will reply by email. It can take a few weeks. They might not reply at all. What happens to your residence permit",
+    "text": "If you have a residence permit, always tell the Ausländerbehörde when you change or lose your job. Do not wait more than 2 weeks. [§ 82 Abs. 6 AufenthG] Permanent residents don’t need to do this. If you change employers, use the online form to tell the Ausländerbehörde. You get a PDF confirmation. If you lose your job, use my letter generator to write the message. Use the Ausländerbehörde ’s contact form to send it to the correct department. Attach your resignation letter or termination notice. Generate a letter to notify the Berlin immigration office of a job change. This tool requires JavaScript to work. The Ausländerbehörde will reply by email. It can take a few weeks. They might not reply at all. What happens to your residence permit",
     "anchor": "tell-the-auslanderbehorde"
   },
   {
@@ -108,7 +108,7 @@
     "guide": "losing-your-job",
     "section": "Before you stop working",
     "title": "Get a letter of reference",
-    "text": "A letter of reference ( Arbeitszeugnis) is a proof of the work you did for your employer. It can help your job search. Your next employer can ask for it. Your employer is required to give you a letter of reference. Ask for it in your resignation letter. Apprentices, working students, temporary workers and minijobbers can also demand a letter of reference. The letter must clearly explain the type of work you did, and for how long. Your employer must give you a paper version, not an electronic version. It must not have information about your health, your salary, your other jobs, your union membership, or your political affiliations. Your employer needs your explicit permission to mention why you quit or got fired. If you worked for more than 6 weeks, you can demand a qualified reference ( qualifiziertes Arbeitszeugnis). It includes an evaluation of your performance, and the reason you left the company.",
+    "text": "A letter of reference ( Arbeitszeugnis) is a proof of the work you did for your employer. It can help your job search. Your next employer can ask for it. Your employer is required to give you a letter of reference. [verdi.de, § 109 GewO] Ask for it in your resignation letter. Apprentices, working students, temporary workers and minijobbers can also demand a letter of reference. The letter must clearly explain the type of work you did, and for how long. Your employer must give you a paper version, not an electronic version. It must not have information about your health, your salary, your other jobs, your union membership, or your political affiliations. Your employer needs your explicit permission to mention why you quit or got fired. If you worked for more than 6 weeks, you can demand a qualified reference ( qualifiziertes Arbeitszeugnis). It includes an evaluation of your performance, and the reason you left the company.",
     "anchor": "get-a-letter-of-reference"
   },
   {
@@ -116,7 +116,7 @@
     "guide": "losing-your-job",
     "section": "Before you stop working",
     "title": "Get an Ar­beits­be­schei­ni­gung",
-    "text": "Before you get unemployment benefits, your employer must send your Arbeitsbescheinigung to the Agentur für Arbeit. Some employers take a long time to do this. How to get your Arbeitsbescheinigung",
+    "text": "Before you get unemployment benefits, your employer must send your Arbeitsbescheinigung to the Agentur für Arbeit. [kanzlei-hallermann.de, § 312 SGB III, Agentur für Arbeit] Some employers take a long time to do this. How to get your Arbeitsbescheinigung",
     "anchor": "get-an-arbeitsbescheinigung"
   },
   {
@@ -124,7 +124,7 @@
     "guide": "losing-your-job",
     "section": "Before you stop working",
     "title": "Get an Ur­laubs­be­schei­ni­gung",
-    "text": "A vacation certificate ( Urlaubsbescheinigung) shows how many unused vacation days you have. It tells your next employer how many vacation days you should get this year. Your employer must give you an Urlaubsbescheinigung if you ask for it. Ask for it in your resignation letter. What happens to your vacation days",
+    "text": "A vacation certificate ( Urlaubsbescheinigung) shows how many unused vacation days you have. It tells your next employer how many vacation days you should get this year. Your employer must give you an Urlaubsbescheinigung if you ask for it. [§ 6 Abs. 2 BUrlG, karrierebibel.de] Ask for it in your resignation letter. What happens to your vacation days",
     "anchor": "get-an-urlaubsbescheinigung"
   },
   {
@@ -132,7 +132,7 @@
     "guide": "losing-your-job",
     "section": "Before you stop working",
     "title": "Get all other documents",
-    "text": "Your employer will give you these documents after your last paycheck: Wage tax statement ( Lohnsteuerbescheinigung) Last pay slip ( Gehaltsabrechnung or Lohnabrechnung). You need these documents to apply for unemployment benefits, and to make a tax declaration.",
+    "text": "Your employer will give you these documents after your last paycheck: [§ 41b EStG, prokontex.de, bewerbungen.de, Red Tape Translation (July 2023), Rotwang Law (July 2023)] Wage tax statement ( Lohnsteuerbescheinigung) Last pay slip ( Gehaltsabrechnung or Lohnabrechnung). You need these documents to apply for unemployment benefits, and to make a tax declaration.",
     "anchor": "get-all-other-documents"
   },
   {
@@ -172,7 +172,7 @@
     "guide": "losing-your-job",
     "section": "What happens to your residence permit",
     "title": "",
-    "text": "Always tell the Ausländerbehörde when you change or lose your job. In Berlin, they usually give you 6 to 12 months to find another job. If you can’t find a job after 6 to 12 months, your residence permit expires, and you must leave Germany. To stay longer, you can get a different residence permit. You can apply for an opportunity card and get an extra 12 months to find a job. When you find a job, you might need the Ausländerbehörde ’s permission to start your new job. It depends on your residence permit.",
+    "text": "Always tell the Ausländerbehörde when you change or lose your job. In Berlin, they usually give you 6 to 12 months to find another job. [§ 7 Abs. 2 AufenthG, 7.2.2 VAB, David Kremers, anwalt.de, make-it-in-germany.com, Facebook, Charlott Posch of the Willkommenszentrum (June 2023), Beratungsservice of the Ausländerbehörde (June 2023), Red Tape Translation (July 2023), Carina Senf at Rotwang Law (July 2023), BAMF, Mirko Vorreuter (September 2025)] If you can’t find a job after 6 to 12 months, your residence permit expires, and you must leave Germany. To stay longer, you can get a different residence permit. You can apply for an opportunity card and get an extra 12 months to find a job. When you find a job, you might need the Ausländerbehörde ’s permission to start your new job. It depends on your residence permit.",
     "anchor": "what-happens-to-your-residence-permit"
   },
   {
@@ -180,7 +180,7 @@
     "guide": "losing-your-job",
     "section": "What happens to your residence permit",
     "title": "Blue Card",
-    "text": "Check your Zusatzblatt. It tells you what you can do. In the first 12 months with a Blue Card, your new job must fulfil the Blue Card requirements. You must tell the Ausländerbehörde that you have a new job. You can start working immediately. The Ausländerbehörde has 30 days to stop you. After 12 months of employment with a Blue Card, you can get any kind of job. There is no minimum salary requirement, but you can’t make less than € 13.90 per hour. You can start working immediately. You should tell the Ausländerbehörde that you have a new job, but they can’t really stop you.",
+    "text": "Check your Zusatzblatt. It tells you what you can do. In the first 12 months with a Blue Card, your new job must fulfil the Blue Card requirements. [§ 18g Abs. 4 AufenthG] You must tell the Ausländerbehörde that you have a new job. [VAB A.18g.4 (December 2024), § 82 Abs. 6 AufenthG] You can start working immediately. The Ausländerbehörde has 30 days to stop you. After 12 months of employment with a Blue Card, you can get any kind of job. There is no minimum salary requirement, but you can’t make less than € 13.90 per hour. You can start working immediately. [§ 18g Abs. 4 AufenthG] You should tell the Ausländerbehörde that you have a new job, but they can’t really stop you.",
     "anchor": "blue-card"
   },
   {
@@ -188,7 +188,7 @@
     "guide": "losing-your-job",
     "section": "What happens to your residence permit",
     "title": "Opportunity card",
-    "text": "The opportunity card lets you work 20 hours per week for any employer. To work full time, you must apply for a residence permit like a work visa or a Blue Card. You must wait for your residence permit before you work full time. It takes 3 to 6 months to get a residence permit. Residence permits to work in Germany",
+    "text": "The opportunity card lets you work 20 hours per week for any employer. [§ 20a Abs. 2 AufenthG] To work full time, you must apply for a residence permit like a work visa or a Blue Card. You must wait for your residence permit before you work full time. It takes 3 to 6 months to get a residence permit. Residence permits to work in Germany",
     "anchor": "opportunity-card"
   },
   {
@@ -212,7 +212,7 @@
     "guide": "losing-your-job",
     "section": "What happens to your residence permit",
     "title": "Other residence permits",
-    "text": "Check your Zusatzblatt. If it says “Beschäftigung erlaubt” or “Erwerbstätigkeit erlaubt”, you can start a new job immediately. You don’t need permission from the Ausländerbehörde. Usually, you need the Ausländerbehörde ’s permission to change jobs. You must apply for a new residence permit before you start working. It takes 3 to 6 months to get a residence permit. After 2 to 3 years in Germany, they might allow you to take any job, in any field, for any salary. Always tell the Ausländerbehörde about your new job, even if you don’t need their permission to change jobs.",
+    "text": "Check your Zusatzblatt. If it says “Beschäftigung erlaubt” or “Erwerbstätigkeit erlaubt”, you can start a new job immediately. You don’t need permission from the Ausländerbehörde. Usually, you need the Ausländerbehörde ’s permission to change jobs. You must apply for a new residence permit before you start working. It takes 3 to 6 months to get a residence permit. After 2 to 3 years in Germany, they might allow you to take any job, in any field, for any salary. [§ 9 Abs. 1 BeschV] Always tell the Ausländerbehörde about your new job, even if you don’t need their permission to change jobs.",
     "anchor": "other-residence-permits"
   },
   {
@@ -260,7 +260,7 @@
     "guide": "losing-your-job",
     "section": "Need help?",
     "title": "",
-    "text": "If you need help, hire an employment lawyer ( Anwalt für Arbeitsrecht). In Germany, it’s normal to hire a lawyer. It’s not an aggressive move. English-speaking lawyers in Berlin Other ways to get help Andreas Martin (July 2025) ⤴ Andreas Martin (July 2025) ⤴ § 626 BGB ⤴ § 626 BGB ⤴ Elliot Herman (November 2024) ⤴ Elliot Herman (November 2024) ⤴ VAB A.18g.4 (December 2024), § 82 Abs. 6 AufenthG ⤴ VAB A.18g.4 (December 2024), § 82 Abs. 6 AufenthG ⤴ § 7 Abs. 2 AufenthG, 7.2.2 VAB, David Kremers, anwalt.de, make-it-in-germany.com, Facebook, Charlott Posch of the Willkommenszentrum (June 2023), Beratungsservice of the Ausländerbehörde (June 2023), Red Tape Translation (July 2023), Carina Senf at Rotwang Law (July 2023), BAMF, Mirko Vorreuter (September 2025) ⤴ § 7 Abs. 2 AufenthG, 7.2.2 VAB, David Kremers, anwalt.de, make-it-in-germany.com, Facebook, Charlott Posch of the Willkommenszentrum (June 2023), Beratungsservice of the Ausländerbehörde (June 2023), Red Tape Translation (July 2023), Carina Senf at Rotwang Law (July 2023), BAMF, Mirko Vorreuter (September 2025) ⤴ Techniker Krankenkasse ⤴ Techniker Krankenkasse ⤴ § 9 Abs. 1 BeschV ⤴ § 9 Abs. 1 BeschV ⤴ wiwi-treff.de (March 2016), Reddit (2020) ⤴ wiwi-treff.de (March 2016), Reddit (2020) ⤴ Finanztip ⤴ Finanztip ⤴ § 82 Abs. 6 AufenthG ⤴ § 82 Abs. 6 AufenthG ⤴ Red Tape Translation (July 2023), personal interview (June 2023) ⤴ Red Tape Translation (July 2023), personal interview (June 2023) ⤴ kanzlei-hallermann.de, § 312 SGB III, Agentur für Arbeit ⤴ kanzlei-hallermann.de, § 312 SGB III, Agentur für Arbeit ⤴ verdi.de, § 109 GewO ⤴ verdi.de, § 109 GewO ⤴ karrierebibel.de ⤴ karrierebibel.de ⤴ arbeitnow.com, Finanztip ⤴ arbeitnow.com, Finanztip ⤴ Finanztip, Andreas Martin (July 2025) ⤴ Finanztip, Andreas Martin (July 2025) ⤴ § 1a KSchG, “It’s a guideline, not a legal entitlement” ( Andreas Martin, July 2025) ⤴ § 1a KSchG, “It’s a guideline, not a legal entitlement” ( Andreas Martin, July 2025) ⤴ roedl.de, fachanwaltfürarbeitsrecht.net, fachanwaltfürarbeitsrecht.net (January 2026) ⤴ roedl.de, fachanwaltfürarbeitsrecht.net, fachanwaltfürarbeitsrecht.net (January 2026) ⤴ anwalt-martin.de, dr-drees.com ⤴ anwalt-martin.de, dr-drees.com ⤴ Finanztip, Andreas Martin (July 2025) ⤴ Finanztip, Andreas Martin (July 2025) ⤴ Finanztip ⤴ Finanztip ⤴ kanzlei-chevalier.de ⤴ kanzlei-chevalier.de ⤴ § 41b EStG, prokontex.de, bewerbungen.de, Red Tape Translation (July 2023), Rotwang Law (July 2023) ⤴ § 41b EStG, prokontex.de, bewerbungen.de, Red Tape Translation (July 2023), Rotwang Law (July 2023) ⤴ Fiona Macdonald (March 2024), Rotwang Law (July 2023), reddit.com (2023), Alexander von Engelhardt (July 2023) ⤴ Fiona Macdonald (March 2024), Rotwang Law (July 2023), reddit.com (2023), Alexander von Engelhardt (July 2023) ⤴ Ina Bozhilova at Noah Mobility (July 2023) ⤴ Ina Bozhilova at Noah Mobility (July 2023) ⤴ § 4 KSchG ⤴ § 4 KSchG ⤴ bewerbungen.de ⤴ bewerbungen.de ⤴ Alexander von Engelhardt (July 2023) ⤴ Alexander von Engelhardt (July 2023) ⤴ § 6 Abs. 2 BUrlG, karrierebibel.de ⤴ § 6 Abs. 2 BUrlG, karrierebibel.de ⤴ vangard.de ⤴ vangard.de ⤴ § 18g Abs. 4 AufenthG ⤴ § 18g Abs. 4 AufenthG ⤴ Experience of a friend (January 2025), VAB 18.2.2.2 (January 2025) ⤴ Experience of a friend (January 2025), VAB 18.2.2.2 (January 2025) ⤴ § 18g Abs. 4 AufenthG ⤴ § 18g Abs. 4 AufenthG ⤴ Berlin.de (May 2025) ⤴ Berlin.de (May 2025) ⤴ karrierebibel.de ⤴ karrierebibel.de ⤴ Alexander von Engelhardt (July 2023) ⤴ Alexander von Engelhardt (July 2023) ⤴ Dr. Drees (July 2024) ⤴ Dr. Drees (July 2024) ⤴ Dr. Drees (July 2024) ⤴ Dr. Drees (July 2024) ⤴ Reddit (October 2024), Reddit (August 2023), Charlotte Forestier at Expat Management Group (December 2024) ⤴ Reddit (October 2024), Reddit (August 2023), Charlotte Forestier at Expat Management Group (December 2024) ⤴ § 20a Abs. 2 AufenthG ⤴ § 20a Abs. 2 AufenthG ⤴",
+    "text": "If you need help, hire an employment lawyer ( Anwalt für Arbeitsrecht). In Germany, it’s normal to hire a lawyer. It’s not an aggressive move. English-speaking lawyers in Berlin Other ways to get help",
     "anchor": "need-help"
   }
 ]
