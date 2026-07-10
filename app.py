@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import logging
 import os
 
 import streamlit as st
@@ -12,6 +13,19 @@ from ingest import build_vector_index, load_documents, load_guides, load_meta
 from rag_helper import DEFAULT_NUM_RESULTS, RERANK_MODEL, RAGVector
 
 load_dotenv()
+
+logger = logging.getLogger(__name__)
+
+FRIENDLY_ERROR = "Something went wrong while answering. Please try again in a moment."
+
+
+def friendly_error(exc: Exception) -> str:
+    """Log the full traceback server-side; return a neutral message for the UI.
+
+    Never surface the raw exception text — it can leak provider errors or internals.
+    """
+    logger.error("RAG pipeline failed", exc_info=exc)
+    return FRIENDLY_ERROR
 
 
 @st.cache_resource(show_spinner=False)
@@ -104,7 +118,7 @@ def main() -> None:
                 except Exception as e:
                     answer = ""
                     sources = []
-                    error = str(e)
+                    error = friendly_error(e)
 
             if error:
                 st.error(error)
