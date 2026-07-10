@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "This guide explains how the Deutschland Ticket works in Berlin. Summary: It costs € 63 per month. You can use local public transit everywhere in Germany. It’s a monthly subscription. You can’t buy it from a ticket machine. Tourists should buy it from mo.pla or Hamburg’s hvv Switch app.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "0d4544c224",
@@ -13,7 +14,8 @@
     "section": "How to buy the Deutschland Ticket",
     "title": "",
     "text": "You can buy a Deutschland Ticket from many different apps. You can’t buy it from a ticket machine. It’s only sold as a monthly subscription. The subscription renews automatically until you cancel it. The Deutschland Ticket always starts on the first day of the month. This means that if you need a ticket from January 10 to February 5, you must pay for two full months. mo.pla | hvv Switch | BVG | Deutsche Bahn\nBuy a ticket for the current month | ✓ | ✓ | ✗ | ✓\nCancellation deadline | 10th of the month | 10th of the month | 25th of the month | 10th of the month\nPay with foreign credit card | ✓ | ✓ | ✗ | ✗\nPay with German credit card | ✓ | ✗ | ✗ | ✗\nPay with PayPal | ✓ | ✓ | ✗ | ✗\nBook ticket in English | ✗ | ✓ | ✗ | ✗\nApp is in English | ✗ | ✓ | ✓ | ✓\nTicket in Apple Wallet | ✓ | ✓ | ✓ | ✗\nTicket in Google Wallet | ✓ | ✓ | ✗ | ✗ I recommend mo.pla, because it accepts more payment options, and it’s the easiest to cancel. They also support Apple Wallet and Google Wallet. You can’t use hvv Switch with foreign credit cards, even if you use PayPal.",
-    "anchor": "how-to-buy-the-deutschland-ticket"
+    "anchor": "how-to-buy-the-deutschland-ticket",
+    "images": []
   },
   {
     "id": "8853fee595",
@@ -21,7 +23,8 @@
     "section": "How to buy the Deutschland Ticket",
     "title": "For tourists",
     "text": "The Deutschland Ticket is a subscription. You can’t buy it from a ticket machine. Tourists should get a Deutschland Ticket from deutschland-ticket.store. You can pay with foreign credit cards. You must still manually cancel your subscription before the end of the month. Your ticket is a QR code. You can see your ticket it in the Bconn app. It might take time to process, so buy it in advance. The other option is mo.pla, because it accepts credit cards and it’s easy to cancel. Other options require a European bank account or a German credit card, and their Deutschland Ticket subscription is harder to cancel. It can be easier to buy a regular daily, weekly or monthly ticket. You can buy them from a ticket machine at the train station. You can pay with cash or credit cards. Where to buy regular tickets How to use public transit in Berlin When you leave Germany, cancel your subscription. The Deutschland Ticket renews automatically every month until you cancel it.",
-    "anchor": "for-tourists"
+    "anchor": "for-tourists",
+    "images": []
   },
   {
     "id": "1bbc5630c3",
@@ -29,7 +32,8 @@
     "section": "What can you do with a Deutschland Ticket?",
     "title": "",
     "text": "You can… Use local public transit in all of Germany: the S-Bahn, the U-Bahn, trams, buses, ferries and regional trains (RE) Bring a dog for free in Berlin zones A, B and C You can’t… Use intercity trains (IC, EC and ICE) or private buses and trains Bring other people with you for free Bring a bicycle with you for free Let someone else use your ticket",
-    "anchor": "what-can-you-do-with-a-deutschland-ticket"
+    "anchor": "what-can-you-do-with-a-deutschland-ticket",
+    "images": []
   },
   {
     "id": "dbf1589722",
@@ -37,7 +41,8 @@
     "section": "Deutschland Ticket alternatives",
     "title": "",
     "text": "In Berlin, you can also get a daily, weekly or monthly pass. These tickets are only valid in Berlin and its surroundings. Which ticket to buy? ** Buy a BVG monthly ticket",
-    "anchor": "deutschland-ticket-alternatives"
+    "anchor": "deutschland-ticket-alternatives",
+    "images": []
   },
   {
     "id": "f869ed1077",
@@ -45,6 +50,7 @@
     "section": "How to cancel a Deutschland Ticket",
     "title": "",
     "text": "You can cancel your ticket where you bought it. If you got your ticket from the BVG, you can cancel it on the BVG website or at a BVG service centre. If you cancel online, you must do it before the 25th day of the month. If you cancel in person, you can cancel at any time. Your ticket will stop working at the end of the month. If you got your ticket from the Deutsche Bahn, you can cancel it on the S-Bahn Berlin website or at a Deutsche Bahn service centre. Your ticket will stop working at the end of the month.",
-    "anchor": "how-to-cancel-a-deutschland-ticket"
+    "anchor": "how-to-cancel-a-deutschland-ticket",
+    "images": []
   }
 ]

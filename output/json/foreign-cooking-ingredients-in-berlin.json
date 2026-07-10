@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "This is a list of foreign cooking ingredients, and where to find them in Berlin. If something is missing, let me know. If you can’t find something, ask Found in… Berlin.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "f5b3fd3c22",
@@ -13,7 +14,8 @@
     "section": "List of ingredients",
     "title": "American cheese",
     "text": "American cheese, the square, “radioactive yellow” cheese that’s also known as Kraft Singles, can be found in the dairy section of most grocery stores.",
-    "anchor": "american-cheese"
+    "anchor": "american-cheese",
+    "images": []
   },
   {
     "id": "949f973bfe",
@@ -21,7 +23,8 @@
     "section": "List of ingredients",
     "title": "Baking soda",
     "text": "Sodium bicarbonate is called Natron in Germany. It’s sold in small paper packets and boxes. You can find it in the baking section of all grocery stores. Look for the green Kaiser Natron boxes and packets. You can find Arm & Hammer baking soda at some Asian supermarkets.",
-    "anchor": "baking-soda"
+    "anchor": "baking-soda",
+    "images": []
   },
   {
     "id": "2fd2aad940",
@@ -29,7 +32,8 @@
     "section": "List of ingredients",
     "title": "Baking powder",
     "text": "Baking powder is called Backpulver in Germany. It’s easy to find. Look for small paper packets in the baking section of any grocery store. German baking powder is usually single-acting, while American and English baking powder is double-acting, and the difference is important. Broken English and many Asian markets have double-acting baking powder. If you are in a pinch, substitute double-acting baking powder with 1.25x the amount single-acting baking powder.",
-    "anchor": "baking-powder"
+    "anchor": "baking-powder",
+    "images": []
   },
   {
     "id": "3aa6f7f71f",
@@ -37,7 +41,8 @@
     "section": "List of ingredients",
     "title": "Boneless chicken thighs",
     "text": "Kaufland and Metro have them, and sometimes Penny. This is not a common product in Germany.",
-    "anchor": "boneless-chicken-thighs"
+    "anchor": "boneless-chicken-thighs",
+    "images": []
   },
   {
     "id": "c368ed28ff",
@@ -45,7 +50,8 @@
     "section": "List of ingredients",
     "title": "Brown sugar",
     "text": "German Rohrzucker or brauner Zucker is not the same as brown sugar. It does not contain molasses, and it will ruin any recipe that calls for brown sugar. Tate+Lyle sells light and dark brown sugar on Amazon. You can also find it in most asian supermarkets. Go Asia, Asia Markt Lee, Metro, Galeria Kaufhof and some Edeka stores have brown sugar. You can also make it yourself with sugar and molasses.",
-    "anchor": "brown-sugar"
+    "anchor": "brown-sugar",
+    "images": []
   },
   {
     "id": "3311e6b000",
@@ -53,7 +59,8 @@
     "section": "List of ingredients",
     "title": "Caramelized condensed milk",
     "text": "LEDO supermarkets have caramelized condensed milk, and many other Russian staple foods.",
-    "anchor": "caramelized-condensed-milk"
+    "anchor": "caramelized-condensed-milk",
+    "images": []
   },
   {
     "id": "e4ee31316c",
@@ -61,7 +68,8 @@
     "section": "List of ingredients",
     "title": "Condensed milk",
     "text": "Condensed milk is called Kondensmilch. You can find it in the coffee section, next to coffee cream and H-Milch. It’s sold in small cans, or in small juice boxes. Condensed milk can be a false friend for people from the UK at least. If a recipe calls for condensed milk, you might want gezuckert Kondensmilch, also known as Mädchenmilch.",
-    "anchor": "condensed-milk"
+    "anchor": "condensed-milk",
+    "images": []
   },
   {
     "id": "898f666df2",
@@ -69,7 +77,8 @@
     "section": "List of ingredients",
     "title": "Corn tortillas",
     "text": "Corn tortillas are sold at Chili & Paprika and Aqui España.",
-    "anchor": "corn-tortillas"
+    "anchor": "corn-tortillas",
+    "images": []
   },
   {
     "id": "a397efdf46",
@@ -77,7 +86,8 @@
     "section": "List of ingredients",
     "title": "Couscous spices",
     "text": "According to Quora, you can find Couscous spice at Galeria under the name Ras el-Hanout. Turkish markets and spice kiosks at Berlin’s many Wochenmärkte should also carry couscous spices.",
-    "anchor": "couscous-spices"
+    "anchor": "couscous-spices",
+    "images": []
   },
   {
     "id": "8b140ed430",
@@ -85,7 +95,8 @@
     "section": "List of ingredients",
     "title": "Flour",
     "text": "North American all-purpose flour is the same as Type 550 flour in Germany. It’s in most supermarkets. Mehlstübchen has flours from all over the world, including Manitoba and type 00 dopio zero. Self-raising flour can be found at Galeria Kaufhof.",
-    "anchor": "flour"
+    "anchor": "flour",
+    "images": []
   },
   {
     "id": "cf7073b17c",
@@ -93,7 +104,8 @@
     "section": "List of ingredients",
     "title": "Graham crumbs",
     "text": "Graham crumbs are hard to find, but if you grind Leibniz crackers into crumbs, it’s exactly the same. You can find them in every supermarket.",
-    "anchor": "graham-crumbs"
+    "anchor": "graham-crumbs",
+    "images": []
   },
   {
     "id": "7b685b6bb2",
@@ -101,7 +113,8 @@
     "section": "List of ingredients",
     "title": "Hot dog sausages",
     "text": "Most Turkish grocery stores have chicken and beef sausages. They taste exactly like the hot dog sausages in North America.",
-    "anchor": "hot-dog-sausages"
+    "anchor": "hot-dog-sausages",
+    "images": []
   },
   {
     "id": "5ff2f3ece1",
@@ -109,7 +122,8 @@
     "section": "List of ingredients",
     "title": "Kerrygold salted butter",
     "text": "Kaufland, Edeka, Lidl, Penny and REWE usually have Kerrygold salted butter.",
-    "anchor": "kerrygold-salted-butter"
+    "anchor": "kerrygold-salted-butter",
+    "images": []
   },
   {
     "id": "2a9bc9bd4a",
@@ -117,7 +131,8 @@
     "section": "List of ingredients",
     "title": "Maple syrup",
     "text": "Most grocery stores have pure Canadian or American maple syrup. REWE keeps it close the the Nutella and peanut butter.",
-    "anchor": "maple-syrup"
+    "anchor": "maple-syrup",
+    "images": []
   },
   {
     "id": "2a265c7a01",
@@ -125,7 +140,8 @@
     "section": "List of ingredients",
     "title": "Marmite",
     "text": "Marmite is found at Galeria Kaufhof and Broken English. It was also spotted at Asia Mekong near Hackescher Markt and in the English section at Real,- and at KaDeWe.",
-    "anchor": "marmite"
+    "anchor": "marmite",
+    "images": []
   },
   {
     "id": "34cb1ddc14",
@@ -133,7 +149,8 @@
     "section": "List of ingredients",
     "title": "Minced lamb",
     "text": "You can find it in Turkish supermarkets like Bolu or Eurogida. Find them with this map. Regular supermarkets and butcher shops do not sell it.",
-    "anchor": "minced-lamb"
+    "anchor": "minced-lamb",
+    "images": []
   },
   {
     "id": "b2152dd71d",
@@ -141,7 +158,8 @@
     "section": "List of ingredients",
     "title": "Molasses",
     "text": "Molasses is called Melasse in German. You can find it at Edeka and in many bio shops. You can also order it off Amazon.",
-    "anchor": "molasses"
+    "anchor": "molasses",
+    "images": []
   },
   {
     "id": "abc59dd343",
@@ -149,7 +167,8 @@
     "section": "List of ingredients",
     "title": "Mustard powder",
     "text": "This staple ingredient of American BBQ can be found in most Wochenmärkte. I get mine from the Winterfeldtplatz market. Just look for Senfpulver at the spice kiosks. Colman’s Mustard Powder can be found at KaDeWe or ordered from Amazon.",
-    "anchor": "mustard-powder"
+    "anchor": "mustard-powder",
+    "images": []
   },
   {
     "id": "840dfcf3fa",
@@ -157,7 +176,8 @@
     "section": "List of ingredients",
     "title": "Peanut butter",
     "text": "Most grocery stores carry peanut butter. REWE has both creamy and crunchy peanut butter. You will find it next to the Nutella. Go Asia has Skippy peanut butter.",
-    "anchor": "peanut-butter"
+    "anchor": "peanut-butter",
+    "images": []
   },
   {
     "id": "31c32ae09e",
@@ -165,7 +185,8 @@
     "section": "List of ingredients",
     "title": "Powdered sugar",
     "text": "Powdered sugar (also called confectioner’s sugar or icing sugar) is called Puderzucker or Staubzucker. It’s sold in small boxes in the baking section of all grocery stores. It’s very easy to find. There is a small difference between powdered sugar and confectioner’s sugar. If you need confectioner’s sugar, add 1 tablespoon of cornstarch per cup of powdered sugar.",
-    "anchor": "powdered-sugar"
+    "anchor": "powdered-sugar",
+    "images": []
   },
   {
     "id": "37134bc5a0",
@@ -173,7 +194,8 @@
     "section": "List of ingredients",
     "title": "Pumpkin puree",
     "text": "American Lifestyle KaDeWe Galeria Kaufhof You can also make your own. Supermarkets sell pumpkins when they are in season.",
-    "anchor": "pumpkin-puree"
+    "anchor": "pumpkin-puree",
+    "images": []
   },
   {
     "id": "3715994be7",
@@ -181,7 +203,8 @@
     "section": "List of ingredients",
     "title": "Sal de Guzano, sal de Chapulín",
     "text": "Chili & Paprika has agave worm salt and grasshoper salt.",
-    "anchor": "sal-de-guzano-sal-de-chapulin"
+    "anchor": "sal-de-guzano-sal-de-chapulin",
+    "images": []
   },
   {
     "id": "10ba12a310",
@@ -189,7 +212,8 @@
     "section": "List of ingredients",
     "title": "Self-raising flour",
     "text": "You can get it from most Asian supermarkets, and at Galeria Kaufhof. You can make your own: add 2 teaspoons of baking powder for every 150g of flour.",
-    "anchor": "self-raising-flour"
+    "anchor": "self-raising-flour",
+    "images": []
   },
   {
     "id": "db58ffe91a",
@@ -197,7 +221,8 @@
     "section": "List of ingredients",
     "title": "Vanilla extract",
     "text": "Vanilla extract hard to find in Germany. I buy it on Amazon. Galeria Kaufhof, Chili & Paprika, Edeka and Metro also sell it.",
-    "anchor": "vanilla-extract"
+    "anchor": "vanilla-extract",
+    "images": []
   },
   {
     "id": "706eda3879",
@@ -205,7 +230,8 @@
     "section": "List of ingredients",
     "title": "Vegemite",
     "text": "Australia Shopping World has Vegemite. You can also order it from Amazon, but it’s more expensive.",
-    "anchor": "vegemite"
+    "anchor": "vegemite",
+    "images": []
   },
   {
     "id": "b209777235",
@@ -213,7 +239,8 @@
     "section": "List of ingredients",
     "title": "Yeast",
     "text": "Yeast is called Backhefe in Germany. You can find it in small paper packets in the baking section of all grocery stores.",
-    "anchor": "yeast"
+    "anchor": "yeast",
+    "images": []
   },
   {
     "id": "04aad45459",
@@ -221,7 +248,8 @@
     "section": "Stores that sell international foods",
     "title": "International",
     "text": "Galeria Kaufhof – Large selection of international products KaDeWe – Large selection of international products Mehlstübchen – Flours from all over the world",
-    "anchor": "international"
+    "anchor": "international",
+    "images": []
   },
   {
     "id": "f0b29a2a66",
@@ -229,7 +257,8 @@
     "section": "Stores that sell international foods",
     "title": "Eastern Europe",
     "text": "Kasatschok – Russian supermarket LEDO – Russian supermarket",
-    "anchor": "eastern-europe"
+    "anchor": "eastern-europe",
+    "images": []
   },
   {
     "id": "98e53f980b",
@@ -237,6 +266,7 @@
     "section": "Stores that sell international foods",
     "title": "Latin America",
     "text": "Aqui España – They have some Latin American products Chili & Paprika – Food from Mexico, Brasil, Colombia, Argentina, Peru La Bodega",
-    "anchor": "latin-america"
+    "anchor": "latin-america",
+    "images": []
   }
 ]

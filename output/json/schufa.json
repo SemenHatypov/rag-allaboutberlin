@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "If you apply for an apartment, you might need a Schufa report. Most landlords require it. This is how you get one.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "7535f4665d",
@@ -13,7 +14,8 @@
     "section": "What is a Schufa?",
     "title": "",
     "text": "The Schufa score is like a credit score. A good score shows that you pay your bills on time. The Schufa report ( SCHUFA-Bonitätsauskunft) shows your Schufa score ( Basisscore). Your score is based on your financial situations. Your income does not affect your score. A score above 95% is good enough.",
-    "anchor": "what-is-a-schufa"
+    "anchor": "what-is-a-schufa",
+    "images": []
   },
   {
     "id": "4c4af74989",
@@ -21,7 +23,8 @@
     "section": "How to get a Schufa report",
     "title": "",
     "text": "There are 2 versions of the Schufa: The paid version ( Bonitätsauskunft) It costs € 29.95. It looks more official, so landlords prefer it. You can get it online now (as a PDF), or by post in 1 to 3 days. You must verify your ID document with your phone or computer camera. It works with most passports. The free version ( Datenkopie) It has the same information, but they make it look worse: It’s harder to read. Your score is mixed with your private information. You must censor it before you share it. It looks worse. Many landlords want the fancy certificate you get with the paid version. You get it slower. It arrives by post in 5 to 7 days. It’s harder to read. Your score is mixed with your private information. You must censor it before you share it. It looks worse. Many landlords want the fancy certificate you get with the paid version. You get it slower. It arrives by post in 5 to 7 days. The paid version is better when you apply for an apartment, because it’s what landlords expect. The free version is better for your own use. You can also get a Schufa from ImmoScout24. It costs € 29.95. If you have a premium membership, you pay 15% to 40% less. It does not work for everyone. You must verify your identity with your bank, and some banks are not supported. The Bonify app shows the same information as the free Schufa report. The app does not work well, tries to sell you financial products, and is a privacy risk. I don’t recommend it. You can’t get a Schufa in person at the bank anymore.",
-    "anchor": "how-to-get-a-schufa-report"
+    "anchor": "how-to-get-a-schufa-report",
+    "images": []
   },
   {
     "id": "b646ae3230",
@@ -29,7 +32,8 @@
     "section": "How to get a Schufa report",
     "title": "If you can’t get a Schufa",
     "text": "Short-term apartments (from HousingAnywhere or Spotahome) rarely require a Schufa. They can help you get your first apartment without a stable job. You can get a Schufa score by opening a bank account. For example, if you open an N26 account, you get a Schufa record a few days later. Look for short-term apartments",
-    "anchor": "if-you-cant-get-a-schufa"
+    "anchor": "if-you-cant-get-a-schufa",
+    "images": []
   },
   {
     "id": "f0325568f2",
@@ -37,7 +41,8 @@
     "section": "How to get a Schufa report",
     "title": "If you don’t have a score",
     "text": "Schufa is a private company. They only know what other companies tell them. If you are new in Germany, Schufa has no information about you, so you don’t have a score yet. You get a Schufa record when you… Open a bank account Get a credit card or a loan Get a mobile phone contract Sign up for private health insurance Pay for something in instalments Don’t pay your debts When you open a bank account, you let your bank to check your score. If you don’t have a score, a new Schufa record is created. It takes around 7 days. Not all companies check your score. Foreign companies rarely care about Schufa. A foreign bank probably won’t create a Schufa record when you open an account.",
-    "anchor": "if-you-dont-have-a-score"
+    "anchor": "if-you-dont-have-a-score",
+    "images": []
   },
   {
     "id": "1bb5696bb7",
@@ -45,6 +50,7 @@
     "section": "What to do next",
     "title": "",
     "text": "After you get your Schufa report, look for an apartment. Get a free report every year, and check if the information is correct. False information can lower your Schufa score. You don’t need the € 29.95 version for this.",
-    "anchor": "what-to-do-next"
+    "anchor": "what-to-do-next",
+    "images": []
   }
 ]

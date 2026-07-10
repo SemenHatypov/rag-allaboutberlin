@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "This is how you can send a letter by post in Germany, even if you don’t have a printer.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "bef0ce4260",
@@ -13,7 +14,8 @@
     "section": "At the post office",
     "title": "",
     "text": "Write your address on the envelope or package Bring it to the post office. You don’t need a stamp; you can buy it at the post office. Bring cash; some post offices only accept cash and Girocard, no Visa or Mastercard. Map of mailboxes and post offices",
-    "anchor": "at-the-post-office"
+    "anchor": "at-the-post-office",
+    "images": []
   },
   {
     "id": "dc9c8e1500",
@@ -21,7 +23,8 @@
     "section": "In a mailbox",
     "title": "",
     "text": "Write your address on the envelope. Get a digital stamp from the Post & DHL app. You get a code that you must write on the envelope. You can pay with PayPal, Google Pay, Apple Pay or credit card. It does not work for international mail. Put the letter in a yellow Deutsche Post post box. Map of mailboxes and post offices",
-    "anchor": "in-a-mailbox"
+    "anchor": "in-a-mailbox",
+    "images": []
   },
   {
     "id": "81792a9374",
@@ -29,7 +32,8 @@
     "section": "From your computer",
     "title": "",
     "text": "If you don’t have a printer at home, or you want to save time, send a letter from your computer. You type text or upload a PDF, and it’s delivered by post. To mail a letter from a computer, use these services: Superpost (English) Send text or PDF documents in any format. More expensive, but easier to use. No account needed. LetterXpress (German) Send text or PDF documents in any format. You must create an account and add at least € 5 in funds. eBrief (German) Send PDF documents in the DIN 5008 format. You must create an account.",
-    "anchor": "from-your-computer"
+    "anchor": "from-your-computer",
+    "images": []
   },
   {
     "id": "56e2d255c1",
@@ -37,7 +41,8 @@
     "section": "By registered mail",
     "title": "",
     "text": "A registered letter ( Einschreibebrief) comes with a tracking number and a proof of delivery. It’s more expensive than normal mail. There are different kinds of registered mail: Mailbox delivery ( Einschreiben Einwurf) They put the letter in the mailbox. No signature is needed. It’s the fastest kind of registered mail, because no one needs to accept the letter. With signature ( Einschreiben Standard) They need someone’s signature to deliver the letter. The recipient can refuse the letter. Anyone who opens the door can receive the letter, not just the recipient: a family member, a roommate, the office front desk. You can pay for extra options: To addressee only ( Eigenhändig) They need the signature of the recipient to deliver the letter. No one else can accept the letter. Use it to send written warnings and important legal documents. With return receipt ( mit Rückschein) They need someone’s signature to deliver the letter. You get a copy of the signature. The recipient can refuse the letter. To addressee only ( Eigenhändig) They need the signature of the recipient to deliver the letter. No one else can accept the letter. Use it to send written warnings and important legal documents. With return receipt ( mit Rückschein) They need someone’s signature to deliver the letter. You get a copy of the signature. The recipient can refuse the letter. Registered mail is not faster than normal mail. The recipient can be on vacation, refuse to open the door, or pretend that you sent them an empty page. It’s not a perfect solution. The safest way to send a letter is to hire a messenger ( Bote), or to deliver the letter yourself with a witness.",
-    "anchor": "by-registered-mail"
+    "anchor": "by-registered-mail",
+    "images": []
   },
   {
     "id": "ed357ec532",
@@ -45,6 +50,7 @@
     "section": "By registered mail",
     "title": "How to send a registered letter",
     "text": "Go to the post office, or send it from your computer with LetterXpress.",
-    "anchor": "how-to-send-a-registered-letter"
+    "anchor": "how-to-send-a-registered-letter",
+    "images": []
   }
 ]

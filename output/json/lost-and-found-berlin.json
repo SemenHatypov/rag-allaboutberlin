@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "Lost something in Berlin? You are not alone. Hundreds of thousands of lost items are found in Berlin each year. Here’s what you have to get your things back.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "6c60ca6efa",
@@ -13,7 +14,8 @@
     "section": "Stolen objects",
     "title": "",
     "text": "If your objects were stolen, you must report the theft to the police. If they are found by the police, they will contact you.",
-    "anchor": "stolen-objects"
+    "anchor": "stolen-objects",
+    "images": []
   },
   {
     "id": "510421a3cb",
@@ -21,7 +23,8 @@
     "section": "Lost objects in the train, tram or bus",
     "title": "",
     "text": "If you lost something in the S-Bahn, U-Bahn, tram or bus, you must go to the BVG- und S-Bahn-Fundbüro. You can find more information here. Where to go: BVG- und S-Bahn-Fundbüro, Rudolfstraße 1-8, Friedrichshain. When to go: Wait at least 5 days, but no more than 6 weeks. Found objects arrive at the Fundbüro in around 5 days. Keys and personal documents are destroyed after 6 weeks. Special instructions: When you go to the Fundbüro, bring an ID document with you. If you lost your keys, bring a copy of the lost keys. This is how you prove that the keys are yours. If you find your things, you get them back immediately. You don’t need to pay anything. If you lost something on a Flixbus bus, you must their lost item search Where to go: The lost item search on the Flixbus website When to go: As soon as you lost something on the bus",
-    "anchor": "lost-objects-in-the-train-tram-or-bus"
+    "anchor": "lost-objects-in-the-train-tram-or-bus",
+    "images": []
   },
   {
     "id": "142bd29313",
@@ -29,7 +32,8 @@
     "section": "Lost objects on Deutsche Bahn trains",
     "title": "",
     "text": "If you lost something on a Deutsche Bahn train, use their online lost property service. You can find more information here. Found items are kept at the train station for 7 days. Items worth more than € 15 are then sent to the central collection point in Wuppertal. Where to go: The online lost property service on Deutsche Bahn website When to go: As soon as you lost something on the train. It can take up to 2 days for items to be returned to the station. After 70 days, the found items are put on auction. You can find the auction dates here. Special instructions: Report the item loss online. There is a fee of € 5 to € 35 for getting your items back. You can find the fee list here.",
-    "anchor": "lost-objects-on-deutsche-bahn-trains"
+    "anchor": "lost-objects-on-deutsche-bahn-trains",
+    "images": []
   },
   {
     "id": "c026c369d0",
@@ -37,7 +41,8 @@
     "section": "Lost objects at BER airport",
     "title": "",
     "text": "If you lost something at the BER airport, go to their lost and found office in Terminal 1. Where to go: Lost and found office, Terminal 1, BER Airport When to go: See their opening hours",
-    "anchor": "lost-objects-at-ber-airport"
+    "anchor": "lost-objects-at-ber-airport",
+    "images": []
   },
   {
     "id": "a43f356743",
@@ -45,7 +50,8 @@
     "section": "Lost passports and documents",
     "title": "",
     "text": "If your personal documents were lost or stolen, report it to the police immediately. The Berlin Police works with the Zentrales Fundbüro (see below). If they find your things, they will contact you directly. If you lost your bank cards, cancel them as soon as possible. Many banks let you do this directly from their app. If you lost your passport, report it to the police immediately, and to your local embassy.",
-    "anchor": "lost-passports-and-documents"
+    "anchor": "lost-passports-and-documents",
+    "images": []
   },
   {
     "id": "41e285cb32",
@@ -53,7 +59,8 @@
     "section": "Lost pets",
     "title": "",
     "text": "Lost pets are kept at Tierheim Berlin. You can find more information here. Where to go: Tierheim Berlin, Hausvaterweg 39, Falkenberg When to go: As soon as you lost your pet Special instructions: You can call the Tiersammelstelle at +03076888200, or email them at tiersammelstelle@tierschutz-berlin.de.",
-    "anchor": "lost-pets"
+    "anchor": "lost-pets",
+    "images": []
   },
   {
     "id": "2239f3767f",
@@ -61,7 +68,8 @@
     "section": "Lost packages",
     "title": "",
     "text": "When you order a package, it’s often delivered to a neighbour or nearby shop. The tracking number or the delivery slip often have more information. If you don’t know where your package is, read this guide.",
-    "anchor": "lost-packages"
+    "anchor": "lost-packages",
+    "images": []
   },
   {
     "id": "d0e3ffb739",
@@ -69,7 +77,8 @@
     "section": "Other lost and found objects",
     "title": "",
     "text": "Everything else goes to the Zentrales Fundbüro inside the Tempelhof airport. You can find more information here. Where to go: Zentrales Fundbüro, Platz der Luftbrücke 6, Tempelhof When to go: Wait at least 1 week. That’s how long most objects take to get there. Special instructions: Report your lost things online. You can also write to fundbuero@ba-ts.berlin.de.",
-    "anchor": "other-lost-and-found-objects"
+    "anchor": "other-lost-and-found-objects",
+    "images": []
   },
   {
     "id": "a90a106796",
@@ -77,6 +86,7 @@
     "section": "Rewards for finding something",
     "title": "",
     "text": "If you find something in Germany, you have the right to ask for a reward. The reward depends on how much the item is worth. Under € 500: 5% of the value of the item Over € 500: € 25 + 3% of the value of the item over € 500. For example, for a € 1,200 item: € 25 + 3% of € 700 = € 46 Animals: 3% of the value of the animal For objects found in the train or public transit, the rules are different: Under € 50: no reward Over € 50: half of the normal reward",
-    "anchor": "rewards-for-finding-something"
+    "anchor": "rewards-for-finding-something",
+    "images": []
   }
 ]

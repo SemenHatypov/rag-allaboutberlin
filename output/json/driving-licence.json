@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "This guide explains how to get a car or motorcycle licence in Berlin.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "f705dc3fd5",
@@ -13,7 +14,8 @@
     "section": "Cost and timeline",
     "title": "",
     "text": "Getting a driving licence takes around 6 months. It costs € 2,500 to € 4,000. The costs include: Driving school fee: Registration: ~€ 190 Practical lessons: ~€ 60 per lesson, minimum 12 lessons Practical exam: ~€ 200 Registration: ~€ 190 Practical lessons: ~€ 60 per lesson, minimum 12 lessons Practical exam: ~€ 200 First aid course: ~€ 80 Eye test: € 0 to € 25 Bürgeramt fee: € 51.21 TÜV or Dekra fee: Theory exam: € 25 Practical exam: € 130 Theory exam: € 25 Practical exam: € 130 If you have a foreign driving licence, you can convert it. It’s cheaper and faster.",
-    "anchor": "cost-and-timeline"
+    "anchor": "cost-and-timeline",
+    "images": []
   },
   {
     "id": "69a74b518c",
@@ -21,7 +23,8 @@
     "section": "Cost and timeline",
     "title": "Language",
     "text": "You don’t need to speak German, but it helps. There are English-speaking driving schools. Even if you take German classes, the practice app is usually in English. The theory exam is in English, but the translations are really bad. I could not understand some questions in English or French. It’s easier if you can take the test in German. The practical exam is usually in German. Some examiners don’t speak English. You must understand simple instructions in German.",
-    "anchor": "language"
+    "anchor": "language",
+    "images": []
   },
   {
     "id": "7475d028ed",
@@ -29,7 +32,8 @@
     "section": "1. Choose a driving school",
     "title": "",
     "text": "Find a driving school and sign a contract ( Ausbildungsvertrag) with them. To choose a driving school, look at… The costs The schedule Look at the timing and frequency of the lessons. Ask how long it takes to get your driving licence. Some schools have intensive classes. Classes in English are harder to find. The distance If you take intensive lessons, choose a school near you. The language There are English-speaking driving schools. Check if they offer theory and practical lessons in English. The reviews Read the school’s reviews on Google Maps. Don’t trust the reviews too much; German businesses often delete negative reviews. Check if they make you more classes than you need. Other services Some driving schools offer first aid courses and eye tests. You can do everything in one place. It’s more convenient.",
-    "anchor": "choose-a-driving-school"
+    "anchor": "choose-a-driving-school",
+    "images": []
   },
   {
     "id": "c1b3e0a7a0",
@@ -37,7 +41,8 @@
     "section": "2. First aid course",
     "title": "",
     "text": "Take a first aid course before. It costs around € 80. It takes 7.5 hours. There is no test at the end. [§ 19 FeV (November 2025), ersthelfer.tv (November 2025), ArbeitNow (2025), reddit.com/r/berlinmoto] There are first aid classes in English. I took mine at Ersthelfer.tv. Online and foreign first aid certificates are not accepted. Doctor and nurses don’t need a first aid certificate. [berlin.de (November 2025), § 19 Abs. 3 FeV (November 2025)] After the course, you get a certificate. You need it to get permission from the Bürgeramt.",
-    "anchor": "first-aid-course"
+    "anchor": "first-aid-course",
+    "images": []
   },
   {
     "id": "6025a1bf72",
@@ -45,7 +50,8 @@
     "section": "3. Eye test",
     "title": "",
     "text": "You need an eye test ( Sehtest) certificate. You can get tested… During your first aid class Ersthelfer.tv offers first aid and eye tests. You can do both at the same time. At your driving school Some driving schools do eye tests. At the optometrist ( Optiker) You can get a free test from Fielmann or Apollo. At the eye doctor ( Augenarzt) The eye test takes around 10 minutes. Bring an ID document to take the test. [§ 12 Abs. 2 FeV] You can wear glasses or contact lenses during the test. If you pass the test with glasses or contact lenses, you must always wear them when you drive. [§ 12 Abs. 7 FeV, brille24.de, Apollo.de (2024)] After the course, you get a certificate. You need it to get permission from the Bürgeramt.",
-    "anchor": "eye-test"
+    "anchor": "eye-test",
+    "images": []
   },
   {
     "id": "665f021429",
@@ -53,7 +59,8 @@
     "section": "4. Theory classes",
     "title": "",
     "text": "When you find a school, you can start theory classes. You don’t need anything else to start. There are 18 hours of theory classes. If you already have a car licence, and you are getting a motorcycle, you can skip some of the theory classes. When you finish the theory classes, your driving school will give you a certificate ( Ausbildungsbescheinigung der Fahrschule). With this certificate, you can take the theory exam.",
-    "anchor": "theory-classes"
+    "anchor": "theory-classes",
+    "images": []
   },
   {
     "id": "564d7c6a8a",
@@ -61,7 +68,13 @@
     "section": "5. Permission from the Bürgeramt",
     "title": "",
     "text": "You need permission from the Bürgeramt to take the theory exam. It costs € 51.21. There are 2 ways to do it: Let your driving school do it It saves a lot of time. You don’t need to go to the Bürgeramt. Do it yourself Get a Bürgeramt appointment. Your appointment will be a few weeks later. You must go in person. The Bürgeramt needs these documents: Passport or Personalausweis First aid course certificate Eye test certificate Biometric picture Driving school contract ( Ausbildungsvertrag) Payment for the € 51.21 fee – Check if your Bürgeramt accepts cash or credit cards. Around 6 weeks later, you will get a permission paper. While you wait, you can take theory classes and prepare for your theory exam. When you get the permission paper, you have 12 months to pass the theory exam.",
-    "anchor": "permission-from-the-burgeramt"
+    "anchor": "permission-from-the-burgeramt",
+    "images": [
+      {
+        "url": "https://allaboutberlin.com/images/ausbildungvertrag.jpg",
+        "caption": "contract"
+      }
+    ]
   },
   {
     "id": "ccc5aa3ad7",
@@ -69,7 +82,8 @@
     "section": "6. Theory exam",
     "title": "",
     "text": "The theory exam is in 13 languages. You sit at a computer and answer 30 random questions from a list of around 1,000 questions. If you make more than 2 to 4 mistakes, you fail the test. Some questions are really hard. The translations are really bad. Memorisation is the only way to pass the exam. You must prepare well; 53% of students fail their first exam. Your driving school will give you access to a practice app. The questions in the app are exactly the same as in the real exam. Even the translations are the same. You must memorise all the questions and all the answers. I needed 3 to 4 weeks to prepare. When you are ready to take the theory exam, go to your assigned Dekra or TÜV branch. You don’t need an appointment. It costs € 25. The test takes around 20 minutes. After the test, you get a certificate by email. With this certificate, you have 12 months to pass the practical exam. [§ 18 Abs. 2 FeV (2025), ArbeitNow (2025)]",
-    "anchor": "theory-exam"
+    "anchor": "theory-exam",
+    "images": []
   },
   {
     "id": "4a5e8ab77d",
@@ -77,7 +91,8 @@
     "section": "7. Practical exam",
     "title": "",
     "text": "After you pass the theory exam, your driving school will schedule your practical exam. In Berlin, the exam will be a few months later. You must take the exam where you live. [§ 17 FeV] The exam is hard; 44% of students fail the first time. Watch real exam videos to prepare. Your driving instructor and the examiner sit in the car with you. If you take the motorcycle exam, they follow you in a car. The examiners rarely speak English, so you must understand instructions in German. The practical exam takes around 1 hour. You must drive in the city and on the highway, and do a few maneuvers. You must then drive back to the testing centre. The drive back is also part of the test. If you pass, the examiner will take your driving licence (if you have one), and give you a temporary driving licence. If you fail, you can try again in 2 weeks. [§ 18 Abs. 1 FeV (2025)] You must book another exam appointment, and pay the exam fees again.",
-    "anchor": "practical-exam"
+    "anchor": "practical-exam",
+    "images": []
   },
   {
     "id": "e2384427d1",
@@ -85,7 +100,8 @@
     "section": "8. Get your driving licence",
     "title": "",
     "text": "When you pass the practical exam, you get a temporary driving licence ( Vorläufiger Nachweis der Fahrerlaubnis or VNF). It’s valid for 3 months, only in Germany, and only with a valid ID. You must give back your previous driving licence, so this is your only driving licence for now. You will get your plastic driving licence by post 2 to 6 weeks later.",
-    "anchor": "get-your-driving-licence"
+    "anchor": "get-your-driving-licence",
+    "images": []
   },
   {
     "id": "9d71902a2a",
@@ -93,7 +109,8 @@
     "section": "Other ways to get a licence",
     "title": "Use your EU, EEA or Ukrainian driving licence",
     "text": "EU, EEA and Ukrainian driving licences are valid in Germany. [§ 28 Abs. 1 FeV (2025)] When it expires, you can convert it to a German driving licence. Use your foreign driving licence in Germany",
-    "anchor": "use-your-eu-eea-or-ukrainian-driving-licence"
+    "anchor": "use-your-eu-eea-or-ukrainian-driving-licence",
+    "images": []
   },
   {
     "id": "a6fcbe606e",
@@ -101,7 +118,8 @@
     "section": "Other ways to get a licence",
     "title": "Convert your foreign driving licence",
     "text": "If you have a driving licence from another country, you can convert it. It’s cheaper and faster. You might not need to take driving classes or a driving exam. Convert your foreign driving licence",
-    "anchor": "convert-your-foreign-driving-licence"
+    "anchor": "convert-your-foreign-driving-licence",
+    "images": []
   },
   {
     "id": "47f40058d4",
@@ -109,7 +127,8 @@
     "section": "Other ways to get a licence",
     "title": "Get your licence in another country",
     "text": "You must get your driving licence in your country of residence. If you live in Germany, you can’t get your driving licence in another country. For example, you can’t move to Germany, then get a driving licence in the Czech Republic. There is an exception: university students from other EU countries. For example, if you are Polish, and you study in Germany, you can get your driving licence in Poland. [europa.eu (November 2025), § 7 Abs. 2 FeV (2025)]",
-    "anchor": "get-your-licence-in-another-country"
+    "anchor": "get-your-licence-in-another-country",
+    "images": []
   },
   {
     "id": "98118ade54",
@@ -117,7 +136,8 @@
     "section": "What to do next",
     "title": "Get an International Driving Permit",
     "text": "Your German driving licence is valid in all European Union countries. Outside the European Union, you might need an International Driving Permit. In my experience, you rarely need an International Driving Permit. I drove in over 50 countries. I never needed it. How to get an International Driving Permit",
-    "anchor": "get-an-international-driving-permit"
+    "anchor": "get-an-international-driving-permit",
+    "images": []
   },
   {
     "id": "d7f4882861",
@@ -125,6 +145,7 @@
     "section": "What to do next",
     "title": "Buy a car",
     "text": "How to buy a vehicle in Germany You can also rent a car when you need it. If you don’t drive often, car sharing is better.",
-    "anchor": "buy-a-car"
+    "anchor": "buy-a-car",
+    "images": []
   }
 ]

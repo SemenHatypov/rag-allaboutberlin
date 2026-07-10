@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "This is a map of gyms that are open 24 hour a day in Berlin. If a place is missing, contact me.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "b3860e73b0",
@@ -13,6 +14,7 @@
     "section": "List of 24-hour gyms",
     "title": "",
     "text": "This tool requires JavaScript to work. FitX, McFit, John Reed and SuperFit have 24 hour fitness studios all over Berlin. Some independent gyms are also open all day. Find 24-hour gyms – Google Maps",
-    "anchor": "list-of-24-hour-gyms"
+    "anchor": "list-of-24-hour-gyms",
+    "images": []
   }
 ]

@@ -134,6 +134,16 @@ GUIDE_PAGE_FOOTNOTES_HTML = """
 </body></html>
 """
 
+GUIDE_PAGE_WITH_IMAGES_HTML = """
+<html><body>
+<article>
+  <h2>Your tax ID letter</h2>
+  <p>You get a letter by post. Here is <a href="https://allaboutberlin.com/images/tax-id-document-bzst.jpg">the letter from the Bundeszentralamt für Steuern</a> that you should keep safe.</p>
+  <p>See also this <a href="https://allaboutberlin.com/guides/anmeldung">related guide</a> for the next step in the process.</p>
+</article>
+</body></html>
+"""
+
 GUIDE_PAGE_WITH_IDS_HTML = """
 <html><body>
 <article>
@@ -381,6 +391,27 @@ class TestTextCleaning:
         assert "9 m²" in text  # literal ², not a <sup>, must survive
 
 
+class TestImages:
+    def setup_method(self):
+        self.sections = parse_guide_page(GUIDE_PAGE_WITH_IMAGES_HTML, "tax-id")
+
+    def test_image_link_captured_with_caption(self):
+        sec = self.sections[0]
+        assert sec.images == [{
+            "url": "https://allaboutberlin.com/images/tax-id-document-bzst.jpg",
+            "caption": "the letter from the Bundeszentralamt für Steuern",
+        }]
+
+    def test_non_image_links_ignored(self):
+        sec = self.sections[0]
+        urls = [im["url"] for im in sec.images]
+        assert "https://allaboutberlin.com/guides/anmeldung" not in urls
+
+    def test_sections_without_images_have_empty_list(self):
+        sections = parse_guide_page(GUIDE_PAGE_HTML, "find-a-flat-in-berlin")
+        assert all(s.images == [] for s in sections)
+
+
 class TestFootnotes:
     def setup_method(self):
         self.sections = parse_guide_page(GUIDE_PAGE_FOOTNOTES_HTML, "anmeldung")
@@ -588,7 +619,7 @@ class TestRun:
         assert isinstance(data, list)
         assert len(data) > 0
         entry = data[0]
-        assert set(entry.keys()) == {"id", "guide", "section", "title", "text", "anchor"}
+        assert set(entry.keys()) == {"id", "guide", "section", "title", "text", "anchor", "images"}
 
     @responses_lib.activate
     def test_continues_on_guide_fetch_error(self, tmp_path):

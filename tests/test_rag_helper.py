@@ -177,9 +177,35 @@ class TestExtractSources:
                 "guide_name": "taxes",
                 "url": "https://allaboutberlin.com/guides/taxes",
                 "section_url": "https://allaboutberlin.com/guides/taxes",
+                "images": [],
                 "sections": [],
             }
         ]
+
+    def test_aggregates_images_across_retrieved_chunks(self):
+        docs = [
+            {"guide": "tax", "section": "Letter", "text": "...",
+             "images": [{"url": "https://allaboutberlin.com/images/tax-id.jpg", "caption": "The letter"}]},
+            {"guide": "tax", "section": "More", "text": "...",
+             "images": [{"url": "https://allaboutberlin.com/images/other.jpg", "caption": "Other"}]},
+        ]
+        # the image-bearing chunk isn't always top-ranked, so figures accumulate per guide
+        urls = [im["url"] for im in extract_sources(docs)[0]["images"]]
+        assert urls == [
+            "https://allaboutberlin.com/images/tax-id.jpg",
+            "https://allaboutberlin.com/images/other.jpg",
+        ]
+
+    def test_images_deduped_and_capped_at_two(self):
+        imgs = [{"url": f"https://allaboutberlin.com/images/{i}.jpg", "caption": str(i)} for i in range(5)]
+        dup = [{"url": "https://allaboutberlin.com/images/0.jpg", "caption": "dup"}]
+        docs = [
+            {"guide": "g", "section": "S", "text": "...", "images": imgs[:1] + dup},
+            {"guide": "g", "section": "T", "text": "...", "images": imgs[1:]},
+        ]
+        images = extract_sources(docs)[0]["images"]
+        assert len(images) == 2
+        assert len({im["url"] for im in images}) == 2  # no duplicate url
 
     def test_skips_empty_and_duplicate_sections(self):
         docs = [

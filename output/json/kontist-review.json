@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "Kontist is a German bank. They offer business bank accounts ( Geschäftskonto) for freelancers. This is my review of Kontist in May 2025. I used Kontist for my business from January 2022 to May 2025. Now I have an N26 freelancer account. In my opinion, there is no good reason to choose Kontist. Use one of the Kontist alternatives.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "a066e119c4",
@@ -13,7 +14,8 @@
     "section": "Cost and fees",
     "title": "",
     "text": "A Kontist account costs € 0 to € 25 per month. There are extra fees: 5 free transactions per month, then € 0.40 per transaction (incoming and outgoing). 2% fee on foreign currency transactions (incoming and outgoing). For example, if you get 1,000 USD from a client, you pay around € 20 in fees. € 2 per ATM withdrawal. If you get paid in foreign currencies, or have many small transactions, Kontist gets expensive. I paid € 12 to € 15 per month in fees, but sometimes a single transaction cost me € 20 in currency conversion fees.",
-    "anchor": "cost-and-fees"
+    "anchor": "cost-and-fees",
+    "images": []
   },
   {
     "id": "b6831431b6",
@@ -21,7 +23,8 @@
     "section": "Cost and fees",
     "title": "Free account",
     "text": "Kontist has a free account. It’s almost useless. You only get 5 free transactions per month (incoming and outgoing), then you pay € 0.40 per transaction. It only comes with a virtual Visa card, no physical card. No invoicing, no integration with bookkeeping tools, and no MT940 exports (only CSV). No automatic bookkeeping. This means that for almost everyone, the free account is not free. Check the Kontist alternatives to find a better free business account.",
-    "anchor": "free-account"
+    "anchor": "free-account",
+    "images": []
   },
   {
     "id": "0592eccd73",
@@ -29,7 +32,8 @@
     "section": "Automatic tax deductions",
     "title": "",
     "text": "When you are self-employed, you must save part of your income for VAT and income tax. It’s hard to know how much money you really have. Sometimes, you have € 5,000 in your bank account, but only € 1,000 is really yours. The rest goes to the Finanzamt. Kontist promises to fix this. It automatically saves money for VAT and income tax payments. It shows you how much money is for you, and how much is for the Finanzamt. It even categorises your transactions automatically! This is why I opened a Kontist account. There is only one problem: it does not work.",
-    "anchor": "automatic-tax-deductions"
+    "anchor": "automatic-tax-deductions",
+    "images": []
   },
   {
     "id": "24e516eaa2",
@@ -37,7 +41,8 @@
     "section": "Automatic tax deductions",
     "title": "Automatic VAT",
     "text": "You decide how much VAT to set aside for each transaction: 0%, 7% or 19%. Kontist uses AI to guess the correct VAT rate for each transaction. It’s often wrong. Instead of leaving transactions uncategorised, it puts them in the wrong category, with the wrong VAT rate. When you correct the AI, it makes the same mistakes the next month. It does not learn. The AI’s errors just creates more work for me, because I have to check every transaction. There is no way to turn this feature off. I do my bookkeeping in Lexware Office. All of my transactions are categorised in Lexware Office already. They already have the right VAT. Kontist sees this information, and still sets the VAT wrong.",
-    "anchor": "automatic-vat"
+    "anchor": "automatic-vat",
+    "images": []
   },
   {
     "id": "98128ffcc2",
@@ -45,7 +50,8 @@
     "section": "Automatic tax deductions",
     "title": "Automatic income tax",
     "text": "Kontist also sets some of your income aside for income tax. This time, there is no AI magic. You manually set your income tax rate. For example, if you choose a 34% income tax, it sets aside 34% of each transaction. Calculate your income tax rate When you pay your income tax, you can’t reset how much income tax you owe. Kontist can keep too much money aside. You can’t change that. Kontist does not understand trade tax payments. This makes the income tax calculation even less precise. In the end, this feature is too crude to help. I don’t trust that Kontist sets aside the correct amount.",
-    "anchor": "automatic-income-tax"
+    "anchor": "automatic-income-tax",
+    "images": []
   },
   {
     "id": "0d6b390b4a",
@@ -53,7 +59,8 @@
     "section": "Invoicing and bookkeeping",
     "title": "Invoicing tool",
     "text": "You can create invoices in Kontist, but Kontist does not send them for you. You must download them and email them manually. If you don’t send many invoices, the invoicing tool is good enough. If you plan to grow your business, get real invoicing software. I use Lexware Office. When your client pays an invoice you created in Kontist, Kontist marks the invoice as paid. This is a nice feature.",
-    "anchor": "invoicing-tool"
+    "anchor": "invoicing-tool",
+    "images": []
   },
   {
     "id": "f312eca0e6",
@@ -61,7 +68,8 @@
     "section": "Invoicing and bookkeeping",
     "title": "Reports",
     "text": "You can see how much you have, and how much you owe the Finanzamt. That’s all. You can’t see how much you made last month, or last year. If your income varies a lot, this information is really important. Most accounting software shows you this. Holvi is a business bank that shows this information. Lexware Office ’s reports are much better.",
-    "anchor": "reports"
+    "anchor": "reports",
+    "images": []
   },
   {
     "id": "867dec2ae9",
@@ -69,7 +77,8 @@
     "section": "Invoicing and bookkeeping",
     "title": "Exporting your data",
     "text": "You can export your transactions as CSV or MT940. This lets you import them into your accounting software. There is no way to export all transactions and attached invoices. You must ask their customer support. Kontist makes it too hard to reliably export your data. If you want to use other accounting tools, it’s a problem. Kontist should not hold your data hostage.",
-    "anchor": "exporting-your-data"
+    "anchor": "exporting-your-data",
+    "images": []
   },
   {
     "id": "7d94e6624e",
@@ -77,7 +86,8 @@
     "section": "Invoicing and bookkeeping",
     "title": "Integration with other services",
     "text": "Kontist only syncs with Lexware Office and FastBill. It does not integrate with any English-speaking tax software. You can match Kontist bank transactions to receipts and invoices in Lexware Office. Most other banks also sync with Lexware Office, so this is nothing special. One time, some transactions did not sync. One time, a client paid me. I could see the transaction in Kontist, but not in Lexware Office. All other transactions were there. I manually marked the invoice as paid. A few months later, the missing transaction appeared in Lexware Office. There were a dozen more transactions, all of them very late. If this happened a little later, my tax declaration would have been wrong, and I could have been fined by the Finanzamt. This is really bad! Kontist also syncs in the other direction. You can do your bookkeeping in Lexware Office, and see the changes in Kontist. This is sometimes buggy, and transactions do not sync properly. In other cases, a transaction type exists in Lexware Office, but not in Kontist. A trade tax payment can appear as an expense, and it makes the income tax calculation completely wrong. In other words, syncing from Lexware Office to Kontist does not work.",
-    "anchor": "integration-with-other-services"
+    "anchor": "integration-with-other-services",
+    "images": []
   },
   {
     "id": "515c897348",
@@ -85,7 +95,8 @@
     "section": "Invoicing and bookkeeping",
     "title": "Tax advisor access",
     "text": "Your tax advisor needs to access your invoices and expenses to prepare your income tax and VAT declarations. Your tax advisor can’t access your Kontist account. Other business banks like Qonto and Holvi make it possible. Almost all bookkeeping software does. Instead, you must export MT940 data and send it to them manually, every month.",
-    "anchor": "tax-advisor-access"
+    "anchor": "tax-advisor-access",
+    "images": []
   },
   {
     "id": "39b92f84e1",
@@ -93,7 +104,8 @@
     "section": "Web app and mobile app",
     "title": "",
     "text": "The website and mobile app are very reliable. I never had problems with them.",
-    "anchor": "web-app-and-mobile-app"
+    "anchor": "web-app-and-mobile-app",
+    "images": []
   },
   {
     "id": "1579d26b59",
@@ -101,7 +113,8 @@
     "section": "Web app and mobile app",
     "title": "Everything is in English",
     "text": "The website, the app and the customer support are in English. You don’t need to speak German to use Kontist. N26 Business, Holvi and Qonto also speak English.",
-    "anchor": "everything-is-in-english"
+    "anchor": "everything-is-in-english",
+    "images": []
   },
   {
     "id": "6f647912d8",
@@ -109,7 +122,8 @@
     "section": "Web app and mobile app",
     "title": "SMS confirmation codes",
     "text": "Kontist uses its mobile app for two-factor authentication. If you log in on the web app, you must confirm it in the mobile app. It works reliably. When you transfer money or change your card PIN, Kontist sends a confirmation code by SMS. SMS activation codes are not secure, and it’s also hard to receive SMS messages when you travel.",
-    "anchor": "sms-confirmation-codes"
+    "anchor": "sms-confirmation-codes",
+    "images": []
   },
   {
     "id": "76d91a20d8",
@@ -117,7 +131,8 @@
     "section": "Sending and receiving money",
     "title": "Reliable payments",
     "text": "All my business transactions go through my Kontist account. Bank transfers and card payments always worked reliably. I used my Kontist Visa card in Europe and Asia. It always worked well.",
-    "anchor": "reliable-payments"
+    "anchor": "reliable-payments",
+    "images": []
   },
   {
     "id": "b6dc3a9cfd",
@@ -125,7 +140,8 @@
     "section": "Sending and receiving money",
     "title": "You can’t deposit cash",
     "text": "You can’t deposit cash into your Kontist account. It’s simply impossible. You must transfer money from another bank account. This is rarely a problem, except when you open an account. When you open a Kontist account, you must transfer € 9 from another bank to pay for the monthly fee.",
-    "anchor": "you-cant-deposit-cash"
+    "anchor": "you-cant-deposit-cash",
+    "images": []
   },
   {
     "id": "e9d5ae527a",
@@ -133,7 +149,8 @@
     "section": "Customer service",
     "title": "",
     "text": "Kontist has phone, email and chat support. Some banks only have email or chat support. They usually answer in 1 business day. They give complete and helpful answers, and they speak English.",
-    "anchor": "customer-service"
+    "anchor": "customer-service",
+    "images": []
   },
   {
     "id": "73828d39e0",
@@ -141,7 +158,8 @@
     "section": "Opening an account",
     "title": "",
     "text": "I opened my Kontist account in 10 minutes: 5 minutes to create the account, and 5 minutes to verify my identity. You can do it in English or in German, but the terms and conditions are only in German. You only need a phone and an ID document. You don’t need a registered address ( Anmeldung). Kontist uses IDNow to verify your ID. It supports almost all passports. Only freelancers, small businesses and sole traders can open an account. Corporations and partnerships (GmbH, KG, UG, or GbR) are not allowed.",
-    "anchor": "opening-an-account"
+    "anchor": "opening-an-account",
+    "images": []
   },
   {
     "id": "c8e77895f7",
@@ -149,7 +167,8 @@
     "section": "Conclusion",
     "title": "",
     "text": "I don’t recommend Kontist. There is no reason to choose them over another business bank. The fees are too high, and the promised features are not good enough. I just don’t understand what I’m paying for when other banks have more features for a lower price. Kontist was supposed to make my bookkeeping easier, but it makes too many errors, so I can’t trust it.",
-    "anchor": "conclusion"
+    "anchor": "conclusion",
+    "images": []
   },
   {
     "id": "627d8121a1",
@@ -157,7 +176,8 @@
     "section": "Conclusion",
     "title": "The good",
     "text": "Banking works reliably The web app and mobile apps are reliable The Kontist Duo plan with Lexware Office is a good deal The invoicing tool is basic, but good enough for some people",
-    "anchor": "the-good"
+    "anchor": "the-good",
+    "images": []
   },
   {
     "id": "d2256c3ba1",
@@ -165,7 +185,8 @@
     "section": "Conclusion",
     "title": "The bad",
     "text": "Transaction fees are too high The free account is not really free for most people Auto-categorization does not work. The AI keeps making mistakes Synchronisation issues with Lexware Office The income tax estimation is not precise enough to be useful The invoicing tool is very basic",
-    "anchor": "the-bad"
+    "anchor": "the-bad",
+    "images": []
   },
   {
     "id": "7959c8acc2",
@@ -173,7 +194,8 @@
     "section": "Conclusion",
     "title": "Don’t trust what you read",
     "text": "Bloggers get paid to promote Kontist. When you open an account, they get around € 50. If they tell you that Kontist is bad, they make less money. They don’t know if Kontist is good or bad, because they don’t use it. Read reviews from real users instead, and decide for yourself.",
-    "anchor": "dont-trust-what-you-read"
+    "anchor": "dont-trust-what-you-read",
+    "images": []
   },
   {
     "id": "e8b30f7104",
@@ -181,7 +203,8 @@
     "section": "Kontist alternatives",
     "title": "",
     "text": "If you need a business bank account to start a business in Germany, there are many other options. Your bank, your accounting software and your tax advisor should be 3 different services. You can’t find one business that does 3 things well. You should find 3 businesses that do one thing well. English-speaking tax advisors in Berlin German tax software for businesses",
-    "anchor": "kontist-alternatives"
+    "anchor": "kontist-alternatives",
+    "images": []
   },
   {
     "id": "75af7a16b0",
@@ -189,6 +212,7 @@
     "section": "Kontist alternatives",
     "title": "Other business banks",
     "text": "N26 Business This is what I use. It’s exactly like the N26 personal account, but for your business. I am with N26 since 2016, and I like it. It’s also my business account since 2025. Holvi Very similar to Kontist. They have better invoicing and better reports. Your tax advisor can access your account and export transactions. Qonto Similar to Kontist. Corporations and partnerships can also open an account. bunq Business Exactly like bunq personal accounts, but for businesses. They speak English. Revolut Business Exactly like Revolut personal accounts, but for businesses. They speak English. Finom English-speaking business bank. Fyrst German-speaking business bank. Traditional banks Deutsche Bank, Commerzbank and other German banks offer business accounts. They might not speak English.",
-    "anchor": "other-business-banks"
+    "anchor": "other-business-banks",
+    "images": []
   }
 ]

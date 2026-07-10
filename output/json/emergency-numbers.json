@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "If you need to call the emergency services, call 112. For the police, call 110.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "589c859f75",
@@ -13,7 +14,8 @@
     "section": "Police: 110",
     "title": "",
     "text": "Call 110 to talk to the police. It works everywhere in Germany.",
-    "anchor": "police-110"
+    "anchor": "police-110",
+    "images": []
   },
   {
     "id": "94ef0289a6",
@@ -21,7 +23,8 @@
     "section": "Police: 110",
     "title": "Ordnungsamt",
     "text": "If it’s not urgent, call +49 30 9018 22010. It’s the Ordnungsamt ’s Central Point of Contact ( ZAB). You can also use their online service. How to make a noise complaint in Berlin",
-    "anchor": "ordnungsamt"
+    "anchor": "ordnungsamt",
+    "images": []
   },
   {
     "id": "f12ee93308",
@@ -29,7 +32,8 @@
     "section": "Ambulance: 112",
     "title": "",
     "text": "Call 112 to call an ambulance in Berlin. This number works for all emergencies, everywhere in Europe. They speak English. If it’s not urgent, call 116117. They might not speak English.",
-    "anchor": "ambulance-112"
+    "anchor": "ambulance-112",
+    "images": []
   },
   {
     "id": "f7e8d06a93",
@@ -37,7 +41,8 @@
     "section": "Fire brigade: 112",
     "title": "",
     "text": "Call 112 to call the fire department in Berlin. This number works for all emergencies, everywhere in Europe.",
-    "anchor": "fire-brigade-112"
+    "anchor": "fire-brigade-112",
+    "images": []
   },
   {
     "id": "d3266e9bfb",
@@ -45,7 +50,8 @@
     "section": "Poison control centre: +49 30 19240",
     "title": "",
     "text": "Call the poison control centre of Charité at +49 30 19240. This is a free service.",
-    "anchor": "poison-control-centre-49-30-19240"
+    "anchor": "poison-control-centre-49-30-19240",
+    "images": []
   },
   {
     "id": "6705f2d358",
@@ -53,7 +59,8 @@
     "section": "Mental health",
     "title": "",
     "text": "Call the Berliner Krisendienst. They speak English. This is a free service. English-speaking psychotherapists in Berlin English-speaking psychiatrists in Berlin",
-    "anchor": "mental-health"
+    "anchor": "mental-health",
+    "images": []
   },
   {
     "id": "cd3acc05a8",
@@ -61,6 +68,7 @@
     "section": "Drugs and addiction: +49 30 19237",
     "title": "",
     "text": "Call +49 30 19237. This is the Drogennotdienst. They speak English. This is a free service.",
-    "anchor": "drugs-and-addiction-49-30-19237"
+    "anchor": "drugs-and-addiction-49-30-19237",
+    "images": []
   }
 ]

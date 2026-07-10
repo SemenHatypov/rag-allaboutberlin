@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "This guide shows you how to get biometric pictures or passport photos in Berlin. You need biometric pictures to apply for a residence permit, a driving licence, a German passport or a Personalausweis.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "1f675c8c71",
@@ -13,7 +14,8 @@
     "section": "Biometric picture requirements",
     "title": "",
     "text": "Biometric photos must meet the official requirements. The Bürgeramt and the Ausländerbehörde only accept… Photos from registered photographers, sent digitally Photos from registered photo kiosks, sent digitally Photos from the photo kiosks at the Bürgeramt or Ausländerbehörde They do not accept… Printed photos Photos that you have taken yourself Photos from random photo kiosks This applies to photos for residence permits, passports and personal IDs. It does not apply to driving licence photos. Digital biometric pictures are valid for 6 months. You can use the same photo multiple times.",
-    "anchor": "biometric-picture-requirements"
+    "anchor": "biometric-picture-requirements",
+    "images": []
   },
   {
     "id": "2aef7e8ecc",
@@ -21,7 +23,8 @@
     "section": "Where to get biometric pictures",
     "title": "",
     "text": "You can get biometric pictures… At a dm drugstore At the Bürgeramt At the Ausländerbehörde At a registered photographer",
-    "anchor": "where-to-get-biometric-pictures"
+    "anchor": "where-to-get-biometric-pictures",
+    "images": []
   },
   {
     "id": "fce831133c",
@@ -29,7 +32,8 @@
     "section": "Where to get biometric pictures",
     "title": "At a dm store",
     "text": "dm stores have photo kiosks. Biometric pictures cost € 6. You must ask an employee to help you. You get a QR code and printed photos. Bring them to your Bürgeramt or Ausländerbehörde appointment. This is the best way to get biometric pictures because you can do it in advance. If there is a problem, you have time to find another solution. Check if your photos meet the official requirements. The Bürgeramt and Ausländerbehörde sometimes rejects photos from dm because of small mistakes. Find a dm store",
-    "anchor": "at-a-dm-store"
+    "anchor": "at-a-dm-store",
+    "images": []
   },
   {
     "id": "313bd1bb5b",
@@ -37,7 +41,8 @@
     "section": "Where to get biometric pictures",
     "title": "At the Bürgeramt",
     "text": "In Berlin, each Bürgeramt has self-service photo kiosks. Photos cost € 6. If you need photos, arrive early to your appointment. The photo kiosks are new. They can be busy or unreliable. The photos are valid for 6 months, so you can use the kiosks a few days in advance. You must also bring printed photos, because the new photo kiosks are unreliable. You can get printed photos from dm or from a photo booth.",
-    "anchor": "at-the-burgeramt"
+    "anchor": "at-the-burgeramt",
+    "images": []
   },
   {
     "id": "802e840046",
@@ -45,7 +50,8 @@
     "section": "At the Aus­län­der­be­hör­de",
     "title": "",
     "text": "The Berlin Ausländerbehörde uses the same photo kiosks as the Bürgeramt. Photos cost € 6. You must also bring printed photos, because the new photo kiosks are unreliable. You can get printed photos from dm or from a photo booth.",
-    "anchor": "at-the-auslanderbehorde"
+    "anchor": "at-the-auslanderbehorde",
+    "images": []
   },
   {
     "id": "9997a9c3bc",
@@ -53,7 +59,8 @@
     "section": "From a photographer",
     "title": "",
     "text": "Approved photographers can take biometric photos. They usually cost around € 15. The photographer takes your photo, uploads it, and gives you a QR code. Bring the QR code to your Bürgeramt or Ausländerbehörde appointment. Find an approved photographer",
-    "anchor": "from-a-photographer"
+    "anchor": "from-a-photographer",
+    "images": []
   },
   {
     "id": "076eeb37ab",
@@ -61,7 +68,8 @@
     "section": "From a photo booth",
     "title": "",
     "text": "Photos from a photo booths are not accepted by the Bürgeramt or the Ausländerbehörde. There are Fotofix photo booths everywhere in Berlin. Photos cost around € 10. You get five 35 × 45 mm passport pictures printed on the same sheet. Find a photo booth – Google Maps List of passport photo machines – Passbilder.net",
-    "anchor": "from-a-photo-booth"
+    "anchor": "from-a-photo-booth",
+    "images": []
   },
   {
     "id": "c34c6278b1",
@@ -69,6 +77,7 @@
     "section": "Biometric pictures for other countries",
     "title": "",
     "text": "Other countries use different passport picture sizes. For example, India uses square pictures. Passport photo requirements by country Photography studios can take pictures and cut them to the correct size.",
-    "anchor": "biometric-pictures-for-other-countries"
+    "anchor": "biometric-pictures-for-other-countries",
+    "images": []
   }
 ]

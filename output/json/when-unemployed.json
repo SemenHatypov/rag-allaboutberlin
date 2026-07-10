@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "All German residents need health insurance, even when unemployed. This guide explains how health insurance works when you have no income. Losing your job in Germany",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "ff65a586b8",
@@ -13,7 +14,8 @@
     "section": "If you lost your job",
     "title": "With public health insurance",
     "text": "Your public health insurance becomes cheaper. The coverage stays the same. If you get unemployment benefits You get free health insurance. The Agentur für Arbeit pays for it. If you don’t get unemployment benefits You pay around around € 250 per month. You can get free health insurance from your spouse or your parents. In some cases, your health insurance is free for 1 month after you lose your job ( nachgehender Leistungsanspruch). This happens automatically; you don’t need to apply for it.",
-    "anchor": "with-public-health-insurance"
+    "anchor": "with-public-health-insurance",
+    "images": []
   },
   {
     "id": "833063ee50",
@@ -21,7 +23,8 @@
     "section": "If you lost your job",
     "title": "With private health insurance",
     "text": "Your private health insurance becomes more expensive, because you employer stops paying half of it. The coverage stays the same. If you get unemployment benefits You must switch to public health insurance, then you get insured for free. The Agentur für Arbeit pays it. In some cases, you can keep your private health insurance. If you are over 55 years old, you must usually keep your private health insurance. If you don’t get unemployment benefits You keep your private health insurance. The Agentur für Arbeit pays € 210 per month. Your employer does not pay half of it. For example, if your private health insurance costs € 500 per month, your employer paid € 250, and you paid € 250. If you lose your job, you pay € 500 alone without help. Who gets unemployment benefits",
-    "anchor": "with-private-health-insurance"
+    "anchor": "with-private-health-insurance",
+    "images": []
   },
   {
     "id": "3704b3be76",
@@ -29,7 +32,8 @@
     "section": "After you find a job",
     "title": "",
     "text": "When you start a new job, you must switch to public health insurance. If you make more than € 77,400 per year, you can choose private health insurance instead. Health insurance for employees",
-    "anchor": "after-you-find-a-job"
+    "anchor": "after-you-find-a-job",
+    "images": []
   },
   {
     "id": "5beb10c6d9",
@@ -37,6 +41,7 @@
     "section": "If you just moved to Germany",
     "title": "",
     "text": "If you move from another EU country Your health insurance from your home country usually covers you until you start making money. You can get free health insurance from your parents or your spouse. Otherwise, you can get public, private or expat health insurance. If you move from a non- EU country You can use your expat health insurance until you start working or studying. You can get free health insurance from your parents or your spouse. Health insurance for a residence permit application",
-    "anchor": "if-you-just-moved-to-germany"
+    "anchor": "if-you-just-moved-to-germany",
+    "images": []
   }
 ]

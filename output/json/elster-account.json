@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "This is how you create an ELSTER account. This account gives you access to online tax services. It lets you file tax returns, register a business, and many other things. ELSTER is like an online Finanzamt. Creating an account is easy, but you must do it in German. It takes around 1 week, because they send your account activation code by post.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "21d5706bf7",
@@ -13,7 +14,8 @@
     "section": "Before you start",
     "title": "Find your tax ID",
     "text": "To create an ELSTER account, you need a tax ID. You get a tax ID when you register your address for the first time. You can also request one from the Finanzamt. How to get your tax ID",
-    "anchor": "find-your-tax-id"
+    "anchor": "find-your-tax-id",
+    "images": []
   },
   {
     "id": "0c92e32f5c",
@@ -21,7 +23,8 @@
     "section": "Before you start",
     "title": "Do you need an ELSTER account?",
     "text": "You can register your business with Sorted’s business registration tool. It’s free, it’s easier to use, it’s in English, and you don’t need an ELSTER account. You only need a tax ID. Your tax advisor can register also your business and submit VAT returns for you. If you have a tax advisor, you don’t need an ELSTER account.",
-    "anchor": "do-you-need-an-elster-account"
+    "anchor": "do-you-need-an-elster-account",
+    "images": []
   },
   {
     "id": "29f2d136b7",
@@ -29,7 +32,8 @@
     "section": "Create your ELSTER account",
     "title": "",
     "text": "To create an account, visit elster.de, and follow these instructions. ▲ Click Benutzerkonto erstellen ▲ Click Weiter ▲ Click Weiter ▲ Choose how you want to log in. The first option is the easiest. Click Auswählen to continue. ▲ Select why you are opening an account: for you ( Für mich), or for an organisation ( Für eine Organisation). You can select Für mich, even if you are registering a business. Click Weiter to continue. ▲ Choose how you want to verify your identity. With your tax ID ( Mit steuerlicher Identifikationsnummer): This lets you access all ELSTER services. With email ( Mit E-Mail): This only lets you register a business. Click Weiter to continue. ▲ Enter your personal information: Email address ( E-Mail) Birth date ( Geburtsdatum) – for example “23.09.1970” Tax ID ( Identifikationsnummer) Username ( Benutzername) – maximum 8 characters Security question ( Sicherheitsabfrage) Answer to the security question ( Antwort) – maximum 40 characters ▲ Tick the box, and click Weiter to continue ▲ Click Prüfen to continue ▲ Verify that all the information is correct, and click Absenden to create your account. ▲ This is the confirmation page. You will receive an email with an activation link for your account. ▲ You will receive an email with an activation link. Click the activation link. ▲ This is what you see when you click the confirmation link. It says that you will receive an activation ID by email, and an activation code by post. You can close the window.",
-    "anchor": "create-your-elster-account"
+    "anchor": "create-your-elster-account",
+    "images": []
   },
   {
     "id": "caf9e75b28",
@@ -37,7 +41,8 @@
     "section": "Activate your ELSTER account",
     "title": "",
     "text": "In a few minutes, you will receive an email with an activation ID ( Aktivierungs-ID). In around 1 week, you will receive a letter with an activation code ( Aktivierungs-Code). You need both codes to activate your account. ▲ When you receive the letter with your Aktivierungs-Code, click the activation link in your email. ▲ Enter the activation ID ( Aktivierungs-ID) from the email, and the activation code ( Aktivierungs-Code) from the letter. Click Absenden to continue. ▲ Choose a strong password, and click Erstellen to continue. ▲ Click Zertifikatsdatei herunterladen to download your login certificate. You need this file to log in. Save it in a safe place, and do not share it with anyone. ▲ Log in for the first time. Select the certificate you have downloaded in the last step. Enter the password you chose. ▲ Complete the information about you: Name of the organisation ( Name der Organisation/ Firmenname) – if you already registered a business Telephone number ( Telefon) – see How to write German phone numbers Tax number ( Steuernummer) – If you already have a tax number (this is not the same as the tax ID), select your state, and enter your tax number. ▲ You are not a tax advisor. Leave this field empty, and click Mein Profil speichern und weiter. In the next step (no screenshot), you must choose what type of entity you are. You have the option to select it later. You are done! Click Bestätigen und Weiter to access ELSTER. You can tick the box if you don’t want to see this privacy warning again.",
-    "anchor": "activate-your-elster-account"
+    "anchor": "activate-your-elster-account",
+    "images": []
   },
   {
     "id": "b40687189d",
@@ -45,6 +50,7 @@
     "section": "What to do next",
     "title": "",
     "text": "To start a business in Germany, you must register your business with the Finanzamt. You usually need your ELSTER account to do this. If you don’t have an ELSTER account, there are other ways to register your business.",
-    "anchor": "what-to-do-next"
+    "anchor": "what-to-do-next",
+    "images": []
   }
 ]

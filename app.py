@@ -71,6 +71,8 @@ def _render_sources(sources: list[dict]) -> None:
         st.markdown(f"{i}. [{source['guide_name']}]({url})")
         if source.get("sections"):
             st.caption(escape_caption(" · ".join(source["sections"][:3])))
+        for image in source.get("images", []):
+            st.image(image["url"], caption=image.get("caption") or None, width=360)
 
 
 def main() -> None:

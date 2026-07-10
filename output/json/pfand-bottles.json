@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "In Germany, there is a bottle return system. When you buy certain products, you pay a deposit ( Pfand) for the container. When you return the empty container, you get your deposit back. The empty bottles are recycled or reused. The Pfand system is a big part of sorting your trash in Germany. This guide explains how it works.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "efb2dc2813",
@@ -13,7 +14,8 @@
     "section": "How much is the deposit?",
     "title": "",
     "text": "The deposit is 8 to 25 cents. It depends on the type of container. Bottle crates ( Bierkasten) also have a deposit between € 0.75 and € 1.50.",
-    "anchor": "how-much-is-the-deposit"
+    "anchor": "how-much-is-the-deposit",
+    "images": []
   },
   {
     "id": "256a769eff",
@@ -21,7 +23,13 @@
     "section": "Which bottles have a Pfand?",
     "title": "Bottles with a deposit",
     "text": "These bottles have a deposit. You can return them at any store that sells them, and you will get some money back. Beer bottles – € 0.08 (€ 0.15 for resealable bottles) Aluminium cans – € 0.25 Single-use ( Einweg) plastic bottles – € 0.25 Multiple-use ( Mehrweg) glass and plastic bottles – € 0.08 to € 0.15 Glass yoghurt containers – € 0.15 Some wine bottles – € 0.03",
-    "anchor": "bottles-with-a-deposit"
+    "anchor": "bottles-with-a-deposit",
+    "images": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/File:Wulle.jpg",
+        "caption": "resealable bottles"
+      }
+    ]
   },
   {
     "id": "d541878dd8",
@@ -29,7 +37,13 @@
     "section": "Which bottles have a Pfand?",
     "title": "Bottles with no deposit",
     "text": "These bottles can still be recycled, but they don’t have a deposit. Milk cartons – They go in the yellow recycling bin. Plastic milk bottles have a deposit. Most wine bottles – They go in the glass recycling bins Containers with the Grüne Punkt logo – They go in the yellow recycling bin Bottles purchased in other countries How to sort trash in Germany",
-    "anchor": "bottles-with-no-deposit"
+    "anchor": "bottles-with-no-deposit",
+    "images": [
+      {
+        "url": "https://allaboutberlin.com/images/gruene-punkt-pfand.png",
+        "caption": "Grüne Punkt"
+      }
+    ]
   },
   {
     "id": "509d0a8c4d",
@@ -37,7 +51,8 @@
     "section": "Which bottles have a Pfand?",
     "title": "Bottle crates with a deposit",
     "text": "Bottle crates also have a deposit. It’s usually € 1.50. You can return bottle crates where you return bottles. Bottle return machines ( Pfandautomaten) have a hole at the bottom for bottle crates.",
-    "anchor": "bottle-crates-with-a-deposit"
+    "anchor": "bottle-crates-with-a-deposit",
+    "images": []
   },
   {
     "id": "0fa3fe64df",
@@ -45,7 +60,8 @@
     "section": "How to identify Pfand bottles",
     "title": "Pfand symbols",
     "text": "If you see one of these symbols on a container, it has a deposit.",
-    "anchor": "pfand-symbols"
+    "anchor": "pfand-symbols",
+    "images": []
   },
   {
     "id": "cb137e0dbb",
@@ -53,7 +69,8 @@
     "section": "How to identify Pfand bottles",
     "title": "Pfand keywords",
     "text": "If you see these words on the label or on the container, it has a deposit. Deposit: “Mehrweg”, “Pfand-Glas”, “Mehrwegflasche” No deposit: “Pfandfrei”, “Ohne Pfand”",
-    "anchor": "pfand-keywords"
+    "anchor": "pfand-keywords",
+    "images": []
   },
   {
     "id": "e5555b9389",
@@ -61,7 +78,8 @@
     "section": "How to identify Pfand bottles",
     "title": "Einweg and Mehrweg",
     "text": "There are two types of containers with a deposit: Single-use ( Einweg) The container is destroyed, and the materials are recycled. Multiple-use ( Mehrweg) The container is cleaned and reused. For example, beer bottles are multiple-use.",
-    "anchor": "einweg-and-mehrweg"
+    "anchor": "einweg-and-mehrweg",
+    "images": []
   },
   {
     "id": "484ad42742",
@@ -69,7 +87,13 @@
     "section": "Where to return bottles in Germany?",
     "title": "",
     "text": "If a business sells Pfand containers, they must accept Pfand returns. They might refuse container types that they don’t sell. For example, Aldi and Lidl only sell single-use cans and plastic bottles, so they don’t accept multiple-use glass bottles. If a store is larger than 200 m², it must accept containers from all brands, not just the brands it sells. Supermarket Look for a bottle return machine ( Pfandautomat). They look like this. They are near the entrance, or at the back of the store. The machine will print a coupon. You must bring that coupon to the cash register to get your money back. Some grocery stores like Aldi and Lidl do not accept multiple-use ( Mehrweg) bottles like beer bottles. Rewe and Edeka accept most bottles. Liquor store ( Getränkemarkt) If you have a lot of bottles to return, bring them to a liquor store like Getränke Hoffmann. Späti They will accept the bottles they sold you. It’s not a good place to return a lot of bottles. Donate your bottles to bottle collectors in your area. Use Pfandgeben to find them. It can be hard to return certain types of bottles. If one place does not accept all your bottles, try a different place.",
-    "anchor": "where-to-return-bottles-in-germany"
+    "anchor": "where-to-return-bottles-in-germany",
+    "images": [
+      {
+        "url": "https://allaboutberlin.com/images/pfandautomat-edeka-bottle-return-machine.jpg",
+        "caption": "They look like this"
+      }
+    ]
   },
   {
     "id": "1d29833acd",
@@ -77,6 +101,7 @@
     "section": "Where to return bottles in Germany?",
     "title": "Leaving bottles under trash cans",
     "text": "In Berlin, some people collect empty bottles to earn money. Leave your bottle next to trash can to make their job easier. They won’t need to search inside the bin to find your bottle.",
-    "anchor": "leaving-bottles-under-trash-cans"
+    "anchor": "leaving-bottles-under-trash-cans",
+    "images": []
   }
 ]

@@ -5,7 +5,8 @@
     "section": "List of cinemas",
     "title": "",
     "text": "These cinemas usually screen movies in English, with or without subtitles. This tool requires JavaScript to work.",
-    "anchor": "list-of-cinemas"
+    "anchor": "list-of-cinemas",
+    "images": []
   },
   {
     "id": "e34e916d89",
@@ -13,7 +14,8 @@
     "section": "English movie playtimes",
     "title": "",
     "text": "Use these websites to find movies in English or with English subtitles: OV-Berlin englishcinemaberlin.com Berlin.de",
-    "anchor": "english-movie-playtimes"
+    "anchor": "english-movie-playtimes",
+    "images": []
   },
   {
     "id": "ef7b7590bd",
@@ -21,6 +23,7 @@
     "section": "OmU? OV? OmeU?",
     "title": "",
     "text": "OmU means original version with subtitles ( Original mit Untertiteln). The subtitles are usually in German. OmeU means original version with English subtitles ( Originalversion mit englischen Untertiteln). OmU+ means original version with English and German subtitles. OV means original version. The movie is in its original language, and there are no subtitles.",
-    "anchor": "omu-ov-omeu"
+    "anchor": "omu-ov-omeu",
+    "images": []
   }
 ]

@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "If you have found a dead animal or need to dispose of the body of a deceased pet in Berlin, here is how to proceed.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "47ac7a0e6a",
@@ -13,7 +14,8 @@
     "section": "Wild animals",
     "title": "",
     "text": "Dead animals – especially wild ones – can carry diseases, so you can’t dunk them in the Restmüll and call it a day. Dead wild animals can be reported to the Friedrichshain-Kreuzeberg Ordnungsamt, who will take care of their safe collection and disposal. Contact them by telephone or by email, give them the location of the animal and a way to reach you, and they will handle the rest.",
-    "anchor": "wild-animals"
+    "anchor": "wild-animals",
+    "images": []
   },
   {
     "id": "98ad659b23",
@@ -21,7 +23,8 @@
     "section": "House pets",
     "title": "Burial",
     "text": "You cannot bury an animal on public grounds or in a park. You can be fined up to € 50,000 for it. However, you can legally bury your deceased pets on your own property, as long as it’s not in a water conservation area (Wasserschutzgebiet) or right next to a public road or square. You must bury the animal at least 50 centimetres deep. A pet cemetery ( Tierfriedhof) is also an option. Tierschutzverein Berlin and Tierhimmel will bury your best friend. Burial costs € 10 to € 350, depending on the animal’s weight.",
-    "anchor": "burial"
+    "anchor": "burial",
+    "images": []
   },
   {
     "id": "491d63d6ee",
@@ -29,7 +32,8 @@
     "section": "House pets",
     "title": "Cremation",
     "text": "There are a few Haustierkrematoriums in Berlin. The prices go from € 50 to € 350, depending on the weight of the animal.",
-    "anchor": "cremation"
+    "anchor": "cremation",
+    "images": []
   },
   {
     "id": "231ac560f5",
@@ -37,7 +41,8 @@
     "section": "House pets",
     "title": "Disposal",
     "text": "Many veterinarians will dispose of animal bodies, albeit for a fee. Alternatively, SecAnim is contracted by the city to dispose of roadkill and other wild animals. You can call them and they will collect your deceased pets for a fee of € 10 to € 30. English speaking veterinarians in Berlin",
-    "anchor": "disposal"
+    "anchor": "disposal",
+    "images": []
   },
   {
     "id": "302b82163f",
@@ -45,6 +50,7 @@
     "section": "Useful links",
     "title": "",
     "text": "Wohin mit dem toten Haustier? – An official guide from Berlin.de Entsorgung tierischer Nebenprodukte – An official resource for disposing of animal by-products",
-    "anchor": "useful-links"
+    "anchor": "useful-links",
+    "images": []
   }
 ]

@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "These are the 2026 public holidays in Berlin. On public holidays, most businesses are closed, and employees get a paid day off.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "e4bd96b3b1",
@@ -13,7 +14,8 @@
     "section": "Berlin public holidays in 2026",
     "title": "",
     "text": "In 2026, there are 10 public holidays, but 3 are on a weekend.",
-    "anchor": "berlin-public-holidays-in-2026"
+    "anchor": "berlin-public-holidays-in-2026",
+    "images": []
   },
   {
     "id": "9a296e4fc3",
@@ -21,7 +23,8 @@
     "section": "Berlin public holidays in 2027",
     "title": "",
     "text": "In 2027, there are 10 public holidays, but 4 are on a weekend.",
-    "anchor": "berlin-public-holidays-in-2027"
+    "anchor": "berlin-public-holidays-in-2027",
+    "images": []
   },
   {
     "id": "4c8252614d",
@@ -29,7 +32,8 @@
     "section": "Berlin public holidays in 2028",
     "title": "",
     "text": "In 2028, there are 11 public holidays, but 2 are on a weekend.",
-    "anchor": "berlin-public-holidays-in-2028"
+    "anchor": "berlin-public-holidays-in-2028",
+    "images": []
   },
   {
     "id": "2ce494a02e",
@@ -37,7 +41,8 @@
     "section": "Add public holidays to your calendar",
     "title": "",
     "text": "Instructions for Google Calendar Instructions for Apple Calendar (iOS) Instructions for Apple Calendar (Mac) Public holidays are also announced in the monthly newsletter.",
-    "anchor": "add-public-holidays-to-your-calendar"
+    "anchor": "add-public-holidays-to-your-calendar",
+    "images": []
   },
   {
     "id": "6be8337c47",
@@ -45,7 +50,8 @@
     "section": "How public holidays work",
     "title": "Employees get a paid day off",
     "text": "On public holidays, you still get paid, but you don’t have to work. If you were not supposed to work, you don’t get paid. For example, if you only work on Mondays and Fridays, and the public holiday is on a Tuesday, you don’t get paid. If you work part-time, and you don’t have a fixed schedule, public holidays are rarely paid. If you work in another state, you celebrate the holidays of the state where you work. For example, if you live in Brandenburg, and you work in Berlin, you get a paid day off when it’s a public holiday in Berlin. If you are on vacation during a public holiday, you still get a free day off. You don’t need to use a vacation day. For example, if you are on vacation for 5 days, and 1 day is a public holiday, you only use 4 vacation days. How vacation days work in Germany",
-    "anchor": "employees-get-a-paid-day-off"
+    "anchor": "employees-get-a-paid-day-off",
+    "images": []
   },
   {
     "id": "b17d434f59",
@@ -53,7 +59,8 @@
     "section": "How public holidays work",
     "title": "Businesses are closed",
     "text": "On public holidays, most businesses are closed, just like on Sundays. Supermarkets are also closed, so you must buy food in advance. What is open on public holidays?",
-    "anchor": "businesses-are-closed"
+    "anchor": "businesses-are-closed",
+    "images": []
   },
   {
     "id": "729cdbb5a6",
@@ -61,7 +68,8 @@
     "section": "How public holidays work",
     "title": "Public transit still works",
     "text": "On public holidays, you can still use trains, trams and buses. Trains are less frequent, like on Sundays. How to use public transit",
-    "anchor": "public-transit-still-works"
+    "anchor": "public-transit-still-works",
+    "images": []
   },
   {
     "id": "abab361c54",
@@ -69,6 +77,7 @@
     "section": "How public holidays work",
     "title": "Each state is different",
     "text": "Different German states have different public holidays. Some states have more public holidays than other.",
-    "anchor": "each-state-is-different"
+    "anchor": "each-state-is-different",
+    "images": []
   }
 ]

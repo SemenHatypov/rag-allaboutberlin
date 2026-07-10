@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "Germans take recycling seriously. It’s hard to sort your trash correctly. This guide will help.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "d77f20f6a0",
@@ -13,7 +14,8 @@
     "section": "Types of recycling bins",
     "title": "Standard recycling bins",
     "text": "You find these bins in your apartment building: 🔵 Blue bin ( blaue Tonne) For paper and cardboard. You can’t use plastic bags for the blue bin. Flatten cardboard boxes before you recycle them. 🟡 Yellow or orange bin ( Wertstofftonne) For plastic and metal containers, and containers with the Grüner Punkt logo. 🟤 Brown bin ( Biomüll) For biodegradable goods. It’s used to make biogas and compost. Don’t use plastic or biodegradable bags, only paper bags. ⚫ Grey bin ( Restmüll) Things that you can’t sell, donate or recycle. ♻️ Glass recycling bins ( Glasiglus) For glass containers that don’t have a deposit ( Pfand). In Berlin, you don’t need to clean glass containers. If your building has no glass recycling bins, find them in your neighbourhood. There are 3 bin types: 🟤 The Braunglas bin for brown glass 🟢 The Grünglas bin for green, red and blue glass ⚪ The Weißglas bin for transparent glass 🟤 The Braunglas bin for brown glass 🟢 The Grünglas bin for green, red and blue glass ⚪ The Weißglas bin for transparent glass",
-    "anchor": "standard-recycling-bins"
+    "anchor": "standard-recycling-bins",
+    "images": []
   },
   {
     "id": "d3c2269319",
@@ -21,7 +23,8 @@
     "section": "Types of recycling bins",
     "title": "Other types of recycling bins",
     "text": "Bottle return machines ( Pfandautomat) For containers with a deposit ( Pfand). These machines are in most supermarkets, usually near the entrance. Battery recycling bins For used batteries. These bins are in most supermarkets, electronics stores and hardware stores, usually near the door. Rossmann and dm also recycle batteries. Electronics recycling bins For used electronics and objects with the WEEE logo. These bins are in electronics stores, hardware stores, and some supermarkets.",
-    "anchor": "other-types-of-recycling-bins"
+    "anchor": "other-types-of-recycling-bins",
+    "images": []
   },
   {
     "id": "3cf41d1c18",
@@ -29,7 +32,8 @@
     "section": "Types of recycling bins",
     "title": "Recycling centres",
     "text": "Recycling centres accept almost everything. This is where you get rid of big items like construction materials, trees, furniture, appliances, carpets and mattresses. List of recycling centres in Berlin",
-    "anchor": "recycling-centres"
+    "anchor": "recycling-centres",
+    "images": []
   },
   {
     "id": "e84185052c",
@@ -37,7 +41,8 @@
     "section": "Types of recycling bins",
     "title": "Bulk trash collection days",
     "text": "On special days, you can bring furniture, mattresses and other big trash to special collection points in your neighbourhood. It’s easier than going to the recycling centre. Bulk trash collection days",
-    "anchor": "bulk-trash-collection-days"
+    "anchor": "bulk-trash-collection-days",
+    "images": []
   },
   {
     "id": "89f1ee3890",
@@ -45,7 +50,8 @@
     "section": "Containers and packaging",
     "title": "Paper and cardboard",
     "text": "🔵 Paper and cardboard ➞ blue bin This includes egg cartons, paper bread bags, envelopes (even with plastic windows). newspapers and magazines. Flatten boxes before you put them in the bin. 🟡 Grüner Punkt logo or Tetra Pak logo ➞ yellow bin 🟡 Paper + plastic packaging ➞ yellow bin This includes plastic bread bags, but not paper bread bags with transparent windows, and not paper envelopes with transparent windows. 🟡 Milk cartons ➞ yellow bin Plastic milk bottles have a Pfand. 🟡 Tetra Pak ➞ yellow bin 🟤 Paper towels, tissues ➞ brown bin ⚫ Coated, waxed and thermal paper ➞ grey bin This includes receipts and paper coffee cups. ⚫ Dirty or greasy paper ➞ grey bin This includes pizza boxes and take-out food containers.",
-    "anchor": "paper-and-cardboard"
+    "anchor": "paper-and-cardboard",
+    "images": []
   },
   {
     "id": "bb551e3f87",
@@ -53,7 +59,8 @@
     "section": "Containers and packaging",
     "title": "Plastic",
     "text": "🟡 Plastic ➞ yellow bin This includes food containers, plastic foil and bottle caps. Pfand logo ➞ return it, get money back Most juice bottles have a Pfand.",
-    "anchor": "plastic"
+    "anchor": "plastic",
+    "images": []
   },
   {
     "id": "41030bd445",
@@ -61,7 +68,8 @@
     "section": "Containers and packaging",
     "title": "Metal",
     "text": "🟡 Metal ➞ yellow bin This includes aluminium foil. Pfand logo ➞ return it, get money back Most metal drink cans have a Pfand. More information here.",
-    "anchor": "metal"
+    "anchor": "metal",
+    "images": []
   },
   {
     "id": "0b7352f186",
@@ -69,7 +77,8 @@
     "section": "Containers and packaging",
     "title": "Glass",
     "text": "Glass ➞ glass recycling bins The lids should go in the yellow bin, but you can leave metal lids on. In Berlin, you don’t need to clean glass containers. Pfand logo or label ➞ return it, get money back Most beer bottles have a Pfand. More information here. ⚫ Mirrors ➞ grey bin ⚫ Crystal, porcelain and ceramic ➞ grey bin ⚫ Light bulbs (incandescent or halogen) ➞ grey bin LED lights ➞ electronics recycling bin Energy-saving light bulbs ➞ recycling centre LED lights ➞ electronics recycling bin Energy-saving light bulbs ➞ recycling centre",
-    "anchor": "glass"
+    "anchor": "glass",
+    "images": []
   },
   {
     "id": "770ee16761",
@@ -77,7 +86,8 @@
     "section": "Containers and packaging",
     "title": "Styrofoam",
     "text": "🟡 Styrofoam ➞ yellow bin This includes food containers and packing material. Styrofoam isolation for buildings ➞ recycling centre",
-    "anchor": "styrofoam"
+    "anchor": "styrofoam",
+    "images": []
   },
   {
     "id": "1f2d9c5f0b",
@@ -85,7 +95,8 @@
     "section": "Containers and packaging",
     "title": "Other",
     "text": "🔵 Paper bags with plastic windows ➞ blue bin This includes bread bags with plastic windows, and envelopes with plastic windows.",
-    "anchor": "other"
+    "anchor": "other",
+    "images": []
   },
   {
     "id": "63eb7ed2bc",
@@ -93,7 +104,8 @@
     "section": "Food",
     "title": "",
     "text": "🟤 Biodegradable food ➞ brown bin This includes leftover food, fruits, vegetables, meat, fish, bread, cheese, egg shells, tea bags, coffee grounds, paper towels and bones. ⚫ Fat and cooking oil ➞ grey bin Don’t pour the fat down the kitchen drain, because it can block the pipes.",
-    "anchor": "food"
+    "anchor": "food",
+    "images": []
   },
   {
     "id": "ace82dd4b4",
@@ -101,7 +113,8 @@
     "section": "Clothes and shoes",
     "title": "",
     "text": "🎁 Sell or donate If they are still good, sell or donate them Old textiles ➞ recycling centre Where to donate clothes in Berlin",
-    "anchor": "clothes-and-shoes"
+    "anchor": "clothes-and-shoes",
+    "images": []
   },
   {
     "id": "8accb663d4",
@@ -109,7 +122,8 @@
     "section": "Electronics",
     "title": "Phones, computers and electronics",
     "text": "Electronics stores (bigger than 400 m²) must recycle your electronics. [§ 17 ElektroG, chip.de] You don’t have to buy something there. Big stores (bigger than 800 m²) that sell electronics must also recycle them, even if they are a different kind. [§ 17 ElektroG, chip.de] You don’t have to buy something there. This includes hardware stores, supermarkets and drugstores. In reality, most supermarkets don’t recycle electronics, even if they are required to. Recycling centres accept all electronics and appliances. 🎁 Sell or donate If they are still good, sell or donate them. You can also bring them to a repair café. Electronics ➞ electronics stores, hardware stores, supermarkets, recycling centres Batteries ➞ electronics stores, hardware stores, supermarkets, recycling centres Supermarkets have a collection box near the cash registers. Car and motorcycle batteries have a Pfand of € 7.50. Return car batteries where you bought them, with your receipt.",
-    "anchor": "phones-computers-and-electronics"
+    "anchor": "phones-computers-and-electronics",
+    "images": []
   },
   {
     "id": "354166ff95",
@@ -117,7 +131,8 @@
     "section": "Electronics",
     "title": "Batteries",
     "text": "Supermarkets, electronics stores and hardware stores have battery recycling bins, usually near the door. Rossmann and dm also recycle batteries. Batteries ➞ electronics stores, hardware stores and supermarkets Car batteries ➞ auto parts store, some recycling centres They have a Pfand of € 7.50. [§ 19 BattDG] Return the battery to the store where you bought it, with your receipt. Some recycling centres recycle batteries for free, but only if they accept dangerous materials ( Schadstoffe).",
-    "anchor": "batteries"
+    "anchor": "batteries",
+    "images": []
   },
   {
     "id": "a2116d3357",
@@ -125,7 +140,8 @@
     "section": "Electronics",
     "title": "Printer cartridges and toner",
     "text": "Cartridges and toners do not go in the yellow bin. Recycle them where you recycle small electronics.",
-    "anchor": "printer-cartridges-and-toner"
+    "anchor": "printer-cartridges-and-toner",
+    "images": []
   },
   {
     "id": "c9f2d0e3dd",
@@ -133,7 +149,8 @@
     "section": "Electronics",
     "title": "Light bulbs",
     "text": "Incandescent light bulbs ➞ glass recycling bins Fluorescent light bulbs ➞ glass recycling bins Energy-saving light bulbs ➞ hardware store or recycling centre Neon lights ➞ hardware store or recycling centre",
-    "anchor": "light-bulbs"
+    "anchor": "light-bulbs",
+    "images": []
   },
   {
     "id": "986f8866ca",
@@ -141,7 +158,8 @@
     "section": "Furniture and appliances",
     "title": "",
     "text": "🎁 Sell or donate If it’s still good, sell or donate it. Appliances ➞ appliance collector, hardware store, or recycling centre Stores that sell appliances must also recycle them for free. When you buy an appliance, they often take back your old appliance. You can also contact Wachmachinen Entsorgung Berlin. You can bring broken appliances to BSR recycling centres. Big items ➞ recycling centre or collection days This includes furniture, appliance and mattresses. In Berlin, BSR can pick up big items (for a fee). You can also wait for bulk trash collection days in most areas.",
-    "anchor": "furniture-and-appliances"
+    "anchor": "furniture-and-appliances",
+    "images": []
   },
   {
     "id": "e935bce0e7",
@@ -149,7 +167,8 @@
     "section": "Trees, soil and grass",
     "title": "",
     "text": "🟤 Plants, yard trimmings, soil, cut grass ➞ brown bin Christmas trees ➞ collected in January Look at your city’s trash collection calendar ( Abfuhrkalender). You just need to leave the tree next to the street. More information here.",
-    "anchor": "trees-soil-and-grass"
+    "anchor": "trees-soil-and-grass",
+    "images": []
   },
   {
     "id": "1980e64868",
@@ -157,7 +176,8 @@
     "section": "Oil and paint",
     "title": "",
     "text": "Paints, oils and lacquers ➞ hardware stores, some recycling centres Bauhaus, Hellweg, Hornbach and OBI will take it. Check if your recycling store accepts dangerous materials ( Schadstoffe). They charge a small fee per kilo. Car oil ➞ garages, car parts stores, hardware stores, some recycling centres If a business sells car oil, they must accept your old oil. Usually, they only take oil if you bought it from them. If you ask nicely, they will take oil from other places. Check if your recycling store accepts dangerous materials ( Schadstoffe). They charge a small fee per kilo. Car tires ➞ garages, recycling centres At the recycling centre, you must pay around € 3 per tire. ⚫ Cooking oil ➞ grey bin",
-    "anchor": "oil-and-paint"
+    "anchor": "oil-and-paint",
+    "images": []
   },
   {
     "id": "ae352327e0",
@@ -165,7 +185,8 @@
     "section": "Other things",
     "title": "",
     "text": "⚫ Animal poop ➞ grey bin This includes dog poop and cat litter. 🔵 Books ➞ sell, donate or put in the blue bin ⚫ Baby diapers ➞ grey bin ⚫ Medicine and drugs ➞ grey bin. More information here.",
-    "anchor": "other-things"
+    "anchor": "other-things",
+    "images": []
   },
   {
     "id": "7feaa98289",
@@ -173,6 +194,7 @@
     "section": "Useful links",
     "title": "",
     "text": "Recycling information in English, with printable sheet – BSR What goes where? (in German) – search tool by BSR",
-    "anchor": "useful-links"
+    "anchor": "useful-links",
+    "images": []
   }
 ]

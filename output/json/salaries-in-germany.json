@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "When you look for a job in Germany, you must know what salary you should get. This helps you negotiate a better salary.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "2bed9ae55f",
@@ -13,7 +14,8 @@
     "section": "Salaries by profession",
     "title": "",
     "text": "These tools help you find how much you should earn. Office of Statistics salary calculator (in German) – Find salaries by job title. Glassdoor and Kununu – Find salaries by job title. You need an account. Gehalt.de (in German) – find salaries by job title Levels.fyi – IT salaries techpays.eu – IT salaries Startup salary survey – Yearly survey by BerlinStartupJobs Startup and tech salary trends – Yearly survey by Handpicked Berlin Developer salaries in Germany (2021) – Honeypot.io Salaries in Berlin – longer article by Settle in Berlin",
-    "anchor": "salaries-by-profession"
+    "anchor": "salaries-by-profession",
+    "images": []
   },
   {
     "id": "c998e9f0ad",
@@ -21,7 +23,8 @@
     "section": "Salaries by profession",
     "title": "Rates for freelancers",
     "text": "Income survey for solo freelancers (in German) – over 7,000 respondents Software developer rates in Berlin",
-    "anchor": "rates-for-freelancers"
+    "anchor": "rates-for-freelancers",
+    "images": []
   },
   {
     "id": "b4f8089e9c",
@@ -29,7 +32,8 @@
     "section": "Taxes in Germany",
     "title": "",
     "text": "When you negotiate your salary, you negotiate your gross income. The amount you keep after taxes is your net income. In Germany, you pay around 35% of your salary in taxes and social contributions. Your employer takes them directly from your paycheck. How taxes work Income tax calculator",
-    "anchor": "taxes-in-germany"
+    "anchor": "taxes-in-germany",
+    "images": []
   },
   {
     "id": "f4dbff2c9b",
@@ -37,7 +41,8 @@
     "section": "Minimum wage and median income",
     "title": "Minimum wage",
     "text": "The minimum wage ( Mindestlohn) in Germany is € 13.90 per hour. Some professions have a higher minimum wage ( Branchenmindestlohn). Around 4% of jobs pay the minimum wage.",
-    "anchor": "minimum-wage"
+    "anchor": "minimum-wage",
+    "images": []
   },
   {
     "id": "e6c55a8399",
@@ -45,7 +50,8 @@
     "section": "Minimum wage and median income",
     "title": "Median income",
     "text": "The median income in Germany is € 54,066 per year before taxes. The median income in Berlin is € 50,280 per year before taxes. This is only for full-time employees. The median income for all German residents is much lower: in 2019, it was € 2,109 per month. The median income for immigrants is lower. Compare your income (German) – Enter your Netto income, see how it compares to what other people earn. Median income by profession (German) – Federal Employment Office Median income by location (German) – Federal Employment Office",
-    "anchor": "median-income"
+    "anchor": "median-income",
+    "images": []
   },
   {
     "id": "d1b83cce84",
@@ -53,7 +59,8 @@
     "section": "Minimum wage and median income",
     "title": "Cost of living",
     "text": "Your salary should match the local cost of living. Salaries in Munich are higher than in Berlin, but living in Munich is more expensive. Salaries in Berlin are lower than in New York, but life in Berlin is cheaper than in New York. Before you negotiate your salary, look at the cost of living in your area. Cost of living in Berlin",
-    "anchor": "cost-of-living"
+    "anchor": "cost-of-living",
+    "images": []
   },
   {
     "id": "f27cff48ca",
@@ -61,7 +68,8 @@
     "section": "Bonuses",
     "title": "Yearly bonus",
     "text": "Some employers pay a yearly bonus ( 13. Monatsgehalt). It’s usually in your work contract. You pay income tax on this bonus.",
-    "anchor": "yearly-bonus"
+    "anchor": "yearly-bonus",
+    "images": []
   },
   {
     "id": "413b603d91",
@@ -69,7 +77,8 @@
     "section": "Bonuses",
     "title": "Relocation bonus",
     "text": "Some companies offer a relocation bonus. This helps you pay for your relocation costs. You can also negotiate this amount. Sometimes, it’s a fixed amount, and sometimes they refund your real costs. Sometimes, you get your relocation bonus with your first paycheck, 30 to 45 days after you start working. You pay income tax on your relocation bonus. When you get a job offer, you can negotiate a bigger relocation bonus. If you don’t get a relocation bonus, if you move for work, your relocation costs are still tax-deductible. – More information",
-    "anchor": "relocation-bonus"
+    "anchor": "relocation-bonus",
+    "images": []
   },
   {
     "id": "b3a02c87aa",
@@ -77,6 +86,7 @@
     "section": "When do I get paid?",
     "title": "",
     "text": "In Germany, most people are paid once per month, usually on the 1st or 15th day of the month. You get your first paycheck after 30 or 45 days after you start working. If you are just moving to Germany, you need enough savings to survive the first 6 weeks. Almost everyone is paid by bank transfer. If you start working in Germany, open a bank account that supports SEPA transfers. Your bank can be in another European country.",
-    "anchor": "when-do-i-get-paid"
+    "anchor": "when-do-i-get-paid",
+    "images": []
   }
 ]

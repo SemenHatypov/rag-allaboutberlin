@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "To get a German driving licence, you must take driving lessons. These driving schools speak English. How to get a driving licence",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "b03cb1e6be",
@@ -13,7 +14,8 @@
     "section": "List of English-speaking driving schools",
     "title": "",
     "text": "This tool requires JavaScript to work. Suggest a place to include in our list. This tool requires JavaScript to work.",
-    "anchor": "list-of-english-speaking-driving-schools"
+    "anchor": "list-of-english-speaking-driving-schools",
+    "images": []
   },
   {
     "id": "b6966d2463",
@@ -21,6 +23,7 @@
     "section": "Convert your foreign driving licence",
     "title": "",
     "text": "Your EU or EEA driving licence is valid in Germany. If you have a driving licence from another country, you can convert it to a German driving licence. It’s cheaper and faster. You might not need driving lessons. How to convert your foreign driving licence",
-    "anchor": "convert-your-foreign-driving-licence"
+    "anchor": "convert-your-foreign-driving-licence",
+    "images": []
   }
 ]

@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "Most German businesses must pay a trade tax ( Gewerbesteuer) on their profits. If you start a business in Germany, you must understand how the trade tax works. This guide explains it.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "f487e90693",
@@ -13,7 +14,8 @@
     "section": "Who must pay trade tax",
     "title": "",
     "text": "Sole proprietorships, partnerships and corporations must pay the trade tax. This includes Kleinunternehmer. Freelancers ( Freiberufler) do not pay the trade tax. Not all self-employed people are freelancers. If you work alone, you might still need to pay the trade tax.",
-    "anchor": "who-must-pay-trade-tax"
+    "anchor": "who-must-pay-trade-tax",
+    "images": []
   },
   {
     "id": "f5cbb00122",
@@ -21,7 +23,8 @@
     "section": "How much is the trade tax?",
     "title": "",
     "text": "In Berlin, trade tax is 14.35% of all profit above € 24,500 per year. As a sole proprietor, you get most of it back as an income tax credit. [Haufe.de, § 35 Abs. 1 EStG] In the end you pay 0.35% more taxes in total. To calculate your trade tax: Take your profit for the year, and round it down to the nearest € 100. [§ 11 Abs. 3 GewStG] If you are a sole proprietor ( Einzelunternehmer), remove € 24,500 (the tax-free amount). Multiply that by 3.5%. Multiply that by the Hebesatz in your city. In Berlin, it’s 410%. Example trade tax calculation For a sole proprietor in Berlin € 45,678 per year profit, rounded down to € 45,600 € 45,600 – € 24,500 tax-free amount = € 21,100 taxable profit € 21,100 × 3.5% = € 738.50 € 738.50 × 410% = € 302,785 trade tax If you are a sole proprietor ( Einzelunternehmer), you get an income tax credit for the trade tax you pay. You pay 14.35% trade tax, but you get 14.0% income tax back. In other words, you only pay 0.35% more taxes in total. € 3,027.85 trade tax – € 2,954 income tax credit = € 73.85 extra taxes Trade tax calculator – Smart-Rechner.de (in German)",
-    "anchor": "how-much-is-the-trade-tax"
+    "anchor": "how-much-is-the-trade-tax",
+    "images": []
   },
   {
     "id": "a9751c5e9e",
@@ -29,7 +32,8 @@
     "section": "How much is the trade tax?",
     "title": "Tax-free amount",
     "text": "If you are a sole proprietor ( Einzelunternehmer), the first € 24,500 per year in profit are not taxed. If you have a society ( Verein), the first € 5,000 per year in profit are not taxed. [§ 11 GewStG] If you have a corporation ( Kapitalgesellschaft, AG, GmbH), the entire profit is taxed.",
-    "anchor": "tax-free-amount"
+    "anchor": "tax-free-amount",
+    "images": []
   },
   {
     "id": "08d620d03c",
@@ -37,7 +41,8 @@
     "section": "IHK membership",
     "title": "",
     "text": "In Berlin, all businesses that pay trade tax must join the IHK and pay the membership fee. The IHK membership fee is not the same as the trade tax. IHK membership fee calculator You get an IHK letter ( Beitragsbescheid) every year. You have 30 days to pay. You can’t automate payments with a direct debit authorisation.",
-    "anchor": "ihk-membership"
+    "anchor": "ihk-membership",
+    "images": []
   },
   {
     "id": "1a046185ef",
@@ -45,7 +50,8 @@
     "section": "How to pay the trade tax",
     "title": "",
     "text": "You start paying trade tax after you do your Gewerbeanmeldung. Trade tax is collected by the Finanzamt at the same time as the income tax. Every year, you must make a tax declaration for your business. A bit later, the Finanzamt will send you a tax assessment for income tax ( Einkommensteuerbescheid) and trade tax ( Gewerbesteuerbescheid). It tells you how much you need to pay. If you have a high income, the Finanzamt can request advance tax payments ( Vorauszahlungen) every quarter: on February 15, May 15, August 15 and November 15. You pay income tax and trade tax in advance, and it’s adjusted later.",
-    "anchor": "how-to-pay-the-trade-tax"
+    "anchor": "how-to-pay-the-trade-tax",
+    "images": []
   },
   {
     "id": "6107d67714",
@@ -53,6 +59,7 @@
     "section": "Need help?",
     "title": "",
     "text": "When you start a business in Germany, you should hire a tax advisor ( Steuerberater). They can help you register your business, file your taxes, and solve other tax problems. Where to ask business questions",
-    "anchor": "need-help"
+    "anchor": "need-help",
+    "images": []
   }
 ]

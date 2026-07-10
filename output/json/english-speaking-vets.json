@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "If you don’t speak German, these veterinarians speak English.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "11f0bb5279",
@@ -13,7 +14,8 @@
     "section": "List of English-speaking vets",
     "title": "",
     "text": "This tool requires JavaScript to work. Suggest a place to include in our list. This tool requires JavaScript to work.",
-    "anchor": "list-of-english-speaking-vets"
+    "anchor": "list-of-english-speaking-vets",
+    "images": []
   },
   {
     "id": "958967413e",
@@ -21,6 +23,7 @@
     "section": "Other resources",
     "title": "",
     "text": "More English-speaking vets – PerPETual Vets for emergencies – PerPETual",
-    "anchor": "other-resources"
+    "anchor": "other-resources",
+    "images": []
   }
 ]

@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "This is how you cancel a BVG ticket subscription ( Abo). If you don’t cancel it, it’s renewed automatically. You can cancel your BVG subscription by email, by post, at a BVG Kundenzentrum, or on the BVG website. If you booked your subscription from the Deutsche Bahn, you must cancel it on the S-Bahn Berlin website.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "fb4c0238d5",
@@ -13,7 +14,8 @@
     "section": "How to cancel online",
     "title": "",
     "text": "You can cancel your BVG yearly ticket on the BVG website. Go to abo.bvg.de, enter your customer number ( Kundennummer), and cancel your subscription.",
-    "anchor": "how-to-cancel-online"
+    "anchor": "how-to-cancel-online",
+    "images": []
   },
   {
     "id": "19817a014b",
@@ -21,7 +23,8 @@
     "section": "How to cancel by post",
     "title": "",
     "text": "You can cancel by email or by post, but it’s easier to do it online.",
-    "anchor": "how-to-cancel-by-post"
+    "anchor": "how-to-cancel-by-post",
+    "images": []
   },
   {
     "id": "972d8c69d4",
@@ -29,7 +32,8 @@
     "section": "How to cancel by post",
     "title": "1. Find your BVG contract number",
     "text": "You must know your customer number ( Kundennummer) and your contract number ( Vertragsnummer or Abonummer). They are on the letter you received from the BVG. You can also find them online. This is not the number on your BVG card, or the number in your order confirmation email ( Abonnement Best-Nr).",
-    "anchor": "find-your-bvg-contract-number"
+    "anchor": "find-your-bvg-contract-number",
+    "images": []
   },
   {
     "id": "1191480a00",
@@ -37,7 +41,8 @@
     "section": "How to cancel by post",
     "title": "2. Send a written cancellation request",
     "text": "Fill the template below with your information, then send the letter to the BVG by post. Sehr geehrte Damen und Herren, hiermit kündige ich mein oben genanntes Abonnement fristgerecht zum nächstmöglichen Zeitpunkt. Bitte senden Sie mir eine schriftliche Bestätigung der Kündigung unter Angabe des Beendigungszeitpunktes zu. Name: [your name] Anschrift: [your address] Kundennummer: [your customer number] Mit freundlichen Grüßen, [your name] Fill this template above, print it, and mail it to this address: Berliner Verkehrsbetriebe (BVG) FVM-V4 (43340) 10096 Berlin How to mail a letter – from your computer, without a printer",
-    "anchor": "send-a-written-cancellation-request"
+    "anchor": "send-a-written-cancellation-request",
+    "images": []
   },
   {
     "id": "89529478c1",
@@ -45,7 +50,8 @@
     "section": "How to cancel by post",
     "title": "3. Get confirmation from the BVG",
     "text": "The BVG will receive your request, and confirm that your subscription is cancelled. Your BVG ticket will work until the end of your subscription.",
-    "anchor": "get-confirmation-from-the-bvg"
+    "anchor": "get-confirmation-from-the-bvg",
+    "images": []
   },
   {
     "id": "b14a364947",
@@ -53,7 +59,8 @@
     "section": "How to cancel by post",
     "title": "4. Return your BVG card",
     "text": "At the end of your 12 month subscription, your BVG card will stop working. You have 10 days to return it to the BVG. If you do not return the card, you will be billed € 10. You can send the card by mail, or bring it to a BVG Kundenzentrum.",
-    "anchor": "return-your-bvg-card"
+    "anchor": "return-your-bvg-card",
+    "images": []
   },
   {
     "id": "a3899b9764",
@@ -61,6 +68,7 @@
     "section": "How to cancel in person",
     "title": "",
     "text": "You can cancel your BVG ticket at any BVG Kundenzentrum. You will sign have to sign a paper, and a few days later, you will receive a confirmation letter by post. List of BVG Kundenzentren – bvg.de",
-    "anchor": "how-to-cancel-in-person"
+    "anchor": "how-to-cancel-in-person",
+    "images": []
   }
 ]

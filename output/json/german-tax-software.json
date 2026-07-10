@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "This guide lists software that can help you file a tax declaration in Germany. It also shows alternatives to tax software. Tax and bookkeeping software costs are tax-deductible.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "ca1101d04b",
@@ -13,7 +14,8 @@
     "section": "Tax software for employees",
     "title": "",
     "text": "Tax software for employees help you prepare and send a tax declaration. This is how you pay less income tax. English-speaking options: SteuerGo The most comprehensive tax software in English. Handles cross-border taxation and other edge cases. Wundertax More suited for EU immigrants. It supports more immigration-related deductions and types of income. Taxfix Basic tax app for simple situations. Basic tax software is easier to use, but it does not handle complex tax cases. For example, it might not handle foreign income, investment income, self-employment income, complex tax deductions and other edge cases. Only use basic tax software like Taxfix if… You have lived in Germany for the entire year and your income comes only from employment and you have no foreign income and you are not sending financial support to relatives Many Germans use WISO Steuer for their tax return. It’s only in German, but it handles many cross-border and foreign income scenarios. You can also file your taxes yourself in ELSTER. It’s mostly in German, but many questions have English AI translations.",
-    "anchor": "tax-software-for-employees"
+    "anchor": "tax-software-for-employees",
+    "images": []
   },
   {
     "id": "07ad64604e",
@@ -21,7 +23,8 @@
     "section": "Tax software for freelancers",
     "title": "",
     "text": "Tax software for self-employed people can handle invoicing, bookkeeping, VAT reporting, payroll and more. English-speaking options: Accountable Many of my friends use it and love it. sevDesk Sorted German-speaking options: Lexware Office This is what I use since many years. FastBill Some business banks help you with invoicing, bookkeeping and VAT reporting. I don’t recommend them. You can have a good bank or good tax software, but you can’t have both in one product. Keep those services separate. These banks help with your accounting: Qonto Holvi Kontist (read my review of Kontist first)",
-    "anchor": "tax-software-for-freelancers"
+    "anchor": "tax-software-for-freelancers",
+    "images": []
   },
   {
     "id": "898334e743",
@@ -29,6 +32,7 @@
     "section": "Alternatives to tax software",
     "title": "",
     "text": "Hire a tax advisor. Use my list of English-speaking tax advisors. Join a Lohnsteuerhilfeverein. Join a freelancer cooperative like Smart.",
-    "anchor": "alternatives-to-tax-software"
+    "anchor": "alternatives-to-tax-software",
+    "images": []
   }
 ]

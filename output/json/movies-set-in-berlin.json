@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "Below is a list of movies in which Berlin is a prominently featured location. They are listed in no particular order.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "be5f6adf88",
@@ -13,7 +14,8 @@
     "section": "Der Himmel über Berlin (1987)",
     "title": "",
     "text": "Wings of Desire prominently features West Berlin, the Berlin wall, Potsdamer Platz and a handful of other locations around Berlin. IMDb – U-Bahn scene",
-    "anchor": "der-himmel-uber-berlin-1987"
+    "anchor": "der-himmel-uber-berlin-1987",
+    "images": []
   },
   {
     "id": "e72e66b08f",
@@ -21,7 +23,8 @@
     "section": "Inglourious Basterds (2009)",
     "title": "",
     "text": "Towards the end of the movie, Colonel Hans Landa meets Lt. Aldo Raine at Clärchens Ballhaus in Mitte. The cinema featured in the movie was built and destroyed at Studio Babelsberg in Potsdam. Under Nazi rule, hundreds of propaganda films were filmed in that same studio under the direction of Dr. Goebbels, including Leni Riefenstahl’s Triumph of the Will (1935). Clärchens Ballhaus is also featured in The Monuments Men (2014). IMDb – Clärchens Ballhaus scene",
-    "anchor": "inglourious-basterds-2009"
+    "anchor": "inglourious-basterds-2009",
+    "images": []
   },
   {
     "id": "3d9dd09690",
@@ -29,7 +32,8 @@
     "section": "Good bye Lenin! (2003)",
     "title": "",
     "text": "The entire movie is set in East Berlin during and shortly after the fall of the Berlin wall, and prominently features Karl-Marx-Allee and its surroundings. No movie gives you a better glimpse at life behind the wall. IMDb",
-    "anchor": "good-bye-lenin-2003"
+    "anchor": "good-bye-lenin-2003",
+    "images": []
   },
   {
     "id": "02c0c1b19f",
@@ -37,7 +41,8 @@
     "section": "The Lives of Others (2006)",
     "title": "",
     "text": "The Lives of Others puts follows the moral struggles of an introverted Stasi agent tasked with the surveillance of a playwright. It’s featured in IMDb’s Top 250. IMDb – Final scene on Karl-Marx-Allee",
-    "anchor": "the-lives-of-others-2006"
+    "anchor": "the-lives-of-others-2006",
+    "images": []
   },
   {
     "id": "42b76a0a95",
@@ -45,7 +50,8 @@
     "section": "Er ist wieder da! (2015)",
     "title": "",
     "text": "This dark comedy about the unexplained return of Hitler in modern days shows various parts of Berlin Mitte, beginning right where Hitler killed himself in 1945. IMDb",
-    "anchor": "er-ist-wieder-da-2015"
+    "anchor": "er-ist-wieder-da-2015",
+    "images": []
   },
   {
     "id": "ea1765363d",
@@ -53,7 +59,8 @@
     "section": "Der Untergang (2004)",
     "title": "",
     "text": "Der Untergang is a grim depiction of the last days of the second world war in Hitler’s bunker. It features former Berlin buildings such as the New Reich Chancellery, the Führerbunker and the air raid shelters. It’s featured in IMDb’s Top 250. IMDb – Bunker scene – New Reich’s Chancellery scene",
-    "anchor": "der-untergang-2004"
+    "anchor": "der-untergang-2004",
+    "images": []
   },
   {
     "id": "d42e4300d1",
@@ -61,7 +68,8 @@
     "section": "Valkyrie (2008)",
     "title": "",
     "text": "This second world war political thriller tells the story of the July 20 plot against Hitler. It prominently features former Nazi government buildings, including the Bendlerblock, the former Reichsluftfahrtministerium building and the Berlin Messe. IMDb – Luftfahrtministerium and Messe Berlin scene",
-    "anchor": "valkyrie-2008"
+    "anchor": "valkyrie-2008",
+    "images": []
   },
   {
     "id": "a45ee3e839",
@@ -69,7 +77,8 @@
     "section": "Atomic Blonde (2017)",
     "title": "",
     "text": "Cold War Berlin is the backdrop of this tightly choreographed, action-packed, neon-lit spy flick by John Wick director David Leitch. Atomic Blonde features gorgeous neon-lit shots of Berlin’s club culture, as well as the Berlin wall and other cold war landmarks. IMDb – Trailer – Fight scene",
-    "anchor": "atomic-blonde-2017"
+    "anchor": "atomic-blonde-2017",
+    "images": []
   },
   {
     "id": "92dd5ce819",
@@ -77,6 +86,7 @@
     "section": "And many, many more",
     "title": "",
     "text": "Berlin Syndrom (2017) Tschick (2016) DE – Two teenage boys steal a car and go on a trip. Features the outskirts of Berlin and the surrounding Brandenburg. Berlin Calling (2015) DE Victoria (2015) DE – An entire movie in a single take! Most of the movie is set in Mitte, around U-Stadtmitte. Bridge of Spies (2015) – Historical drama from Steven Spielberg. Prominently features Cold War-era Berlin, the Berlin wall, Mitte and Glienicker Brücke in Potsdam. The Man from U.N.C.L.E. (2015) – Light-hearted spy comedy from Guy Ritchie. Features a CGI-heavy portrayal of 1989 Berlin. Oh Boy (2012) DE The Bourne Supremacy (2004) Herr Lehmann (2003) DE Sonnenallee (1999) DE Lola Rennt (1998) DE Wir Kinder vom Bahnhof Zoo (1981) – Portrays the drug scene of Berlin in the 1970’s Just a Gigolo (1978) – Starring David Bowie One, Two, Three (1961) DE Eine auswärtige Affäre (1948) DE Die Mörder sind unter uns (1946) DE Eine Frau in Berlin (2008) DE",
-    "anchor": "and-many-many-more"
+    "anchor": "and-many-many-more",
+    "images": []
   }
 ]

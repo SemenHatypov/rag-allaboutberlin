@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "If you must get rid of old clothes and shoes, you can resell them, or you can donate them. This guide shows you where to donate clothes and shoes in Berlin.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "75b60cc84e",
@@ -13,7 +14,8 @@
     "section": "Clothes donation bins",
     "title": "",
     "text": "There are over 6000 donation bins for clothes in Berlin. They are often near supermarkets and gas stations. Map of clothes donation bins",
-    "anchor": "clothes-donation-bins"
+    "anchor": "clothes-donation-bins",
+    "images": []
   },
   {
     "id": "2b193d5794",
@@ -21,7 +23,13 @@
     "section": "Clothes donation bins",
     "title": "Where will my clothes go?",
     "text": "Some belong to for-profit businesses. Some donation bins belong to charities. Donation bins with the FairWertung logo are run by charities. The Red Cross donation bins are also easy to recognise.",
-    "anchor": "where-will-my-clothes-go"
+    "anchor": "where-will-my-clothes-go",
+    "images": [
+      {
+        "url": "https://allaboutberlin.com/images/red-cross-donation-bin-berlin.jpg",
+        "caption": "Red Cross donation bins"
+      }
+    ]
   },
   {
     "id": "5694537530",
@@ -29,7 +37,8 @@
     "section": "Clothes donation bins",
     "title": "How to use the donation bins?",
     "text": "Donate clothes for the current season. Put your clothes in plastic bags to protect them Tie shoes together",
-    "anchor": "how-to-use-the-donation-bins"
+    "anchor": "how-to-use-the-donation-bins",
+    "images": []
   },
   {
     "id": "b10ede0265",
@@ -37,7 +46,8 @@
     "section": "Charities that accept clothes donations",
     "title": "",
     "text": "Many clothes donation bins are operated by charities. Look for donation bins with the FairWertung logo. Those belong to charities. aktion-hoffnung Map of collection points Berliner Obdachlosenhilfe Lynarstraße 38, Wedding The clothes will be used to help the homeless in Berlin. Berliner Stadtmission Map of collection points The clothes will be used to help the homeless in Berlin. German Red Cross Search by post code They have donation bins in every neighbourhood. Oxfam foundation Map of Oxfam shops The clothes will be resold. The profits go to the Oxfam foundation. Berliner Stadtreinigung also has a list of collection points for clothes. All of them are operated by charities. This map also shows collection points.",
-    "anchor": "charities-that-accept-clothes-donations"
+    "anchor": "charities-that-accept-clothes-donations",
+    "images": []
   },
   {
     "id": "26a1762c24",
@@ -45,7 +55,8 @@
     "section": "Other ways to donate clothes",
     "title": "",
     "text": "Free your stuff Berlin – Facebook group for giving things away Kleinanzeigen – Online classified ads",
-    "anchor": "other-ways-to-donate-clothes"
+    "anchor": "other-ways-to-donate-clothes",
+    "images": []
   },
   {
     "id": "8b9761d346",
@@ -53,6 +64,7 @@
     "section": "How to sell used clothes",
     "title": "",
     "text": "Sell your stuff Berlin – Facebook group for selling things Kleinanzeigen – Online classified ads Vinted – Sell or trade used clothes",
-    "anchor": "how-to-sell-used-clothes"
+    "anchor": "how-to-sell-used-clothes",
+    "images": []
   }
 ]

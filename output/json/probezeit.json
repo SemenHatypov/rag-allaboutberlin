@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "When you start a new job in Germany, you are in your probation period ( Probezeit). During that time, it’s easier to lose your job. This guide explains how the Probezeit works.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "5f0011a65c",
@@ -13,7 +14,8 @@
     "section": "What is the probation period?",
     "title": "",
     "text": "When you start working for a company, you have a 6 month probation period. Some employers have shorter probation periods, or no probation period at all. During your probation, it’s easier to lose your job. Your employer can fire you without any reason, with a 2 week notice period. [arbeitsrechte.de, § 622 BGB] Many people find the probation period stressful, because they are afraid of losing their job. Apprentices ( Azubis) have a shorter probation: 1 to 4 months. During their probation, there is no notice period; they can be laid off immediately.",
-    "anchor": "what-is-the-probation-period"
+    "anchor": "what-is-the-probation-period",
+    "images": []
   },
   {
     "id": "9381776ba7",
@@ -21,7 +23,8 @@
     "section": "During your probation",
     "title": "Vacations",
     "text": "You can take vacations during your probation period. In the first 6 months after you start a new job, your vacation days are prorated: you unlock 1/12 of your vacation days every month. [sns-anwaelte.de, § 5 BUrlG] After 6 months, you unlock all of your vacation days. For example, if you have 24 vacation days per year, and you have been working for 3 months, you can use 6 vacation days. After 4 months, you can use 8 vacation days. After 6 months, you can use all 24 vacation days. You should avoid taking long vacations during your probation period. It’s not illegal, but some people think that it looks bad. Vacation days in Germany",
-    "anchor": "vacations"
+    "anchor": "vacations",
+    "images": []
   },
   {
     "id": "49f518d1ce",
@@ -29,7 +32,8 @@
     "section": "During your probation",
     "title": "Sick leave",
     "text": "You can take as many sick days as you need during your probation period. In the first month of your probation period, get a sick note on the first day that you are sick. The rules are different during your first month: you only get sick pay after you send a sick note to your health insurance. Sick leave in Germany",
-    "anchor": "sick-leave"
+    "anchor": "sick-leave",
+    "images": []
   },
   {
     "id": "5c3a73d51a",
@@ -37,7 +41,8 @@
     "section": "During your probation",
     "title": "Pregnancy",
     "text": "Your employer can’t fire you during your pregnancy, and 4 months after you give birth. This is true even if you are in your probation period.",
-    "anchor": "pregnancy"
+    "anchor": "pregnancy",
+    "images": []
   },
   {
     "id": "201fea7cf6",
@@ -45,7 +50,8 @@
     "section": "During your probation",
     "title": "Quitting your job",
     "text": "During your probation period, it’s easier to quit your job. Your notice period is only 2 weeks. How to quit your job",
-    "anchor": "quitting-your-job"
+    "anchor": "quitting-your-job",
+    "images": []
   },
   {
     "id": "b91202040a",
@@ -53,7 +59,8 @@
     "section": "During your probation",
     "title": "Finding an apartment",
     "text": "It’s harder to get a loan or find an apartment during your probation period, because you can easily lose your job. Landlords want tenants that have a stable job. Banks won’t give you money if you don’t have a stable income.",
-    "anchor": "finding-an-apartment"
+    "anchor": "finding-an-apartment",
+    "images": []
   },
   {
     "id": "6879ef6fff",
@@ -61,7 +68,8 @@
     "section": "During your probation",
     "title": "Permanent residence",
     "text": "To apply for permanent residence, you need a stable, long-term income. If you are in your probation period, you might not get a PR. If you have a history of stable employment, you might get it anyway. How to apply for permanent residence",
-    "anchor": "permanent-residence"
+    "anchor": "permanent-residence",
+    "images": []
   },
   {
     "id": "f3f626da87",
@@ -69,7 +77,8 @@
     "section": "After your probation",
     "title": "",
     "text": "After your probation period, it’s harder to get fired. It’s also harder to quit your job. For most people, the end of the probation period is a big relief. If your employer fires you, they must give you a 4 week notice. If you want to quit your job, you must also give a 4 week notice. The longer you work at a company, the longer the notice period. [§ 622 BGB] After 5 years with a company, the notice period is 2 months. After 8 years, it’s 3 months. Some companies have longer notice periods in their contracts. 3 month notice periods are common, and some have a 6 month notice period. Your notice period (when you quit) can’t be longer than the notice period of your employer (when they fire you).",
-    "anchor": "after-your-probation"
+    "anchor": "after-your-probation",
+    "images": []
   },
   {
     "id": "99aed8a8ad",
@@ -77,6 +86,7 @@
     "section": "After your probation",
     "title": "Taking vacations",
     "text": "After your probation is over, you can use all your vacation days for the year. Vacation days in Germany",
-    "anchor": "taking-vacations"
+    "anchor": "taking-vacations",
+    "images": []
   }
 ]

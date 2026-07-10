@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "This guide explains how to get an appointment at the Bürgeramt in Berlin. You might not need an appointment. For example, you can register and deregister your address online. You don’t need to go to the Bürgeramt. How to do your Anmeldung online How to do your Abmeldung online",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "2dff969180",
@@ -13,7 +14,8 @@
     "section": "Book an appointment online",
     "title": "",
     "text": "Choose a service in the list of services. For example, for the Anmeldung or the Abmeldung. Scroll to the list of locations, and select all locations. You can go to any Bürgeramt in Berlin, not just the one near you. You can’t go to a Bürgeramt in Brandenburg. Choose an appointment date. Receive a verification code by email. You have 10 minutes to enter the activation code. If you don’t get an email, try again with a different email address. Enter the verification code in the appointment booking page. Get an appointment confirmation.",
-    "anchor": "book-an-appointment-online"
+    "anchor": "book-an-appointment-online",
+    "images": []
   },
   {
     "id": "1defe51b96",
@@ -21,7 +23,8 @@
     "section": "Book an appointment online",
     "title": "If there are no appointments",
     "text": "Sometimes, there are no appointments available. Try again every few minutes. Most new appointments appear during working hours. There are more appointments in the morning, between 8:00 and 11:00. Look for appointments everywhere in Berlin, not just near you. The Bürgeramt does not release all available appointments online. Some appointments are only for people who call 115. Other appointments are only given by Bürgeramt employees.",
-    "anchor": "if-there-are-no-appointments"
+    "anchor": "if-there-are-no-appointments",
+    "images": []
   },
   {
     "id": "00d75de447",
@@ -29,7 +32,8 @@
     "section": "Book an appointment online",
     "title": "Multiple services, one appointment",
     "text": "You can book a single appointment for multiple services: Select a Bürgeramt from the list of Bürgeramt locations Scroll to the list of services. Select multiple services Click “ An diesem Standort einen Termin buchen ”.",
-    "anchor": "multiple-services-one-appointment"
+    "anchor": "multiple-services-one-appointment",
+    "images": []
   },
   {
     "id": "d43b3b3722",
@@ -37,7 +41,8 @@
     "section": "Other ways to get an appointment",
     "title": "Use my appointment finder",
     "text": "To register your address, use my Anmeldung appointment finder. Tool to find available Anmeldung appointments at the Bürgeramt in Berlin. This tool requires JavaScript to work.",
-    "anchor": "use-my-appointment-finder"
+    "anchor": "use-my-appointment-finder",
+    "images": []
   },
   {
     "id": "84df0f54ef",
@@ -45,7 +50,8 @@
     "section": "Other ways to get an appointment",
     "title": "Call 115",
     "text": "Call 115 between 7:00 and 18:00. This is the Bürgertelefon. They can find you a Bürgeramt appointment, even when there are no appointments online. They only speak German. You must wait a few minutes to talk to someone.",
-    "anchor": "call-115"
+    "anchor": "call-115",
+    "images": []
   },
   {
     "id": "75ba10a023",
@@ -53,7 +59,8 @@
     "section": "Other ways to get an appointment",
     "title": "Email the Bürgeramt",
     "text": "Email your local Bürgeramt, explain what you need, and ask for an appointment. If your situation is urgent, include a proof. You might get an appointment faster, even if there are no appointments online. They usually reply in 1 or 2 days. How to contact the Bürgeramt",
-    "anchor": "email-the-burgeramt"
+    "anchor": "email-the-burgeramt",
+    "images": []
   },
   {
     "id": "ce143a6ad0",
@@ -61,7 +68,8 @@
     "section": "Other ways to get an appointment",
     "title": "Go to the Bürgeramt in person",
     "text": "If your situation is urgent, you can go to the Bürgeramt in person. They will help you on the same day, or give you an emergency appointment. For example, if you need documents to travel soon, you can go in person. If your situation is not urgent, ask for an appointment by email. It’s faster.",
-    "anchor": "go-to-the-burgeramt-in-person"
+    "anchor": "go-to-the-burgeramt-in-person",
+    "images": []
   },
   {
     "id": "e7d9c1de69",
@@ -69,7 +77,8 @@
     "section": "How to cancel your appointment",
     "title": "",
     "text": "If you can’t go to your appointment, cancel it. In your confirmation email, there is a link to cancel your appointment. Click the link, and cancel your appointment.",
-    "anchor": "how-to-cancel-your-appointment"
+    "anchor": "how-to-cancel-your-appointment",
+    "images": []
   },
   {
     "id": "ef58b60581",
@@ -77,7 +86,8 @@
     "section": "Bring a translator",
     "title": "",
     "text": "Many Bürgeramt employees only speak German. If you don’t speak German, bring a translator or a German-speaking friend. I recommend Red Tape Translation. Appointments for the Anmeldung and the Abmeldung are simple, so you probably don’t need a translator. If you sign a Vollmacht, someone can go to the Bürgeramt for you. Red Tape Translation can do it. It’s expensive, but it saves time.",
-    "anchor": "bring-a-translator"
+    "anchor": "bring-a-translator",
+    "images": []
   },
   {
     "id": "db270a533c",
@@ -85,6 +95,7 @@
     "section": "Contact the Bürgeramt",
     "title": "",
     "text": "If you have a problem, email the Bürgeramt. They usually reply a few days later. Sometimes it takes a few weeks. To contact the Bürgeramt: Find your local Bürgeramt Use the contact information on the page",
-    "anchor": "contact-the-burgeramt"
+    "anchor": "contact-the-burgeramt",
+    "images": []
   }
 ]

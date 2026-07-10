@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "In Germany, there are two kinds of Netto supermarkets. They have the same name, but a different logo. They are different supermarket chains.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "5b63cdce79",
@@ -13,7 +14,8 @@
     "section": "Netto with the dog",
     "title": "",
     "text": "Netto ApS & Co. KG has around 350 branches in Germany. Most branches are in the east. It belongs to the Salling Group, a Danish retail firm.",
-    "anchor": "netto-with-the-dog"
+    "anchor": "netto-with-the-dog",
+    "images": []
   },
   {
     "id": "420a6ee47a",
@@ -21,7 +23,8 @@
     "section": "Netto without the dog",
     "title": "",
     "text": "Netto Marken-Discount has around 4,000 branches in Germany. It was founded by Spar (a supermarket chain), and taken over by Edeka (another supermarket chain) in 2005.",
-    "anchor": "netto-without-the-dog"
+    "anchor": "netto-without-the-dog",
+    "images": []
   },
   {
     "id": "fd84907a0a",
@@ -29,6 +32,7 @@
     "section": "What is the difference?",
     "title": "",
     "text": "Netto (with the dog) has more types of products, including bio options. The stores are often bigger. Netto (without the dog) is cheaper. It’s a competitor to Aldi, Lidl and Penny. The stores are often smaller.",
-    "anchor": "what-is-the-difference"
+    "anchor": "what-is-the-difference",
+    "images": []
   }
 ]

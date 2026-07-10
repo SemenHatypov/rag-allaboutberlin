@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "This guide explains how to use trains, trams, buses and ride sharing in Berlin.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "8ab8c12ed8",
@@ -13,7 +14,17 @@
     "section": "1. Buy a ticket",
     "title": "Where to buy a ticket",
     "text": "To use intercity trains (IC and ICE), buy a ticket from the Deutsche Bahn website, in the DB Navigator app, a DB Reisezentrum or a DB ticket machine. You can’t buy tickets on the train. To use everything else ( S-Bahn, U-Bahn, tram, bus, ferry), buy a local public transit ticket. It lets you travel in Berlin and parts of Brandenburg. You can buy local public transit tickets… At a ticket machine Find a yellow or red ticket machine at the train station. The machines are on the train platforms, near the exits. You can pay with coins, bills, credit cards and Girocards. You can sometimes pay with Apple Pay and Google Pay. The ticket machines speak many languages. Don’t forget to stamp your ticket. In the app Buy tickets on your phone. Pay with a credit card, Apple Pay or Google Pay. Your ticket is valid 1 minute after you buy it. You need internet access to buy tickets. There is Wi-Fi at most train stations. Jelbi app You can also rent cars, bicycles, scooters and mopeds with this app. It’s in English and German. BVG app It’s in English and German. VBB app You can buy tickets for Berlin and Brandenburg. It’s a little harder to use. Jelbi app You can also rent cars, bicycles, scooters and mopeds with this app. It’s in English and German. BVG app It’s in English and German. VBB app You can buy tickets for Berlin and Brandenburg. It’s a little harder to use. On the tram Find a yellow ticket machine near the middle of the tram. The old machines only accept coins. The new machines only accept cards. On the bus Enter at the front of the bus, and tap your phone or credit card to pay. You can’t pay with cash. At S-Bahn and BVG service points Buy tickets at S-Bahn and BVG service points. At the airport, there are ticket machines on the way to the train platforms, just before you go downstairs. You can also install the BVG ticket app before you arrive in Berlin. The airport is in zone C, so you must buy an ABC ticket.",
-    "anchor": "where-to-buy-a-ticket"
+    "anchor": "where-to-buy-a-ticket",
+    "images": [
+      {
+        "url": "https://allaboutberlin.com/images/VBB-ticket-machine.jpg",
+        "caption": "yellow or red ticket machine"
+      },
+      {
+        "url": "https://allaboutberlin.com/images/berlin-bvg-tram-ticket-machine.jpg",
+        "caption": "yellow ticket machine"
+      }
+    ]
   },
   {
     "id": "a0750d3843",
@@ -21,7 +32,8 @@
     "section": "1. Buy a ticket",
     "title": "What ticket to buy",
     "text": "To buy a local public transit ticket… Choose the tariff zone Berlin has 3 tariff zones: A, B and C. Buy an AB or ABC ticket, depending on the zones you travel in. Most things are in zone A or B. The airport is in zone C. Choose the duration of the ticket Single tickets are valid for 2 hours in one direction. There are daily, weekly and monthly passes. Short trip tickets ( Kurzstrecke) let you travel just a few stops. Choose the type of ticket There are cheaper tickets for children, students, apprentices and dogs. You need a ticket for your bicycle. Daily, weekly and monthly passes sometimes let you bring people for free. Your ticket is valid on the S-Bahn, U-Bahn, trams, buses, ferries and regional trains (RE). It’s not valid on intercity trains (IC and ICE), private operators (Flixtrain, Flixbus, European Sleeper, Hop-On, Hop-Off) or tour boats.",
-    "anchor": "what-ticket-to-buy"
+    "anchor": "what-ticket-to-buy",
+    "images": []
   },
   {
     "id": "aaf8317fa5",
@@ -29,7 +41,8 @@
     "section": "1. Buy a ticket",
     "title": "Tariff zones",
     "text": "Berlin has 3 public transit zones: A, B and C. Zone A is central Berlin. It’s everything inside the Ringbahn; all the central neighbourhoods. Zone B is everything outside the Ringbahn, but inside Berlin. Zone C is outside of Berlin. It includes parts of Brandenburg like the Berlin-Brandenburg airport, Potsdam and Oranienburg. Most things are in zone A or B, so you usually need an AB ticket. If you go to the airport, you need an ABC ticket. If you already have an AB ticket, and you want to go to zone C, get an extention ticket ( Anschlussfahrausweis). It’s cheaper than an ABC ticket. If you have a Deutschland Ticket, you can travel in all zones.",
-    "anchor": "tariff-zones"
+    "anchor": "tariff-zones",
+    "images": []
   },
   {
     "id": "0983cba2ba",
@@ -37,7 +50,8 @@
     "section": "1. Buy a ticket",
     "title": "Ticket duration",
     "text": "Single tickets are valid for 2 hours in one direction. You can take as many trains, buses and ferries as you want with the same ticket. You can stop, do some shopping, and take the train again. Your ticket only works in one direction. To go back, you must buy a new ticket. Short trip tickets let you travel 3 train tops, or 6 bus or tram stops. If you buy them in the app, they are valid for 20 minutes. Daily, monthly and weekly passes are cheaper. They usually let you bring other people for free. The Deutschland Ticket is a monthly subscription. You can use all public transit in Germany for € 63 per month.",
-    "anchor": "ticket-duration"
+    "anchor": "ticket-duration",
+    "images": []
   },
   {
     "id": "eb5aae07ff",
@@ -45,7 +59,8 @@
     "section": "1. Buy a ticket",
     "title": "Ticket types",
     "text": "Standard ticket This is the ticket most people need. Reduced price ticket ( Ermäßigungstarif) Children between 6 and 15 years old need a reduced price ticket. Dogs too. Most tickets let you bring children for free. Some tickets let you bring a dog for free. Student ticket ( Schülerticket, Ausbildungsticket) Students and apprentices get a free monthly pass. Apply for it here or here. Bicycle ticket ( Fahrradkarte) You need a bicycle ticket for your bicycle. – How to bring bikes on public transit. List of ticket types – S-Bahn Berlin",
-    "anchor": "ticket-types"
+    "anchor": "ticket-types",
+    "images": []
   },
   {
     "id": "b44d31dd4f",
@@ -53,7 +68,13 @@
     "section": "1. Buy a ticket",
     "title": "If you get caught without a ticket",
     "text": "There are ticket checkers who enter the train and look at everyone’s tickets. They wait until the doors close, so you can’t run away. If your ticket is not valid, you get a € 60 fine. If you have the wrong ticket, you still get a fine. If you bought your ticket with the app, show them the ticket QR code in the app. How to pay a BVG fine",
-    "anchor": "if-you-get-caught-without-a-ticket"
+    "anchor": "if-you-get-caught-without-a-ticket",
+    "images": [
+      {
+        "url": "https://allaboutberlin.com/images/bvg-app-digital-deutschland-ticket.jpg",
+        "caption": "ticket QR code"
+      }
+    ]
   },
   {
     "id": "826f6c08bf",
@@ -61,7 +82,8 @@
     "section": "2. Validate your ticket",
     "title": "",
     "text": "Stamp your ticket before you use it. If your ticket is not stamped, it’s not valid. There are stamping machines on train platforms, and inside trams and buses. Look for a yellow or red metal box, and put your ticket in the slit. If you buy a ticket on the bus or tram, it’s already stamped. Monthly passes are already stamped. Digital tickets are valid 1 minute after you buy them. Buy your ticket before you get on the train.",
-    "anchor": "validate-your-ticket"
+    "anchor": "validate-your-ticket",
+    "images": []
   },
   {
     "id": "68a0a232fa",
@@ -69,7 +91,8 @@
     "section": "3. Use public transport",
     "title": "",
     "text": "Get on the bus, tram, train or ferry, and go where you want to go. Get directions from Google Maps ( iOS or Android) or BVG Fahrinfo. BVG Fahrinfo has more accurate information.",
-    "anchor": "use-public-transport"
+    "anchor": "use-public-transport",
+    "images": []
   },
   {
     "id": "90b2ec7c90",
@@ -77,7 +100,8 @@
     "section": "3. Use public transport",
     "title": "Go in the right direction",
     "text": "The display shows a train’s last stop, not its direction. For example, the S2’s last stop could be in Bernau, Buch or Blankenburg. These trains all go in the same direction, but their last stops are not the same.",
-    "anchor": "go-in-the-right-direction"
+    "anchor": "go-in-the-right-direction",
+    "images": []
   },
   {
     "id": "4acd6832fa",
@@ -85,7 +109,8 @@
     "section": "3. Use public transport",
     "title": "Take the bus or tram",
     "text": "When your bus or tram arrives, stand on the side, and let other people exit before you enter. If you stand in front of the door, you block people who try to leave. You can use any door to get on the bus. You don’t need to show your ticket to the driver. Before your stop, press the yellow or red “STOP” button near you. You will hear a “ding” sound. You will see “STOP” in the corner of the information screen. The bus will stop at the next bus stop. To open the doors, you might need to press a button near the doors.",
-    "anchor": "take-the-bus-or-tram"
+    "anchor": "take-the-bus-or-tram",
+    "images": []
   },
   {
     "id": "89b39e6a17",
@@ -93,7 +118,25 @@
     "section": "Public transport options",
     "title": "Inside Berlin",
     "text": "S-Bahn trains The red and yellow S-Bahn trains are run by the Deutsche Bahn. They travel everywhere in Berlin, and in some parts of Brandenburg. S-Bahn line names start with an S (S1, S2, …). U-Bahn trains The yellow U-Bahn trains use their own rail network. They travel everywhere in Berlin. They are run by the BVG. U-Bahn line names start with a U (U1, U2, …). The “U” is for “underground”, but U-Bahn lines are not always underground. At night, U-Bahn trains are replaced by night buses. Trams ( Straßenbahn) Some tram lines start with an M (M1, M2…), and others have just a number (50, 68…). Most trams are in the east. Before the reunification, there were no trams in West Berlin. At night, some tram lines are replaced by night buses. Some tram lines also run at night. Buses Bus stops have an “H” sign or post. There are night buses that replace U-Bahn and tram lines. Night bus lines start with the letter N (N6, N7, …). Their number is the same as the bus or train line they replace (U6 and N6, 50 and N50…). Ferries There are a few ferries in Berlin. Ferry lines start with an F (F12, F24, …).",
-    "anchor": "inside-berlin"
+    "anchor": "inside-berlin",
+    "images": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/File:Berlin-_Bahnhof_Friedrichstra%C3%9Fe-_auf_Bahnsteig_zu_Gleis_4-_BVG-Baureihe_480_10.8.2009.jpg",
+        "caption": "red and yellow S-Bahn trains"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/File:Berlin_U-Bahn_IK_at_Olympia-Stadion_(3).jpg",
+        "caption": "yellow U-Bahn trains"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/File:Bushaltestelle_S%2BU_Potsdamer_Platz_in_Berlin.jpg",
+        "caption": "“H” sign"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/File:Berlin-Stadtrundfahrt_Bus_100.jpg",
+        "caption": "post"
+      }
+    ]
   },
   {
     "id": "4714cd85e0",
@@ -101,7 +144,8 @@
     "section": "Public transport options",
     "title": "Outside of Berlin",
     "text": "Regional trains The Regio trains travel from Berlin to Brandenburg and other parts of Germany. The express lines start with RE (RE1, RE2…) and the other lines start with RB (RB10, RB49…). There is also the FEX line, which goes to the BER airport. S-Bahn trains Most S-Bahn lines end in zone C. Zone C is outside of Berlin, in Brandenburg. Long distance trains These trains travel to other German cities. The express line names start with ICE. The other lines start with IC. You can board some IC and ICE trains with a regular ticket. Use Omio or Bahn.de to find train tickets.",
-    "anchor": "outside-of-berlin"
+    "anchor": "outside-of-berlin",
+    "images": []
   },
   {
     "id": "9bea66ceec",
@@ -109,7 +153,8 @@
     "section": "Other ways to get around",
     "title": "Rent a scooter",
     "text": "You can rent electric scooters (🛴) from Bolt, Dott, Lime or Voi. You do not need a driving licence. You can book them in the Jelbi app.",
-    "anchor": "rent-a-scooter"
+    "anchor": "rent-a-scooter",
+    "images": []
   },
   {
     "id": "3ac9833f71",
@@ -117,7 +162,8 @@
     "section": "Other ways to get around",
     "title": "Rent a moped",
     "text": "You can rent motor scooters (🛵) from Emmy or Dance. You can book Emmy scooters in the Jelbi app too. Create an account in advance, because their verification process is unreliable. There are also scooter rental businesses. You need a valid driving licence. Scooter rental services don’t always accept non-EU driving licences, because they are only valid for 6 months after you move to Germany.",
-    "anchor": "rent-a-moped"
+    "anchor": "rent-a-moped",
+    "images": []
   },
   {
     "id": "5ca7ba4641",
@@ -125,7 +171,8 @@
     "section": "Other ways to get around",
     "title": "Rent a car",
     "text": "Rent a car for a single ride with Miles or Share Now. Miles cars are bookable in the Jelbi app. Rent a car for a few days with Miles, Sixt, Avis, Budget or Europcar. RentalCars.com can help you find a rental car. You need a valid driving licence to use those services. Car sharing services don’t always accept non-EU licences, because they are only valid for 6 months after you move to Germany.",
-    "anchor": "rent-a-car"
+    "anchor": "rent-a-car",
+    "images": []
   },
   {
     "id": "5f11014778",
@@ -133,7 +180,8 @@
     "section": "Other ways to get around",
     "title": "Call a taxi",
     "text": "People rarely use taxis in Berlin, because they are very expensive. You can get a taxi from Bolt, FreeNow, Uber, and standard taxi services. The Jelbi app also lets you book a taxi. German taxis must accept cash and credit cards. The Jelbi app also accepts PayPal.",
-    "anchor": "call-a-taxi"
+    "anchor": "call-a-taxi",
+    "images": []
   },
   {
     "id": "3381c0f362",
@@ -141,7 +189,8 @@
     "section": "Other ways to get around",
     "title": "Ride sharing",
     "text": "BlaBlaCar lets you ride with drivers who travel to Berlin. You meet them in one place, and drive together to another city. It’s usually the cheapest way to travel between cities.",
-    "anchor": "ride-sharing"
+    "anchor": "ride-sharing",
+    "images": []
   },
   {
     "id": "79d6f11dd4",
@@ -149,7 +198,8 @@
     "section": "Bicycles on public transit",
     "title": "",
     "text": "You can bring your bicycle on the train (S-Bahn and U-Bahn), on the tram, on ferries, and on the N1 to N9 night buses. You can’t bring your bicycle on other buses. On the U-Bahn, don’t bring your bicycle in the first carriage. Some carriages also have a “no bicycles” sign near the door. On the S-Bahn, only use the carriages with a bicycle sign near the door. Bicycle trailers, bicycles with more than two wheels, scooters and motorcycles are not allowed. Electric bicycles are allowed.",
-    "anchor": "bicycles-on-public-transit"
+    "anchor": "bicycles-on-public-transit",
+    "images": []
   },
   {
     "id": "da7ea4ea66",
@@ -157,7 +207,8 @@
     "section": "Bicycles on public transit",
     "title": "Bicycle tickets",
     "text": "You must buy a bicycle ticket ( Fahrradticket) for your bicycle. If you have a student ticket ( Schülerticket) or an apprentice ticket ( Ausbildungsticket), you don’t need a bicycle ticket. If you have a folding bike, you don’t need a bicycle ticket, but your bike must be folded when you are on the train. You can also bring your folded bike on the bus and tram.",
-    "anchor": "bicycle-tickets"
+    "anchor": "bicycle-tickets",
+    "images": []
   },
   {
     "id": "87b0fb5f00",
@@ -165,7 +216,8 @@
     "section": "Dogs on public transit",
     "title": "",
     "text": "In Berlin, you can take your dog with you in trains, trams and buses. They can’t go on the seats. They must be in a closed container. If they don’t fit in a container, they must wear a muzzle and be on a leash. Normally, you must buy a reduced price ( Ermäßigungstarif) ticket for your dog, but there are exceptions. You can bring your dog on the train, tram or bus for free if… It’s not bigger than a house cat, and you carry it in a closed container or you have a daily, weekly, monthly or yearly pass or your dog is a guide dog or you have a student ticket or you have an apprentice ticket If you have a Deutschland Ticket, you can bring a dog with you for free, but only in zones A, B and C. In the rest of Germany, the rules can be different. Having a dog in Berlin",
-    "anchor": "dogs-on-public-transit"
+    "anchor": "dogs-on-public-transit",
+    "images": []
   },
   {
     "id": "d826bf9444",
@@ -173,6 +225,7 @@
     "section": "Bring other people for free",
     "title": "",
     "text": "All tickets let you bring children under 6 years old for free. Most weekly, monthly and yearly tickets let you bring children under 15 years old for free. Most weekly, monthly and yearly tickets, let you bring other people for free during certain times: Monday to Friday from 8PM to 3AM the next day. Saturday and Sunday On public holidays These tickets do not let you bring children and other people with you: The Deutschland Ticket The student ticket ( Schülerticket) The FlexTicket The 10AM card ( 10-Uhr-Karte) The 65 Plus ticket.",
-    "anchor": "bring-other-people-for-free"
+    "anchor": "bring-other-people-for-free",
+    "images": []
   }
 ]

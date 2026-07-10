@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "This guide helps you choose the best health insurance for an apprenticeship ( Ausbildung).",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "ed9d8e0dc2",
@@ -13,7 +14,8 @@
     "section": "Your options",
     "title": "",
     "text": "Use my health insurance calculator to see your options. Calculate the cost of German health insurance and see health insurance options for employees, students and freelancers. This tool requires JavaScript to work. What is the best option?",
-    "anchor": "your-options"
+    "anchor": "your-options",
+    "images": []
   },
   {
     "id": "01627d029e",
@@ -21,7 +23,8 @@
     "section": "Your options",
     "title": "Free health insurance",
     "text": "If you earn less than € 325 per month, you get free public health insurance. Your employer pays for it.",
-    "anchor": "free-health-insurance"
+    "anchor": "free-health-insurance",
+    "images": []
   },
   {
     "id": "d085e3051a",
@@ -29,7 +32,8 @@
     "section": "Your options",
     "title": "Public health insurance",
     "text": "If you earn more than € 325 per month, you can only choose public health insurance. It costs 9.55% to 11.15% of your income (including Pflegeversicherung). You can’t get free health insurance.",
-    "anchor": "public-health-insurance"
+    "anchor": "public-health-insurance",
+    "images": []
   },
   {
     "id": "108153344b",
@@ -37,6 +41,7 @@
     "section": "How to get insured",
     "title": "",
     "text": "You must choose a public health insurer. There are dozens of options, but their price and coverage are almost the same. Barmer and Techniker Krankenkasse are English-speaking options. Ask my insurance expert to help you choose. How to get insured",
-    "anchor": "how-to-get-insured"
+    "anchor": "how-to-get-insured",
+    "images": []
   }
 ]

@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "In Berlin, when you a see a tree covered in small worms, they are probably ermine moth worms ( Gespinstmottenraupen) or oak processionary worms ( Eichenprozessionsspinner). Summary: If the worms have hair on their backs, don’t touch them. They are dangerous.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "096fd86c7e",
@@ -13,7 +14,17 @@
     "section": "Oak processionary worms",
     "title": "",
     "text": "Oak processionary larvae ( Eichenprozessionsspinner). You can find them in from May to July. They live in large groups on oak trees, and around them. They often move together in the same direction. These worms are dangerous to you and your pets. Do not touch them. The hairs on their backs are toxic. They cause allergic reactions. They cause itchy, blistering skin rashes. The symptoms start after a day, and they can last for a few weeks. In some cases, they can cause more serious problems like fever, dizziness and breathing problems. The city sometimes puts warning signs in parks, and even block roads. They also try to kill them with fire or vacuums.",
-    "anchor": "oak-processionary-worms"
+    "anchor": "oak-processionary-worms",
+    "images": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/File:Thaumetopoea_processionea_68862604.jpg",
+        "caption": "large groups"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/File:Oak_processionary_rash.JPG",
+        "caption": "skin rashes"
+      }
+    ]
   },
   {
     "id": "d9e228d1f5",
@@ -21,6 +32,7 @@
     "section": "Ermine moth worms",
     "title": "",
     "text": "Ermine moth larvae ( Gespinstmottenraupen) are around 3 centimetres long. They have smooth skin, and dark dots on their backs. You can find them from April to July. Just look for trees covered in silk. Ermin moth larvae are not dangerous to you or your pets, but they often kill the trees they invade. They sometimes hang from trees by their silk, so you can run into them.",
-    "anchor": "ermine-moth-worms"
+    "anchor": "ermine-moth-worms",
+    "images": []
   }
 ]

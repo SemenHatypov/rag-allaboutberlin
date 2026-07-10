@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "When you apply for a freelance visa or for permanent residence, you might need a certificate of tax matters ( Bescheinigung in Steuersachen or steuerliche Unbedenklichkeitsbescheinigung). This document confirms that you paid your taxes on time, and that you don’t owe the Finanzamt money.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "881a637ca8",
@@ -13,7 +14,8 @@
     "section": "How to get this document",
     "title": "",
     "text": "Request it from the Finanzamt, online or in person. It costs € 17.90. It arrives by post in 1 to 3 weeks.",
-    "anchor": "how-to-get-this-document"
+    "anchor": "how-to-get-this-document",
+    "images": []
   },
   {
     "id": "3a40d83879",
@@ -21,7 +23,8 @@
     "section": "How to get this document",
     "title": "Online",
     "text": "Fill the application form Download the form, fill it, print it and sign it. Contact your Finanzamt Find your Finanzamt, then find its contact information. Email them and ask for a Bescheinigung in Steuersachen. Use my email template. Pay the application fee Find your Finanzamt’s bank information, and transfer them € 17.90. In the payment message, include your tax ID, your name and “Bescheinigung in Steuersachen”. Wait You will get the document by post in 1 to 3 weeks. If you don’t get it after 3 weeks, contact the Finanzamt. It’s faster if you phone them. Mine got lost in the mail, so they sent it again.",
-    "anchor": "online"
+    "anchor": "online",
+    "images": []
   },
   {
     "id": "e9c794a34b",
@@ -29,7 +32,8 @@
     "section": "How to get this document",
     "title": "In person",
     "text": "You can also get the document if you go to the Finanzamt in person. It might not be faster, because they might still mail it to you. Find your Finanzamt Find your Finanzamt, then find its address and opening hours. Go to the Finanzamt Go to the Finanzamt without an appointment, and ask for a Bescheinigung in Steuersachen. Pay the € 17.90 fee. Wait You will get the document by post in 1 to 3 weeks.",
-    "anchor": "in-person"
+    "anchor": "in-person",
+    "images": []
   },
   {
     "id": "21d2621516",
@@ -37,7 +41,8 @@
     "section": "Application form",
     "title": "",
     "text": "Fill this application form, print it and sign it. You must know your tax ID or Steuernummer.",
-    "anchor": "application-form"
+    "anchor": "application-form",
+    "images": []
   },
   {
     "id": "89b80027b8",
@@ -45,6 +50,7 @@
     "section": "Application form",
     "title": "Email template",
     "text": "If you apply online, use this email template, and attach the application form. Generate an email to request a Bescheinigung in Steuersachen from your Finanzamt. This tool requires JavaScript to work.",
-    "anchor": "email-template"
+    "anchor": "email-template",
+    "images": []
   }
 ]

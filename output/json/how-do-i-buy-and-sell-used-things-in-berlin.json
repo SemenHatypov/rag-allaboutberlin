@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "This is how you trade used clothes, vehicles, electronics and other things in Berlin.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "87718bdec3",
@@ -13,7 +14,8 @@
     "section": "Where to buy and sell things",
     "title": "Classified ads",
     "text": "Kleinanzeigen (German) – the main classified ads website in Germany Nebenan (German) – Classified ads in your neighbourhood.",
-    "anchor": "classified-ads"
+    "anchor": "classified-ads",
+    "images": []
   },
   {
     "id": "d5fe61905e",
@@ -21,7 +23,8 @@
     "section": "Where to buy and sell things",
     "title": "Facebook groups",
     "text": "If you want to trade with English-speaking Berliners, try Sell Your Stuff Berlin or Free Your Stuff Berlin. You must be approved before you can join those groups. Sell Your Stuff Berlin – 85 000+ members Free/Sell/Buy your stuff Berlin – 30 000+ members Sell your furniture Berlin – 21 000+ members Girls Sell Stuff Berlin – 11 000+ members",
-    "anchor": "facebook-groups"
+    "anchor": "facebook-groups",
+    "images": []
   },
   {
     "id": "ab0dbfe37c",
@@ -29,7 +32,8 @@
     "section": "Where to buy and sell things",
     "title": "Vehicles",
     "text": "Mobile.de Kleinanzeigen You really don’t need a car in Berlin. Buying a bicycle or using public transit is a better choice. You can also rent a car when you need it. How to buy a car in Germany How to buy a bicycle in Berlin",
-    "anchor": "vehicles"
+    "anchor": "vehicles",
+    "images": []
   },
   {
     "id": "a522596879",
@@ -37,7 +41,8 @@
     "section": "Where to buy and sell things",
     "title": "Clothes",
     "text": "Vinted – Sell or trade used clothes How to donate clothes in Berlin",
-    "anchor": "clothes"
+    "anchor": "clothes",
+    "images": []
   },
   {
     "id": "471a9a9d8d",
@@ -45,7 +50,8 @@
     "section": "Where to buy and sell things",
     "title": "Flea markets",
     "text": "You can also visit flea markets. They happen every Sunday all over Berlin. Berlin flea market map – berlin.de NochMall – BSR ’s second-hand store",
-    "anchor": "flea-markets"
+    "anchor": "flea-markets",
+    "images": []
   },
   {
     "id": "405899610c",
@@ -53,6 +59,7 @@
     "section": "Where to donate things",
     "title": "",
     "text": "BSR Verschenktmarkt (in German) – Run by the city’s recycling service Free Your Stuff Berlin – Popular Facebook group Spenden statt wegwerfen (German) – List of BSR donation points Nebenan (German) – Classified ads in your neighbourhood. Sharing is Caring – Telegram Donate your bicycle – Rückenwind Where to donate books – Reddit",
-    "anchor": "where-to-donate-things"
+    "anchor": "where-to-donate-things",
+    "images": []
   }
 ]

@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "You can use your residence permit as an eID. This allows you to log into online government services. This feature is not always activated. This guide explains how to activate it.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "56b6777ddb",
@@ -13,7 +14,8 @@
     "section": "How the eID works",
     "title": "",
     "text": "German ID cards have a chip in them. You can use your ID card and the AusweisApp to log into online government services. This is feature is called Online-Ausweisfunktion, eID, elektronischer Aufenthaltstitel or eAT.",
-    "anchor": "how-the-eid-works"
+    "anchor": "how-the-eid-works",
+    "images": []
   },
   {
     "id": "c89917cdcc",
@@ -21,7 +23,8 @@
     "section": "Why you should activate your eID",
     "title": "",
     "text": "To use online government services. Some services require an eID: Applying for unemployment benefits when you lose your job Applying for Kindergeld Registering a vehicle after you buy it Requesting a replacement of your registration certificate Registering as an organ donor In Berlin, most services are not digital, or they don’t require an eID. Most new digital services require an eID. If you don’t have eID, you must do everything in person. It’s slower.",
-    "anchor": "why-you-should-activate-your-eid"
+    "anchor": "why-you-should-activate-your-eid",
+    "images": []
   },
   {
     "id": "d6ea539ba4",
@@ -29,7 +32,8 @@
     "section": "How to activate your eID",
     "title": "1. Check if it’s activated",
     "text": "Some residence permits come with the eID feature already activated. Usually, if you got your residence permit by post, the eID feature is not activated. If you picked it up at the Ausländerbehörde, it’s probably activated. Download the AusweisApp, and use your phone to scan your residence permit. The app will tell you if your eID already works.",
-    "anchor": "check-if-its-activated"
+    "anchor": "check-if-its-activated",
+    "images": []
   },
   {
     "id": "c889067f53",
@@ -37,7 +41,8 @@
     "section": "How to activate your eID",
     "title": "2. Activate your eID",
     "text": "After you receive your residence permit, you can activate the eID function at the Ausländerbehörde. Cards issued by the Bürgeramt can be activated at the Bürgeramt. Cards issued by the Ausländerbehörde must be activated at the Ausländerbehörde. To activate your eID at the Ausländerbehörde: Contact the Ausländerbehörde. There is no special form for this; you must use the general contact form. You can’t activate your residence permit at the Bürgeramt. Wait to receive an appointment date. This can take a long time. Go to your Ausländerbehörde appointment. The appointment only takes a few minutes. If you can activate your eID at the Bürgeramt, you might not need an appointment. For example, you don’t need an appointment in Steglitz. If you pick up a new residence permit at the Ausländerbehörde, ask if they can activate the eID function while you are there.",
-    "anchor": "activate-your-eid"
+    "anchor": "activate-your-eid",
+    "images": []
   },
   {
     "id": "45f191da91",
@@ -45,6 +50,7 @@
     "section": "What to do next",
     "title": "",
     "text": "If you just got your residence permit, tell us how long it took. Your feedback helps other people plan their residence permit application. Tell us how long it took to apply for a residence permit in Berlin. This tool requires JavaScript to work. With your new eID, it only takes a few minutes to register as an organ donor, and it can save lives.",
-    "anchor": "what-to-do-next"
+    "anchor": "what-to-do-next",
+    "images": []
   }
 ]

@@ -169,6 +169,7 @@ def extract_sources(
                 "url": url,
                 # Deep-link to the first (highest-ranked) retrieved section.
                 "section_url": f"{url}#{anchor}" if anchor else url,
+                "images": [],
                 "sections": [],
             }
             if "rerank_score" in doc:
@@ -178,6 +179,15 @@ def extract_sources(
         section = doc.get("section", "")
         if section and section not in source["sections"]:
             source["sections"].append(section)
+        # Aggregate figures from every retrieved chunk of this guide (max 2, deduped);
+        # the image-bearing sub-section is not always the top-ranked one.
+        seen_urls = {im["url"] for im in source["images"]}
+        for image in doc.get("images") or []:
+            if len(source["images"]) >= 2:
+                break
+            if image["url"] not in seen_urls:
+                source["images"].append(image)
+                seen_urls.add(image["url"])
     sources = list(by_guide.values())
     sources = _passes_relevance_gate(sources, min_score)
     if limit is not None:

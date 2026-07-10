@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "This guide shows you how to deal with noise problems in Berlin. This includes loud neighbours that ignore quiet hours, construction noise, and noise from businesses.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "6348307bde",
@@ -13,7 +14,8 @@
     "section": "Talk to each other",
     "title": "",
     "text": "Talk the the person who makes the noise, and ask them to stop. It’s sometimes enough.",
-    "anchor": "talk-to-each-other"
+    "anchor": "talk-to-each-other",
+    "images": []
   },
   {
     "id": "2cd8451845",
@@ -21,7 +23,8 @@
     "section": "Contact the Ordnungsamt",
     "title": "",
     "text": "The Ordnungsamt will send a police officer to make the noise stop. Usually, they just knock at the door and ask them to stop. If they have to come multiple times, they can give a fine, or confiscate the source of the noise. For example, the police can confiscate your neighbour’s sound system.",
-    "anchor": "contact-the-ordnungsamt"
+    "anchor": "contact-the-ordnungsamt",
+    "images": []
   },
   {
     "id": "951fb12591",
@@ -29,7 +32,8 @@
     "section": "Contact the Ordnungsamt",
     "title": "By telephone",
     "text": "Call the Ordnungsamt ’s central point of contact ( ZAB), or find your local Ordnungsamt, and call them directly. How to dial phone numbers",
-    "anchor": "by-telephone"
+    "anchor": "by-telephone",
+    "images": []
   },
   {
     "id": "2453ef29e6",
@@ -37,7 +41,8 @@
     "section": "Contact the Ordnungsamt",
     "title": "Online",
     "text": "You can file a noise complaint online on the Ordnungsamt’s website.",
-    "anchor": "online"
+    "anchor": "online",
+    "images": []
   },
   {
     "id": "1fd3177ac5",
@@ -45,7 +50,8 @@
     "section": "Tell the Hausverwaltung",
     "title": "",
     "text": "If the same neighbour always makes noise, complain to your building management ( Hausverwaltung). They will usually notify your neighbour, and if the problem persists, you can get a rent reduction, and they can get kicked out. If construction noises in your building or near your building disturb you, tell the Hausverwaltung. You can ask for a rent reduction.",
-    "anchor": "tell-the-hausverwaltung"
+    "anchor": "tell-the-hausverwaltung",
+    "images": []
   },
   {
     "id": "22b3fc1155",
@@ -53,7 +59,8 @@
     "section": "Keep a noise log (Lärmprotokoll)",
     "title": "",
     "text": "If the noise makes your life hard, keep a noise log ( Lärmprotokoll) for at least 2 weeks. It helps you ask for a rent reduction. Use a Lärmprotokoll template or this Android app. Your housing company might have its own template.",
-    "anchor": "keep-a-noise-log-larmprotokoll"
+    "anchor": "keep-a-noise-log-larmprotokoll",
+    "images": []
   },
   {
     "id": "7ac2a6c1fe",
@@ -61,6 +68,7 @@
     "section": "Ask for a rent reduction",
     "title": "",
     "text": "If there is constant noise where you live, you can get a rent reduction for a “fault in rented property” ( Mangel an der Mietsache). To get a rent reduction, you must prove that the noise is a serious problem. This is why you must keep a noise log ( Lärmprotokoll). There are exceptions. Church bells, children playing and car traffic are normal noises. If you move near an airport, above a busy street, or next to a bar, you know that it will be noisy. You can’t get a rent reduction for these problems.",
-    "anchor": "ask-for-a-rent-reduction"
+    "anchor": "ask-for-a-rent-reduction",
+    "images": []
   }
 ]

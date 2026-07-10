@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "On Sundays and public holidays, most shops in Berlin must close, but there are exceptions. This guide shows you where to buy groceries and other things when all the stores are closed.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "a023ab6d81",
@@ -13,7 +14,8 @@
     "section": "What stays open",
     "title": "",
     "text": "These businesses can open on Sundays: Shops in train stations, airports and bus terminals Restaurants and food delivery Cafés Bakeries Many Spätis Petrol stations Pharmacies ( Apotheken) Tourist attractions and souvenir shops Flea markets and art markets Museums",
-    "anchor": "what-stays-open"
+    "anchor": "what-stays-open",
+    "images": []
   },
   {
     "id": "9dada660c5",
@@ -21,7 +23,8 @@
     "section": "What stays open",
     "title": "Supermarkets",
     "text": "Those train station supermarkets open on Sundays: Friedrichstraße (Mitte): Edeka, go Asia and Vitalia Gesundbrunnen (Wedding): Denns Biomarkt Hauptbahnhof (Mitte): REWE City and Denns Biomarkt Lichtenberg: Edeka Ostbahnhof (Friedrichshain): REWE and Penny Ostkreuz (Friedrichshain): Denns Biomarkt Potsdamer Platz (Mitte): SPAR Express and go asia Südkreuz (Schöneberg): Edeka Zoologischer Garten (Charlottenburg): Ullrich, Denns Biomarkt and SPAR Express On Sundays, these grocery stores are very busy. There is often a queue outside the store. You can also buy food and drinks in Spätis and petrol stations. Grocery delivery services are closed on Sundays.",
-    "anchor": "supermarkets"
+    "anchor": "supermarkets",
+    "images": []
   },
   {
     "id": "d972b63e34",
@@ -29,7 +32,8 @@
     "section": "What stays open",
     "title": "Pharmacies and drug stores",
     "text": "Those train station pharmacies and drug stores are open on Sundays: Alexanderplatz (Mitte): Rossmann Friedrichstraße (Mitte): Rossmann Hauptbahnhof (Mitte): Apotheke and Rossmann Lichtenberg: Apotheke and Rossmann Ostbahnhof (Friedrichshain): Apotheke and Rossmann Südkreuz (Schöneberg): Apotheke and dm Some other pharmacies also open on Sundays.",
-    "anchor": "pharmacies-and-drug-stores"
+    "anchor": "pharmacies-and-drug-stores",
+    "images": []
   },
   {
     "id": "a98873d73e",
@@ -37,7 +41,8 @@
     "section": "What stays open",
     "title": "Restaurants, Spätis and flea markets",
     "text": "Most restaurants open on Sundays. Food delivery services also work. Most Spätis open on Sundays. Many flea markets ( Flohmarkt) only open on Sundays.",
-    "anchor": "restaurants-spatis-and-flea-markets"
+    "anchor": "restaurants-spatis-and-flea-markets",
+    "images": []
   },
   {
     "id": "7d2b5f05b3",
@@ -45,7 +50,8 @@
     "section": "What stays open",
     "title": "Museums",
     "text": "Some museums and tourist attractions stay open on Sundays.",
-    "anchor": "museums"
+    "anchor": "museums",
+    "images": []
   },
   {
     "id": "2db514de6f",
@@ -53,7 +59,8 @@
     "section": "What stays open",
     "title": "Public transit",
     "text": "You can still use trains, trams and buses. Trains are less frequent.",
-    "anchor": "public-transit"
+    "anchor": "public-transit",
+    "images": []
   },
   {
     "id": "bbbdbcfcd6",
@@ -61,7 +68,8 @@
     "section": "What is open on public holidays?",
     "title": "",
     "text": "If a business can open on Sundays, it can open on public holidays. Some businesses still choose to close on public holidays. List of public holidays in Berlin",
-    "anchor": "what-is-open-on-public-holidays"
+    "anchor": "what-is-open-on-public-holidays",
+    "images": []
   },
   {
     "id": "083caa06c0",
@@ -69,6 +77,7 @@
     "section": "Sunday shopping days",
     "title": "",
     "text": "There are up to 8 Sunday shopping days ( Verkaufsoffene Sonntage) per year. On those Sundays, shops can open from 13:00 to 20:00. Those days are announced in advance on Berlin.de. List of Sunday shopping days – Berlin.de These shops usually open on Sunday shopping days: Most shopping malls Some furniture stores Some electronics stores Some supermarkets",
-    "anchor": "sunday-shopping-days"
+    "anchor": "sunday-shopping-days",
+    "images": []
   }
 ]

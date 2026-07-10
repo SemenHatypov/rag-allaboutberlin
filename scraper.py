@@ -11,7 +11,7 @@ import json
 import logging
 import re
 import time
-from dataclasses import asdict, dataclass, replace
+from dataclasses import asdict, dataclass, field, replace
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -50,6 +50,7 @@ class GuideSection:
     title: str          # h3 sub-heading or empty string
     text: str           # plain text content of that block
     anchor: str = ""    # heading id for deep-linking (h3 id, else h2 id, else "")
+    images: list = field(default_factory=list)  # [{"url", "caption"}] figures in this section
 
 
 def fetch_html(url: str, session: requests.Session | None = None) -> str:
@@ -138,10 +139,13 @@ def parse_guide_page(html: str, slug: str) -> list[GuideSection]:
     current_h2_id = ""
     current_h3_id = ""
     buffer: list[str] = []
+    img_buffer: list[dict] = []
 
-    def flush(h2: str, h3: str, h2_id: str, h3_id: str, buf: list[str]) -> None:
+    def flush(h2: str, h3: str, h2_id: str, h3_id: str, buf: list[str], imgs: list[dict]) -> None:
         text = " ".join(buf).strip()
         if text:
+            seen: set[str] = set()
+            deduped = [im for im in imgs if not (im["url"] in seen or seen.add(im["url"]))]
             sections.append(GuideSection(
                 id=make_id(slug, h2, h3),
                 guide=slug,
@@ -149,21 +153,24 @@ def parse_guide_page(html: str, slug: str) -> list[GuideSection]:
                 title=h3,
                 text=text,
                 anchor=h3_id or h2_id,  # prefer the more specific h3 anchor
+                images=deduped,
             ))
 
     for tag in content.find_all(["h2", "h3", "p", "li", "ul", "ol", "table"], recursive=True):
         if tag.find_parent("nav") is not None:
             continue  # skip breadcrumbs and the table-of-contents nav
         if tag.name == "h2":
-            flush(current_h2, current_h3, current_h2_id, current_h3_id, buffer)
+            flush(current_h2, current_h3, current_h2_id, current_h3_id, buffer, img_buffer)
             buffer = []
+            img_buffer = []
             current_h2 = clean_text(tag)
             current_h2_id = tag.get("id") or ""
             current_h3 = ""
             current_h3_id = ""
         elif tag.name == "h3":
-            flush(current_h2, current_h3, current_h2_id, current_h3_id, buffer)
+            flush(current_h2, current_h3, current_h2_id, current_h3_id, buffer, img_buffer)
             buffer = []
+            img_buffer = []
             current_h3 = clean_text(tag)
             current_h3_id = tag.get("id") or ""
         elif tag.name == "p":
@@ -172,6 +179,7 @@ def parse_guide_page(html: str, slug: str) -> list[GuideSection]:
             text = clean_text(tag)
             if text:
                 buffer.append(text)
+            img_buffer.extend(collect_images(tag))
         elif tag.name == "li":
             if tag.find_parent("table") is not None:
                 continue  # cell content is captured by the table handler
@@ -179,6 +187,7 @@ def parse_guide_page(html: str, slug: str) -> list[GuideSection]:
                 text = clean_text(tag)
                 if text:
                     buffer.append(text)
+                img_buffer.extend(collect_images(tag))
         elif tag.name == "table":
             text = serialize_table(tag)
             if text:
@@ -186,7 +195,7 @@ def parse_guide_page(html: str, slug: str) -> list[GuideSection]:
         elif tag.name in ("ul", "ol"):
             pass  # handled via <li>
 
-    flush(current_h2, current_h3, current_h2_id, current_h3_id, buffer)
+    flush(current_h2, current_h3, current_h2_id, current_h3_id, buffer, img_buffer)
     return [s for s in sections if is_valid_section(s)]
 
 
@@ -205,6 +214,20 @@ _WS = re.compile(r"\s+")
 _SPACE_BEFORE_PUNCT = re.compile(r"\s+([.,;:!?%)])")
 _FN_ID = re.compile(r"^fn:")  # footnote target id, e.g. <li id="fn:20">
 _BACKREF = "⤴↩"  # footnote back-reference arrows to strip
+_IMG_EXT = re.compile(r"\.(?:jpe?g|png|webp|gif)(?:\?|#|$)", re.IGNORECASE)
+
+
+def collect_images(tag) -> list[dict]:
+    """Image figures linked inside a tag: <a href="…jpg">caption</a>.
+
+    Guides link screenshots (tax ID letter, payslips) as image-file anchors rather
+    than inline <img>, so the anchor text doubles as a caption.
+    """
+    images: list[dict] = []
+    for a in tag.find_all("a", href=True):
+        if _IMG_EXT.search(a["href"]):
+            images.append({"url": a["href"], "caption": clean_text(a)})
+    return images
 
 
 def clean_text(tag) -> str:

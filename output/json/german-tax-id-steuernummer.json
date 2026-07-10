@@ -5,7 +5,8 @@
     "section": "",
     "title": "",
     "text": "German residents have different tax identification numbers. This guide explains what they are, and where to find them.",
-    "anchor": ""
+    "anchor": "",
+    "images": []
   },
   {
     "id": "aad3a65e09",
@@ -13,7 +14,8 @@
     "section": "The tax ID (Steuer-ID)",
     "title": "",
     "text": "This is your unique, permanent tax identification number. Every German resident has a tax ID. The Finanzamt uses your tax ID to identify you. It has the format “ 12 345 678 901 ”. Your tax ID is permanent; it never changes. The tax ID is also called… Steuerliche Identifikationsnummer Persönliche Identificationsnummer Identifikationsnummer Steuer-IdNr. SteuerID IdNr",
-    "anchor": "the-tax-id-steuer-id"
+    "anchor": "the-tax-id-steuer-id",
+    "images": []
   },
   {
     "id": "6738260db2",
@@ -21,7 +23,8 @@
     "section": "The tax ID (Steuer-ID)",
     "title": "Why you need a tax ID",
     "text": "You need a tax ID to… Get paid correctly If you don’t have a tax ID, you can still work and get paid, but you pay more wage tax. You can get that money back later by filing a tax declaration. Some employers think that you can’t work without a tax ID, but they are wrong. Open a bank account Some banks ask for a tax ID when you open an account. Apply for Kindergeld and Elterngeld Get a Kitagutschein Your children need a tax ID to get a Kitagutschein and send them to daycare. Start a business You need a tax ID to register your business with the Finanzamt.",
-    "anchor": "why-you-need-a-tax-id"
+    "anchor": "why-you-need-a-tax-id",
+    "images": []
   },
   {
     "id": "e083619050",
@@ -29,7 +32,13 @@
     "section": "The tax ID (Steuer-ID)",
     "title": "How to get your tax ID",
     "text": "You get a tax ID when you register your address for the first time. 4 to 6 weeks later, you get a letter from the Bundeszentralamt für Steuern with your tax ID. If you can’t register your address, fill this form. You will get your tax ID by post 4 to 6 weeks later. This does not always work. If you registered your address before, you already have a tax ID. You just need to find it. If you did not get your tax ID after 6 weeks, request it again. You can also go to your local Finanzamt with your passport, and ask for your tax ID. You don’t need an appointment. A lot of people never get their tax ID letter.",
-    "anchor": "how-to-get-your-tax-id"
+    "anchor": "how-to-get-your-tax-id",
+    "images": [
+      {
+        "url": "https://allaboutberlin.com/images/tax-id-document-bzst.jpg",
+        "caption": "a letter from the Bundeszentralamt für Steuern"
+      }
+    ]
   },
   {
     "id": "e278f3f897",
@@ -37,7 +46,29 @@
     "section": "The tax ID (Steuer-ID)",
     "title": "Where to find your tax ID",
     "text": "If you already have a tax ID, you can find it on… The letter from the Bundeszentralamt für Steuern. You get it 4 to 6 weeks after your first Anmeldung Your pay slip ( Gehaltsabrechnung) Your wage tax statement ( Lohnsteuerbescheinigung) as “Identifikationsnummer” Your income tax assessment ( Steuerbescheid) as “IdNr” In ELSTER under Meine Profile If you can’t find your tax ID… Go to your local Finanzamt with your passport, and ask for your tax ID. You don’t need an appointment. If they won’t help you, go to another Finanzamt. Fill this form, and get a letter from the Finanzamt in around 4 weeks. They will send it to the address you registered, not anywhere else. Make sure that your name is on your mailbox. Your employer and your tax advisor also know your tax ID. Ask them.",
-    "anchor": "where-to-find-your-tax-id"
+    "anchor": "where-to-find-your-tax-id",
+    "images": [
+      {
+        "url": "https://allaboutberlin.com/images/tax-id-document-bzst.jpg",
+        "caption": "The letter from the Bundeszentralamt für Steuern"
+      },
+      {
+        "url": "https://allaboutberlin.com/images/Gehaltsabrechnung-muster-steuerID.png",
+        "caption": "pay slip"
+      },
+      {
+        "url": "https://allaboutberlin.com/images/Lohnsteuerbescheinigung-SteuerID.png",
+        "caption": "wage tax statement"
+      },
+      {
+        "url": "https://allaboutberlin.com/images/Einkommensteuerbescheid-SteuerID-Steuernummer.png",
+        "caption": "income tax assessment"
+      },
+      {
+        "url": "https://allaboutberlin.com/images/elster-tax-id.png",
+        "caption": "under Meine Profile"
+      }
+    ]
   },
   {
     "id": "ecbd6d098c",
@@ -45,7 +76,8 @@
     "section": "The tax number (Steuernummer)",
     "title": "",
     "text": "The Steuernummer is for freelancers and businesses. It’s a 10 or 11 digit number, and has the format “ 12/345/67890 ”. It’s sometimes written as “30 12 0 34567890 ” (the first two digits are the number of your Bundesland). It’s also called Steuer-Identnummer or St-Nr.",
-    "anchor": "the-tax-number-steuernummer"
+    "anchor": "the-tax-number-steuernummer",
+    "images": []
   },
   {
     "id": "795e6533bd",
@@ -53,7 +85,8 @@
     "section": "The tax number (Steuernummer)",
     "title": "How to get a Steuernummer",
     "text": "You get a Steuernummer when you register your business with the Finanzamt. You get it by post, 2 to 6 weeks later. If it takes longer, ask your local Finanzamt on the phone or in person. The Steuernummer is unique, but not permanent. If you move your business to another Finanzamt ’s area, you will get a new Steuernummer. You can have multiple Steuernummer for different businesses. When you get your Steuernummer, you must put it in your Impressum, and on your invoices to German customers.",
-    "anchor": "how-to-get-a-steuernummer"
+    "anchor": "how-to-get-a-steuernummer",
+    "images": []
   },
   {
     "id": "305ff291d5",
@@ -61,7 +94,17 @@
     "section": "The tax number (Steuernummer)",
     "title": "Where to find your Steuernummer",
     "text": "If you have a Steuernummer, you can find it… On your income tax assessment ( Steuerbescheid) On most letters from the Finanzamt In ELSTER under Meine Profile",
-    "anchor": "where-to-find-your-steuernummer"
+    "anchor": "where-to-find-your-steuernummer",
+    "images": [
+      {
+        "url": "https://allaboutberlin.com/images/Einkommensteuerbescheid-SteuerID-Steuernummer.png",
+        "caption": "income tax assessment"
+      },
+      {
+        "url": "https://allaboutberlin.com/images/elster-tax-number.png",
+        "caption": "under Meine Profile"
+      }
+    ]
   },
   {
     "id": "e1ee6b821d",
@@ -69,7 +112,8 @@
     "section": "The tax number (Steuernummer)",
     "title": "Where to find a business’ tax number",
     "text": "You can usually find a business’ Steuernummer on their website (in their Impressum), and on their invoices.",
-    "anchor": "where-to-find-a-business-tax-number"
+    "anchor": "where-to-find-a-business-tax-number",
+    "images": []
   },
   {
     "id": "8f6a154041",
@@ -77,7 +121,8 @@
     "section": "The VAT number (Umsatzsteuer-Id)",
     "title": "",
     "text": "The Umsatzsteuer-ID is the German VAT number. It’s a 9 digit number with the format “ DE123456789 ”. This number identifies your business for B2B transactions in the European Union. It proves that you are a business and not a private consumer. Your VAT number must appear on your B2B invoices for EU customers. The VAT number is also called… Umsatzsteuer-Identifikationsnummer USt-Identifikationsnummer USt-IdNr. You can have a VAT number even if you don’t charge VAT. You can also charge VAT without a VAT number. How VAT works in Germany",
-    "anchor": "the-vat-number-umsatzsteuer-id"
+    "anchor": "the-vat-number-umsatzsteuer-id",
+    "images": []
   },
   {
     "id": "ab6d872add",
@@ -85,7 +130,8 @@
     "section": "The VAT number (Umsatzsteuer-Id)",
     "title": "How to get a German VAT number",
     "text": "You get a VAT number when you register your business with the Finanzamt. If you already registered your business, request a VAT number here. A small business ( Kleinunternehmer) that does not charge VAT might not have a VAT number. When you get your VAT number, you must put it in your Impressum, and on your invoices for EU customers.",
-    "anchor": "how-to-get-a-german-vat-number"
+    "anchor": "how-to-get-a-german-vat-number",
+    "images": []
   },
   {
     "id": "f6500d1e07",
@@ -93,6 +139,7 @@
     "section": "The VAT number (Umsatzsteuer-Id)",
     "title": "Where to find a business’ VAT number",
     "text": "You can usually find a business’ VAT number on their website (in their Impressum), and on their invoices. You can check if a VAT number is valid, but it will not give you information about the business.",
-    "anchor": "where-to-find-a-business-vat-number"
+    "anchor": "where-to-find-a-business-vat-number",
+    "images": []
   }
 ]
