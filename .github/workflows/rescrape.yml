@@ -1,0 +1,47 @@
+name: Weekly re-scrape
+
+# Keeps the committed corpus fresh. Runs the scraper and rebuilds the embeddings,
+# then commits output/json/* back to main if anything changed. The scraper needs
+# no secrets (no OPENAI_API_KEY). Enable Actions on the repo to activate this.
+
+on:
+  schedule:
+    - cron: "0 4 * * 1"  # Mondays 04:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rescrape
+  cancel-in-progress: false
+
+jobs:
+  rescrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install dependencies
+        run: uv sync --frozen
+
+      - name: Re-scrape guides
+        run: uv run python scraper.py
+
+      - name: Rebuild embeddings
+        run: uv run python build_embeddings.py
+
+      - name: Commit changes if the corpus moved
+        run: |
+          if [ -n "$(git status --porcelain output/json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add output/json
+            git commit -m "chore: weekly re-scrape of guides"
+            git push
+          else
+            echo "No corpus changes."
+          fi

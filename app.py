@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import logging
 import os
+import re
 
 import streamlit as st
 from dotenv import load_dotenv
@@ -49,6 +50,17 @@ def _load_reranker():
     return CrossEncoder(RERANK_MODEL)
 
 
+_LEADING_NUMBER = re.compile(r"^(\s*\d+)\.")
+
+
+def escape_caption(text: str) -> str:
+    """Escape a leading 'N.' so st.caption doesn't render it as an ordered list.
+
+    Section headings on the site include numbered steps like '5. Apply...'.
+    """
+    return _LEADING_NUMBER.sub(r"\1\\.", text)
+
+
 def _render_sources(sources: list[dict]) -> None:
     if not sources:
         return
@@ -57,7 +69,7 @@ def _render_sources(sources: list[dict]) -> None:
         url = source.get("section_url") or source["url"]
         st.markdown(f"{i}. [{source['guide_name']}]({url})")
         if source.get("sections"):
-            st.caption(" · ".join(source["sections"][:3]))
+            st.caption(escape_caption(" · ".join(source["sections"][:3])))
 
 
 def main() -> None:

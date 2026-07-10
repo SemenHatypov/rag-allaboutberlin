@@ -317,6 +317,14 @@ output/json/
 └── ... (one file per guide)
 ```
 
+After a re-scrape, rebuild the committed embeddings so cold starts stay fast:
+
+```bash
+uv run python build_embeddings.py   # writes output/json/embeddings.npz
+```
+
+**Automated weekly re-scrape:** `.github/workflows/rescrape.yml` runs the scraper + `build_embeddings.py` on a weekly cron (and on manual dispatch) and commits `output/json/*` back to `main` if anything changed. It needs no secrets; enable GitHub Actions on the repo to activate it. Note it auto-commits to `main`.
+
 ### Configuration
 
 Edit the constants at the top of `scraper.py`:
