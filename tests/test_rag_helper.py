@@ -106,6 +106,35 @@ class RaisingClient:
         self.responses = RaisingResponses()
 
 
+class _StreamEvent:
+    def __init__(self, type, delta=""):
+        self.type = type
+        self.delta = delta
+
+
+class StreamingResponses:
+    def __init__(self, deltas):
+        self.deltas = deltas
+        self.last_input = None
+
+    def create(self, model, input, stream=False):
+        self.last_input = input
+        if stream:
+            events = [_StreamEvent("response.output_text.delta", d) for d in self.deltas]
+            events.append(_StreamEvent("response.completed"))  # non-delta event, must be ignored
+            return iter(events)
+
+        class Response:
+            output_text = "".join(self.deltas)
+
+        return Response()
+
+
+class StreamingClient:
+    def __init__(self, deltas):
+        self.responses = StreamingResponses(deltas)
+
+
 MANY_GUIDES = [
     {"guide": f"g{i}", "guide_name": f"Guide {i}",
      "url": f"https://allaboutberlin.com/guides/g{i}", "section": f"S{i}", "text": "..."}
@@ -368,6 +397,27 @@ class TestRerank:
         pipeline = RAGBase(index=index, llm_client=StubClient(), reranker=_schufa_wins_reranker())
         results = pipeline.retrieve("free schufa", num_results=3)
         assert results[0]["guide"] == "schufa"
+
+
+class TestLlmStream:
+    def test_yields_only_text_deltas(self):
+        client = StreamingClient(["He", "llo", " world"])
+        pipeline = RAGBase(index=StubIndex(DOCS), llm_client=client)
+        chunks = list(pipeline.llm_stream("prompt"))
+        assert chunks == ["He", "llo", " world"]
+        assert "".join(chunks) == "Hello world"
+
+    def test_includes_history_in_input(self):
+        client = StreamingClient(["ok"])
+        pipeline = RAGBase(index=StubIndex(DOCS), llm_client=client)
+        list(pipeline.llm_stream("p", history=[{"role": "user", "content": "prior turn"}]))
+        assert any(m["content"] == "prior turn" for m in client.responses.last_input)
+
+    def test_last_message_is_the_prompt(self):
+        client = StreamingClient(["ok"])
+        pipeline = RAGBase(index=StubIndex(DOCS), llm_client=client)
+        list(pipeline.llm_stream("the prompt"))
+        assert client.responses.last_input[-1] == {"role": "user", "content": "the prompt"}
 
 
 class TestMultiTurnPlumbing:

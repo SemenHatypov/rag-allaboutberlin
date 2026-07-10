@@ -10,7 +10,14 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 from ingest import build_vector_index, load_documents, load_guides, load_meta
-from rag_helper import DEFAULT_NUM_RESULTS, RERANK_MODEL, RAGVector
+from rag_helper import (
+    DEFAULT_NUM_RESULTS,
+    MAX_SOURCES,
+    RERANK_MODEL,
+    RAGVector,
+    extract_sources,
+    is_refusal,
+)
 
 load_dotenv()
 
@@ -109,21 +116,23 @@ def main() -> None:
         )
 
         with st.chat_message("assistant"):
-            with st.spinner("Thinking..."):
-                try:
-                    answer, sources = pipeline.rag_with_sources(
+            answer = ""
+            sources: list[dict] = []
+            error: str | None = None
+            try:
+                with st.spinner("Searching the guides..."):
+                    results = pipeline.retrieve(
                         query, history=history, num_results=DEFAULT_NUM_RESULTS
                     )
-                    error: str | None = None
-                except Exception as e:
-                    answer = ""
-                    sources = []
-                    error = friendly_error(e)
+                    prompt = pipeline.build_prompt(query, results)
+                answer = st.write_stream(pipeline.llm_stream(prompt, history=history))
+                sources = [] if is_refusal(answer) else extract_sources(results, limit=MAX_SOURCES)
+            except Exception as e:
+                error = friendly_error(e)
 
             if error:
                 st.error(error)
             else:
-                st.markdown(answer)
                 _render_sources(sources)
 
         if not error:

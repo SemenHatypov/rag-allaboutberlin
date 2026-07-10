@@ -221,16 +221,30 @@ class RAGBase:
             return query
         return rewritten or query
 
-    def llm(self, prompt: str, history: list[dict] | None = None) -> str:
-        input_messages: list[dict] = [{"role": "developer", "content": self.instructions}]
+    def _build_messages(self, prompt: str, history: list[dict] | None = None) -> list[dict]:
+        messages: list[dict] = [{"role": "developer", "content": self.instructions}]
         for msg in (history or [])[-MAX_HISTORY_MESSAGES:]:
-            input_messages.append({"role": msg["role"], "content": msg["content"]})
-        input_messages.append({"role": "user", "content": prompt})
+            messages.append({"role": msg["role"], "content": msg["content"]})
+        messages.append({"role": "user", "content": prompt})
+        return messages
+
+    def llm(self, prompt: str, history: list[dict] | None = None) -> str:
         response = self.llm_client.responses.create(
             model=self.model,
-            input=input_messages,
+            input=self._build_messages(prompt, history),
         )
         return response.output_text
+
+    def llm_stream(self, prompt: str, history: list[dict] | None = None):
+        """Yield answer text deltas as they arrive (for a streamed UI)."""
+        stream = self.llm_client.responses.create(
+            model=self.model,
+            input=self._build_messages(prompt, history),
+            stream=True,
+        )
+        for event in stream:
+            if getattr(event, "type", None) == "response.output_text.delta":
+                yield event.delta
 
     def rag_with_sources(
         self,
