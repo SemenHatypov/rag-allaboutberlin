@@ -111,6 +111,16 @@ GUIDE_PAGE_WITH_TABLE_HTML = """
 </body></html>
 """
 
+GUIDE_PAGE_GLUED_HTML = """
+<html><body>
+<article>
+  <h2>Deregister your address</h2>
+  <p>You deregister at the <strong>Bürgeramt</strong><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">31</a></sup>. It is the fastest way to get the certificate you need.</p>
+  <p>Every person needs 9 m² of living space in the shared apartment overall.</p>
+</article>
+</body></html>
+"""
+
 GUIDE_PAGE_WITH_IDS_HTML = """
 <html><body>
 <article>
@@ -337,6 +347,25 @@ class TestParseGuidePageTables:
     def test_no_duplicate_cell_text(self):
         costs = next(s for s in self.sections if s.section == "Costs")
         assert costs.text.count("10.80 EUR") == 1
+
+
+class TestTextCleaning:
+    def setup_method(self):
+        self.sections = parse_guide_page(GUIDE_PAGE_GLUED_HTML, "abmeldung")
+
+    def test_words_not_glued_across_inline_tags(self):
+        sec = self.sections[0]
+        assert "the Bürgeramt" in sec.text
+        assert "Bürgeramt31" not in sec.text and "BürgeramtIt" not in sec.text
+
+    def test_footnote_marker_removed(self):
+        sec = self.sections[0]
+        assert "31" not in sec.text
+        assert "Bürgeramt. It is" in sec.text  # de-glued and no space before the period
+
+    def test_unit_superscript_preserved(self):
+        text = " ".join(s.text for s in self.sections)
+        assert "9 m²" in text  # literal ², not a <sup>, must survive
 
 
 class TestParseGuidePageAnchors:

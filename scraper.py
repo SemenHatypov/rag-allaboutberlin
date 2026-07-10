@@ -127,6 +127,12 @@ def parse_guide_page(html: str, slug: str) -> list[GuideSection]:
     if content is None:
         return []
 
+    # Footnote reference markers (<sup><a class="footnote-ref">31</a></sup>) glue
+    # digits onto sentences ("the law.31"); drop them. Unit superscripts like m²
+    # are literal characters, not <sup>, so this is safe.
+    for sup in content.find_all("sup"):
+        sup.decompose()
+
     sections: list[GuideSection] = []
     current_h2 = ""
     current_h3 = ""
@@ -152,26 +158,26 @@ def parse_guide_page(html: str, slug: str) -> list[GuideSection]:
         if tag.name == "h2":
             flush(current_h2, current_h3, current_h2_id, current_h3_id, buffer)
             buffer = []
-            current_h2 = tag.get_text(strip=True)
+            current_h2 = clean_text(tag)
             current_h2_id = tag.get("id") or ""
             current_h3 = ""
             current_h3_id = ""
         elif tag.name == "h3":
             flush(current_h2, current_h3, current_h2_id, current_h3_id, buffer)
             buffer = []
-            current_h3 = tag.get_text(strip=True)
+            current_h3 = clean_text(tag)
             current_h3_id = tag.get("id") or ""
         elif tag.name == "p":
             if tag.find_parent("table") is not None:
                 continue  # cell content is captured by the table handler
-            text = tag.get_text(strip=True)
+            text = clean_text(tag)
             if text:
                 buffer.append(text)
         elif tag.name == "li":
             if tag.find_parent("table") is not None:
                 continue  # cell content is captured by the table handler
             if tag.parent and tag.parent.name in ("ul", "ol"):
-                text = tag.get_text(strip=True)
+                text = clean_text(tag)
                 if text:
                     buffer.append(text)
         elif tag.name == "table":
@@ -189,11 +195,28 @@ def serialize_table(table) -> str:
     """Flatten a <table> to text: cells joined by ' | ', rows by newline."""
     rows: list[str] = []
     for tr in table.find_all("tr"):
-        cells = [c.get_text(strip=True) for c in tr.find_all(["th", "td"])]
+        cells = [clean_text(c) for c in tr.find_all(["th", "td"])]
         cells = [c for c in cells if c]
         if cells:
             rows.append(" | ".join(cells))
     return "\n".join(rows).strip()
+
+
+_WS = re.compile(r"\s+")
+_SPACE_BEFORE_PUNCT = re.compile(r"\s+([.,;:!?%)])")
+
+
+def clean_text(tag) -> str:
+    """Text of a tag with words kept separate and whitespace normalized.
+
+    get_text(strip=True) drops the whitespace between inline elements, gluing
+    words together ("theBürgeramt"). Joining with a separator and re-normalizing
+    fixes that; footnote <sup> markers are stripped by the caller beforehand.
+    """
+    text = tag.get_text(separator=" ")
+    text = _WS.sub(" ", text)
+    text = _SPACE_BEFORE_PUNCT.sub(r"\1", text)
+    return text.strip()
 
 
 def is_valid_section(section: GuideSection) -> bool:
