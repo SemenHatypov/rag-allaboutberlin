@@ -36,7 +36,7 @@ from pydantic import BaseModel
 
 from evaluation_utils import calc_total_price, llm_structured_retry, map_progress
 from ingest import build_vector_index, load_documents
-from rag_helper import DEFAULT_NUM_RESULTS, RAGVector, extract_sources, is_refusal
+from rag_helper import DEFAULT_NUM_RESULTS, RERANK_MODEL, RAGVector, extract_sources, is_refusal
 
 load_dotenv()
 
@@ -183,6 +183,7 @@ def main() -> None:
     parser.add_argument("--workers", type=int, default=DEFAULT_WORKERS, help="Parallel cases")
     parser.add_argument("--output", type=Path, default=None, help="Save results JSON here")
     parser.add_argument("--dry-run", action="store_true", help="Estimate cost on 2 cases and exit")
+    parser.add_argument("--no-rerank", action="store_true", help="Skip the cross-encoder reranker")
     args = parser.parse_args()
 
     cases = json.loads(args.cases.read_text(encoding="utf-8"))
@@ -191,8 +192,13 @@ def main() -> None:
     print("Loading documents and building vector index (~30s)...")
     documents = load_documents()
     vindex, embedder = build_vector_index(documents)
+    reranker = None
+    if not args.no_rerank:
+        from sentence_transformers import CrossEncoder
+        print(f"Loading reranker {RERANK_MODEL}...")
+        reranker = CrossEncoder(RERANK_MODEL)
     client = OpenAI(timeout=90.0)
-    pipeline = RAGVector(embedder=embedder, index=vindex, llm_client=client)
+    pipeline = RAGVector(embedder=embedder, index=vindex, llm_client=client, reranker=reranker)
     grade_case = make_grade_case(client, pipeline)
 
     if args.dry_run:

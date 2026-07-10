@@ -321,6 +321,55 @@ class TestLlmHistory:
         assert sent[1] == {"role": "user", "content": "current prompt"}
 
 
+class StubReranker:
+    """Scores each pair by a lookup on the passage text (higher = more relevant)."""
+
+    def __init__(self, scores_by_text):
+        self.scores_by_text = scores_by_text
+
+    def predict(self, pairs):
+        return [self.scores_by_text.get(text, 0.0) for _query, text in pairs]
+
+
+def _schufa_wins_reranker():
+    # bi-encoder order is [anmeldung, schufa, anmeldung]; make schufa the top hit
+    from ingest import embed_text
+    return StubReranker({
+        embed_text(DOCS[0]): 0.1,
+        embed_text(DOCS[1]): 0.9,  # schufa
+        embed_text(DOCS[2]): 0.2,
+    })
+
+
+class TestRerank:
+    def test_reorders_by_reranker_score(self):
+        pipeline = RAGBase(index=StubIndex(DOCS), llm_client=StubClient(), reranker=_schufa_wins_reranker())
+        reordered = pipeline.rerank("free schufa", DOCS)
+        assert reordered[0]["guide"] == "schufa"
+
+    def test_no_reranker_keeps_order(self):
+        pipeline = RAGBase(index=StubIndex(DOCS), llm_client=StubClient())
+        assert pipeline.rerank("q", DOCS) == DOCS
+
+    def test_empty_results(self):
+        reranker = StubReranker({})
+        pipeline = RAGBase(index=StubIndex(DOCS), llm_client=StubClient(), reranker=reranker)
+        assert pipeline.rerank("q", []) == []
+
+    def test_does_not_mutate_input_docs(self):
+        reranker = StubReranker({})
+        pipeline = RAGBase(index=StubIndex(DOCS), llm_client=StubClient(), reranker=reranker)
+        before = [dict(d) for d in DOCS]
+        pipeline.rerank("q", DOCS)
+        assert DOCS == before
+
+    def test_retrieve_applies_rerank(self):
+        index = StubIndex(DOCS)
+        pipeline = RAGBase(index=index, llm_client=StubClient(), reranker=_schufa_wins_reranker())
+        results = pipeline.retrieve("free schufa", num_results=3)
+        assert results[0]["guide"] == "schufa"
+
+
 class TestMultiTurnPlumbing:
     def test_history_drives_condensation_then_answer(self):
         # 1st create() = condense (returns standalone query), 2nd = answer

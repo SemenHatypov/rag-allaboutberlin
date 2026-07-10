@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 from minsearch import Index
 from openai import OpenAI
 
-from ingest import build_index, build_vector_index, guide_url, load_documents
+from ingest import build_index, build_vector_index, embed_text, guide_url, load_documents
 
 load_dotenv()
 
@@ -29,6 +29,11 @@ MAX_SOURCES = 3
 # Most recent conversation messages fed to the LLM for follow-up context
 # (3 exchanges). Older turns are dropped to keep the prompt small.
 MAX_HISTORY_MESSAGES = 6
+
+# Cross-encoder that re-scores the top-k bi-encoder hits by true query-passage
+# relevance. The MiniLM bi-encoder alone sometimes ranks the wrong section first
+# (e.g. Anmeldung "Questions and answers" over "Prepare your documents").
+RERANK_MODEL = "cross-encoder/ms-marco-MiniLM-L6-v2"
 
 # Exact fallback string. Referenced by INSTRUCTIONS (so the model is told to emit
 # it verbatim) and by is_refusal (so the app can detect a refusal). Keep in sync.
@@ -138,6 +143,7 @@ class RAGBase:
         prompt_template: str = PROMPT_TEMPLATE,
         guide: str | None = None,
         model: str = DEFAULT_MODEL,
+        reranker=None,
     ) -> None:
         self.index = index
         self.llm_client = llm_client
@@ -145,6 +151,7 @@ class RAGBase:
         self.prompt_template = prompt_template
         self.guide = guide  # None = search across all guides
         self.model = model
+        self.reranker = reranker  # optional CrossEncoder; None = keep bi-encoder order
 
     def search(self, query: str, num_results: int = DEFAULT_NUM_RESULTS) -> list[dict]:
         boost_dict = {"title": 2.0, "section": 0.5}
@@ -155,6 +162,26 @@ class RAGBase:
             boost_dict=boost_dict,
             filter_dict=filter_dict,
         )
+
+    def rerank(self, query: str, results: list[dict]) -> list[dict]:
+        """Reorder hits by cross-encoder relevance. No reranker → unchanged order."""
+        if self.reranker is None or not results:
+            return results
+        pairs = [(query, embed_text(doc)) for doc in results]
+        scores = self.reranker.predict(pairs)
+        ranked = sorted(zip(results, scores), key=lambda rs: float(rs[1]), reverse=True)
+        return [doc for doc, _ in ranked]
+
+    def retrieve(
+        self,
+        query: str,
+        history: list[dict] | None = None,
+        num_results: int = DEFAULT_NUM_RESULTS,
+    ) -> list[dict]:
+        """Condense the query against history, search, then rerank the hits."""
+        search_query = self.condense_query(query, history or [])
+        results = self.search(search_query, num_results=num_results)
+        return self.rerank(search_query, results)
 
     def build_context(self, search_results: list[dict]) -> str:
         lines: list[str] = []
@@ -212,13 +239,12 @@ class RAGBase:
         num_results: int = DEFAULT_NUM_RESULTS,
     ) -> tuple[str, list[dict]]:
         history = history or []
-        search_query = self.condense_query(query, history)
-        search_results = self.search(search_query, num_results=num_results)
-        prompt = self.build_prompt(query, search_results)
+        results = self.retrieve(query, history, num_results=num_results)
+        prompt = self.build_prompt(query, results)
         answer = self.llm(prompt, history=history)
         if is_refusal(answer):
             return answer, []
-        return answer, extract_sources(search_results, limit=MAX_SOURCES)
+        return answer, extract_sources(results, limit=MAX_SOURCES)
 
     def rag(self, query: str) -> str:
         return self.rag_with_sources(query)[0]

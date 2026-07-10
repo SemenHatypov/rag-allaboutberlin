@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 from ingest import build_vector_index, load_documents, load_guides, load_meta
-from rag_helper import DEFAULT_NUM_RESULTS, RAGVector
+from rag_helper import DEFAULT_NUM_RESULTS, RERANK_MODEL, RAGVector
 
 load_dotenv()
 
@@ -19,6 +19,13 @@ def _load_index() -> tuple:
     documents = load_documents()
     vindex, embedder = build_vector_index(documents)
     return vindex, embedder
+
+
+@st.cache_resource(show_spinner=False)
+def _load_reranker():
+    from sentence_transformers import CrossEncoder
+
+    return CrossEncoder(RERANK_MODEL)
 
 
 def _render_sources(sources: list[dict]) -> None:
@@ -53,8 +60,9 @@ def main() -> None:
 
     client = OpenAI(api_key=api_key)
 
-    with st.spinner("Building vector index (first load ~1 min)..."):
+    with st.spinner("Loading the search index..."):
         vindex, embedder = _load_index()
+        reranker = _load_reranker()
 
     with st.sidebar:
         if st.button("Clear chat", use_container_width=True):
@@ -83,6 +91,7 @@ def main() -> None:
             embedder=embedder,
             index=vindex,
             llm_client=client,
+            reranker=reranker,
         )
 
         with st.chat_message("assistant"):
