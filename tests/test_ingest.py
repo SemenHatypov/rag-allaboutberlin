@@ -2,7 +2,18 @@
 
 import json
 
-from ingest import guide_url, load_documents, load_guides, load_meta
+import numpy as np
+
+from ingest import (
+    EMBEDDINGS_FILE,
+    corpus_fingerprint,
+    embed_text,
+    guide_url,
+    load_cached_vectors,
+    load_documents,
+    load_guides,
+    load_meta,
+)
 
 GUIDES_INDEX = [
     {
@@ -145,3 +156,58 @@ class TestLoadMeta:
 
     def test_missing_file_returns_empty_dict(self, tmp_path):
         assert load_meta(tmp_path) == {}
+
+
+EMB_DOCS = [
+    {"guide": "a", "section": "Sec A", "title": "", "text": "First document body."},
+    {"guide": "b", "section": "Sec B", "title": "Sub", "text": "Second document body."},
+]
+
+
+def write_embeddings(json_dir, documents, model="all-MiniLM-L6-v2", fingerprint=None, vectors=None):
+    if vectors is None:
+        vectors = np.ones((len(documents), 4), dtype=np.float32)
+    if fingerprint is None:
+        fingerprint = corpus_fingerprint(documents)
+    np.savez(json_dir / EMBEDDINGS_FILE, vectors=vectors, model=model, fingerprint=fingerprint)
+
+
+class TestEmbedText:
+    def test_concatenates_section_title_text(self):
+        assert embed_text(EMB_DOCS[1]) == "Sec B Sub Second document body."
+
+    def test_handles_missing_fields(self):
+        assert embed_text({"text": "only body"}) == "only body"
+
+
+class TestCorpusFingerprint:
+    def test_is_deterministic(self):
+        assert corpus_fingerprint(EMB_DOCS) == corpus_fingerprint(EMB_DOCS)
+
+    def test_changes_when_text_changes(self):
+        changed = [EMB_DOCS[0], {**EMB_DOCS[1], "text": "different body"}]
+        assert corpus_fingerprint(changed) != corpus_fingerprint(EMB_DOCS)
+
+
+class TestLoadCachedVectors:
+    def test_missing_file_returns_none(self, tmp_path):
+        assert load_cached_vectors(EMB_DOCS, json_dir=tmp_path) is None
+
+    def test_returns_vectors_on_match(self, tmp_path):
+        write_embeddings(tmp_path, EMB_DOCS)
+        vectors = load_cached_vectors(EMB_DOCS, json_dir=tmp_path)
+        assert vectors is not None
+        assert vectors.shape == (2, 4)
+
+    def test_model_mismatch_returns_none(self, tmp_path):
+        write_embeddings(tmp_path, EMB_DOCS, model="some-other-model")
+        assert load_cached_vectors(EMB_DOCS, json_dir=tmp_path) is None
+
+    def test_fingerprint_mismatch_returns_none(self, tmp_path):
+        # cache built for a different corpus → stale, must not be used
+        write_embeddings(tmp_path, EMB_DOCS, fingerprint="stale")
+        assert load_cached_vectors(EMB_DOCS, json_dir=tmp_path) is None
+
+    def test_length_mismatch_returns_none(self, tmp_path):
+        write_embeddings(tmp_path, EMB_DOCS, vectors=np.ones((1, 4), dtype=np.float32))
+        assert load_cached_vectors(EMB_DOCS, json_dir=tmp_path) is None
