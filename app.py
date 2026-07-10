@@ -15,6 +15,7 @@ from rag_helper import (
     DEFAULT_NUM_RESULTS,
     MAX_SOURCES,
     RERANK_MODEL,
+    RERANK_SCORE_FLOOR,
     RAGVector,
     extract_sources,
     is_refusal,
@@ -138,7 +139,11 @@ def main() -> None:
                     )
                     prompt = pipeline.build_prompt(query, results)
                 answer = st.write_stream(pipeline.llm_stream(prompt, history=history))
-                sources = [] if is_refusal(answer) else extract_sources(results, limit=MAX_SOURCES)
+                sources = (
+                    []
+                    if is_refusal(answer)
+                    else extract_sources(results, limit=MAX_SOURCES, min_score=RERANK_SCORE_FLOOR)
+                )
             except Exception as e:
                 error = friendly_error(e)
 

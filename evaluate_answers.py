@@ -36,7 +36,15 @@ from pydantic import BaseModel
 
 from evaluation_utils import calc_total_price, llm_structured_retry, map_progress
 from ingest import build_vector_index, load_documents
-from rag_helper import DEFAULT_NUM_RESULTS, RERANK_MODEL, RAGVector, extract_sources, is_refusal
+from rag_helper import (
+    DEFAULT_NUM_RESULTS,
+    MAX_SOURCES,
+    RERANK_MODEL,
+    RERANK_SCORE_FLOOR,
+    RAGVector,
+    extract_sources,
+    is_refusal,
+)
 
 load_dotenv()
 
@@ -75,7 +83,12 @@ class CaseVerdict(BaseModel):
 
 
 def run_case(pipeline: RAGVector, case: dict) -> dict:
-    """Run all turns of a case through the real pipeline, threading history."""
+    """Run all turns of a case through the real pipeline, threading history.
+
+    Mirrors the app: search → rerank → build prompt from the reranked hits, and
+    derive the citation list with the same relevance gate the UI applies, so
+    source-precision checks reflect what the user actually sees.
+    """
     history: list[dict] = []
     transcript: list[dict] = []
     context = ""
@@ -83,6 +96,7 @@ def run_case(pipeline: RAGVector, case: dict) -> dict:
     for turn in case["turns"]:
         search_query = pipeline.condense_query(turn, history)
         results = pipeline.search(search_query, num_results=DEFAULT_NUM_RESULTS)
+        results = pipeline.rerank(search_query, results)
         context = pipeline.build_context(results)
         prompt = pipeline.build_prompt(turn, results)
         answer = pipeline.llm(prompt, history=history)
@@ -92,7 +106,8 @@ def run_case(pipeline: RAGVector, case: dict) -> dict:
             {"role": "assistant", "content": answer},
         ]
     final_answer = transcript[-1]["answer"]
-    cited = [s["guide"] for s in extract_sources(results)]
+    # The gated, capped citation list shown to the user (matches app.py).
+    cited = [s["guide"] for s in extract_sources(results, limit=MAX_SOURCES, min_score=RERANK_SCORE_FLOOR)]
     return {"transcript": transcript, "context": context, "final_answer": final_answer, "cited": cited}
 
 
@@ -110,14 +125,36 @@ def build_judge_prompt(case: dict, run: dict) -> str:
     return "\n".join(lines)
 
 
-def passed(case: dict, verdict: CaseVerdict, refused_exact: bool) -> bool:
+def source_precision_ok(case: dict, cited: list[str] | None) -> bool:
+    """Check the citation list against a case's source expectations.
+
+    - single_guide: exactly the one expected guide is cited (catches over-citation,
+      e.g. Deutschlandticket padding the list with Pfand/electric-bill guides).
+    - min_sources: at least N guides cited and every expected_guides slug survives
+      (catches the relevance gate over-trimming a genuinely multi-guide answer).
+
+    No source expectation on the case → always True. cited=None (not evaluated) → True.
+    """
+    if cited is None:
+        return True
+    if case.get("single_guide"):
+        return cited == [case["expected_guide"]]
+    if case.get("min_sources"):
+        expected = set(case.get("expected_guides", []))
+        return len(cited) >= case["min_sources"] and expected.issubset(set(cited))
+    return True
+
+
+def passed(case: dict, verdict: CaseVerdict, refused_exact: bool, cited: list[str] | None = None) -> bool:
     ctype = case["type"]
     if ctype == "offtopic":
         return refused_exact or verdict.refused
     if ctype == "factual":
-        return not refused_exact and verdict.grounded and verdict.on_topic
+        base = not refused_exact and verdict.grounded and verdict.on_topic
+        return base and source_precision_ok(case, cited)
     if ctype == "multiturn":
-        return not refused_exact and verdict.on_topic
+        base = not refused_exact and verdict.on_topic
+        return base and source_precision_ok(case, cited)
     if ctype == "wrong_city":
         # Acceptable to either flag the Berlin scope or refuse outright — both avoid
         # the failure mode we care about (a confident answer for the wrong city).
@@ -136,15 +173,19 @@ def make_grade_case(client: OpenAI, pipeline: RAGVector):
             hit = None
             if case.get("expected_guide"):
                 hit = case["expected_guide"] in run["cited"]
+            has_source_expectation = bool(case.get("single_guide") or case.get("min_sources"))
+            src_ok = source_precision_ok(case, run["cited"]) if has_source_expectation else None
             record = {
                 "id": case["id"],
                 "type": case["type"],
-                "passed": passed(case, verdict, refused_exact),
+                "passed": passed(case, verdict, refused_exact, cited=run["cited"]),
                 "refused": refused_exact or verdict.refused,
                 "grounded": verdict.grounded,
                 "on_topic": verdict.on_topic,
                 "scope_caveat": verdict.scope_caveat,
                 "hit": hit,
+                "source_ok": src_ok,
+                "cited": run["cited"],
                 "reasoning": verdict.reasoning,
                 "final_answer": run["final_answer"],
             }
@@ -159,13 +200,14 @@ def make_grade_case(client: OpenAI, pipeline: RAGVector):
 
 def print_report(records: list[dict]) -> None:
     print("\n=== Answer-quality results ===")
-    print(f"{'id':<5} {'type':<11} {'pass':<5} {'refused':<8} {'grounded':<9} {'on_topic':<9} {'caveat':<7} {'hit':<5}")
+    print(f"{'id':<5} {'type':<11} {'pass':<5} {'refused':<8} {'grounded':<9} {'on_topic':<9} {'caveat':<7} {'hit':<5} {'src':<5}")
     for r in sorted(records, key=lambda r: r["id"]):
         mark = "PASS" if r.get("passed") else "FAIL"
         hit = "-" if r.get("hit") is None else ("yes" if r["hit"] else "no")
+        src = "-" if r.get("source_ok") is None else ("yes" if r["source_ok"] else "no")
         print(f"{r['id']:<5} {r['type']:<11} {mark:<5} "
               f"{str(r.get('refused', '')):<8} {str(r.get('grounded', '')):<9} "
-              f"{str(r.get('on_topic', '')):<9} {str(r.get('scope_caveat', '')):<7} {hit:<5}")
+              f"{str(r.get('on_topic', '')):<9} {str(r.get('scope_caveat', '')):<7} {hit:<5} {src:<5}")
 
     by_type: dict[str, list[bool]] = {}
     for r in records:

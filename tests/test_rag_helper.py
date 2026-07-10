@@ -4,6 +4,8 @@ from rag_helper import (
     DEFAULT_NUM_RESULTS,
     MAX_SOURCES,
     NO_ANSWER,
+    RERANK_SCORE_FLOOR,
+    RERANK_SCORE_MARGIN,
     RAGBase,
     RAGVector,
     extract_sources,
@@ -376,9 +378,19 @@ class TestRerank:
         reordered = pipeline.rerank("free schufa", DOCS)
         assert reordered[0]["guide"] == "schufa"
 
-    def test_no_reranker_keeps_order(self):
+    def test_attaches_rerank_score(self):
+        pipeline = RAGBase(index=StubIndex(DOCS), llm_client=StubClient(), reranker=_schufa_wins_reranker())
+        reordered = pipeline.rerank("free schufa", DOCS)
+        # top hit is schufa (0.9); scores are carried through, in descending order
+        assert reordered[0]["rerank_score"] == 0.9
+        scores = [d["rerank_score"] for d in reordered]
+        assert scores == sorted(scores, reverse=True)
+
+    def test_no_reranker_keeps_order_and_no_score(self):
         pipeline = RAGBase(index=StubIndex(DOCS), llm_client=StubClient())
-        assert pipeline.rerank("q", DOCS) == DOCS
+        result = pipeline.rerank("q", DOCS)
+        assert result == DOCS
+        assert all("rerank_score" not in d for d in result)
 
     def test_empty_results(self):
         reranker = StubReranker({})
@@ -434,3 +446,103 @@ class TestMultiTurnPlumbing:
         # the answer call carried the conversation history
         answer_input = client.responses.inputs[1]
         assert any(m["content"] == "earlier question" for m in answer_input)
+
+
+def _scored_doc(guide, score, section="S", name=None):
+    """A retrieved chunk already carrying a rerank_score (as rerank() would set)."""
+    return {
+        "guide": guide,
+        "guide_name": name or guide,
+        "url": f"https://allaboutberlin.com/guides/{guide}",
+        "section": section,
+        "text": "...",
+        "rerank_score": score,
+    }
+
+
+class TestExtractSourcesRelevanceGate:
+    def test_drops_noise_below_floor_keeping_single_source(self):
+        # DT-shaped: one strong guide, a negative-scoring tail (the reported bug).
+        docs = [
+            _scored_doc("deutschland-ticket", 1.54),
+            _scored_doc("saving-money-germany", -1.89),
+            _scored_doc("eyeglasses", -5.21),
+        ]
+        sources = extract_sources(docs, limit=MAX_SOURCES, min_score=RERANK_SCORE_FLOOR)
+        assert [s["guide"] for s in sources] == ["deutschland-ticket"]
+
+    def test_margin_drops_positive_but_far_below_top(self):
+        # Abmeldung-shaped: the #2 guide scores well (>floor) but is >MARGIN below top.
+        docs = [
+            _scored_doc("abmeldung", 7.75),
+            _scored_doc("start-a-business-in-germany", 3.90),  # >0 but gap 3.85 > 3.0
+        ]
+        sources = extract_sources(docs, limit=MAX_SOURCES, min_score=RERANK_SCORE_FLOOR)
+        assert [s["guide"] for s in sources] == ["abmeldung"]
+
+    def test_keeps_multiple_closely_scored_guides(self):
+        # Freelance-visa-shaped: several guides score near the top → all kept.
+        docs = [
+            _scored_doc("freelance-visa-letter-of-intent", 5.68),
+            _scored_doc("freelance-visa", 5.65),  # gap 0.03
+            _scored_doc("permanent-residence", 4.19),  # gap 1.49
+        ]
+        sources = extract_sources(docs, limit=MAX_SOURCES, min_score=RERANK_SCORE_FLOOR)
+        assert [s["guide"] for s in sources] == [
+            "freelance-visa-letter-of-intent",
+            "freelance-visa",
+            "permanent-residence",
+        ]
+
+    def test_always_keeps_top_even_when_below_floor(self):
+        # A weak answer still shows its single best source (never zero on a real answer).
+        docs = [_scored_doc("obscure-guide", -1.0)]
+        sources = extract_sources(docs, limit=MAX_SOURCES, min_score=RERANK_SCORE_FLOOR)
+        assert [s["guide"] for s in sources] == ["obscure-guide"]
+
+    def test_no_min_score_disables_gate(self):
+        docs = [
+            _scored_doc("deutschland-ticket", 1.54),
+            _scored_doc("saving-money-germany", -1.89),
+        ]
+        sources = extract_sources(docs, limit=MAX_SOURCES)  # min_score default None
+        assert [s["guide"] for s in sources] == ["deutschland-ticket", "saving-money-germany"]
+
+    def test_unscored_docs_are_not_gated(self):
+        # Keyword path / retrieval eval: docs carry no rerank_score, so min_score is a no-op.
+        docs = [
+            {"guide": "a", "guide_name": "A", "section": "S", "text": "..."},
+            {"guide": "b", "guide_name": "B", "section": "S", "text": "..."},
+        ]
+        sources = extract_sources(docs, limit=MAX_SOURCES, min_score=RERANK_SCORE_FLOOR)
+        assert [s["guide"] for s in sources] == ["a", "b"]
+
+    def test_does_not_leak_internal_score_key(self):
+        docs = [_scored_doc("deutschland-ticket", 1.54)]
+        sources = extract_sources(docs, limit=MAX_SOURCES, min_score=RERANK_SCORE_FLOOR)
+        assert "_best_score" not in sources[0]
+        assert "rerank_score" not in sources[0]
+
+    def test_margin_constant_boundary_is_inclusive(self):
+        # A guide exactly MARGIN below the top is kept (>= / <= boundaries).
+        docs = [
+            _scored_doc("top", 5.0),
+            _scored_doc("edge", 5.0 - RERANK_SCORE_MARGIN),
+        ]
+        sources = extract_sources(docs, min_score=RERANK_SCORE_FLOOR)
+        assert [s["guide"] for s in sources] == ["top", "edge"]
+
+
+class TestRagWithSourcesRelevanceGate:
+    def test_reranked_pipeline_drops_irrelevant_source(self):
+        # anmeldung chunks score high, schufa chunk scores negative → schufa dropped.
+        from ingest import embed_text
+
+        reranker = StubReranker({
+            embed_text(DOCS[0]): 5.0,   # anmeldung
+            embed_text(DOCS[1]): -1.0,  # schufa (below floor)
+            embed_text(DOCS[2]): 4.0,   # anmeldung
+        })
+        pipeline = RAGBase(index=StubIndex(DOCS), llm_client=StubClient(), reranker=reranker)
+        _, sources = pipeline.rag_with_sources("how do I register?", num_results=3)
+        assert [s["guide"] for s in sources] == ["anmeldung"]

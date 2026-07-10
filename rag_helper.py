@@ -26,6 +26,21 @@ DEFAULT_NUM_RESULTS = 12
 # dilute trust. Kept separate from DEFAULT_NUM_RESULTS on purpose.
 MAX_SOURCES = 3
 
+# Relevance gate for the CITATION list only (never touches the LLM context — it
+# still sees all top-k chunks, so answer quality is unchanged). Gates cited guides
+# by their best cross-encoder rerank score. The rank-1 guide is always kept; a
+# lower-ranked guide is cited only when its best chunk scores at least
+# RERANK_SCORE_FLOOR *and* within RERANK_SCORE_MARGIN of the top guide's score.
+#
+# Values calibrated on real rerank scores (see the 2026-07 source-relevance work):
+# ms-marco-MiniLM emits raw logits (0 ≈ 50% relevance). At FLOOR=0/MARGIN=3 the
+# single-guide questions (Deutschlandticket, Schufa, Abmeldung) collapse to one
+# authoritative source while genuinely multi-guide questions (freelance visa,
+# insurance) keep their 2-3 closely-scored guides. Only applied when scores are
+# present (i.e. a reranker ran); the keyword path and retrieval eval are untouched.
+RERANK_SCORE_FLOOR = 0.0
+RERANK_SCORE_MARGIN = 3.0
+
 # Most recent conversation messages fed to the LLM for follow-up context
 # (3 exchanges). Older turns are dropped to keep the prompt small.
 MAX_HISTORY_MESSAGES = 6
@@ -95,7 +110,37 @@ def format_history(history: list[dict]) -> str:
 # ── Sources ────────────────────────────────────────────────────────────────────
 
 
-def extract_sources(search_results: list[dict], limit: int | None = None) -> list[dict]:
+def _passes_relevance_gate(sources: list[dict], min_score: float | None) -> list[dict]:
+    """Drop weakly-relevant cited guides using their best rerank score.
+
+    Keeps the rank-1 guide always (a non-refusal answer should show at least one
+    source). A later guide survives only when its best chunk scores at least
+    ``min_score`` AND within RERANK_SCORE_MARGIN of the top guide's score.
+
+    A no-op when gating is off (``min_score is None``) or when scores are absent
+    (no reranker ran, so no guide carries "_best_score") — the keyword path and the
+    retrieval eval keep their original behaviour.
+    """
+    if min_score is None or not sources:
+        return sources
+    if not any("_best_score" in s for s in sources):
+        return sources
+    top_score = sources[0]["_best_score"]
+    kept = [sources[0]]
+    for source in sources[1:]:
+        score = source.get("_best_score")
+        if score is None:
+            continue
+        if score >= min_score and (top_score - score) <= RERANK_SCORE_MARGIN:
+            kept.append(source)
+    return kept
+
+
+def extract_sources(
+    search_results: list[dict],
+    limit: int | None = None,
+    min_score: float | None = None,
+) -> list[dict]:
     """Unique guides from ranked search results, preserving rank order.
 
     Each source: {"guide", "guide_name", "url", "section_url", "sections": [str, ...]}
@@ -106,6 +151,10 @@ def extract_sources(search_results: list[dict], limit: int | None = None) -> lis
     limit=None (default) keeps every cited guide — required by the retrieval eval,
     which scores hit_rate/MRR over all cited guides. The app passes limit=MAX_SOURCES
     to trim the citation list shown to the user.
+
+    min_score gates the citation list by rerank relevance (see _passes_relevance_gate
+    and RERANK_SCORE_FLOOR). None (default) disables gating; it is also a no-op when
+    the results carry no rerank scores.
     """
     by_guide: dict[str, dict] = {}
     for doc in search_results:
@@ -122,12 +171,21 @@ def extract_sources(search_results: list[dict], limit: int | None = None) -> lis
                 "section_url": f"{url}#{anchor}" if anchor else url,
                 "sections": [],
             }
+            if "rerank_score" in doc:
+                # Best (first-seen == highest, results are score-sorted) chunk score.
+                source["_best_score"] = doc["rerank_score"]
             by_guide[slug] = source
         section = doc.get("section", "")
         if section and section not in source["sections"]:
             source["sections"].append(section)
     sources = list(by_guide.values())
-    return sources[:limit] if limit is not None else sources
+    sources = _passes_relevance_gate(sources, min_score)
+    if limit is not None:
+        sources = sources[:limit]
+    # "_best_score" is an internal ranking aid, not part of the source contract.
+    for source in sources:
+        source.pop("_best_score", None)
+    return sources
 
 
 # ── RAG class ──────────────────────────────────────────────────────────────────
@@ -164,13 +222,18 @@ class RAGBase:
         )
 
     def rerank(self, query: str, results: list[dict]) -> list[dict]:
-        """Reorder hits by cross-encoder relevance. No reranker → unchanged order."""
+        """Reorder hits by cross-encoder relevance, tagging each with its score.
+
+        No reranker → unchanged order and no score attached. Scores are kept on a
+        new "rerank_score" key (fresh dicts, inputs untouched) so downstream code
+        can gate citations by relevance; see extract_sources.
+        """
         if self.reranker is None or not results:
             return results
         pairs = [(query, embed_text(doc)) for doc in results]
         scores = self.reranker.predict(pairs)
         ranked = sorted(zip(results, scores), key=lambda rs: float(rs[1]), reverse=True)
-        return [doc for doc, _ in ranked]
+        return [{**doc, "rerank_score": float(score)} for doc, score in ranked]
 
     def retrieve(
         self,
@@ -258,7 +321,7 @@ class RAGBase:
         answer = self.llm(prompt, history=history)
         if is_refusal(answer):
             return answer, []
-        return answer, extract_sources(results, limit=MAX_SOURCES)
+        return answer, extract_sources(results, limit=MAX_SOURCES, min_score=RERANK_SCORE_FLOOR)
 
     def rag(self, query: str) -> str:
         return self.rag_with_sources(query)[0]

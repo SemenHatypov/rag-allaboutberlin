@@ -16,18 +16,39 @@
     "id": "1.3",
     "type": "factual",
     "turns": ["What is Schufa and how do I get a free copy of my report?"],
-    "expected_guide": "schufa"
+    "expected_guide": "schufa",
+    "single_guide": true,
+    "note": "Source-precision: whole answer lives in the schufa guide; must cite only it (verified corpus-single-guide)."
   },
   {
     "id": "1.4",
     "type": "factual",
     "turns": ["How much does the Deutschlandticket cost and where do I buy it?"],
-    "expected_guide": "deutschland-ticket"
+    "expected_guide": "deutschland-ticket",
+    "single_guide": true,
+    "note": "The reported bug: must cite only deutschland-ticket, not pad with Pfand/electric-bill guides (verified corpus-single-guide)."
   },
   {
     "id": "1.5",
     "type": "factual",
     "turns": ["Can I do freelance work on the side while employed full-time in Germany?"]
+  },
+  {
+    "id": "1.6",
+    "type": "factual",
+    "turns": ["How do I deregister my address (Abmeldung) in Berlin?"],
+    "expected_guide": "abmeldung",
+    "single_guide": true,
+    "note": "Source-precision: Abmeldung how-to concentrated in the abmeldung guide (verified corpus-single-guide)."
+  },
+  {
+    "id": "1.7",
+    "type": "factual",
+    "turns": ["What is legal insurance in Germany and is it worth it?"],
+    "expected_guide": "legal-insurance",
+    "min_sources": 2,
+    "expected_guides": ["legal-insurance", "insurance"],
+    "note": "Over-trim guard: a genuinely multi-guide answer (legal-insurance + insurance score closely) must keep 2+ sources; catches an overly aggressive relevance gate."
   },
   {
     "id": "2.1",
