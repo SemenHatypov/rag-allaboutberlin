@@ -124,7 +124,7 @@
     "guide": "cost-of-living",
     "section": "Example budget",
     "title": "",
-    "text": "These are my real monthly expenses in 2026. It only includes the bills Imustpay. It does not include buying clothes, replacing broken things, and going out. My rent is also very low, because I have an old rent contract, and I live far from the centre.",
+    "text": "These are my real monthly expenses in 2026. It only includes the bills Imustpay. It does not include buying clothes, replacing broken things, and going out. My rent is also very low, because I have an old rent contract, and I live far from the centre. Description | Monthly | Yearly\nRent | €600 | €7,200\nGroceries | €250 | €3,000\nElectricity | €60 | €720\nPublic transit pass | €63 | €756\nInternet | €40 | €480\nTV tax (Rundfunkbeitrag) | €18 | €210\nMobile phone | €10 | €120\nLiability insurance | €5 | €60\nTotalThis is how much I need to pay the bills | €1,046 | €12,552",
     "anchor": "example-budget"
   }
 ]

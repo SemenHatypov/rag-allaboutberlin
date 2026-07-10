@@ -146,7 +146,7 @@ def parse_guide_page(html: str, slug: str) -> list[GuideSection]:
                 anchor=h3_id or h2_id,  # prefer the more specific h3 anchor
             ))
 
-    for tag in content.find_all(["h2", "h3", "p", "li", "ul", "ol"], recursive=True):
+    for tag in content.find_all(["h2", "h3", "p", "li", "ul", "ol", "table"], recursive=True):
         if tag.find_parent("nav") is not None:
             continue  # skip breadcrumbs and the table-of-contents nav
         if tag.name == "h2":
@@ -162,19 +162,38 @@ def parse_guide_page(html: str, slug: str) -> list[GuideSection]:
             current_h3 = tag.get_text(strip=True)
             current_h3_id = tag.get("id") or ""
         elif tag.name == "p":
+            if tag.find_parent("table") is not None:
+                continue  # cell content is captured by the table handler
             text = tag.get_text(strip=True)
             if text:
                 buffer.append(text)
         elif tag.name == "li":
+            if tag.find_parent("table") is not None:
+                continue  # cell content is captured by the table handler
             if tag.parent and tag.parent.name in ("ul", "ol"):
                 text = tag.get_text(strip=True)
                 if text:
                     buffer.append(text)
+        elif tag.name == "table":
+            text = serialize_table(tag)
+            if text:
+                buffer.append(text)
         elif tag.name in ("ul", "ol"):
             pass  # handled via <li>
 
     flush(current_h2, current_h3, current_h2_id, current_h3_id, buffer)
     return [s for s in sections if is_valid_section(s)]
+
+
+def serialize_table(table) -> str:
+    """Flatten a <table> to text: cells joined by ' | ', rows by newline."""
+    rows: list[str] = []
+    for tr in table.find_all("tr"):
+        cells = [c.get_text(strip=True) for c in tr.find_all(["th", "td"])]
+        cells = [c for c in cells if c]
+        if cells:
+            rows.append(" | ".join(cells))
+    return "\n".join(rows).strip()
 
 
 def is_valid_section(section: GuideSection) -> bool:

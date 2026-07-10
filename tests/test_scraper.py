@@ -97,6 +97,20 @@ GUIDE_PAGE_NO_H2_HTML = """
 </body></html>
 """
 
+GUIDE_PAGE_WITH_TABLE_HTML = """
+<html><body>
+<article>
+  <h2>Costs</h2>
+  <p>Here is what the different services cost you in total.</p>
+  <table>
+    <tr><th>Service</th><th>Price</th></tr>
+    <tr><td>Anmeldung</td><td>Free</td></tr>
+    <tr><td>Vehicle re-registration</td><td>10.80 EUR</td></tr>
+  </table>
+</article>
+</body></html>
+"""
+
 GUIDE_PAGE_WITH_IDS_HTML = """
 <html><body>
 <article>
@@ -304,6 +318,25 @@ class TestParseGuidePage:
         assert not any(s.section == "On this page" for s in sections)
         assert "Real intro paragraph" in all_text
         assert "Real section content" in all_text
+
+
+class TestParseGuidePageTables:
+    def setup_method(self):
+        self.sections = parse_guide_page(GUIDE_PAGE_WITH_TABLE_HTML, "costs-guide")
+
+    def test_table_cells_captured_in_section_text(self):
+        costs = next(s for s in self.sections if s.section == "Costs")
+        assert "Anmeldung | Free" in costs.text
+        assert "Vehicle re-registration | 10.80 EUR" in costs.text
+        assert "Service | Price" in costs.text
+
+    def test_intro_paragraph_and_table_share_the_section(self):
+        costs = next(s for s in self.sections if s.section == "Costs")
+        assert "what the different services cost" in costs.text
+
+    def test_no_duplicate_cell_text(self):
+        costs = next(s for s in self.sections if s.section == "Costs")
+        assert costs.text.count("10.80 EUR") == 1
 
 
 class TestParseGuidePageAnchors:
