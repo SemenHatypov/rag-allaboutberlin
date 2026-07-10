@@ -63,9 +63,9 @@ GUIDE_PAGE_HTML = """
   <p>Start with ImmobilienScout24.</p>
   <ul><li>ImmobilienScout24</li><li>WG-Gesucht</li></ul>
   <h2>The application</h2>
-  <p>Write a short cover letter.</p>
+  <p>Write a short cover letter introducing yourself to the landlord.</p>
   <h3>What to include</h3>
-  <p>Proof of income, SCHUFA report.</p>
+  <p>Proof of income, a SCHUFA report, and copies of your passport.</p>
 </article>
 </body></html>
 """
@@ -93,6 +93,19 @@ GUIDE_PAGE_NO_H2_HTML = """
   <p>Berlin has a tight housing market.</p>
   <h3>Tips</h3>
   <p>Apply quickly.</p>
+</article>
+</body></html>
+"""
+
+GUIDE_PAGE_WITH_IDS_HTML = """
+<html><body>
+<article>
+  <h2 id="finding-a-flat">Finding a flat</h2>
+  <p>The most popular platforms are ImmobilienScout24 and WG-Gesucht here.</p>
+  <h3 id="where-to-search">Where to search</h3>
+  <p>Start with ImmobilienScout24 and check listings every single morning.</p>
+  <h2 id="the-application">The application</h2>
+  <p>Write a short cover letter and attach proof of income documents.</p>
 </article>
 </body></html>
 """
@@ -293,6 +306,23 @@ class TestParseGuidePage:
         assert "Real section content" in all_text
 
 
+class TestParseGuidePageAnchors:
+    def setup_method(self):
+        self.sections = parse_guide_page(GUIDE_PAGE_WITH_IDS_HTML, "find-a-flat-in-berlin")
+
+    def test_h3_id_used_as_anchor_when_present(self):
+        where = next(s for s in self.sections if s.title == "Where to search")
+        assert where.anchor == "where-to-search"
+
+    def test_h2_id_used_when_no_h3(self):
+        application = next(s for s in self.sections if s.section == "The application")
+        assert application.anchor == "the-application"
+
+    def test_anchor_empty_when_headings_have_no_ids(self):
+        sections = parse_guide_page(GUIDE_PAGE_HTML, "find-a-flat-in-berlin")
+        assert all(s.anchor == "" for s in sections)
+
+
 # ---------------------------------------------------------------------------
 # save_json
 # ---------------------------------------------------------------------------
@@ -458,7 +488,7 @@ class TestRun:
         assert isinstance(data, list)
         assert len(data) > 0
         entry = data[0]
-        assert set(entry.keys()) == {"id", "guide", "section", "title", "text"}
+        assert set(entry.keys()) == {"id", "guide", "section", "title", "text", "anchor"}
 
     @responses_lib.activate
     def test_continues_on_guide_fetch_error(self, tmp_path):
@@ -543,3 +573,39 @@ class TestRun:
 
         assert not (tmp_path / "renamed-old-slug.json").exists()
         assert (tmp_path / "guides.json").exists()
+
+    @responses_lib.activate
+    def test_writes_meta_json_with_scraped_at(self, tmp_path):
+        responses_lib.add(
+            responses_lib.GET, f"{BASE_URL}{GUIDES_PATH}", body=GUIDES_INDEX_HTML, status=200,
+        )
+        for slug in ("find-a-flat-in-berlin", "apartment-deposit", "anmeldung"):
+            responses_lib.add(
+                responses_lib.GET, f"{BASE_URL}/guides/{slug}", body=GUIDE_PAGE_HTML, status=200,
+            )
+
+        run(output_dir=tmp_path, delay=0)
+
+        meta = json.loads((tmp_path / "meta.json").read_text())
+        assert "scraped_at" in meta and meta["scraped_at"]
+        assert meta["guides"] == 3
+        assert meta["sections"] > 0
+
+    @responses_lib.activate
+    def test_meta_json_not_deleted_as_stale_on_rerun(self, tmp_path):
+        # a meta.json from a previous run must survive the stale-file sweep
+        (tmp_path / "meta.json").write_text('{"scraped_at": "old"}', encoding="utf-8")
+
+        responses_lib.add(
+            responses_lib.GET, f"{BASE_URL}{GUIDES_PATH}", body=GUIDES_INDEX_HTML, status=200,
+        )
+        for slug in ("find-a-flat-in-berlin", "apartment-deposit", "anmeldung"):
+            responses_lib.add(
+                responses_lib.GET, f"{BASE_URL}/guides/{slug}", body=GUIDE_PAGE_HTML, status=200,
+            )
+
+        run(output_dir=tmp_path, delay=0)
+
+        assert (tmp_path / "meta.json").exists()
+        # and it was refreshed, not left as the old placeholder
+        assert json.loads((tmp_path / "meta.json").read_text())["scraped_at"] != "old"

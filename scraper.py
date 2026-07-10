@@ -12,6 +12,7 @@ import logging
 import re
 import time
 from dataclasses import asdict, dataclass, replace
+from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
@@ -22,6 +23,8 @@ logger = logging.getLogger(__name__)
 BASE_URL = "https://allaboutberlin.com"
 GUIDES_PATH = "/guides"
 OUTPUT_DIR = Path("output/json")
+GUIDES_FILE = "guides.json"
+META_FILE = "meta.json"  # snapshot metadata (scraped_at); not a guide document
 REQUEST_DELAY = 1.0
 REQUEST_TIMEOUT = 15
 MIN_SECTION_TEXT_LEN = 50  # shorter blocks are nav fragments, not substantive content
@@ -46,6 +49,7 @@ class GuideSection:
     section: str        # h2 heading (may be empty string if article has no h2)
     title: str          # h3 sub-heading or empty string
     text: str           # plain text content of that block
+    anchor: str = ""    # heading id for deep-linking (h3 id, else h2 id, else "")
 
 
 def fetch_html(url: str, session: requests.Session | None = None) -> str:
@@ -126,9 +130,11 @@ def parse_guide_page(html: str, slug: str) -> list[GuideSection]:
     sections: list[GuideSection] = []
     current_h2 = ""
     current_h3 = ""
+    current_h2_id = ""
+    current_h3_id = ""
     buffer: list[str] = []
 
-    def flush(h2: str, h3: str, buf: list[str]) -> None:
+    def flush(h2: str, h3: str, h2_id: str, h3_id: str, buf: list[str]) -> None:
         text = " ".join(buf).strip()
         if text:
             sections.append(GuideSection(
@@ -137,20 +143,24 @@ def parse_guide_page(html: str, slug: str) -> list[GuideSection]:
                 section=h2,
                 title=h3,
                 text=text,
+                anchor=h3_id or h2_id,  # prefer the more specific h3 anchor
             ))
 
     for tag in content.find_all(["h2", "h3", "p", "li", "ul", "ol"], recursive=True):
         if tag.find_parent("nav") is not None:
             continue  # skip breadcrumbs and the table-of-contents nav
         if tag.name == "h2":
-            flush(current_h2, current_h3, buffer)
+            flush(current_h2, current_h3, current_h2_id, current_h3_id, buffer)
             buffer = []
             current_h2 = tag.get_text(strip=True)
+            current_h2_id = tag.get("id") or ""
             current_h3 = ""
+            current_h3_id = ""
         elif tag.name == "h3":
-            flush(current_h2, current_h3, buffer)
+            flush(current_h2, current_h3, current_h2_id, current_h3_id, buffer)
             buffer = []
             current_h3 = tag.get_text(strip=True)
+            current_h3_id = tag.get("id") or ""
         elif tag.name == "p":
             text = tag.get_text(strip=True)
             if text:
@@ -163,7 +173,7 @@ def parse_guide_page(html: str, slug: str) -> list[GuideSection]:
         elif tag.name in ("ul", "ol"):
             pass  # handled via <li>
 
-    flush(current_h2, current_h3, buffer)
+    flush(current_h2, current_h3, current_h2_id, current_h3_id, buffer)
     return [s for s in sections if is_valid_section(s)]
 
 
@@ -202,17 +212,29 @@ def _scrape(session: requests.Session, output_dir: Path, delay: float) -> None:
             time.sleep(delay)
 
     _remove_stale_guide_files(output_dir, {e.guide for e in entries})
-    save_json(entries, output_dir / "guides.json")
+    save_json(entries, output_dir / GUIDES_FILE)
     total_sections = sum(e.sections_count for e in entries)
+    _write_meta(output_dir, len(entries), total_sections)
     logger.info("Done. %d guides, %d sections total.", len(entries), total_sections)
     logger.info("Output: %s", output_dir.resolve())
+
+
+def _write_meta(output_dir: Path, guides: int, sections: int) -> None:
+    meta = {
+        "scraped_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "guides": guides,
+        "sections": sections,
+    }
+    output_dir.mkdir(parents=True, exist_ok=True)
+    with open(output_dir / META_FILE, "w", encoding="utf-8") as f:
+        json.dump(meta, f, ensure_ascii=False, indent=2)
 
 
 def _remove_stale_guide_files(output_dir: Path, current_slugs: set[str]) -> None:
     if not output_dir.exists():
         return
     for json_file in output_dir.glob("*.json"):
-        if json_file.stem == "guides":
+        if json_file.name in (GUIDES_FILE, META_FILE):
             continue
         if json_file.stem not in current_slugs:
             logger.info("Removing stale guide file: %s", json_file.name)

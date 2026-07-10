@@ -2,7 +2,7 @@
 
 import json
 
-from ingest import guide_url, load_documents, load_guides
+from ingest import guide_url, load_documents, load_guides, load_meta
 
 GUIDES_INDEX = [
     {
@@ -121,3 +121,27 @@ class TestLoadDocuments:
         documents = load_documents(tmp_path)
         assert len(documents) == 2
         assert documents[0]["guide_name"] == "anmeldung"
+
+    def test_meta_json_is_not_loaded_as_a_document(self, tmp_path):
+        write_corpus(tmp_path)
+        (tmp_path / "meta.json").write_text(
+            json.dumps({"scraped_at": "2026-07-10T00:00:00+00:00"}), encoding="utf-8"
+        )
+        documents = load_documents(tmp_path)
+        # meta.json is a dict, not a list of chunks — must be skipped, not iterated
+        assert len(documents) == 4
+        assert all("scraped_at" not in doc for doc in documents)
+
+
+class TestLoadMeta:
+    def test_reads_scraped_at(self, tmp_path):
+        (tmp_path / "meta.json").write_text(
+            json.dumps({"scraped_at": "2026-07-10T00:00:00+00:00", "guides": 151}),
+            encoding="utf-8",
+        )
+        meta = load_meta(tmp_path)
+        assert meta["scraped_at"] == "2026-07-10T00:00:00+00:00"
+        assert meta["guides"] == 151
+
+    def test_missing_file_returns_empty_dict(self, tmp_path):
+        assert load_meta(tmp_path) == {}

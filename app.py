@@ -8,7 +8,7 @@ import streamlit as st
 from dotenv import load_dotenv
 from openai import OpenAI
 
-from ingest import build_vector_index, load_documents, load_guides
+from ingest import build_vector_index, load_documents, load_guides, load_meta
 from rag_helper import DEFAULT_NUM_RESULTS, RAGVector
 
 load_dotenv()
@@ -22,9 +22,12 @@ def _load_index() -> tuple:
 
 
 def _render_sources(sources: list[dict]) -> None:
+    if not sources:
+        return
     st.markdown("**Sources**")
     for i, source in enumerate(sources, 1):
-        st.markdown(f"{i}. [{source['guide_name']}]({source['url']})")
+        url = source.get("section_url") or source["url"]
+        st.markdown(f"{i}. [{source['guide_name']}]({url})")
         if source.get("sections"):
             st.caption(" · ".join(source["sections"][:3]))
 
@@ -36,7 +39,12 @@ def main() -> None:
         layout="wide",
     )
     st.title("All About Berlin — Ask Me Anything")
-    st.caption(f"Answers based on {len(load_guides())} guides from allaboutberlin.com · Semantic vector search")
+    snapshot = load_meta().get("scraped_at", "")
+    snapshot_note = f" · snapshot {snapshot[:10]}" if snapshot else ""
+    st.caption(
+        f"Answers based on {len(load_guides())} guides from allaboutberlin.com"
+        f"{snapshot_note} · Semantic vector search"
+    )
 
     api_key = os.environ.get("OPENAI_API_KEY", "")
     if not api_key:
@@ -63,6 +71,10 @@ def main() -> None:
                 _render_sources(msg["sources"])
 
     if query := st.chat_input("Ask a question about living in Berlin..."):
+        history = [
+            {"role": m["role"], "content": m["content"]}
+            for m in st.session_state.messages
+        ]
         st.session_state.messages.append({"role": "user", "content": query})
         with st.chat_message("user"):
             st.markdown(query)
@@ -76,7 +88,9 @@ def main() -> None:
         with st.chat_message("assistant"):
             with st.spinner("Thinking..."):
                 try:
-                    answer, sources = pipeline.rag_with_sources(query, num_results=DEFAULT_NUM_RESULTS)
+                    answer, sources = pipeline.rag_with_sources(
+                        query, history=history, num_results=DEFAULT_NUM_RESULTS
+                    )
                     error: str | None = None
                 except Exception as e:
                     answer = ""

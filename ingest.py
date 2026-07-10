@@ -15,6 +15,7 @@ if TYPE_CHECKING:
 DATA_DIR = Path(__file__).parent / "output" / "json"
 DEFAULT_EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 GUIDES_FILE = "guides.json"
+META_FILE = "meta.json"  # snapshot metadata, not a guide document
 BASE_GUIDE_URL = "https://allaboutberlin.com/guides"
 
 
@@ -30,13 +31,22 @@ def load_guides(json_dir: Path = DATA_DIR) -> list[dict]:
         return json.load(f)
 
 
+def load_meta(json_dir: Path = DATA_DIR) -> dict:
+    """Snapshot metadata (scraped_at, counts). Empty dict if not present."""
+    meta_path = Path(json_dir) / META_FILE
+    if not meta_path.exists():
+        return {}
+    with open(meta_path, encoding="utf-8") as f:
+        return json.load(f)
+
+
 def load_documents(json_dir: Path = DATA_DIR) -> list[dict]:
     guides = load_guides(json_dir)
     name_map = {g["guide"]: g["guide_name"] for g in guides}
     url_path_map = {g["guide"]: g.get("url_path") for g in guides}
     documents: list[dict] = []
     for json_file in sorted(Path(json_dir).glob("*.json")):
-        if json_file.name == GUIDES_FILE:
+        if json_file.name in (GUIDES_FILE, META_FILE):
             continue
         with open(json_file, encoding="utf-8") as f:
             file_docs = json.load(f)

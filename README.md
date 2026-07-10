@@ -274,7 +274,26 @@ Vector search finds the correct article **1.5× more often** than BM25 — it is
 
 **Options:** `--method {text,vector,all}` (default `all`), `--tune` (BM25 boost grid search), `--num-results`, `--workers`, `--ground-truth`, `--output` (save results JSON).
 
-> An earlier end-to-end RAG evaluation (answer generation + LLM-as-a-judge relevance verdicts) is available in the git history; it was removed to keep the evaluation focused on retrieval quality.
+### Answer Evaluation (LLM-as-judge)
+
+Retrieval metrics say the right *article* was found; they say nothing about whether the *answer* is grounded, whether a follow-up keeps its topic, or whether an off-topic question is refused. `evaluate_answers.py` covers that gap. It runs the **full** pipeline the app uses — query condensation, retrieval, and generation, threading conversation history — over a curated case set (`answer_eval_cases.json`) and grades each final answer with an LLM judge.
+
+Unlike the retrieval evaluation, this one **makes OpenAI calls and costs money** (generation with `gpt-4o-mini` + judging with `gpt-5.4-mini`, roughly a few cents for the default 14 cases). Use `--dry-run` for a cost estimate first.
+
+```bash
+uv run python evaluate_answers.py --dry-run          # estimate cost, then exit
+uv run python evaluate_answers.py                     # run and print a pass/fail table
+uv run python evaluate_answers.py --output output/answer-eval.json
+```
+
+Case types and their pass criteria:
+
+- **factual** — grounded in the retrieved context, on-topic, not a refusal
+- **multiturn** — the last turn stays on the thread's topic (exercises the history plumbing)
+- **offtopic** — the assistant refuses (`"I don't have information about this in my guides."`)
+- **wrong_city** — the answer flags that the guides only cover Berlin, or refuses (either avoids a confident answer for the wrong city)
+
+The cases are seeded from the 2026-07 evaluation of the deployed app; extend `answer_eval_cases.json` to grow the set. **Options:** `--cases`, `--workers`, `--output`, `--dry-run`.
 
 ### Run the Scraper
 
@@ -361,7 +380,10 @@ class GuideSection:
     section: str        # h2 heading (empty if none)
     title: str          # h3 sub-heading (empty if none)
     text: str           # plain text content
+    anchor: str         # heading id for deep-linking (h3 id, else h2 id, else "")
 ```
+
+The scraper also writes `output/json/meta.json` (`scraped_at`, guide/section counts); `ingest.load_meta()` reads it and the app shows the snapshot date in its header.
 
 ## Architecture
 
