@@ -4,83 +4,95 @@
     "guide": "banking",
     "section": "",
     "title": "",
-    "text": "This guide explains how bank accounts, credit cards and bank transfers work in Germany. It’s an introduction to banking for immigrants. To open a bank account, readhow to choose a bank."
+    "text": "This guide explains how bank accounts, credit cards and bank transfers work in Germany. It’s an introduction to banking for immigrants. To open a bank account, readhow to choose a bank.",
+    "anchor": ""
   },
   {
     "id": "23104a2e97",
     "guide": "banking",
     "section": "Bank accounts",
     "title": "",
-    "text": "You need a bank account to get paid by your employer, pay your rent, pay taxes and buy things online. Many things are only payable bybank transfer. Open a bank account as soon as you arrive in Germany. Best banks for expats You don’t need a German bank account. You can use a bank from anyEUcountry. Only German banks give you aGirocardand a GermanIBAN, but you don’t really need them."
+    "text": "You need a bank account to get paid by your employer, pay your rent, pay taxes and buy things online. Many things are only payable bybank transfer. Open a bank account as soon as you arrive in Germany. Best banks for expats You don’t need a German bank account. You can use a bank from anyEUcountry. Only German banks give you aGirocardand a GermanIBAN, but you don’t really need them.",
+    "anchor": "bank-accounts"
   },
   {
     "id": "fafb290168",
     "guide": "banking",
     "section": "Bank accounts",
     "title": "Types of bank accounts",
-    "text": "TheGirokontoor checking account is your default bank account. You use it to send and receive money. This account pays near 0% interest, so don’t keep a lot of money in it. People usually keep around €2,000in theirGirokonto. All banks must offer a freeGirokontocalled theBasiskonto. TheTagesgeldkontoor savings account is where you keep your extra money. This account pays up to 4% interest. Use aDepotor trading account to invest in stocks and ETFs. This is a popular way to invest money in Germany. Open abusiness accountfor your business. It’s optional, butit’s a really good idea. Some banks don’t let you use your personal account for your business. Having a separate business account makes accounting easier. Foreign students might need ablocked account(Sperrkonto) to get aresidence permit. You put your money into this account, and you get a fixed amount back every month. This guarantees that you will have money to support yourself while you study in Germany. The money you put in yourGirokontoandTagesgeldkontois insured up to €100,000. Even if the bank closes, you get your money back. Money in yourDepotaccount is not insured.4"
+    "text": "TheGirokontoor checking account is your default bank account. You use it to send and receive money. This account pays near 0% interest, so don’t keep a lot of money in it. People usually keep around €2,000in theirGirokonto. All banks must offer a freeGirokontocalled theBasiskonto. TheTagesgeldkontoor savings account is where you keep your extra money. This account pays up to 4% interest. Use aDepotor trading account to invest in stocks and ETFs. This is a popular way to invest money in Germany. Open abusiness accountfor your business. It’s optional, butit’s a really good idea. Some banks don’t let you use your personal account for your business. Having a separate business account makes accounting easier. Foreign students might need ablocked account(Sperrkonto) to get aresidence permit. You put your money into this account, and you get a fixed amount back every month. This guarantees that you will have money to support yourself while you study in Germany. The money you put in yourGirokontoandTagesgeldkontois insured up to €100,000. Even if the bank closes, you get your money back. Money in yourDepotaccount is not insured.4",
+    "anchor": "types-of-bank-accounts"
   },
   {
     "id": "aff88d5cb1",
     "guide": "banking",
     "section": "Bank accounts",
     "title": "Types of banks",
-    "text": "Traditional bankshave physical locations. If you have a problem, you can go to the bank in person. Usually, these banks are old-fashioned: they rely on mail and in-person appointments. Their online services are not so good. Online bankshave no branches. You do everything online. Usually, they have lower fees and much better online banking. It’s much easier to open an account, because you do it directly in their app. In my experience, online banks are better, but traditional banks offer more services. If you need a mortgage or a loan, you usually need a traditional bank. If you want to do everything digitally, online banks usually do it better."
+    "text": "Traditional bankshave physical locations. If you have a problem, you can go to the bank in person. Usually, these banks are old-fashioned: they rely on mail and in-person appointments. Their online services are not so good. Online bankshave no branches. You do everything online. Usually, they have lower fees and much better online banking. It’s much easier to open an account, because you do it directly in their app. In my experience, online banks are better, but traditional banks offer more services. If you need a mortgage or a loan, you usually need a traditional bank. If you want to do everything digitally, online banks usually do it better.",
+    "anchor": "types-of-banks"
   },
   {
     "id": "d67ca10c5d",
     "guide": "banking",
     "section": "Bank accounts",
     "title": "How to open a bank account",
-    "text": "With online banks you usually install their app and follow the instructions. You usually need to have a video call and take photos of your passport. It usually takes around 15 minutes. With traditional banks, you usually need to go to one of their branches in person. You might need an appointment. You usually need your passport orPersonalausweis, and sometimes yourAnmeldebestätigung. Some banks might ask for yourtax ID. If you just moved to Germany, you might not have this yet. You might need to choose another bank."
+    "text": "With online banks you usually install their app and follow the instructions. You usually need to have a video call and take photos of your passport. It usually takes around 15 minutes. With traditional banks, you usually need to go to one of their branches in person. You might need an appointment. You usually need your passport orPersonalausweis, and sometimes yourAnmeldebestätigung. Some banks might ask for yourtax ID. If you just moved to Germany, you might not have this yet. You might need to choose another bank.",
+    "anchor": "how-to-open-a-bank-account"
   },
   {
     "id": "46be556418",
     "guide": "banking",
     "section": "Common payment methods",
     "title": "",
-    "text": "Germans use 4 payment methods: bank transfers, cash, Girocard and Visa/Mastercard. Other payment methods are rarely used."
+    "text": "Germans use 4 payment methods: bank transfers, cash, Girocard and Visa/Mastercard. Other payment methods are rarely used.",
+    "anchor": "common-payment-methods"
   },
   {
     "id": "7889a66213",
     "guide": "banking",
     "section": "Common payment methods",
     "title": "Bank transfers",
-    "text": "In the European Union, you can make instantSEPA transfersfor free. It’s thestandard way to send moneyto other people. A company can regularly take money from your bank account with a direct debit authorisation (SEPA-Lastschriftmandat). People often pay bills and taxes that way."
+    "text": "In the European Union, you can make instantSEPA transfersfor free. It’s thestandard way to send moneyto other people. A company can regularly take money from your bank account with a direct debit authorisation (SEPA-Lastschriftmandat). People often pay bills and taxes that way.",
+    "anchor": "bank-transfers"
   },
   {
     "id": "83ebf97223",
     "guide": "banking",
     "section": "Common payment methods",
     "title": "Cash",
-    "text": "Germans love cash. 58% of their transactions are paid with cash.3They usually have around €100in their wallet, and use an ATM around 3 times per month.3 Many restaurants only accept cash. Most street food kiosks andSpätisonly accept cash. Always have cash with you.Choose a bankwith low ATM fees. When you often pay with cash, you have a lot of coins. There are many ways toget rid of your coins."
+    "text": "Germans love cash. 58% of their transactions are paid with cash.3They usually have around €100in their wallet, and use an ATM around 3 times per month.3 Many restaurants only accept cash. Most street food kiosks andSpätisonly accept cash. Always have cash with you.Choose a bankwith low ATM fees. When you often pay with cash, you have a lot of coins. There are many ways toget rid of your coins.",
+    "anchor": "cash"
   },
   {
     "id": "b6e6b1e8df",
     "guide": "banking",
     "section": "Common payment methods",
     "title": "Girocard/EC-Karte",
-    "text": "A type of payment card that’s only in Germany. It’s still very common.3Many stores only accept cash andGirocards, not Visa or Mastercard. Some European websites accept Girocards. Many banks don’t offer Girocards. You don’t really need one.1If you can pay with Girocard, you can pay with cash."
+    "text": "A type of payment card that’s only in Germany. It’s still very common.3Many stores only accept cash andGirocards, not Visa or Mastercard. Some European websites accept Girocards. Many banks don’t offer Girocards. You don’t really need one.1If you can pay with Girocard, you can pay with cash.",
+    "anchor": "girocardec-karte"
   },
   {
     "id": "a67768391a",
     "guide": "banking",
     "section": "Common payment methods",
     "title": "Visa and Mastercard",
-    "text": "Most businesses accept Visa and Mastercard, but you still need cash. Many restaurants andSpätisonly accept cash. Most websites accept Visa and Mastercard. In Berlin, some government offices don’t accept Visa or Mastercard."
+    "text": "Most businesses accept Visa and Mastercard, but you still need cash. Many restaurants andSpätisonly accept cash. Most websites accept Visa and Mastercard. In Berlin, some government offices don’t accept Visa or Mastercard.",
+    "anchor": "visa-and-mastercard"
   },
   {
     "id": "8bd696a458",
     "guide": "banking",
     "section": "Common payment methods",
     "title": "Other payment methods",
-    "text": "Germans do not use checks or QR code payments. There is no system like Alipay, Cash App, Line Pay, UPI or WeChat Pay. American Express is very rare.2Paypal is common for online purchases.3"
+    "text": "Germans do not use checks or QR code payments. There is no system like Alipay, Cash App, Line Pay, UPI or WeChat Pay. American Express is very rare.2Paypal is common for online purchases.3",
+    "anchor": "other-payment-methods"
   },
   {
     "id": "d11448e688",
     "guide": "banking",
     "section": "Credit cards in Germany",
     "title": "",
-    "text": "Most bank accounts come with a Visa or Mastercarddebitcard. The card only works if there is money in your account. Real credit cards are rare.3Immigrants can rarely get one. You might get a very small limit like €500. Some bank accounts only include avirtual card. That means that you get a credit card number, an expiration code and CVV code, but you don’t get a plastic card. You can only use it with Apple Pay, Google Pay or for online payments. You can usually get a plastic card for a small fee. German credit cards rarely havebenefitslike cashback or points. Some cards have a yearly fee, and come with travel insurance. You can usually get separate travel insurance for cheaper. Twitter(April 2024)⤴ Twitter(April 2024)⤴ Statista(2016 to 2022)⤴ Statista(2016 to 2022)⤴ Bundesbank study(2021)⤴ Bundesbank study(2021)⤴ verbraucherzentrale.de(2023)⤴ verbraucherzentrale.de(2023)⤴"
+    "text": "Most bank accounts come with a Visa or Mastercarddebitcard. The card only works if there is money in your account. Real credit cards are rare.3Immigrants can rarely get one. You might get a very small limit like €500. Some bank accounts only include avirtual card. That means that you get a credit card number, an expiration code and CVV code, but you don’t get a plastic card. You can only use it with Apple Pay, Google Pay or for online payments. You can usually get a plastic card for a small fee. German credit cards rarely havebenefitslike cashback or points. Some cards have a yearly fee, and come with travel insurance. You can usually get separate travel insurance for cheaper. Twitter(April 2024)⤴ Twitter(April 2024)⤴ Statista(2016 to 2022)⤴ Statista(2016 to 2022)⤴ Bundesbank study(2021)⤴ Bundesbank study(2021)⤴ verbraucherzentrale.de(2023)⤴ verbraucherzentrale.de(2023)⤴",
+    "anchor": "credit-cards-in-germany"
   }
 ]

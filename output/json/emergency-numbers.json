@@ -4,55 +4,63 @@
     "guide": "emergency-numbers",
     "section": "",
     "title": "",
-    "text": "If you need to call the emergency services, call112. For the police, call 110."
+    "text": "If you need to call the emergency services, call112. For the police, call 110.",
+    "anchor": ""
   },
   {
     "id": "589c859f75",
     "guide": "emergency-numbers",
     "section": "Police: 110",
     "title": "",
-    "text": "Call110to talk to the police. It works everywhere in Germany."
+    "text": "Call110to talk to the police. It works everywhere in Germany.",
+    "anchor": "police-110"
   },
   {
     "id": "94ef0289a6",
     "guide": "emergency-numbers",
     "section": "Police: 110",
     "title": "Ordnungsamt",
-    "text": "If it’s not urgent, call+49 30 9018 22010. It’s theOrdnungsamt’sCentral Point of Contact(ZAB). You can also usetheir online service. How to make a noise complaint in Berlin"
+    "text": "If it’s not urgent, call+49 30 9018 22010. It’s theOrdnungsamt’sCentral Point of Contact(ZAB). You can also usetheir online service. How to make a noise complaint in Berlin",
+    "anchor": "ordnungsamt"
   },
   {
     "id": "f12ee93308",
     "guide": "emergency-numbers",
     "section": "Ambulance: 112",
     "title": "",
-    "text": "Call112to call an ambulance in Berlin. This number works for all emergencies, everywhere in Europe. They speak English. If it’s not urgent, call116117. They might not speak English."
+    "text": "Call112to call an ambulance in Berlin. This number works for all emergencies, everywhere in Europe. They speak English. If it’s not urgent, call116117. They might not speak English.",
+    "anchor": "ambulance-112"
   },
   {
     "id": "f7e8d06a93",
     "guide": "emergency-numbers",
     "section": "Fire brigade: 112",
     "title": "",
-    "text": "Call112to call the fire department in Berlin. This number works for all emergencies, everywhere in Europe."
+    "text": "Call112to call the fire department in Berlin. This number works for all emergencies, everywhere in Europe.",
+    "anchor": "fire-brigade-112"
   },
   {
     "id": "d3266e9bfb",
     "guide": "emergency-numbers",
     "section": "Poison control centre: +49 30 19240",
     "title": "",
-    "text": "Call the poison control centre of Charité at+49 30 19240. This is a free service."
+    "text": "Call the poison control centre of Charité at+49 30 19240. This is a free service.",
+    "anchor": "poison-control-centre-49-30-19240"
   },
   {
     "id": "6705f2d358",
     "guide": "emergency-numbers",
     "section": "Mental health",
     "title": "",
-    "text": "Call theBerliner Krisendienst. They speak English. This is a free service. English-speaking psychotherapists in Berlin English-speaking psychiatrists in Berlin"
+    "text": "Call theBerliner Krisendienst. They speak English. This is a free service. English-speaking psychotherapists in Berlin English-speaking psychiatrists in Berlin",
+    "anchor": "mental-health"
   },
   {
     "id": "cd3acc05a8",
     "guide": "emergency-numbers",
     "section": "Drugs and addiction: +49 30 19237",
     "title": "",
-    "text": "Call+49 30 19237.This is theDrogennotdienst. They speak English. This is a free service."
+    "text": "Call+49 30 19237.This is theDrogennotdienst. They speak English. This is a free service.",
+    "anchor": "drugs-and-addiction-49-30-19237"
   }
 ]

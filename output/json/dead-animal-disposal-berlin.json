@@ -4,41 +4,47 @@
     "guide": "dead-animal-disposal-berlin",
     "section": "",
     "title": "",
-    "text": "If you have found a dead animal or need to dispose of the body of a deceased pet in Berlin, here is how to proceed."
+    "text": "If you have found a dead animal or need to dispose of the body of a deceased pet in Berlin, here is how to proceed.",
+    "anchor": ""
   },
   {
     "id": "47ac7a0e6a",
     "guide": "dead-animal-disposal-berlin",
     "section": "Wild animals",
     "title": "",
-    "text": "Dead animals – especially wild ones – can carry diseases, so you can’t dunk them in the Restmüll and call it a day. Dead wild animals can be reported to theFriedrichshain-Kreuzeberg Ordnungsamt, who will take care of their safe collection and disposal. Contact them by telephone or by email, give them the location of the animal and a way to reach you, and they will handle the rest."
+    "text": "Dead animals – especially wild ones – can carry diseases, so you can’t dunk them in the Restmüll and call it a day. Dead wild animals can be reported to theFriedrichshain-Kreuzeberg Ordnungsamt, who will take care of their safe collection and disposal. Contact them by telephone or by email, give them the location of the animal and a way to reach you, and they will handle the rest.",
+    "anchor": "wild-animals"
   },
   {
     "id": "98ad659b23",
     "guide": "dead-animal-disposal-berlin",
     "section": "House pets",
     "title": "Burial",
-    "text": "You cannot bury an animal on public grounds or in a park. You can be fined up to €50,000for it. However, you can legally bury your deceased pets on your own property, as long as it’s not in a water conservation area (Wasserschutzgebiet) or right next to a public road or square. You must bury the animal at least 50 centimetres deep. A pet cemetery (Tierfriedhof) is also an option.Tierschutzverein BerlinandTierhimmelwill bury your best friend. Burial costs €10to €350, depending on the animal’s weight."
+    "text": "You cannot bury an animal on public grounds or in a park. You can be fined up to €50,000for it. However, you can legally bury your deceased pets on your own property, as long as it’s not in a water conservation area (Wasserschutzgebiet) or right next to a public road or square. You must bury the animal at least 50 centimetres deep. A pet cemetery (Tierfriedhof) is also an option.Tierschutzverein BerlinandTierhimmelwill bury your best friend. Burial costs €10to €350, depending on the animal’s weight.",
+    "anchor": "burial"
   },
   {
     "id": "491d63d6ee",
     "guide": "dead-animal-disposal-berlin",
     "section": "House pets",
     "title": "Cremation",
-    "text": "There are a fewHaustierkrematoriumsin Berlin. The prices go from €50to €350, depending on the weight of the animal."
+    "text": "There are a fewHaustierkrematoriumsin Berlin. The prices go from €50to €350, depending on the weight of the animal.",
+    "anchor": "cremation"
   },
   {
     "id": "231ac560f5",
     "guide": "dead-animal-disposal-berlin",
     "section": "House pets",
     "title": "Disposal",
-    "text": "Many veterinarians will dispose of animal bodies, albeit for a fee. Alternatively,SecAnimis contracted by the city to dispose of roadkill and other wild animals. You can call them and they will collect your deceased pets for a fee of €10to €30. English speaking veterinarians in Berlin"
+    "text": "Many veterinarians will dispose of animal bodies, albeit for a fee. Alternatively,SecAnimis contracted by the city to dispose of roadkill and other wild animals. You can call them and they will collect your deceased pets for a fee of €10to €30. English speaking veterinarians in Berlin",
+    "anchor": "disposal"
   },
   {
     "id": "302b82163f",
     "guide": "dead-animal-disposal-berlin",
     "section": "Useful links",
     "title": "",
-    "text": "Wohin mit dem toten Haustier?– An official guide from Berlin.de Entsorgung tierischer Nebenprodukte– An official resource for disposing of animal by-products"
+    "text": "Wohin mit dem toten Haustier?– An official guide from Berlin.de Entsorgung tierischer Nebenprodukte– An official resource for disposing of animal by-products",
+    "anchor": "useful-links"
   }
 ]

@@ -4,125 +4,143 @@
     "guide": "dog-ownership",
     "section": "",
     "title": "",
-    "text": "This guide explains what all dog owners in Berlin must know. The rules can be different in the rest of Germany."
+    "text": "This guide explains what all dog owners in Berlin must know. The rules can be different in the rest of Germany.",
+    "anchor": ""
   },
   {
     "id": "5936afb6a5",
     "guide": "dog-ownership",
     "section": "Coming to Germany",
     "title": "",
-    "text": "Taking dogs or cats to Germany– The German Way Moving to the EU with pets– PerPETual"
+    "text": "Taking dogs or cats to Germany– The German Way Moving to the EU with pets– PerPETual",
+    "anchor": "coming-to-germany"
   },
   {
     "id": "7cbd3f960d",
     "guide": "dog-ownership",
     "section": "Registration, taxes and permits",
     "title": "Dog register",
-    "text": "You must register your dog in theHunderegister. It costs €17.50. This is how you register for thedog tax. Register your dog– Berlin.de"
+    "text": "You must register your dog in theHunderegister. It costs €17.50. This is how you register for thedog tax. Register your dog– Berlin.de",
+    "anchor": "dog-register"
   },
   {
     "id": "c2debdc1be",
     "guide": "dog-ownership",
     "section": "Registration, taxes and permits",
     "title": "Dog tax",
-    "text": "After you register your dog, you will pay the dog tax (Hundesteuer) by automaticbank transfer. The dog tax is €120per year for one dog, and €180per year for each extra dog."
+    "text": "After you register your dog, you will pay the dog tax (Hundesteuer) by automaticbank transfer. The dog tax is €120per year for one dog, and €180per year for each extra dog.",
+    "anchor": "dog-tax"
   },
   {
     "id": "c33a857b8c",
     "guide": "dog-ownership",
     "section": "Registration, taxes and permits",
     "title": "Identification chip",
-    "text": "Your dog must have an identification chip.1A veterinarian can chip your dog. It costs around €50.2 English speaking vets in Berlin"
+    "text": "Your dog must have an identification chip.1A veterinarian can chip your dog. It costs around €50.2 English speaking vets in Berlin",
+    "anchor": "identification-chip"
   },
   {
     "id": "e674d79a37",
     "guide": "dog-ownership",
     "section": "Registration, taxes and permits",
     "title": "Dog tag",
-    "text": "Outside your home, your dog must wear a collar with its name and address.3 If you have aHundeführerschein, your dog must also wear its green tag (grüne Plakette).18"
+    "text": "Outside your home, your dog must wear a collar with its name and address.3 If you have aHundeführerschein, your dog must also wear its green tag (grüne Plakette).18",
+    "anchor": "dog-tag"
   },
   {
     "id": "06792dff9d",
     "guide": "dog-ownership",
     "section": "Registration, taxes and permits",
     "title": "Dangerous breeds",
-    "text": "You mustregister dogs of dangerous breeds at theOrdnungsamt. Pitbulls, American Staffordshire Terriers and Bull Terriers are considered dangerous breeds.4 This costs €30. If you move, you must also report the address change. If youleave Berlin, you mustderegister your dogat theOrdnungsamt. Register a dangerous breed– Berlin.de"
+    "text": "You mustregister dogs of dangerous breeds at theOrdnungsamt. Pitbulls, American Staffordshire Terriers and Bull Terriers are considered dangerous breeds.4 This costs €30. If you move, you must also report the address change. If youleave Berlin, you mustderegister your dogat theOrdnungsamt. Register a dangerous breed– Berlin.de",
+    "anchor": "dangerous-breeds"
   },
   {
     "id": "7e56c42bb8",
     "guide": "dog-ownership",
     "section": "Registration, taxes and permits",
     "title": "Hun­de­füh­rer­schein",
-    "text": "Outside your home, your dog must be on a leash.20It must be less than 2 metres long.21There aredog parks(Hundeauslaufgebiet) where your dog can play without a leash. To walk your dog without a leash, you need a dog handler certificate (Hundeführerschein). You can get it at certain dog schools. It costs €80to €100.5You must take a theory exam and a practical exam. In the practical exam, you must prove that your dog follows your commands.5Your dog must be at least 15 months old.6 List of certified dog trainers in Berlin(2016, in German) – Berlin.de When you pass the exam, you receive a certificate (Sachkundenachweis für Hundehalter). You can thenapply for theHundeführerscheinat the localBezirksamt. This costs around €100.7 Apply for the Hundeführerschein(in German) – Berlin.de When you get theHundeführerschein, you also get a green tag (grüne Plakette). Your dog must wear it on its collar. TheOrdnungsamtsometimes patrols parks in Berlin. They give fines to people who walk dogs without a leash, or without aHundeführerschein."
+    "text": "Outside your home, your dog must be on a leash.20It must be less than 2 metres long.21There aredog parks(Hundeauslaufgebiet) where your dog can play without a leash. To walk your dog without a leash, you need a dog handler certificate (Hundeführerschein). You can get it at certain dog schools. It costs €80to €100.5You must take a theory exam and a practical exam. In the practical exam, you must prove that your dog follows your commands.5Your dog must be at least 15 months old.6 List of certified dog trainers in Berlin(2016, in German) – Berlin.de When you pass the exam, you receive a certificate (Sachkundenachweis für Hundehalter). You can thenapply for theHundeführerscheinat the localBezirksamt. This costs around €100.7 Apply for the Hundeführerschein(in German) – Berlin.de When you get theHundeführerschein, you also get a green tag (grüne Plakette). Your dog must wear it on its collar. TheOrdnungsamtsometimes patrols parks in Berlin. They give fines to people who walk dogs without a leash, or without aHundeführerschein.",
+    "anchor": "hundefuhrerschein"
   },
   {
     "id": "37e0d2b676",
     "guide": "dog-ownership",
     "section": "Registration, taxes and permits",
     "title": "TASSO register",
-    "text": "You can add your dog to theTASSO register. It’s free. You will get a dog tag (TASSO-Plakette) with a number on it. This helps people return your dog if it gets lost. The TASSO register is a private initiative. It is not connected with Berlin’sHunderegister. They do not share information.8"
+    "text": "You can add your dog to theTASSO register. It’s free. You will get a dog tag (TASSO-Plakette) with a number on it. This helps people return your dog if it gets lost. The TASSO register is a private initiative. It is not connected with Berlin’sHunderegister. They do not share information.8",
+    "anchor": "tasso-register"
   },
   {
     "id": "9cb2689b9f",
     "guide": "dog-ownership",
     "section": "Insurances for your dog",
     "title": "Dog liability insurance",
-    "text": "You must get dog liability insurance (Hundehaftpflichtversicherung). This insurance covers you if your dog… Harms a person, or another dog Gets another dog pregnant Damages another person’s things Damages the apartment you rent It does not cover you if your dog… Gets sick Bites a member of your family Damages your own property Compare prices withTarifcheck. If you don’t speak German,FeatherandGetsafethe only English-speaking options. Your coverage must be at least 1 million euros.19If you travel with your dog, make sure your insurance also covers you in other countries. If your dog is adangerous breed, make sure your insurance covers dangerous breeds."
+    "text": "You must get dog liability insurance (Hundehaftpflichtversicherung). This insurance covers you if your dog… Harms a person, or another dog Gets another dog pregnant Damages another person’s things Damages the apartment you rent It does not cover you if your dog… Gets sick Bites a member of your family Damages your own property Compare prices withTarifcheck. If you don’t speak German,FeatherandGetsafethe only English-speaking options. Your coverage must be at least 1 million euros.19If you travel with your dog, make sure your insurance also covers you in other countries. If your dog is adangerous breed, make sure your insurance covers dangerous breeds.",
+    "anchor": "dog-liability-insurance"
   },
   {
     "id": "99b7028b65",
     "guide": "dog-ownership",
     "section": "Insurances for your dog",
     "title": "Pet health insurance",
-    "text": "Dog health insurance (Tierkrankenversicherung) is optional. It covers the veterinarian bills when your dog gets sick. It rarely covers routine operations like vaccines or castration, but it covers expensive operations.9This can be important when your dog gets old. The cost depends on your dog’s age, race and sex. Basic coverage costs around €20per month. Full coverage costs around €60per month. Compare prices withTarifcheck. If you don’t speak German,FeatherandGetsafesell pet health insurance, and they speak English."
+    "text": "Dog health insurance (Tierkrankenversicherung) is optional. It covers the veterinarian bills when your dog gets sick. It rarely covers routine operations like vaccines or castration, but it covers expensive operations.9This can be important when your dog gets old. The cost depends on your dog’s age, race and sex. Basic coverage costs around €20per month. Full coverage costs around €60per month. Compare prices withTarifcheck. If you don’t speak German,FeatherandGetsafesell pet health insurance, and they speak English.",
+    "anchor": "pet-health-insurance"
   },
   {
     "id": "f5d777c0ae",
     "guide": "dog-ownership",
     "section": "How to behave with a dog",
     "title": "At home",
-    "text": "You must be nice to your neighbours. If your dog barks all the time, or if you leave dog poop in the community area, you could get kicked out of your apartment.16"
+    "text": "You must be nice to your neighbours. If your dog barks all the time, or if you leave dog poop in the community area, you could get kicked out of your apartment.16",
+    "anchor": "at-home"
   },
   {
     "id": "e41ad55f63",
     "guide": "dog-ownership",
     "section": "How to behave with a dog",
     "title": "Dog poop",
-    "text": "You must collect your dog’s poop, and put it in a trash bin. When you walk your dog, you must carry poop bags with you. If theOrdnungsamtcatches you without a bag, you can get a €35to €250fine."
+    "text": "You must collect your dog’s poop, and put it in a trash bin. When you walk your dog, you must carry poop bags with you. If theOrdnungsamtcatches you without a bag, you can get a €35to €250fine.",
+    "anchor": "dog-poop"
   },
   {
     "id": "3e5201c90f",
     "guide": "dog-ownership",
     "section": "How to behave with a dog",
     "title": "Dogs on public transit",
-    "text": "You can bring dogs on public transit. They might need a ticket too. How to bring dogs on public transit"
+    "text": "You can bring dogs on public transit. They might need a ticket too. How to bring dogs on public transit",
+    "anchor": "dogs-on-public-transit"
   },
   {
     "id": "c94f713f86",
     "guide": "dog-ownership",
     "section": "How to behave with a dog",
     "title": "Dogs in restaurants and stores",
-    "text": "Most businesses allow dogs inside.10Grocery stores do not allow dogs inside. Restaurants and bars only allow dogs if they have a closed kitchen.10Always ask if you can bring your dog inside. You can’t bring your dog to a playground for children,11or on a public beach. There are special beaches (Hundestrände) that allow dogs.12"
+    "text": "Most businesses allow dogs inside.10Grocery stores do not allow dogs inside. Restaurants and bars only allow dogs if they have a closed kitchen.10Always ask if you can bring your dog inside. You can’t bring your dog to a playground for children,11or on a public beach. There are special beaches (Hundestrände) that allow dogs.12",
+    "anchor": "dogs-in-restaurants-and-stores"
   },
   {
     "id": "754d8c3f90",
     "guide": "dog-ownership",
     "section": "How to meet other dog owners",
     "title": "",
-    "text": "In Berlin, use theDog owners in BerlinFacebook group. Most neighbourhoods have unofficial WhatsApp groups for dog owners. Ask other dog owners at the park, or onNebenan."
+    "text": "In Berlin, use theDog owners in BerlinFacebook group. Most neighbourhoods have unofficial WhatsApp groups for dog owners. Ask other dog owners at the park, or onNebenan.",
+    "anchor": "how-to-meet-other-dog-owners"
   },
   {
     "id": "944819a987",
     "guide": "dog-ownership",
     "section": "Dog sitters",
     "title": "",
-    "text": "Use these apps to find a dog sitter: Pawshake Rover TrustedHousesitter"
+    "text": "Use these apps to find a dog sitter: Pawshake Rover TrustedHousesitter",
+    "anchor": "dog-sitters"
   },
   {
     "id": "1b29f68101",
     "guide": "dog-ownership",
     "section": "Finding an apartment with a dog",
     "title": "",
-    "text": "It’s harder tofind an apartmentthat allows dogs.13It’s even harder with big dogs.15Over 60% of landlords don’t want dogs.17Landlords can’t ban all dogs, but they just give the apartment to someone else. Most of the time, you need the landlord’s permission to have a dog.14 How to find an apartment in Berlin § 12 HundeG,couchdogs.de⤴ § 12 HundeG,couchdogs.de⤴ tagesspiegel.de⤴ tagesspiegel.de⤴ check24.de,§ 12 HundeG⤴ check24.de,§ 12 HundeG⤴ berlin.de,hundefuehrerscheininfo.de⤴ berlin.de,hundefuehrerscheininfo.de⤴ berlin.de (archived)⤴ berlin.de (archived)⤴ diehundeschulen.de⤴ diehundeschulen.de⤴ Berlin.de⤴ Berlin.de⤴ Berlin.de⤴ Berlin.de⤴ verbraucherzentrale.de⤴ verbraucherzentrale.de⤴ reddit.com/r/berlin⤴ reddit.com/r/berlin⤴ § 15 HungeG⤴ § 15 HungeG⤴ zooplus.de,ostsee24.de⤴ zooplus.de,ostsee24.de⤴ mydog365.de,wohnglueck.de,Reddit(March 2021),Mietrecht.com⤴ mydog365.de,wohnglueck.de,Reddit(March 2021),Mietrecht.com⤴ dogorama.app(2023),perpetual.care,perpetual.care,test.de(July 2021),mietrecht.de⤴ dogorama.app(2023),perpetual.care,perpetual.care,test.de(July 2021),mietrecht.de⤴ dogorama.app(2023)⤴ dogorama.app(2023)⤴ berlin.de (archived),berlin.de (archived)⤴ berlin.de (archived),berlin.de (archived)⤴ immobilienscout24⤴ immobilienscout24⤴ § 19 HundeG⤴ § 19 HundeG⤴ § 14 HundeG⤴ § 14 HundeG⤴ § 28 HundeG⤴ § 28 HundeG⤴ § 23 HundeG⤴ § 23 HundeG⤴"
+    "text": "It’s harder tofind an apartmentthat allows dogs.13It’s even harder with big dogs.15Over 60% of landlords don’t want dogs.17Landlords can’t ban all dogs, but they just give the apartment to someone else. Most of the time, you need the landlord’s permission to have a dog.14 How to find an apartment in Berlin § 12 HundeG,couchdogs.de⤴ § 12 HundeG,couchdogs.de⤴ tagesspiegel.de⤴ tagesspiegel.de⤴ check24.de,§ 12 HundeG⤴ check24.de,§ 12 HundeG⤴ berlin.de,hundefuehrerscheininfo.de⤴ berlin.de,hundefuehrerscheininfo.de⤴ berlin.de (archived)⤴ berlin.de (archived)⤴ diehundeschulen.de⤴ diehundeschulen.de⤴ Berlin.de⤴ Berlin.de⤴ Berlin.de⤴ Berlin.de⤴ verbraucherzentrale.de⤴ verbraucherzentrale.de⤴ reddit.com/r/berlin⤴ reddit.com/r/berlin⤴ § 15 HungeG⤴ § 15 HungeG⤴ zooplus.de,ostsee24.de⤴ zooplus.de,ostsee24.de⤴ mydog365.de,wohnglueck.de,Reddit(March 2021),Mietrecht.com⤴ mydog365.de,wohnglueck.de,Reddit(March 2021),Mietrecht.com⤴ dogorama.app(2023),perpetual.care,test.de(July 2021),mietrecht.de⤴ dogorama.app(2023),perpetual.care,test.de(July 2021),mietrecht.de⤴ dogorama.app(2023)⤴ dogorama.app(2023)⤴ berlin.de (archived),berlin.de (archived)⤴ berlin.de (archived),berlin.de (archived)⤴ immobilienscout24⤴ immobilienscout24⤴ § 19 HundeG⤴ § 19 HundeG⤴ § 14 HundeG⤴ § 14 HundeG⤴ § 28 HundeG⤴ § 28 HundeG⤴ § 23 HundeG⤴ § 23 HundeG⤴",
+    "anchor": "finding-an-apartment-with-a-dog"
   }
 ]

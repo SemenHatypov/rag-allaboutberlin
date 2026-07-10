@@ -292,7 +292,7 @@
     "guide_name": "How to apply for German permanent residence",
     "category": "Visas and immigration",
     "path": "/json/permanent-residence.json",
-    "sections_count": 34,
+    "sections_count": 33,
     "url_path": "/guides/permanent-residence"
   },
   {
@@ -1188,7 +1188,7 @@
     "guide_name": "Where to get help in Berlin",
     "category": "Getting help",
     "path": "/json/help.json",
-    "sections_count": 15,
+    "sections_count": 14,
     "url_path": "/guides/help"
   },
   {

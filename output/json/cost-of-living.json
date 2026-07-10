@@ -4,111 +4,127 @@
     "guide": "cost-of-living",
     "section": "",
     "title": "",
-    "text": "This guide helps you budget yourmove to Germanyand lower your cost of living."
+    "text": "This guide helps you budget yourmove to Germanyand lower your cost of living.",
+    "anchor": ""
   },
   {
     "id": "a57fd9de10",
     "guide": "cost-of-living",
     "section": "Taxes, insurance and pension",
     "title": "",
-    "text": "Cost:Around 35% of your income. Use mytax calculator. Your employer deductstaxes and social contributionsfrom your paycheck every month. This includesincome tax,health insurance,public pension insuranceandunemployment insurance. Calculate your German net income after income tax and social contributions. This tool requires JavaScript to work. How to pay less taxes"
+    "text": "Cost:Around 35% of your income. Use mytax calculator. Your employer deductstaxes and social contributionsfrom your paycheck every month. This includesincome tax,health insurance,public pension insuranceandunemployment insurance. Calculate your German net income after income tax and social contributions. This tool requires JavaScript to work. How to pay less taxes",
+    "anchor": "taxes-insurance-and-pension"
   },
   {
     "id": "a9822f9512",
     "guide": "cost-of-living",
     "section": "Housing",
     "title": "Rent",
-    "text": "Cost:€600to €900per month (room), €900to €1,600per month (apartment). In Germany, there is the cold rent (Kaltmiete), and the warm rent (Warmmiete). The warm rent includes utilities (Nebenkosten). Rent is usually your biggest expense. An unfurnished apartment costs€16to €25per m². Temporary furnished apartments are more expensive. If you just moved to Germany, you might need to pay more. Recent immigrants usually pay higher rents. They get overpriced furnished apartments because they have no other options. Cheap apartments usually go to long-term residents. After a few months in Germany,lower your rentorfind a cheaper apartment. Rent prices map How to pay less rent"
+    "text": "Cost:€600to €900per month (room), €900to €1,600per month (apartment). In Germany, there is the cold rent (Kaltmiete), and the warm rent (Warmmiete). The warm rent includes utilities (Nebenkosten). Rent is usually your biggest expense. An unfurnished apartment costs€16to €25per m². Temporary furnished apartments are more expensive. If you just moved to Germany, you might need to pay more. Recent immigrants usually pay higher rents. They get overpriced furnished apartments because they have no other options. Cheap apartments usually go to long-term residents. After a few months in Germany,lower your rentorfind a cheaper apartment. Rent prices map How to pay less rent",
+    "anchor": "rent"
   },
   {
     "id": "980379f0bf",
     "guide": "cost-of-living",
     "section": "Housing",
     "title": "Electricity",
-    "text": "Cost:€45to €70per month In Germany, you pay two power bills: The heating and hot water that are usually included in your warm rent (Warmmiete) The electricity and gas for your lights and appliances. This costs €45to €70per month How electric bills work"
+    "text": "Cost:€45to €70per month In Germany, you pay two power bills: The heating and hot water that are usually included in your warm rent (Warmmiete) The electricity and gas for your lights and appliances. This costs €45to €70per month How electric bills work",
+    "anchor": "electricity"
   },
   {
     "id": "9610f43faf",
     "guide": "cost-of-living",
     "section": "Housing",
     "title": "Internet",
-    "text": "Cost:around €40per month For €40per month, you can get a 100 Mbit/s internet connection. Compare internet plans"
+    "text": "Cost:around €40per month For €40per month, you can get a 100 Mbit/s internet connection. Compare internet plans",
+    "anchor": "internet"
   },
   {
     "id": "90152219c3",
     "guide": "cost-of-living",
     "section": "Housing",
     "title": "TV tax",
-    "text": "Cost:€18.36per household per month Every household must pay theTV tax. If you live with other people, you can share the cost. How the TV tax works"
+    "text": "Cost:€18.36per household per month Every household must pay theTV tax. If you live with other people, you can share the cost. How the TV tax works",
+    "anchor": "tv-tax"
   },
   {
     "id": "07da6e7f1d",
     "guide": "cost-of-living",
     "section": "Food",
     "title": "",
-    "text": "Cost:around €200per month If you only eat at home, you should pay around €200per month for groceries. If you eat out, you will spend a lot more. Cost of food and restaurants in Berlin– numbeo"
+    "text": "Cost:around €200per month If you only eat at home, you should pay around €200per month for groceries. If you eat out, you will spend a lot more. Cost of food and restaurants in Berlin– numbeo",
+    "anchor": "food"
   },
   {
     "id": "aa5322ec29",
     "guide": "cost-of-living",
     "section": "Transportation",
     "title": "Public transit",
-    "text": "Cost:€63per month or €4per ride Public transit ticket prices in Berlin How to use public transit"
+    "text": "Cost:€63per month or €4per ride Public transit ticket prices in Berlin How to use public transit",
+    "anchor": "public-transit"
   },
   {
     "id": "035bb5b2fe",
     "guide": "cost-of-living",
     "section": "Transportation",
     "title": "Vehicles",
-    "text": "Cost:at least €100per month In Berlin, you rarely need a car. If you have a car, you must pay for parking,car insurance,vehicle tax, fuel, tires and maintenance. Cost of owning a car You need adriving licenceto drive in Germany. It costs around €2,500to €4,000. You can sometimesconvert your foreign driving licence. It’s cheaper and faster. There is no yearly cost for a driving licence."
+    "text": "Cost:at least €100per month In Berlin, you rarely need a car. If you have a car, you must pay for parking,car insurance,vehicle tax, fuel, tires and maintenance. Cost of owning a car You need adriving licenceto drive in Germany. It costs around €2,500to €4,000. You can sometimesconvert your foreign driving licence. It’s cheaper and faster. There is no yearly cost for a driving licence.",
+    "anchor": "vehicles"
   },
   {
     "id": "e00546124b",
     "guide": "cost-of-living",
     "section": "Mobile phone",
     "title": "",
-    "text": "Cost:€7to €40per month A basic pay-as-you-go data plan costs around €10per month. Plans that include a smartphone are much more expensive. It’s cheaper to buy the phone without a plan. Compare mobile phone plans"
+    "text": "Cost:€7to €40per month A basic pay-as-you-go data plan costs around €10per month. Plans that include a smartphone are much more expensive. It’s cheaper to buy the phone without a plan. Compare mobile phone plans",
+    "anchor": "mobile-phone"
   },
   {
     "id": "f38b7b4394",
     "guide": "cost-of-living",
     "section": "Finances",
     "title": "Banking",
-    "text": "Cost:€0to €10per month Some banks charge a monthly fee. It’s usually around €10per month. Some banks also charge €5to €10when you use an ATM from another network. Find the best German bank"
+    "text": "Cost:€0to €10per month Some banks charge a monthly fee. It’s usually around €10per month. Some banks also charge €5to €10when you use an ATM from another network. Find the best German bank",
+    "anchor": "banking"
   },
   {
     "id": "ae44d176c5",
     "guide": "cost-of-living",
     "section": "Finances",
     "title": "Liability insurance",
-    "text": "Cost:around €5per month Liability insuranceis optional, butreallyimportant. It costs around €5per month. Most Germans have it. How to choose liability insurance"
+    "text": "Cost:around €5per month Liability insuranceis optional, butreallyimportant. It costs around €5per month. Most Germans have it. How to choose liability insurance",
+    "anchor": "liability-insurance"
   },
   {
     "id": "25c92df06e",
     "guide": "cost-of-living",
     "section": "Dogs",
     "title": "",
-    "text": "Cost:at least €50per month If you have a dog, you must pay for dog food,liability insurance,health insurance, dog food anddog tax. The dog tax is €120to €180per year. Dog liability insurance is required, and it costs around €5per month. Pet health insurance is optional, and it costs around €20per month. You can see the price of dog foodhere. Having a dog in Berlin"
+    "text": "Cost:at least €50per month If you have a dog, you must pay for dog food,liability insurance,health insurance, dog food anddog tax. The dog tax is €120to €180per year. Dog liability insurance is required, and it costs around €5per month. Pet health insurance is optional, and it costs around €20per month. You can see the price of dog foodhere. Having a dog in Berlin",
+    "anchor": "dogs"
   },
   {
     "id": "d3441d1d39",
     "guide": "cost-of-living",
     "section": "One time expenses",
     "title": "Apartment deposit (Kaution)",
-    "text": "Who pays it:People who rent an apartment Cost:3 times yourcold rent (Kaltmiete) When youmove into an apartment, you must pay a deposit (Kaution). You can’t touch that money until youmove out. If you live in aWG, the deposit is smaller. Sometimes, there is no deposit. How apartment deposits work"
+    "text": "Who pays it:People who rent an apartment Cost:3 times yourcold rent (Kaltmiete) When youmove into an apartment, you must pay a deposit (Kaution). You can’t touch that money until youmove out. If you live in aWG, the deposit is smaller. Sometimes, there is no deposit. How apartment deposits work",
+    "anchor": "apartment-deposit-kaution"
   },
   {
     "id": "a4ec397aad",
     "guide": "cost-of-living",
     "section": "One time expenses",
     "title": "Furniture, appliances, etc",
-    "text": "Cost:€200to €10,000 When youmove into your first apartment, you must get new furniture, new appliances, kitchen equipment, etc. In Germany, you might even need to buy light fixtures, and a kitchen counter. To save money, buy used furniture. You can find free/cheap furniture onKleinanzeigenandvarious Facebook groups. Where to buy what in Berlin"
+    "text": "Cost:€200to €10,000 When youmove into your first apartment, you must get new furniture, new appliances, kitchen equipment, etc. In Germany, you might even need to buy light fixtures, and a kitchen counter. To save money, buy used furniture. You can find free/cheap furniture onKleinanzeigenandvarious Facebook groups. Where to buy what in Berlin",
+    "anchor": "furniture-appliances-etc"
   },
   {
     "id": "53bb1831d1",
     "guide": "cost-of-living",
     "section": "Example budget",
     "title": "",
-    "text": "These are my real monthly expenses in 2026. It only includes the bills Imustpay. It does not include buying clothes, replacing broken things, and going out. My rent is also very low, because I have an old rent contract, and I live far from the centre."
+    "text": "These are my real monthly expenses in 2026. It only includes the bills Imustpay. It does not include buying clothes, replacing broken things, and going out. My rent is also very low, because I have an old rent contract, and I live far from the centre.",
+    "anchor": "example-budget"
   }
 ]

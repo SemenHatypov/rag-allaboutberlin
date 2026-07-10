@@ -4,111 +4,127 @@
     "guide": "value-added-tax",
     "section": "",
     "title": "",
-    "text": "Value added tax (VAT) is a19% taxon goods and services. This guide explains VAT for German businesses. You must understand this tostart a business in Germany."
+    "text": "Value added tax (VAT) is a19% taxon goods and services. This guide explains VAT for German businesses. You must understand this tostart a business in Germany.",
+    "anchor": ""
   },
   {
     "id": "ce53971d57",
     "guide": "value-added-tax",
     "section": "What is VAT?",
     "title": "",
-    "text": "In Germany, VAT is a 19% tax on most goods and services. In German, it’s calledUmsatzsteuer(USt.) orMehrwertsteuer(MwSt.). VAT isalways included in the advertised price.1If the price label says €20, the customer pays €20includingVAT. VAT included example:On a restaurant menu, a meal costs €15. You pay €12.61for the meal, and €2.39VAT; €15in total. Other EU countries also have a VAT; it’s between 17% and 25%.2"
+    "text": "In Germany, VAT is a 19% tax on most goods and services. In German, it’s calledUmsatzsteuer(USt.) orMehrwertsteuer(MwSt.). VAT isalways included in the advertised price.1If the price label says €20, the customer pays €20includingVAT. VAT included example:On a restaurant menu, a meal costs €15. You pay €12.61for the meal, and €2.39VAT; €15in total. Other EU countries also have a VAT; it’s between 17% and 25%.2",
+    "anchor": "what-is-vat"
   },
   {
     "id": "bb21a2e2cc",
     "guide": "value-added-tax",
     "section": "What is VAT?",
     "title": "Reduced VAT",
-    "text": "Some goods and services have a VAT of 7%, or no VAT.3 Reduced VAT (7%): Food in restaurants and cafés5 Some foods and drinks4 Tickets for museum, theatre, concerts and sport events Artistic, journalistic and copyrighted work Hotel stays Full list(in German) No VAT: Medical treatments: doctors, dentists and therapists Teaching, in some cases Social services, in some cases Insurance Rent for long-term, residential spaces Buying and selling property Full list(in German) – § 4 UStG"
+    "text": "Some goods and services have a VAT of 7%, or no VAT.3 Reduced VAT (7%): Food in restaurants and cafés5 Some foods and drinks4 Tickets for museum, theatre, concerts and sport events Artistic, journalistic and copyrighted work Hotel stays Full list(in German) No VAT: Medical treatments: doctors, dentists and therapists Teaching, in some cases Social services, in some cases Insurance Rent for long-term, residential spaces Buying and selling property Full list(in German) – § 4 UStG",
+    "anchor": "reduced-vat"
   },
   {
     "id": "e98701d656",
     "guide": "value-added-tax",
     "section": "Who must charge VAT",
     "title": "",
-    "text": "Most German businesses must charge 19% VAT, but there are exceptions: When you are a small business (Kleinunternehmer) you choose if you want to charge VAT –More information When your customer is in another country, you don’t always charge VAT. Some goods and serviceshave a VAT of 7%, or no VAT."
+    "text": "Most German businesses must charge 19% VAT, but there are exceptions: When you are a small business (Kleinunternehmer) you choose if you want to charge VAT –More information When your customer is in another country, you don’t always charge VAT. Some goods and serviceshave a VAT of 7%, or no VAT.",
+    "anchor": "who-must-charge-vat"
   },
   {
     "id": "2f80c6d37a",
     "guide": "value-added-tax",
     "section": "Who must charge VAT",
     "title": "Exemption forsmall businesses",
-    "text": "If you are a small business (Kleinunternehmer), you canchoosenot to charge VAT. It makes accounting easier, but it’s not always a good idea. Should you be a Kleinunternehmer?"
+    "text": "If you are a small business (Kleinunternehmer), you canchoosenot to charge VAT. It makes accounting easier, but it’s not always a good idea. Should you be a Kleinunternehmer?",
+    "anchor": "exemption-for-small-businesses"
   },
   {
     "id": "2f16e2762c",
     "guide": "value-added-tax",
     "section": "How to charge VAT",
     "title": "",
-    "text": "Charge VAT on the goods and services you sell. Pay VAT on your business expenses. Calculate the difference between the VAT you charge and the VAT you pay. Tell the difference toFinanzamtwith aVAT return. Pay the difference to theFinanzamtwith abank transfer. If the difference is negative, theFinanzamtpays you.6 Example:You make €20,000in sales, including €3,193VATYou pay €12,000for tools and supplies, including €1,916VATYou must give €1,277to theFinanzamt(€3,193− €1,916) Example with negative VAT:You make €20,000in sales, including €3,193VATYou pay €100,000for new office equipment, including €15,966VATTheFinanzamtmust give you €12,773(€15,966− €3,193)"
+    "text": "Charge VAT on the goods and services you sell. Pay VAT on your business expenses. Calculate the difference between the VAT you charge and the VAT you pay. Tell the difference toFinanzamtwith aVAT return. Pay the difference to theFinanzamtwith abank transfer. If the difference is negative, theFinanzamtpays you.6 Example:You make €20,000in sales, including €3,193VATYou pay €12,000for tools and supplies, including €1,916VATYou must give €1,277to theFinanzamt(€3,193− €1,916) Example with negative VAT:You make €20,000in sales, including €3,193VATYou pay €100,000for new office equipment, including €15,966VATTheFinanzamtmust give you €12,773(€15,966− €3,193)",
+    "anchor": "how-to-charge-vat"
   },
   {
     "id": "d2a7736634",
     "guide": "value-added-tax",
     "section": "How to charge VAT",
     "title": "1. Register for VAT",
-    "text": "When youstart your business, you mustregister it with theFinanzamt. This is how you get aSteuernummerand aVAT number. You must put those numbers on your invoices, and start charging VAT. How to register your business When you fill the registration form, you can register as asmall businessthat does not charge VAT. During the registration, you can give theFinanzamtadirect debit authorization. It lets them take VAT payments directly from your bank account. It saves time, and helps you avoid late payments.7"
+    "text": "When youstart your business, you mustregister it with theFinanzamt. This is how you get aSteuernummerand aVAT number. You must put those numbers on your invoices, and start charging VAT. How to register your business When you fill the registration form, you can register as asmall businessthat does not charge VAT. During the registration, you can give theFinanzamtadirect debit authorization. It lets them take VAT payments directly from your bank account. It saves time, and helps you avoid late payments.7",
+    "anchor": "register-for-vat"
   },
   {
     "id": "09ed8e9b9a",
     "guide": "value-added-tax",
     "section": "How to charge VAT",
     "title": "2. Collect VAT from customers",
-    "text": "You must charge VAT to all your German customers, and some of your EU customers. When to charge VAT If you forget to charge your customers VAT, you must still pay VAT to theFinanzamt.8For example, if you make a €100invoice, and you forget to charge €19for VAT, theFinanzamtstill collects €19from you. If you write incorrect invoices, you can lose money."
+    "text": "You must charge VAT to all your German customers, and some of your EU customers. When to charge VAT If you forget to charge your customers VAT, you must still pay VAT to theFinanzamt.8For example, if you make a €100invoice, and you forget to charge €19for VAT, theFinanzamtstill collects €19from you. If you write incorrect invoices, you can lose money.",
+    "anchor": "collect-vat-from-customers"
   },
   {
     "id": "6c58769585",
     "guide": "value-added-tax",
     "section": "How to charge VAT",
     "title": "3. Submit VAT returns",
-    "text": "If you charge VAT, you must submit VAT returns (Umsatzsteuervoranmeldung). They tell theFinanzamthow much VAT you owe them. There are 4 ways to make VAT returns: Hire atax advisor– safe and easy, but expensive Usetax software for businesses Use a business bank likeQonto,HolviorKontist Do it yourself withELSTER9 Frequency:How often you submit VAT returns depend on how much VAT you paid last year.25 Due date:You must submit your VAT return before the 10th day of the next month.10If that day is a Saturday, Sunday or public holiday, you have until the nextbusiness day.11 If you submit your VAT returns late, you pay a fine (Verspätungszuschlag). The fine is up to 10% of the VAT you owe, maximum €25,000.12"
+    "text": "If you charge VAT, you must submit VAT returns (Umsatzsteuervoranmeldung). They tell theFinanzamthow much VAT you owe them. There are 4 ways to make VAT returns: Hire atax advisor– safe and easy, but expensive Usetax software for businesses Use a business bank likeQonto,HolviorKontist Do it yourself withELSTER9 Frequency:How often you submit VAT returns depend on how much VAT you paid last year.25 Due date:You must submit your VAT return before the 10th day of the next month.10If that day is a Saturday, Sunday or public holiday, you have until the nextbusiness day.11 If you submit your VAT returns late, you pay a fine (Verspätungszuschlag). The fine is up to 10% of the VAT you owe, maximum €25,000.12",
+    "anchor": "submit-vat-returns"
   },
   {
     "id": "7fe8d313d7",
     "guide": "value-added-tax",
     "section": "How to charge VAT",
     "title": "4. Pay VAT to the Finanzamt",
-    "text": "After you submit your VAT return, you must pay theFinanzamtbybank transfer. They will not send you an invoice; you must simply transfer the money.13If you gave theFinanzamtadirect debit authorization, they take the money automatically. If the VAT you paid is more than the VAT you charged, you get a refund from theFinanzamt.14 Due date:The VAT payment is due on the same day as the VAT return: before the 10th day of the next month.13You have 3 more days for the bank transfer to go through. Late submission example 1:You pay your March VAT on April 10. The payment goes through on April 13. You don’t pay a fine, because you paid your VAT on time. Late submission example 2:You pay your March VAT on April 20. You pay a fine, because you paid your VAT late. If you submit your VAT return on time, but you payment is late, you get a fine (Säumniszuschlag). The fine is 1% of the VAT you owe for every month you wait.15 Late payment example:You owe theFinanzamt€5,300. You pay your VAT 2 weeks late. The fine is €53(1% of €5,300).16"
+    "text": "After you submit your VAT return, you must pay theFinanzamtbybank transfer. They will not send you an invoice; you must simply transfer the money.13If you gave theFinanzamtadirect debit authorization, they take the money automatically. If the VAT you paid is more than the VAT you charged, you get a refund from theFinanzamt.14 Due date:The VAT payment is due on the same day as the VAT return: before the 10th day of the next month.13You have 3 more days for the bank transfer to go through. Late submission example 1:You pay your March VAT on April 10. The payment goes through on April 13. You don’t pay a fine, because you paid your VAT on time. Late submission example 2:You pay your March VAT on April 20. You pay a fine, because you paid your VAT late. If you submit your VAT return on time, but you payment is late, you get a fine (Säumniszuschlag). The fine is 1% of the VAT you owe for every month you wait.15 Late payment example:You owe theFinanzamt€5,300. You pay your VAT 2 weeks late. The fine is €53(1% of €5,300).16",
+    "anchor": "pay-vat-to-the-finanzamt"
   },
   {
     "id": "533286c62a",
     "guide": "value-added-tax",
     "section": "How to charge VAT",
     "title": "5. Submit a yearly VAT declaration",
-    "text": "You must also make a yearly VAT declaration (Umsatzsteuererklärung). If you forgot to declare something in your VAT returns, you can make corrections in your VAT declaration.17 Due date:May 31 of the next year.18If yourtax advisorsubmits it for you, they have until September 30.19 If you submit your VAT declaration late, the fine is the same as for a late VAT return: up to 10% of the VAT you owe, maximum €25,000."
+    "text": "You must also make a yearly VAT declaration (Umsatzsteuererklärung). If you forgot to declare something in your VAT returns, you can make corrections in your VAT declaration.17 Due date:May 31 of the next year.18If yourtax advisorsubmits it for you, they have until September 30.19 If you submit your VAT declaration late, the fine is the same as for a late VAT return: up to 10% of the VAT you owe, maximum €25,000.",
+    "anchor": "submit-a-yearly-vat-declaration"
   },
   {
     "id": "36b1ce23b8",
     "guide": "value-added-tax",
     "section": "When to charge VAT",
     "title": "",
-    "text": "If you are a small business (Kleinunternehmer), you never charge VAT. Otherwise, it depends on what you sell, and where your customer is. Use theVAT helperto decide how much VAT to charge."
+    "text": "If you are a small business (Kleinunternehmer), you never charge VAT. Otherwise, it depends on what you sell, and where your customer is. Use theVAT helperto decide how much VAT to charge.",
+    "anchor": "when-to-charge-vat"
   },
   {
     "id": "a8aa8b9a6e",
     "guide": "value-added-tax",
     "section": "When to charge VAT",
     "title": "VAT for customers in Germany",
-    "text": "Charge VAT.If you sell goods of services to customers in Germany, you must charge 19% VAT. Some products and serviceshave a reduced VAT, or not VAT."
+    "text": "Charge VAT.If you sell goods of services to customers in Germany, you must charge 19% VAT. Some products and serviceshave a reduced VAT, or not VAT.",
+    "anchor": "vat-for-customers-in-germany"
   },
   {
     "id": "39e0efff88",
     "guide": "value-added-tax",
     "section": "When to charge VAT",
     "title": "VAT for customers in the EU",
-    "text": "It depends.If your customer is in another EU country, it’s more complicated:20 If you sell to another business(B2B)You charge 0% VAT, and issue a reverse charge invoice.21–How reverse charge works If you sell to a private customer(B2C)If you sell goodsIt depends on how muchB2Crevenueyou get from other EU countries:Less than €10,000in EU salesYou charge the German VAT rate, 19%.More than €10,000in EU salesYou charge the VAT rate in the customer’s country. You must register your business for VAT in the customer’s country, oropen a One Stop Shop. –What is a One Stop Shop?If you sell servicesYou usually charge the German VAT rate, 19%, but there are exceptions:Broadcasting, telecommunication and electronically-supplied servicesYou charge the VAT rate in the customer’s country.22This includes most sales of digital services: software, films, web hosting, courses…26 If you sell goodsIt depends on how muchB2Crevenueyou get from other EU countries:Less than €10,000in EU salesYou charge the German VAT rate, 19%.More than €10,000in EU salesYou charge the VAT rate in the customer’s country. You must register your business for VAT in the customer’s country, oropen a One Stop Shop. –What is a One Stop Shop? Less than €10,000in EU salesYou charge the German VAT rate, 19%. More than €10,000in EU salesYou charge the VAT rate in the customer’s country. You must register your business for VAT in the customer’s country, oropen a One Stop Shop. –What is a One Stop Shop? If you sell servicesYou usually charge the German VAT rate, 19%, but there are exceptions:Broadcasting, telecommunication and electronically-supplied servicesYou charge the VAT rate in the customer’s country.22This includes most sales of digital services: software, films, web hosting, courses…26 Broadcasting, telecommunication and electronically-supplied servicesYou charge the VAT rate in the customer’s country.22This includes most sales of digital services: software, films, web hosting, courses…26 If your customer is in another EU country, your invoice must containspecific information."
+    "text": "It depends.If your customer is in another EU country, it’s more complicated:20 If you sell to another business(B2B)You charge 0% VAT, and issue a reverse charge invoice.21–How reverse charge works If you sell to a private customer(B2C)If you sell goodsIt depends on how muchB2Crevenueyou get from other EU countries:Less than €10,000in EU salesYou charge the German VAT rate, 19%.More than €10,000in EU salesYou charge the VAT rate in the customer’s country. You must register your business for VAT in the customer’s country, oropen a One Stop Shop. –What is a One Stop Shop?If you sell servicesYou usually charge the German VAT rate, 19%, but there are exceptions:Broadcasting, telecommunication and electronically-supplied servicesYou charge the VAT rate in the customer’s country.22This includes most sales of digital services: software, films, web hosting, courses…26 If you sell goodsIt depends on how muchB2Crevenueyou get from other EU countries:Less than €10,000in EU salesYou charge the German VAT rate, 19%.More than €10,000in EU salesYou charge the VAT rate in the customer’s country. You must register your business for VAT in the customer’s country, oropen a One Stop Shop. –What is a One Stop Shop? Less than €10,000in EU salesYou charge the German VAT rate, 19%. More than €10,000in EU salesYou charge the VAT rate in the customer’s country. You must register your business for VAT in the customer’s country, oropen a One Stop Shop. –What is a One Stop Shop? If you sell servicesYou usually charge the German VAT rate, 19%, but there are exceptions:Broadcasting, telecommunication and electronically-supplied servicesYou charge the VAT rate in the customer’s country.22This includes most sales of digital services: software, films, web hosting, courses…26 Broadcasting, telecommunication and electronically-supplied servicesYou charge the VAT rate in the customer’s country.22This includes most sales of digital services: software, films, web hosting, courses…26 If your customer is in another EU country, your invoice must containspecific information.",
+    "anchor": "vat-for-customers-in-the-eu"
   },
   {
     "id": "84958eea79",
     "guide": "value-added-tax",
     "section": "When to charge VAT",
     "title": "VAT for customers outside the EU",
-    "text": "Don’t charge VAT.If your customer is outside the European Union, you must not charge VAT.23 For example, if you sell goods or services to customers in the United States, you must not charge VAT.24"
+    "text": "Don’t charge VAT.If your customer is outside the European Union, you must not charge VAT.23 For example, if you sell goods or services to customers in the United States, you must not charge VAT.24",
+    "anchor": "vat-for-customers-outside-the-eu"
   },
   {
     "id": "f37483e6ee",
     "guide": "value-added-tax",
     "section": "Need help?",
     "title": "",
-    "text": "Where to ask business questions gesetze-im-internet.de,gesetze-im-internet.de⤴ gesetze-im-internet.de,gesetze-im-internet.de⤴ Wikipedia⤴ Wikipedia⤴ § 12 UStG,sumup.com,fuer-gruender.de⤴ § 12 UStG,sumup.com,fuer-gruender.de⤴ Anlage 2 UStG⤴ Anlage 2 UStG⤴ sevdesk.de(October 2025)⤴ sevdesk.de(October 2025)⤴ gruenderplattform.de⤴ gruenderplattform.de⤴ lexware.de⤴ lexware.de⤴ haufe.de⤴ haufe.de⤴ fuer-gruender.de⤴ fuer-gruender.de⤴ lexware.de,gruenderplattform.de⤴ lexware.de,gruenderplattform.de⤴ fuer-gruender.de,sumup.com⤴ fuer-gruender.de,sumup.com⤴ steuern.de,hellotax.com⤴ steuern.de,hellotax.com⤴ gruenderplattform.de⤴ gruenderplattform.de⤴ sumup.com⤴ sumup.com⤴ § 240 AO⤴ § 240 AO⤴ smartsteuer.de⤴ smartsteuer.de⤴ fuer-gruender.de⤴ fuer-gruender.de⤴ fuer-gruender.de⤴ fuer-gruender.de⤴ andrewcross.eu (archived)⤴ andrewcross.eu (archived)⤴ taxation-customs.ec.europa.eu⤴ taxation-customs.ec.europa.eu⤴ accountable.de⤴ accountable.de⤴ Council Directive 2006/112/EC, Article 58⤴ Council Directive 2006/112/EC, Article 58⤴ gruenderplattform.de⤴ gruenderplattform.de⤴ gruenderplattform.de⤴ gruenderplattform.de⤴ lexware.de,§ 18 UStG⤴ lexware.de,§ 18 UStG⤴ Council Directive 2006/112/EC, Annex II⤴ Council Directive 2006/112/EC, Annex II⤴"
+    "text": "Where to ask business questions gesetze-im-internet.de,gesetze-im-internet.de⤴ gesetze-im-internet.de,gesetze-im-internet.de⤴ Wikipedia⤴ Wikipedia⤴ § 12 UStG,sumup.com,fuer-gruender.de⤴ § 12 UStG,sumup.com,fuer-gruender.de⤴ Anlage 2 UStG⤴ Anlage 2 UStG⤴ sevdesk.de(October 2025)⤴ sevdesk.de(October 2025)⤴ gruenderplattform.de⤴ gruenderplattform.de⤴ lexware.de⤴ lexware.de⤴ haufe.de⤴ haufe.de⤴ fuer-gruender.de⤴ fuer-gruender.de⤴ lexware.de,gruenderplattform.de⤴ lexware.de,gruenderplattform.de⤴ fuer-gruender.de,sumup.com⤴ fuer-gruender.de,sumup.com⤴ steuern.de,hellotax.com⤴ steuern.de,hellotax.com⤴ gruenderplattform.de⤴ gruenderplattform.de⤴ sumup.com⤴ sumup.com⤴ § 240 AO⤴ § 240 AO⤴ smartsteuer.de⤴ smartsteuer.de⤴ fuer-gruender.de⤴ fuer-gruender.de⤴ fuer-gruender.de⤴ fuer-gruender.de⤴ andrewcross.eu (archived)⤴ andrewcross.eu (archived)⤴ taxation-customs.ec.europa.eu⤴ taxation-customs.ec.europa.eu⤴ accountable.de⤴ accountable.de⤴ Council Directive 2006/112/EC, Article 58⤴ Council Directive 2006/112/EC, Article 58⤴ gruenderplattform.de⤴ gruenderplattform.de⤴ gruenderplattform.de⤴ gruenderplattform.de⤴ lexware.de,§ 18 UStG⤴ lexware.de,§ 18 UStG⤴ Council Directive 2006/112/EC, Annex II⤴ Council Directive 2006/112/EC, Annex II⤴",
+    "anchor": "need-help"
   }
 ]
