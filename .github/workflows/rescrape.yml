@@ -21,12 +21,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history — needed to mirror the repo to the HF Space
 
       - name: Install uv
         uses: astral-sh/setup-uv@v5
 
       - name: Install dependencies
-        run: uv sync --frozen
+        run: uv sync --frozen --no-dev
 
       - name: Re-scrape guides
         run: uv run python scraper.py
@@ -45,3 +47,17 @@ jobs:
           else
             echo "No corpus changes."
           fi
+
+      # Commits made with GITHUB_TOKEN do not trigger other workflows, so the
+      # deploy-space.yml push job never fires for the auto-commit above.
+      # Mirror to the Hugging Face Space directly instead.
+      - name: Deploy to Hugging Face Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_SPACE: ${{ vars.HF_SPACE }}
+        run: |
+          if [ -z "$HF_TOKEN" ] || [ -z "$HF_SPACE" ]; then
+            echo "HF_TOKEN secret or HF_SPACE variable not set; skipping deploy."
+            exit 0
+          fi
+          git push --force "https://${HF_SPACE%%/*}:${HF_TOKEN}@huggingface.co/spaces/${HF_SPACE}" HEAD:main

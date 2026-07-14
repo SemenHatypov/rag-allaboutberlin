@@ -1,0 +1,8 @@
+[browser]
+gatherUsageStats = false
+
+[server]
+headless = true
+# No hot-reload in production; the watcher also trips over transformers'
+# lazy imports (torchvision tracebacks in the logs).
+fileWatcherType = "none"

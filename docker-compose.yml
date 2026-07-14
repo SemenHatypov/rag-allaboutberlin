@@ -1,0 +1,11 @@
+# Self-hosted deployment (any Docker host): docker compose up -d --build
+# OPENAI_API_KEY comes from the shell or from a .env file next to this file.
+services:
+  app:
+    build: .
+    image: rag-allaboutberlin
+    restart: unless-stopped
+    ports:
+      - "7860:7860"
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY:?OPENAI_API_KEY is required}

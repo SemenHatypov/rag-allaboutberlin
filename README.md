@@ -1,3 +1,14 @@
+---
+title: All About Berlin RAG
+emoji: 🐻
+colorFrom: red
+colorTo: yellow
+sdk: docker
+app_port: 7860
+pinned: false
+short_description: Ask questions about living in Berlin, grounded in guides
+---
+
 # All About Berlin RAG
 
 A scraper, RAG pipeline, and chat interface for [allaboutberlin.com](https://allaboutberlin.com) guides. Scrapes 151 guides into structured JSON, then lets you ask questions about living in Berlin and get short grounded answers from an LLM with clickable links to the source articles — via CLI or a Streamlit chat app.

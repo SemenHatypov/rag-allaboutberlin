@@ -1,0 +1,9 @@
+# Whitelist: only what the image actually needs enters the build context.
+*
+!pyproject.toml
+!uv.lock
+!app.py
+!ingest.py
+!rag_helper.py
+!.streamlit
+!output/json
