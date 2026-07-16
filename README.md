@@ -13,7 +13,7 @@ short_description: Ask questions about living in Berlin, grounded in guides
 
 A scraper, RAG pipeline, and chat interface for [allaboutberlin.com](https://allaboutberlin.com) guides. Scrapes 151 guides into structured JSON, then lets you ask questions about living in Berlin and get short grounded answers from an LLM with clickable links to the source articles — via CLI or a Streamlit chat app.
 
-**🐻 Try it live: [rag-all-about-berlin.streamlit.app](https://rag-all-about-berlin.streamlit.app/)** — no installation needed, just open the link and ask a question in the chat.
+**🐻 Try it live: [skhatypov-rag-all-about-berlin.hf.space](https://skhatypov-rag-all-about-berlin.hf.space)** — no installation needed, just open the link and ask a question in the chat. (Also mirrored on [Streamlit Community Cloud](https://rag-all-about-berlin.streamlit.app/).)
 
 Built as a capstone project for [LLM Zoomcamp](https://github.com/DataTalksClub/llm-zoomcamp) by DataTalksClub.
 
@@ -124,7 +124,7 @@ All commands use `uv run` — no need to activate the virtual environment manual
 
 The easiest way to interact with the RAG system — ask questions in a chat interface.
 
-**Hosted version:** the app is deployed on Streamlit Community Cloud at **[rag-all-about-berlin.streamlit.app](https://rag-all-about-berlin.streamlit.app/)**. Every push to `main` redeploys it automatically. (On the free tier the app goes to sleep after ~12 hours without visitors — the first visitor wakes it up with one click, then the vector index builds in about a minute.)
+**Hosted version:** the app runs as a Docker Space on Hugging Face at **[skhatypov-rag-all-about-berlin.hf.space](https://skhatypov-rag-all-about-berlin.hf.space)** (auto-wakes for any visitor). It is also mirrored on Streamlit Community Cloud at **[rag-all-about-berlin.streamlit.app](https://rag-all-about-berlin.streamlit.app/)** (free tier sleeps after ~12 h idle). Every push to `main` redeploys both. See [docs/DEPLOY.md](docs/DEPLOY.md) for the deployment setup.
 
 To run it locally instead:
 
@@ -349,12 +349,21 @@ REQUEST_TIMEOUT = 15                      # HTTP timeout
 
 ## Deployment
 
-The chat app is hosted on [Streamlit Community Cloud](https://streamlit.io/cloud): **[rag-all-about-berlin.streamlit.app](https://rag-all-about-berlin.streamlit.app/)**
+The chat app is hosted in two places, both redeployed on every push to `main`. Full setup — secrets, tokens, self-hosting — is in **[docs/DEPLOY.md](docs/DEPLOY.md)**.
 
-- **Entry point:** `app.py`, deployed from the `main` branch — every push redeploys automatically
-- **Dependencies:** installed from `uv.lock` (Community Cloud supports uv natively)
+**Primary — Hugging Face Space (Docker):** **[skhatypov-rag-all-about-berlin.hf.space](https://skhatypov-rag-all-about-berlin.hf.space)**
+
+- **Image:** built from the repo [`Dockerfile`](Dockerfile) — models and corpus baked in, so cold starts stay offline and fast
+- **Sync:** [`deploy-space.yml`](.github/workflows/deploy-space.yml) mirrors `main` to the Space as a binary-free snapshot (see DEPLOY.md)
+- **Secrets:** `OPENAI_API_KEY` set in the Space settings
+- **Why:** the Space auto-wakes for any visitor — a reliable link to share
+
+**Mirror — Streamlit Community Cloud:** **[rag-all-about-berlin.streamlit.app](https://rag-all-about-berlin.streamlit.app/)**
+
+- **Entry point:** `app.py`, deployed from `main`; dependencies from `uv.lock` (Community Cloud supports uv natively)
 - **Data:** the scraped guides in `output/json/` are tracked in git, so the app indexes them directly from the repo
-- **Secrets:** `OPENAI_API_KEY` is set in the app's Secrets settings on Community Cloud (exposed to the app as an environment variable)
+- **Secrets:** `OPENAI_API_KEY` set in the app's Secrets settings
+- **Caveat:** the free tier sleeps after ~12 h idle and takes a minute to wake — hence the Hugging Face Space as the primary link
 
 ## Testing
 
