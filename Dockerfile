@@ -25,9 +25,14 @@ RUN python -c "from sentence_transformers import SentenceTransformer, CrossEncod
 # Serve models from the baked cache only — no HF Hub calls at runtime.
 ENV HF_HUB_OFFLINE=1
 
-COPY --chown=user:user app.py ingest.py rag_helper.py ./
+COPY --chown=user:user app.py ingest.py rag_helper.py build_embeddings.py ./
 COPY --chown=user:user .streamlit ./.streamlit
 COPY --chown=user:user output/json ./output/json
+
+# The HF Space snapshot ships without embeddings.npz (HF rejects committed
+# binaries), so bake it here from the corpus + cached model. Self-host/local
+# builds include the committed .npz already, so this is skipped there.
+RUN test -f output/json/embeddings.npz || python build_embeddings.py
 
 EXPOSE 7860
 

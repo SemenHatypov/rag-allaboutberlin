@@ -36,6 +36,13 @@ re-scrape pushes its refreshed corpus to the Space itself
 ([rescrape.yml](../.github/workflows/rescrape.yml)), because commits made with
 `GITHUB_TOKEN` never trigger other workflows.
 
+Both push via [`scripts/deploy-to-space.sh`](../scripts/deploy-to-space.sh),
+which mirrors `main` as a **single orphan commit with `output/json/embeddings.npz`
+stripped out** — HF's pre-receive hook rejects binaries committed to plain git
+(it wants LFS/Xet). The Docker build regenerates that file from the corpus, so
+the Space still cold-starts fast; GitHub `main` and Streamlit Cloud keep the
+committed `.npz` untouched.
+
 App URLs: `https://huggingface.co/spaces/<user>/<space>` (with HF chrome) or
 the bare app at `https://<user>-<space>.hf.space` (dashes replace any `_`/`.`).
 
