@@ -4,7 +4,7 @@
     "guide": "fragebogen-zur-steuerlichen-erfassung",
     "section": "",
     "title": "",
-    "text": "When you start a business in Germany, you must fill the Fragebogen zur steuerlichen Erfassung. This is how you register your business with the Finanzamt. All businesses and self-employed people must do this. When you fill this form, you get: a tax number ( Steuernummer) a VAT number ( Umsatzsteuernummer), if you charge VAT an entry in the trade register ( Handelsregister), if you need one Since 2021, there is no paper form. You must fill this form online.",
+    "text": "When you start a business in Germany, you must fill the Fragebogen zur steuerlichen Erfassung. This is how you register your business with the Finanzamt. All businesses and self-employed people must do this. When you fill this form, you get: a tax number ( Steuernummer) a VAT number ( Umsatzsteuernummer), if you charge VAT an entry in the trade register ( Handelsregister), if you need one Since 2021, there is no paper form. You must fill this form online in ELSTER. There tools that make it easier",
     "anchor": "",
     "images": []
   },
@@ -13,7 +13,7 @@
     "guide": "fragebogen-zur-steuerlichen-erfassung",
     "section": "Different ways to register your business",
     "title": "",
-    "text": "There are 3 ways to register your business with the Finanzamt: Online with ELSTER (in German) This is the official way. Create an ELSTER account and fill the Fragebogen zur steuerlichen Erfassung. This is what I describe in this guide. It’s a bit complicated, and it’s all in German, but you can do it yourself. It’s free. Online with Sorted (in English) Sorted built a tool to register your business. It’s faster and easier than the official form, and it’s in English. I tried it myself, and I think it’s great. It’s free. With a tax advisor Your tax advisor ( Steuerberater) can register your business for you. My tax advisor did it in 5 minutes. This is the safest and easiest way, but it’s hard to find a tax advisor. Use my list of English-speaking tax advisors.",
+    "text": "There are 3 ways to register your business with the Finanzamt: Online with ELSTER (in German) This is the official way. Create an ELSTER account and fill the Fragebogen zur steuerlichen Erfassung. This is what I describe in this guide. It’s a bit complicated, and it’s all in German, but you can do it yourself. It’s free. Online with Sorted (in English) Sorted built a free tool to register your business. It’s faster, it’s easier, and it’s in English. I tried it myself. With a tax advisor Your tax advisor ( Steuerberater) can register your business for you. My tax advisor did it in 5 minutes. This is the safest and easiest way, but it’s hard to find a tax advisor. Use my list of English-speaking tax advisors.",
     "anchor": "different-ways-to-register-your-business",
     "images": []
   },
@@ -198,12 +198,21 @@
     "images": []
   },
   {
-    "id": "6d3342b2cd",
+    "id": "26937c987d",
     "guide": "fragebogen-zur-steuerlichen-erfassung",
     "section": "How to register your business with ELSTER",
-    "title": "Section 13: Angaben zur Festsetzung der Vor­aus­zah­lun­gen",
+    "title": "Section 13: Kon­zern­zu­ge­hö­rig­keit",
+    "text": "If your new business belongs to another corporation or enterprise, enter their information here. For most businesses, you should skip this step.",
+    "anchor": "section-13-konzernzugehorigkeit",
+    "images": []
+  },
+  {
+    "id": "b5ecd92ab4",
+    "guide": "fragebogen-zur-steuerlichen-erfassung",
+    "section": "How to register your business with ELSTER",
+    "title": "Section 14: Angaben zur Festsetzung der Vor­aus­zah­lun­gen",
     "text": "In this section, you enter your expected profit for your first 2 years in business. You must enter the expected profit (not revenue) from all your jobs, businesses and investments. This helps the Finanzamt calculate your tax prepayments. There are 4 columns to fill: Your expected income during your first year in business. Your spouse’s expected income during your first year in business. If you are not married or in a civil union, leave this column empty. Your expected income during your second year in business. Your spouse’s expected income during your second year in business. If you are not married or in a civil union, leave this column empty. Voraussichtliche Einkünfte aus – Expected income from… Land- und Forstwirtschaft – Agriculture and silviculture Gewerbebetrieb – Commercial operations The profit from running your Gewerbe. Selbständiger Arbeit – Freelance work The profit from working as a Freiberufler. Nichtselbständiger Arbeit – Employment For example, your salary from a regular full time job or from a mini-job. Kapitalvermögen – Investments For example, investments in the stock market. Vermietung und Verpachtung – Rental and leasing For example, income from renting an apartment. Sonstigen Einkünften – Special income For example from a pension. Voraussichtliche Höhe der – Expected amount of… Sonderausgaben – Special expenses This is for expenses like tax write-offs, not regular business expenses like office supplies or advertising. If you are not sure, leave this row empty. Steuerabzugsbeträge – Tax deduction amounts Expected amount of income tax deductions. If you are not sure, leave this row empty.",
-    "anchor": "section-13-angaben-zur-festsetzung-der-vorauszahlungen",
+    "anchor": "section-14-angaben-zur-festsetzung-der-vorauszahlungen",
     "images": []
   },
   {

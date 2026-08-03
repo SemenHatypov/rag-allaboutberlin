@@ -236,7 +236,7 @@
     "guide_name": "How to take sick days in Germany",
     "category": "Work",
     "path": "/json/sick-leave.json",
-    "sections_count": 17,
+    "sections_count": 19,
     "url_path": "/guides/sick-leave"
   },
   {
@@ -1116,7 +1116,7 @@
     "guide_name": "How to fill the Fragebogen zur steuerlichen Erfassung",
     "category": "Self-employment",
     "path": "/json/fragebogen-zur-steuerlichen-erfassung.json",
-    "sections_count": 37,
+    "sections_count": 38,
     "url_path": "/guides/fragebogen-zur-steuerlichen-erfassung"
   },
   {

@@ -13,7 +13,7 @@
     "guide": "sick-leave",
     "section": "It’s okay to take sick days",
     "title": "",
-    "text": "On average, German employees take 20 sick days per year. You can take as many sick days as you need. During your probation period, your employer can fire you without a reason. You can take sick days, but if you take too many, you could get fired. After your probation period, your employer can’t punish you because you take sick days. If you take more than 30 sick days per year, you could get fired. To fire you, your employer must prove that you will not get better, that it’s bad for the company, and that there are no other options (like a transfer or reduced hours). [§ 167 SGB IX (May 2026)] If you take sick days when you are not sick, you can get fired. For example, if you say that are too sick to work, but you go clubbing, you can get fired.",
+    "text": "On average, German employees take 20 sick days per year. You can take as many sick days as you need. You can also take sick days when your children are sick. During your probation period, your employer can fire you without a reason. You can take sick days, but if you take too many, you could get fired. After your probation period, your employer can’t punish you because you take sick days. If you take more than 30 sick days per year, you could get fired. To fire you, your employer must prove that you will not get better, that it’s bad for the company, and that there are no other options (like a transfer or reduced hours). [§ 167 SGB IX (May 2026)] If you take sick days when you are not sick, you can get fired. For example, if you say that are too sick to work, but you go clubbing, you can get fired.",
     "anchor": "its-okay-to-take-sick-days",
     "images": []
   },
@@ -49,7 +49,7 @@
     "guide": "sick-leave",
     "section": "What to do when you are sick",
     "title": "4. Get better",
-    "text": "If you have a sick note, you have the right to go on sick leave. Your employer can’t refuse. When you are on sick leave, you do not have to do any work. You don’t have to join meetings, answer emails, or be online. Your employer must leave you alone, except if they have urgent questions. The goal of sick leave is to get better, and go back to work when you are healthy.",
+    "text": "If you have a sick note, you can go on sick leave. Your employer can’t force you to work. When you are on sick leave, you do not have to do any work. You don’t have to join meetings, answer emails, or be online. Your employer must leave you alone, except if they have urgent questions. Your job is to recover. You don’t have to stay at home. You can do things that don’t prevent your recovery. For example, if you broke your arm, you can’t work but you can still go to the cinema. If you have depression or burnout, you can travel or work on personal projects.",
     "anchor": "get-better",
     "images": []
   },
@@ -67,7 +67,7 @@
     "guide": "sick-leave",
     "section": "You still get paid when you are sick",
     "title": "The next 78 weeks",
-    "text": "After 6 weeks, your employer stops paying you. Instead, you get Krankengeld from your public health insurance. It’s 70% of your gross salary, up to € 135.62 per day. [§ 47 SGB V, tk.de] Krankengeld calculator (in German) – Techniker Krankenkasse Krankengeld calculator – Arbeitnow You do not get Krankengeld if… You have private health insurance (you need Krankentagegeld insurance) You have expat health insurance You have a minijob You have free health insurance ( Familienversicherung) You have student health insurance You are self-employed (you must pay a little more for it)",
+    "text": "After 6 weeks, your employer stops paying you. Instead, you get Krankengeld from your public health insurance. It’s 70% of your gross salary, up to € 135.62 per day. [§ 47 SGB V, tk.de] Krankengeld calculator (in German) – Techniker Krankenkasse Krankengeld calculator – Arbeitnow You do not get Krankengeld if… You have private health insurance (you need Krankentagegeld insurance) You have expat health insurance You have a minijob You have free health insurance ( Familienversicherung) You have student health insurance You are self-employed (you must pay a bit more to get Krankengeld)",
     "anchor": "the-next-78-weeks",
     "images": []
   },
@@ -81,12 +81,30 @@
     "images": []
   },
   {
-    "id": "99c5a4668a",
+    "id": "a873f003dd",
     "guide": "sick-leave",
-    "section": "Things you can do on sick leave",
+    "section": "Sick leave for parents",
     "title": "",
-    "text": "When you are on sick leave, you don’t have to stay at home. You can still do things that don’t hurt your recovery. If you can’t work because of an injury, you can still meet friends, go shopping and travel. For example, if you can’t work because of a broken arm, you can still have coffee with a friend. It does not hurt your recovery. If you can’t work because you are sick, you can still travel if it helps your recovery. For example, you can go to the Baltic Sea to get rest and fresh air. If you can’t work because of depression or burnout, you can do things that make you feel better.",
-    "anchor": "things-you-can-do-on-sick-leave",
+    "text": "You can leave work to care for a sick child under 12 years old. Your employer can’t refuse to let you take time off. Usually, you don’t get paid during that time; it depends on your work contract.",
+    "anchor": "sick-leave-for-parents",
+    "images": []
+  },
+  {
+    "id": "a7d15f78f1",
+    "guide": "sick-leave",
+    "section": "Sick leave for parents",
+    "title": "With public health insurance",
+    "text": "If you have public health insurance, you get Kinderkrankengeld while you are not working. It pays 90% your salary, up to € 135.62 per day. [bundesgesundheitsministerium.de (July 2026), AOK (July 2026), § 45 Abs. 2 SGB V] You only get Kinderkrankengeld if… Your child is under 12 years old [§ 45 Abs. 1a SGB V] and you get unpaid leave from your employer and you apply for it Each parent can get 15 days of Kinderkrankengeld per child per year. They can get up to 35 days in total. Single parents get twice as many days of Kinderkrankengeld. [TK (July 2026), § 45 Abs. 2a SGB V] Number of children | Paid leave | Paid leave for single parents\n1 child | 15 days per parent | 30 days\n2 children | 30 days per parent | 60 days\n3 or more children | 35 days per parent | 70 days To get Kinderkrankengeld, you must… Get a Kinderkrankenschein It’s a type of sick note. Get it from your Hausarzt. You can get it in person or by phone. Fill the form The Kinderkrankenschein has a form on it. Use these instructions to fill it. Send it to your health insurer You can usually do it online or in their app.",
+    "anchor": "with-public-health-insurance",
+    "images": []
+  },
+  {
+    "id": "23fd2ec7aa",
+    "guide": "sick-leave",
+    "section": "Sick leave for parents",
+    "title": "With private health insurance",
+    "text": "Each policy is different. Some private health insurances give you an income while you care for your sick child. Others pay nothing. You can decide when you choose your health insurance.",
+    "anchor": "with-private-health-insurance",
     "images": []
   },
   {
