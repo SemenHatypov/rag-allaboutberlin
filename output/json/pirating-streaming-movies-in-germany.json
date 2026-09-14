@@ -4,7 +4,7 @@
     "guide": "pirating-streaming-movies-in-germany",
     "section": "",
     "title": "",
-    "text": "This guide is written information purposes only. I do not condone piracy. I encourage you to pay for the media you consume. Downloading movies in Germany is risky. Pirates in Germany can get big fines: € 900 to € 1,500 on average. But if you do it correctly, you can pirate movies without getting in trouble.",
+    "text": "This guide is written for information purposes only. I do not condone piracy. I encourage you to pay for the media you consume. Downloading movies in Germany is risky. Pirates in Germany can get big fines: € 900 to € 1,500 on average. But if you do it correctly, you can pirate movies without getting in trouble.",
     "anchor": "",
     "images": []
   },
@@ -22,7 +22,7 @@
     "guide": "pirating-streaming-movies-in-germany",
     "section": "How is piracy prosecuted in Germany?",
     "title": "What if my guests pirate movies?",
-    "text": "Before October 2017, if anyone pirated movies on your internet connection, you were responsible. This is why there were so few public Wi-Fi hotspots in Germany. The so called Mitstörerhaftung (co-perpetrator liability) was repealed. The updated law is simple: you are not responsible for copyright violations on your network if you don’t cause or facilitate them.",
+    "text": "Before October 2017, if anyone pirated movies on your internet connection, you were responsible. This is why there were so few public Wi-Fi hotspots in Germany. The so-called Mitstörerhaftung (co-perpetrator liability) was repealed. The updated law is simple: you are not responsible for copyright violations on your network if you don’t cause or facilitate them.",
     "anchor": "what-if-my-guests-pirate-movies",
     "images": []
   },
@@ -49,7 +49,7 @@
     "guide": "pirating-streaming-movies-in-germany",
     "section": "Is torrenting safe in Germany?",
     "title": "Torrenting movies with a VPN",
-    "text": "When you browse the internet or torrent movies with a VPN, the remote server sees the VPN’s IP address, not yours. This means that copyright lawyers cannot see your IP address. They can’t easily trace illegal downloads back to you. Using a VPN makes torrenting much safer. VPNs come with extra benefits: They let you see shows and videos that are only available in other countries They let you see websites that are blocked in your country They increase your online privacy by adding a layer of anonymity However, VPNs are not risk-free. If your VPN connection drops, your torrent client might continue downloading copyrighted materials without it, exposing your IP address to the world. This is why you should set up a VPN killswitch that cuts the internet connection if you are not connected to your VPN. I use this docker-based killswitch since a few years. When choosing a VPN, you must look for a fast provider that allows torrenting and does not log IP addresses. Avoid free VPN services, as they usually sacrifice safety, privacy or performance. I use Private Internet Access since 2016. I never had any problems.",
+    "text": "When you browse the internet or torrent movies with a VPN, the remote server sees the VPN’s IP address, not yours. This means that copyright lawyers cannot see your IP address. They can’t easily trace illegal downloads back to you. Using a VPN makes torrenting much safer. VPNs come with extra benefits: They let you see shows and videos that are only available in other countries They let you see websites that are blocked in your country They increase your online privacy by adding a layer of anonymity However, VPNs are not risk-free. If your VPN connection drops, your torrent client might continue downloading copyrighted materials without it, exposing your IP address to the world. This is why you should set up a VPN killswitch that cuts the internet connection if you are not connected to your VPN. I have been using this docker-based killswitch for a few years. When choosing a VPN, you must look for a fast provider that allows torrenting and does not log IP addresses. Avoid free VPN services, as they usually sacrifice safety, privacy or performance. I have been using Private Internet Access since 2016. I never had any problems.",
     "anchor": "torrenting-movies-with-a-vpn",
     "images": []
   },
@@ -58,7 +58,7 @@
     "guide": "pirating-streaming-movies-in-germany",
     "section": "Is torrenting safe in Germany?",
     "title": "Torrenting movies with a seedbox",
-    "text": "A seedbox is a torrent client that runs on a remote server. You add torrents through a web interface, and once the download is finished, you save the files to your computer. Torrent trackers only see the seedbox’s IP address, so copyright lawyers cannot trace the downloads back to you. There are a few benefits to seedboxes over VPNs: Seedboxes are really fast. Typical bandwidths range from 100mbps to 10Gbps. Well-seeded torrents finish in an instant. You don’t need to install or configure anything on your computer. You can access your finished torrents from all your devices. Many seedbox services include a free VPN. However, seedboxes often require you to use private torrent trackers, which have stricter membership requirements. Private trackers are usually invite-only, and require its users to maintain a high seeding ratio.",
+    "text": "A seedbox is a torrent client that runs on a remote server. You add torrents through a web interface, and once the download is finished, you save the files to your computer. Torrent trackers only see the seedbox’s IP address, so copyright lawyers cannot trace the downloads back to you. There are a few benefits to seedboxes over VPNs: Seedboxes are really fast. Typical bandwidths range from 100mbps to 10Gbps. Well-seeded torrents finish in an instant. You don’t need to install or configure anything on your computer. You can access your finished torrents from all your devices. Many seedbox services include a free VPN. However, seedboxes often require you to use private torrent trackers, which have stricter membership requirements. Private trackers are usually invite-only, and require their users to maintain a high seeding ratio.",
     "anchor": "torrenting-movies-with-a-seedbox",
     "images": []
   },

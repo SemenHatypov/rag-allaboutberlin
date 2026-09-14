@@ -211,7 +211,7 @@
     "guide": "website-compliance-germany",
     "section": "Terms and conditions",
     "title": "",
-    "text": "Your website should have a terms and conditions ( AGB or Allgemeine Geschäftsbedingungen) page. Usually, it’s the page where you say “we are not responsible for the accuracy of our content”. The terms in conditions must be available in the same languages as your website.",
+    "text": "Your website should have a terms and conditions ( AGB or Allgemeine Geschäftsbedingungen) page. Usually, it’s the page where you say “we are not responsible for the accuracy of our content”. The terms and conditions must be available in the same languages as your website.",
     "anchor": "terms-and-conditions",
     "images": []
   },
@@ -238,7 +238,7 @@
     "guide": "website-compliance-germany",
     "section": "Terms and conditions",
     "title": "AGB checklist",
-    "text": "Add a terms and conditions page to your website. There are many AGB generators and templates online. Most of them are in German. Add a link to your terms an conditions to your website’s footer.",
+    "text": "Add a terms and conditions page to your website. There are many AGB generators and templates online. Most of them are in German. Add a link to your terms and conditions to your website’s footer.",
     "anchor": "agb-checklist",
     "images": []
   },
@@ -292,7 +292,7 @@
     "guide": "website-compliance-germany",
     "section": "Sponsored content and affiliate links",
     "title": "",
-    "text": "The Telemediengestz says that ads on a website must be clearly labelled. You can’t disguise an ad as genuine content. Otherwise, it’s surreptitious advertising ( Schleichwerbung), and you can get an Abmahnung for “unfair competition”. Here are the basic guidelines for ads and sponsored content on your website: Affiliate links need to be labelled Affiliate links are “commercial communications” according to § 6 DDG. Multiple lawyers suggest to mark affiliate links as ads, even if you are not directly getting financial compensation for affiliate content. A footnote regarding affiliate links might be insufficient. Sponsored content needs to be labelled If you get paid to put a sponsored post on your blog, you need to clearly tell your users that this post is an ad, and tell them who is sponsoring the ad. In other words, you can’t disguise an advertisement as an editorial text. According to Kanzlei Plutte, “sponsored content” is not a sufficient label, and you should use a clear word like “advertisement” to label advertising on your website. He backs his opinion with court cases, but admits that Twitter, Facebook and Instagram use the term “sponsored”.",
+    "text": "The Telemediengesetz says that ads on a website must be clearly labelled. You can’t disguise an ad as genuine content. Otherwise, it’s surreptitious advertising ( Schleichwerbung), and you can get an Abmahnung for “unfair competition”. Here are the basic guidelines for ads and sponsored content on your website: Affiliate links need to be labelled Affiliate links are “commercial communications” according to § 6 DDG. Multiple lawyers suggest marking affiliate links as ads, even if you are not directly getting financial compensation for affiliate content. A footnote regarding affiliate links might be insufficient. Sponsored content needs to be labelled If you get paid to put a sponsored post on your blog, you need to clearly tell your users that this post is an ad, and tell them who is sponsoring the ad. In other words, you can’t disguise an advertisement as an editorial text. According to Kanzlei Plutte, “sponsored content” is not a sufficient label, and you should use a clear word like “advertisement” to label advertising on your website. They back their opinion with court cases, but admit that Twitter, Facebook and Instagram use the term “sponsored”.",
     "anchor": "sponsored-content-and-affiliate-links",
     "images": []
   },
@@ -351,7 +351,7 @@
     "guide": "website-compliance-germany",
     "section": "Income-generating websites",
     "title": "Who needs to register a business?",
-    "text": "Any German resident or who runs a website as a stand-alone business.",
+    "text": "Any German resident or company who runs a website as a stand-alone business.",
     "anchor": "who-needs-to-register-a-business",
     "images": []
   },
@@ -369,7 +369,7 @@
     "guide": "website-compliance-germany",
     "section": "Income-generating websites",
     "title": "Income-generating website checklist",
-    "text": "Before running a commercial website in Germany, make sure you are allowed to be self-employed in Germany. If your website is a stand-alone business, apply for a Gewerbeschein. If your website is a stand-alone business, register it at the Finanzamt. When your get your tax number ( Steuernummer) from the Finanzamt, add it to your Impressum.",
+    "text": "Before running a commercial website in Germany, make sure you are allowed to be self-employed in Germany. If your website is a stand-alone business, apply for a Gewerbeschein. If your website is a stand-alone business, register it at the Finanzamt. When you get your tax number ( Steuernummer) from the Finanzamt, add it to your Impressum.",
     "anchor": "income-generating-website-checklist",
     "images": []
   }

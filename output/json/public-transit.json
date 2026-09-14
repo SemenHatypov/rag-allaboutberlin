@@ -40,7 +40,7 @@
     "guide": "public-transit",
     "section": "1. Buy a ticket",
     "title": "Tariff zones",
-    "text": "Berlin has 3 public transit zones: A, B and C. Zone A is central Berlin. It’s everything inside the Ringbahn; all the central neighbourhoods. Zone B is everything outside the Ringbahn, but inside Berlin. Zone C is outside of Berlin. It includes parts of Brandenburg like the Berlin-Brandenburg airport, Potsdam and Oranienburg. Most things are in zone A or B, so you usually need an AB ticket. If you go to the airport, you need an ABC ticket. If you already have an AB ticket, and you want to go to zone C, get an extention ticket ( Anschlussfahrausweis). It’s cheaper than an ABC ticket. If you have a Deutschland Ticket, you can travel in all zones.",
+    "text": "Berlin has 3 public transit zones: A, B and C. Zone A is central Berlin. It’s everything inside the Ringbahn; all the central neighbourhoods. Zone B is everything outside the Ringbahn, but inside Berlin. Zone C is outside of Berlin. It includes parts of Brandenburg like the Berlin-Brandenburg airport, Potsdam and Oranienburg. Most things are in zone A or B, so you usually need an AB ticket. If you go to the airport, you need an ABC ticket. If you already have an AB ticket, and you want to go to zone C, get an extension ticket ( Anschlussfahrausweis). It’s cheaper than an ABC ticket. If you have a Deutschland Ticket, you can travel in all zones.",
     "anchor": "tariff-zones",
     "images": []
   },
@@ -49,7 +49,7 @@
     "guide": "public-transit",
     "section": "1. Buy a ticket",
     "title": "Ticket duration",
-    "text": "Single tickets are valid for 2 hours in one direction. You can take as many trains, buses and ferries as you want with the same ticket. You can stop, do some shopping, and take the train again. Your ticket only works in one direction. To go back, you must buy a new ticket. Short trip tickets let you travel 3 train tops, or 6 bus or tram stops. If you buy them in the app, they are valid for 20 minutes. Daily, monthly and weekly passes are cheaper. They usually let you bring other people for free. The Deutschland Ticket is a monthly subscription. You can use all public transit in Germany for € 63 per month.",
+    "text": "Single tickets are valid for 2 hours in one direction. You can take as many trains, buses and ferries as you want with the same ticket. You can stop, do some shopping, and take the train again. Your ticket only works in one direction. To go back, you must buy a new ticket. Short trip tickets let you travel 3 train stops, or 6 bus or tram stops. If you buy them in the app, they are valid for 20 minutes. Daily, monthly and weekly passes are cheaper. They usually let you bring other people for free. The Deutschland Ticket is a monthly subscription. You can use all public transit in Germany for € 63 per month.",
     "anchor": "ticket-duration",
     "images": []
   },
@@ -224,7 +224,7 @@
     "guide": "public-transit",
     "section": "Bring other people for free",
     "title": "",
-    "text": "All tickets let you bring children under 6 years old for free. Most weekly, monthly and yearly tickets let you bring children under 15 years old for free. Most weekly, monthly and yearly tickets, let you bring other people for free during certain times: Monday to Friday from 8PM to 3AM the next day. Saturday and Sunday On public holidays These tickets do not let you bring children and other people with you: The Deutschland Ticket The student ticket ( Schülerticket) The FlexTicket The 10AM card ( 10-Uhr-Karte) The 65 Plus ticket.",
+    "text": "All tickets let you bring children under 6 years old for free. Most weekly, monthly and yearly tickets let you bring children under 15 years old for free. Most weekly, monthly and yearly tickets let you bring other people for free during certain times: Monday to Friday from 8PM to 3AM the next day. Saturday and Sunday On public holidays These tickets do not let you bring children and other people with you: The Deutschland Ticket The student ticket ( Schülerticket) The FlexTicket The 10AM card ( 10-Uhr-Karte) The 65 Plus ticket.",
     "anchor": "bring-other-people-for-free",
     "images": []
   }

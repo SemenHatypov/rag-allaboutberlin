@@ -721,7 +721,7 @@
   },
   {
     "guide": "haftpflichtversicherung",
-    "guide_name": "How to choose Germany liability insurance",
+    "guide_name": "How to choose German liability insurance",
     "category": "Personal finance",
     "path": "/json/haftpflichtversicherung.json",
     "sections_count": 14,
@@ -977,7 +977,7 @@
   },
   {
     "guide": "convert-to-german-driving-licence",
-    "guide_name": "How to trade your foreign driver licence for a German one",
+    "guide_name": "How to trade your foreign driving licence for a German one",
     "category": "Getting around",
     "path": "/json/convert-to-german-driving-licence.json",
     "sections_count": 14,
@@ -1065,7 +1065,7 @@
   },
   {
     "guide": "is-marijuana-legal",
-    "guide_name": "Is marijuana legal in Gemany?",
+    "guide_name": "Is marijuana legal in Germany?",
     "category": "Where to find...",
     "path": "/json/is-marijuana-legal.json",
     "sections_count": 8,

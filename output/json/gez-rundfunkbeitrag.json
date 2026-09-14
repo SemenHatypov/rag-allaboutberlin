@@ -49,7 +49,7 @@
     "guide": "gez-rundfunkbeitrag",
     "section": "How to pay the TV tax",
     "title": "Pay automatically",
-    "text": "This is the easiest way. Take 2 minutes to fill a form, and the Beitragsservice will automatically collect the TV tax from your bank account. How to enable automatic payments: Find your 9-digit account number ( Beitragsnummer or Aktenzeichen). It’s on the letters the Beitragsservice sends you. It’s also the last 9 digits of the payment reference number (RF30X 000000000). Open the account information form Enter your name, address, account number and other details. On the next step, choose “Zahlungsweise”, and under “Zahlungsart”, choose “ Lastschrift von meinem/unserem konto”. Enter your bank information (your IBAN and account name), and save the form.",
+    "text": "This is the easiest way. Take 2 minutes to fill a form, and the Beitragsservice will automatically collect the TV tax from your bank account. How to enable automatic payments: Find your 9-digit account number ( Beitragsnummer or Aktenzeichen). It’s on the letters the Beitragsservice sends you. It’s also the last 9 digits of the payment reference number (RF30X 000000000). Open the account information form Enter your name, address, account number and other details. On the next step, choose “Zahlungsweise”, and under “Zahlungsart”, choose “ Lastschrift von meinem/unserem Konto”. Enter your bank information (your IBAN and account name), and save the form.",
     "anchor": "pay-automatically",
     "images": []
   },
@@ -58,7 +58,7 @@
     "guide": "gez-rundfunkbeitrag",
     "section": "How to pay the TV tax",
     "title": "Pay by bank transfer",
-    "text": "Every 3 months, you will get a letter from the Beitragsservice. The letter has the correct payment details. It also has a QR code that you can scan with your banking app. How to pay by bank transfer: Find your account number ( Beitragsnummer). It’s on the letters the Beitragsservice send you. It has 9 digits. You can also use the last 9 digits of the payment reference number (RF30X 000000000). Make a SEPA transfer. Each state has different payment details, but you can use the central Beitragsservice bank account: Recipient: Rundfunk ARD, ZD, DRadio IBAN: DE07 5005 0000 0000 3456 78 BIC: HELADEFFXXX Kunden-Referenznummer / message: RF30X _ __ (the last 9 digits are your Beitragsnummer)",
+    "text": "Every 3 months, you will get a letter from the Beitragsservice. The letter has the correct payment details. It also has a QR code that you can scan with your banking app. How to pay by bank transfer: Find your account number ( Beitragsnummer). It’s on the letters the Beitragsservice sends you. It has 9 digits. You can also use the last 9 digits of the payment reference number (RF30X 000000000). Make a SEPA transfer. Each state has different payment details, but you can use the central Beitragsservice bank account: Recipient: Rundfunk ARD, ZDF, DRadio IBAN: DE07 5005 0000 0000 3456 78 BIC: HELADEFFXXX Kunden-Referenznummer / message: RF30X _ __ (the last 9 digits are your Beitragsnummer)",
     "anchor": "pay-by-bank-transfer",
     "images": [
       {
