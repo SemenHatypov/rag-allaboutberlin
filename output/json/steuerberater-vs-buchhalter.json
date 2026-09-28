@@ -4,7 +4,7 @@
     "guide": "steuerberater-vs-buchhalter",
     "section": "",
     "title": "",
-    "text": "This guide explains the difference between tax advisors ( Steuerberater) and bookkeepers ( Buchhalter).",
+    "text": "Verified by Johann Degraf on September 21, 2026 Johann Degraf is a bookkeeper and founder of NumPro. He trained as a Finanzwirt at the German tax office and worked in corporate accounting before starting his own practice. Johann Degraf is a bookkeeper and founder of NumPro. He trained as a Finanzwirt at the German tax office and worked in corporate accounting before starting his own practice. This guide explains the difference between tax advisors ( Steuerberater) and bookkeepers ( Buchhalter) in Germany.",
     "anchor": "",
     "images": []
   },
@@ -13,35 +13,35 @@
     "guide": "steuerberater-vs-buchhalter",
     "section": "Summary",
     "title": "",
-    "text": "Tax advisor ( Steuerberater) is a protected title in Germany. Bookkeeper ( Buchhalter) is not. Tax advisors can submit tax declarations and financial statements in your name. Bookkeepers can fill the papers, but you must submit them yourself. Tax advisors are liable for their mistakes, bookkeepers are not. Tax advisors are more expensive than bookkeepers.",
+    "text": "Bookkeepers only do bookkeeping. Tax advisors can do more, and they are legally liable for their mistakes, but they are more expensive. Use a bookkeeper for your bookkeeping, and a tax advisor when needed.",
     "anchor": "summary",
     "images": []
   },
   {
-    "id": "5b82210f1b",
+    "id": "d1eeb0d8d0",
     "guide": "steuerberater-vs-buchhalter",
-    "section": "Steuerberater (tax advisor)",
+    "section": "Tax advisor (Steuerberater)",
     "title": "",
-    "text": "Tax advisor ( Steuerberater) is a protected title in Germany. To become a tax advisor, you must have a university degree and 3 years of work experience, then you must pass the Steuerberaterprüfung, a 3-day-long test. Because of their qualifications, tax advisors have special powers and special responsibilities. For example, only tax advisors can submit your tax declaration and financial statements ( Jahresabschluss) for you. They can even handle all communications with the Finanzamt for you. They can also certify documents like the Prüfungsbericht or the Netto-Gewinnermittlung. Tax advisors are liable for their mistakes. If a tax advisor makes a mistake in your tax declaration and you get fined by the Finanzamt, your tax advisor must pay the fine. Tax advisors have more powers and responsibilities than bookkeepers, but they are also more expensive than bookkeepers. Cost of a Steuerberater",
-    "anchor": "steuerberater-tax-advisor",
+    "text": "Tax advisor is a protected title. Becoming a tax advisor usually requires a university degree, 3 years of work experience and passing a 3-day-long test. [§ 36 StBerG] A tax advisor can… Give tax advice Help you register your business at the Finanzamt and the Gewerbeamt. Prepare and submit income tax declarations Prepare and submit VAT declarations Prepare the annual financial statement ( Jahresabschluss) for your corporation [§ 33 StBerG] Do your personal or business bookkeeping In Berlin, you need a tax advisor when you renew your freelance visa. The immigration office requires a Prüfungsbericht or Netto-Gewinnermittlung. It must be stamped by a tax advisor. Tax advisors are liable for their mistakes. If they make an expensive mistake, you can sue them for damages. They must have liability insurance.",
+    "anchor": "tax-advisor-steuerberater",
     "images": []
   },
   {
-    "id": "886e10faa5",
+    "id": "f343ae8cb7",
     "guide": "steuerberater-vs-buchhalter",
-    "section": "Buchhalter (bookkeeper)",
+    "section": "Bookkeeper (Buchhalter)",
     "title": "",
-    "text": "Bookkeeper ( Buchhalter) is not a protected title in Germany. Anyone can be a bookkeeper. They do not need a specific degree or certificate. Because of this, bookkeepers have limited powers. They are also cheaper than tax advisors. Bookkeepers can’t submit your tax declarations or financial statements. They can help you fill financial documents, but you must submit them yourself. If your bookkeeper makes mistakes in your tax declaration, and you get fined by the Finanzamt, it will be your fault. You will have to pay the fine.",
-    "anchor": "buchhalter-bookkeeper",
+    "text": "Bookkeepers only do bookkeeping. They can do less than tax advisors, but they are cheaper than tax advisors. Freelance bookkeepers must have special qualifications: professional training, an exam, and 3 years of experience. [Johann Degraf (2026), § 8 Abs. 1 StBerG] Freelance bookkeepers can… File invoices and transactions in your accounting system Prepare internal financial reports Do ongoing payroll accounting Freelance bookkeepers can’t… Give tax advice Set up a new accounting system Submit financial statements and tax declarations Prepare financial statements and tax declarations, even if you submit them yourself. If you hire a bookkeeper as an employee, they can have more responsibilities, and they don’t need professional qualifications. Bookkeepers are also liable for their mistakes, but they might not have insurance for this. [Johann Degraf (2026), § 280 BGB]",
+    "anchor": "bookkeeper-buchhalter",
     "images": []
   },
   {
-    "id": "5415663c4c",
+    "id": "f8c695bf3e",
     "guide": "steuerberater-vs-buchhalter",
-    "section": "How to find a tax advisor or bookkeeper?",
+    "section": "Other options",
     "title": "",
-    "text": "English-speaking accountants in Berlin List of German tax software",
-    "anchor": "how-to-find-a-tax-advisor-or-bookkeeper",
+    "text": "Tax advisor alternatives Where to ask finance questions",
+    "anchor": "other-options",
     "images": []
   }
 ]
