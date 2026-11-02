@@ -156,7 +156,7 @@
     "guide_name": "How to get a German pension refund",
     "category": "Housing",
     "path": "/json/pension-payments-refund.json",
-    "sections_count": 22,
+    "sections_count": 23,
     "url_path": "/guides/pension-payments-refund"
   },
   {
@@ -358,6 +358,14 @@
     "path": "/json/wait-times.json",
     "sections_count": 2,
     "url_path": "/guides/immigration-office/wait-times"
+  },
+  {
+    "guide": "2027",
+    "guide_name": "What changes in 2027 in Germany",
+    "category": "Living in Germany",
+    "path": "/json/2027.json",
+    "sections_count": 13,
+    "url_path": "/guides/2027"
   },
   {
     "guide": "visit-berlin",
