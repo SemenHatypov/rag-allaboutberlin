@@ -4,7 +4,7 @@
     "guide": "2027",
     "section": "",
     "title": "",
-    "text": "Every year, there are many big changes in Germany. Taxes, social contributions, cost of living and immigration laws change. This guide lists the most important changes for immigrants living in Germany.",
+    "text": "This guide lists important changes for immigrants in Germany in 2027.",
     "anchor": "",
     "images": []
   },
@@ -13,7 +13,7 @@
     "guide": "2027",
     "section": "Social contributions",
     "title": "Income tax",
-    "text": "Every year, income tax is adjusted for inflation. If your salary stayed the same, you pay a bit less income tax. Income tax calculator",
+    "text": "On January 1 2027, income tax is adjusted for inflation. If your salary stayed the same, you will pay a bit less income tax. Income tax calculator",
     "anchor": "income-tax",
     "images": []
   },
@@ -22,17 +22,17 @@
     "guide": "2027",
     "section": "Social contributions",
     "title": "Public health insurance",
-    "text": "On January 1 2027, public health insurance will get more expensive for some people: If you earn over € 77,400 per year Your insurance will get more expensive. It still costs 7.3% of your salary, but the maximum cost increases to € 512 per month. In 2026 it was € 471. Private health insurance might be a better, cheaper option. If you are a student Your public health insurance will get more expensive. Your insurer might also increase your Zusatzbeitrag. This also makes your health insurance more expensive. Health insurance calculator In 2027, public health insurance will stop covering homeopathic medicine.",
+    "text": "On January 1 2027, your public health insurance and long-term care insurance might get more expensive: If you earn more than € 76,500 per year Your health insurance gets more expensive. It still costs 7.3% of your salary, but the maximum cost increases from € 471 to € 512 per month. Your long-term care insurance gets more expensive. The maximum cost increases from € 140 to € 172 per month. Your health insurance gets more expensive. It still costs 7.3% of your salary, but the maximum cost increases from € 471 to € 512 per month. Your long-term care insurance gets more expensive. The maximum cost increases from € 140 to € 172 per month. If you are a student On April 1, the cost of your health insurance and long-term care insurance will increase from € 140 to € 155 per month. If you are over 23 years old, and you have no children Your long-term care insurance gets more expensive. It increases from 2.4% to 2.7% of your salary. Your long-term care insurance gets more expensive. It increases from 2.4% to 2.7% of your salary. Your insurer might also increase your Zusatzbeitrag. This will make your health insurance more expensive. You can switch to another public health insurer, or switch to private health insurance. Health insurance calculator",
     "anchor": "public-health-insurance",
     "images": []
   },
   {
-    "id": "41c37b6914",
+    "id": "885a02c632",
     "guide": "2027",
     "section": "Social contributions",
-    "title": "Long-term care insurance",
-    "text": "On January 1 2027, Pflegeversicherung will get more expensive: If you are over 23 years old, and you have no children Pflegeversicherung will cost 2.7% of your salary. In 2026, it was 2.4%. If you earn over € 69,750 per year Pflegeversicherung will be more expensive. The maximum cost will increase from € 140 to € 172 per month. Private health insurance might be a better, cheaper option. If you are a student, your Pflegeversicherung will get more expensive. If you have private health insurance This change does not affect you. Private Pflegeversicherung prices are calculated differently. If you have private health insurance, you are not affected.",
-    "anchor": "long-term-care-insurance",
+    "title": "Private health insurance",
+    "text": "From January 1 2027, employees must earn at least € 84,150 per year to choose private health insurance. In 2026, it was € 77,400 per year. If your salary is less than € 84,150 per year, you must switch to public health insurance. To stay on private health insurance, you must ask for an exemption. If you are self-employed, this change does not affect you.",
+    "anchor": "private-health-insurance",
     "images": []
   },
   {
@@ -58,16 +58,16 @@
     "guide": "2027",
     "section": "Public transit",
     "title": "",
-    "text": "On January 1 2027, the price of the Deutschland Ticket will increase to € 66.80 per month. In 2026, it was € 63 per month.",
+    "text": "On January 1 2027, public transit tickets get more expensive: Ticket type | Zone | 2026 price | 2027 price\nDeutschland Ticket | Germany | € 63 | € 66.80\nSingle ticket | AB | € 4 | € 4\nSingle ticket | ABC | € 5 | € 5.20\n4-trip ticket | AB | € 12.40 | € 13.20\n24-hour ticket | AB | € 11.20 | € 11.50\nMonthly ticket | AB | € 113 | € 117.20\nMonthly subscription | AB | € 81.30 | € 84.30\nMonthly subscription | ABC | € 103.30 | € 107.10\nSingle bike ticket | AB | € 2.70 | € 2.80\nMonthly bike ticket | AB | € 14.60 | € 15.10 Full 2027 price table",
     "anchor": "public-transit",
     "images": []
   },
   {
-    "id": "08ecd636d8",
+    "id": "de4abe47a4",
     "guide": "2027",
-    "section": "Public transit",
-    "title": "Public holidays",
-    "text": "This year, we get 6 public holidays in Berlin. The other 4 public holidays fall on a weekend, so they are lost. In 2027, there are 10 public holidays, but 4 are on a weekend. Public holidays in Berlin",
+    "section": "Public holidays",
+    "title": "",
+    "text": "In 2027, there are 10 public holidays, but 4 are on a weekend. Public holidays in Berlin",
     "anchor": "public-holidays",
     "images": []
   },
@@ -90,21 +90,21 @@
     "images": []
   },
   {
-    "id": "8a63ccb274",
-    "guide": "2027",
-    "section": "Work",
-    "title": "Digital work contracts",
-    "text": "Wegfall des Schriftformerfordernisses (digital work contracts) https://www.dihk.de/de/newsroom/bundesregierung-beschliesst-entwurf-eines-einkommensteuerreformgesetzes-2027-186880",
-    "anchor": "digital-work-contracts",
-    "images": []
-  },
-  {
     "id": "d2e4efdd17",
     "guide": "2027",
     "section": "Other changes",
     "title": "More free mammograms",
     "text": "Women over 50 can get free mammogram screenings for breast cancer. Public health insurance pays for it. In August 2027, the minimum age will be lowered to 45 years old.",
     "anchor": "more-free-mammograms",
+    "images": []
+  },
+  {
+    "id": "1e6093a5e5",
+    "guide": "2027",
+    "section": "Other changes",
+    "title": "No free homeopathic medicine",
+    "text": "On January 1 2027, public health insurance will stop covering homeopathic medicine.",
+    "anchor": "no-free-homeopathic-medicine",
     "images": []
   },
   {
